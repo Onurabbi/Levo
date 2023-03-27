@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "collision.h": "c",
+        "common.h": "c",
+        "utils.h": "c",
+        "entity.h": "c",
+        "defs.h": "c",
+        "structs.h": "c",
+        "title.h": "c",
+        "actor.h": "c"
+    }
+}

@@ -1,0 +1,11 @@
+[
+	{
+		"filename" : "gfx/anim/nordicLadyWalk.anim",
+        "secperframe" : 0.25,
+		"numFrames" : 4,
+		"frame0" : "gfx/anim/rightWalk1.png",
+		"frame1" : "gfx/anim/rightWalk2.png",
+        "frame2" : "gfx/anim/rightWalk3.png",
+        "frame3" : "gfx/anim/rightWalk4.png"
+	}
+]
