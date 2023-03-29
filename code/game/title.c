@@ -43,7 +43,16 @@ bool initTitle(void)
     return true;
 }
 
-static void update()
+void renderTitle(void)
+{
+    blit(background->texture, 0, 0, false);
+    blit(logo->texture, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, true);
+    app.fontScale = 1.5;
+    drawText("Press space or return", SCREEN_WIDTH/2, SCREEN_HEIGHT/2 + 200, 255, 255, 255, TEXT_ALIGN_CENTER, 0);
+    app.fontScale = 1;
+}
+
+void updateTitle(void)
 {
     Input * input = &app.input;
 
@@ -58,25 +67,4 @@ static void update()
     {
         app.run = false;
     }
-}
-
-void updateAndRenderTitle(void)
-{
-    accumulator += app.input.secElapsed;
-    
-    while(accumulator > 1.0/61.0)
-    {
-        update();
-        accumulator -= 1.0/59.0;
-        if(accumulator < 0)
-        {
-            accumulator = 0;
-        }
-    }
-    
-    blit(background->texture, 0, 0, false);
-    blit(logo->texture, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, true);
-    app.fontScale = 1.5;
-    drawText("Press space or return", SCREEN_WIDTH/2, SCREEN_HEIGHT/2 + 200, 255, 255, 255, TEXT_ALIGN_CENTER, 0);
-    app.fontScale = 1;
 }

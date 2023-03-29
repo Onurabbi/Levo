@@ -42,17 +42,22 @@ do {								  \
 #define MAX_KEYBOARD_KEYS      		350
 #define MAX_SND_CHANNELS       		16
 #define MAX_NUM_ENTITIES       		1024
-#define MAX_NUM_TILES		   	    (MAP_WIDTH * MAP_HEIGHT)
+
+#define MAP_WIDTH 			   		64
+#define MAP_HEIGHT 			  	 	64
+#define MAX_NUM_MAP_LAYERS     		2
+
+#define MAX_NUM_TILES		   	    (MAP_WIDTH * MAP_HEIGHT * MAX_NUM_MAP_LAYERS)
+
 #define MAX_NUM_ACTORS				1024
 #define MAX_NUM_INIT_FUNCS     		32
 
 //because isometric, these two need to be different
-#define TILE_WIDTH		       60
-#define TILE_HEIGHT		       30
+#define TILE_WIDTH		       64
+#define TILE_HEIGHT		       32
 
 #define MAX_TILES              100
-#define MAP_WIDTH 			   256
-#define MAP_HEIGHT 			   256
+
 #define MAX_FLOORS			   13
 
 #define MAP_RENDER_WIDTH       ((SCREEN_WIDTH) / (TILE_WIDTH))
@@ -68,7 +73,7 @@ do {								  \
 #define MAX_NUM_ANIMATIONS		128
 #define MAX_ANIMATION_SPRITES	8
 
-#define MAX_NUM_THREADS 			1
+#define MAX_NUM_THREADS 			8
 #define MAX_TILE_COUNT_PER_THREAD	((MAX_NUM_TILES) / MAX_NUM_THREADS)
 #define MAX_ENTITY_COUNT_PER_THREAD ((MAX_NUM_ENTITIES) / MAX_NUM_THREADS)
 
@@ -147,7 +152,9 @@ enum
 {
 	TILE_HOLE,
 	TILE_GROUND = 11,
-	TILE_WALL = 22
+	TILE_WALL = 22,
+	TILE_MAX = 100,
+	TILE_NULL = 100
 };
 
 enum

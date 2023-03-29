@@ -13,14 +13,26 @@ extern Dungeon dungeon;
 //not using this for now
 static Sprite *  pointerSprite;
 
-static Drawable * tiles[MAX_NUM_THREADS];
+static Drawable * tiles;
 static uint32_t   numTiles[MAX_NUM_THREADS];
 
-static Drawable * entities[MAX_NUM_THREADS];
+static Drawable * entities;
 static uint32_t   numEntities[MAX_NUM_THREADS];
+
+static int compareDrawables(const void * a, const void * b)
+{
+    SDL_assert(a && b);
+
+    Drawable * d1 = (Drawable *)a;
+    Drawable * d2 = (Drawable *)b;
+
+    return (d2->y - d1->y);
+}
 
 void resetDraw(void)
 {
+    memset(tiles, 0, sizeof(Drawable) * MAX_NUM_TILES);
+    memset(entities, 0, sizeof(Drawable) * MAX_NUM_ENTITIES);
     memset(numTiles, 0, sizeof(uint32_t) * MAX_NUM_THREADS);
     memset(numEntities, 0, sizeof(uint32_t) * MAX_NUM_THREADS);
 }
@@ -29,40 +41,61 @@ void drawAll(void)
 {
     for(uint32_t i = 0; i < MAX_NUM_THREADS; i++)
     {
+        Drawable * base = tiles + i * MAX_TILE_COUNT_PER_THREAD;
+        qsort(base, numTiles[i], sizeof(Drawable), compareDrawables);
+    }
+
+    for(uint32_t i = 0; i < MAX_NUM_THREADS; i++)
+    {
+        Drawable * base = tiles + i * MAX_TILE_COUNT_PER_THREAD;
+
+        for(uint32_t  j = 0; j < numTiles[i]; j++)
+        {
+            Drawable * tile = &base[j];
+            blitSprite(tile->sprite, (int)tile->x, (int)tile->y, true, SDL_FLIP_NONE);
+        }
+    }
+    
+#if 0
+    for(uint32_t i = 0; i < MAX_NUM_THREADS; i++)
+    {
         for(uint32_t j = 0; j < numTiles[i]; j++)
         {
             Drawable * tile = &tiles[i][j];
             blitSprite(tile->sprite, (int)tile->x, (int)tile->y, false, SDL_FLIP_NONE);
         }
     }
+#endif
 
     for(uint32_t i = 0; i < MAX_NUM_THREADS; i++)
     {
+        Drawable * base = entities + i * MAX_ENTITY_COUNT_PER_THREAD;
         for(uint32_t j = 0; j < numEntities[i]; j++)
         {
-            Drawable * entity = &entities[i][j];
-            blitSprite(entity->sprite, (int)entity->x, (int)entity->y, false, SDL_FLIP_NONE);
+            Drawable * entity = &base[j];
+            blitSprite(entity->sprite, (int)entity->x, (int)entity->y, true, SDL_FLIP_NONE);
         }
     }
 }
 
 bool initDraw(void)
 {
-    for(int i = 0; i < MAX_NUM_THREADS; i++)
+    tiles = allocateTransientMemory(MAX_NUM_TILES * sizeof(Drawable));
+    if(tiles == NULL)
     {
-        tiles[i] = allocateTransientMemory(MAX_TILE_COUNT_PER_THREAD * sizeof(Drawable));
-        numTiles[i] = 0;
-        if(tiles[i] == NULL)
-        {
-            return false;
-        }
+        return false;
+    }
+    
+    entities = allocateTransientMemory(MAX_NUM_ENTITIES * sizeof(Drawable));
+    if(entities == NULL)
+    {
+        return false;
+    }
 
-        entities[i] = allocateTransientMemory(MAX_ENTITY_COUNT_PER_THREAD * sizeof(Drawable));
+    for(int i = 0; i < MAX_NUM_THREADS; i++)
+    {   
         numEntities[i] = 0;
-        if(entities[i] == NULL)
-        {
-            return false;
-        }
+        numTiles[i] = 0;
     }
 
     return true;
@@ -154,15 +187,17 @@ static Drawable * getNewDrawable(int layer, int thread)
 
     if(layer == DL_ENTITY)
     {
-        result = &entities[thread][numEntities[thread]];
+        Drawable * drawables = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
+        result = &drawables[numEntities[thread]];
         numEntities[thread]++;
         SDL_assert(numEntities[thread] <= MAX_ENTITY_COUNT_PER_THREAD);
     }
     else
     {
-        result = &tiles[thread][numTiles[thread]];
+        Drawable * drawables = tiles + thread * MAX_TILE_COUNT_PER_THREAD;
+        result = &drawables[numTiles[thread]];
         numTiles[thread]++; 
-        SDL_assert(numTiles[thread] <= MAX_ENTITY_COUNT_PER_THREAD);
+        SDL_assert(numTiles[thread] <= MAX_TILE_COUNT_PER_THREAD);
     }
     
     return result;

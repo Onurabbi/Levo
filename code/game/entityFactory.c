@@ -63,7 +63,7 @@ static void initProjectile(Entity * projectile)
 static void initPlayer(Entity * player)
 {
     player->angle = 0.0;
-    player->width = 0.375f;
+    player->width = 0.7f;
     player->height = 0.50f;
     player->sprite = getSprite("gfx/entities/barrel.png");
     player->flags = 0;
@@ -82,7 +82,7 @@ static void initPlayer(Entity * player)
 static void initBarrel(Entity * barrel)
 {
     barrel->angle = 0.0;
-    barrel->width = 1.0f;
+    barrel->width = 0.7f;
     barrel->height = 0.50f;
     barrel->sprite = getSprite("gfx/entities/barrel.png");
     barrel->flags = 0;

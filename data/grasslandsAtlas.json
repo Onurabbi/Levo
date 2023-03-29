@@ -1,0 +1,6050 @@
+[
+	{
+		"filename" : "gfx/tiles/grasslands0.png",
+		"x" : 0,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 11
+	},
+	{
+		"filename" : "gfx/tiles/grasslands1.png",
+		"x" : 64,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 11
+	},
+	{
+		"filename" : "gfx/tiles/grasslands2.png",
+		"x" : 128,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands3.png",
+		"x" : 192,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands4.png",
+		"x" : 256,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands5.png",
+		"x" : 320,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands6.png",
+		"x" : 384,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands7.png",
+		"x" : 448,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands8.png",
+		"x" : 512,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands9.png",
+		"x" : 576,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands10.png",
+		"x" : 640,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands11.png",
+		"x" : 704,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands12.png",
+		"x" : 768,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands13.png",
+		"x" : 832,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands14.png",
+		"x" : 896,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands15.png",
+		"x" : 960,
+		"y" : 0,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands16.png",
+		"x" : 0,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands17.png",
+		"x" : 64,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands18.png",
+		"x" : 128,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands19.png",
+		"x" : 192,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands20.png",
+		"x" : 256,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands21.png",
+		"x" : 320,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands22.png",
+		"x" : 384,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands23.png",
+		"x" : 448,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands24.png",
+		"x" : 512,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands25.png",
+		"x" : 576,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands26.png",
+		"x" : 640,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands27.png",
+		"x" : 704,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands28.png",
+		"x" : 768,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands29.png",
+		"x" : 832,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands30.png",
+		"x" : 896,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands31.png",
+		"x" : 960,
+		"y" : 32,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands32.png",
+		"x" : 0,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands33.png",
+		"x" : 64,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands34.png",
+		"x" : 128,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands35.png",
+		"x" : 192,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands36.png",
+		"x" : 256,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands37.png",
+		"x" : 320,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands38.png",
+		"x" : 384,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands39.png",
+		"x" : 448,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands40.png",
+		"x" : 512,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands41.png",
+		"x" : 576,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands42.png",
+		"x" : 640,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands43.png",
+		"x" : 704,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands44.png",
+		"x" : 768,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands45.png",
+		"x" : 832,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands46.png",
+		"x" : 896,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands47.png",
+		"x" : 960,
+		"y" : 64,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands48.png",
+		"x" : 0,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands49.png",
+		"x" : 64,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands50.png",
+		"x" : 128,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands51.png",
+		"x" : 192,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands52.png",
+		"x" : 256,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands53.png",
+		"x" : 320,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands54.png",
+		"x" : 384,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands55.png",
+		"x" : 448,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands56.png",
+		"x" : 512,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands57.png",
+		"x" : 576,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands58.png",
+		"x" : 640,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands59.png",
+		"x" : 704,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands60.png",
+		"x" : 768,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands61.png",
+		"x" : 832,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands62.png",
+		"x" : 896,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands63.png",
+		"x" : 960,
+		"y" : 96,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands64.png",
+		"x" : 0,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands65.png",
+		"x" : 64,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands66.png",
+		"x" : 128,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands67.png",
+		"x" : 192,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands68.png",
+		"x" : 256,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands69.png",
+		"x" : 320,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands70.png",
+		"x" : 384,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands71.png",
+		"x" : 448,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands72.png",
+		"x" : 512,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands73.png",
+		"x" : 576,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands74.png",
+		"x" : 640,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands75.png",
+		"x" : 704,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands76.png",
+		"x" : 768,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands77.png",
+		"x" : 832,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands78.png",
+		"x" : 896,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands79.png",
+		"x" : 960,
+		"y" : 128,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands80.png",
+		"x" : 0,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands81.png",
+		"x" : 64,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands82.png",
+		"x" : 128,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands83.png",
+		"x" : 192,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands84.png",
+		"x" : 256,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands85.png",
+		"x" : 320,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands86.png",
+		"x" : 384,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands87.png",
+		"x" : 448,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands88.png",
+		"x" : 512,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands89.png",
+		"x" : 576,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands90.png",
+		"x" : 640,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands91.png",
+		"x" : 704,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands92.png",
+		"x" : 768,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands93.png",
+		"x" : 832,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands94.png",
+		"x" : 896,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands95.png",
+		"x" : 960,
+		"y" : 160,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands96.png",
+		"x" : 0,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands97.png",
+		"x" : 64,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands98.png",
+		"x" : 128,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands99.png",
+		"x" : 192,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands100.png",
+		"x" : 256,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands101.png",
+		"x" : 320,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands102.png",
+		"x" : 384,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands103.png",
+		"x" : 448,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands104.png",
+		"x" : 512,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands105.png",
+		"x" : 576,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands106.png",
+		"x" : 640,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands107.png",
+		"x" : 704,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands108.png",
+		"x" : 768,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands109.png",
+		"x" : 832,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands110.png",
+		"x" : 896,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands111.png",
+		"x" : 960,
+		"y" : 192,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands112.png",
+		"x" : 0,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands113.png",
+		"x" : 64,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands114.png",
+		"x" : 128,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands115.png",
+		"x" : 192,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands116.png",
+		"x" : 256,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands117.png",
+		"x" : 320,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands118.png",
+		"x" : 384,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands119.png",
+		"x" : 448,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands120.png",
+		"x" : 512,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands121.png",
+		"x" : 576,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands122.png",
+		"x" : 640,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands123.png",
+		"x" : 704,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands124.png",
+		"x" : 768,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands125.png",
+		"x" : 832,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands126.png",
+		"x" : 896,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands127.png",
+		"x" : 960,
+		"y" : 224,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands128.png",
+		"x" : 0,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands129.png",
+		"x" : 64,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands130.png",
+		"x" : 128,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands131.png",
+		"x" : 192,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands132.png",
+		"x" : 256,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands133.png",
+		"x" : 320,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands134.png",
+		"x" : 384,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands135.png",
+		"x" : 448,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands136.png",
+		"x" : 512,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands137.png",
+		"x" : 576,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands138.png",
+		"x" : 640,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands139.png",
+		"x" : 704,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands140.png",
+		"x" : 768,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands141.png",
+		"x" : 832,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands142.png",
+		"x" : 896,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands143.png",
+		"x" : 960,
+		"y" : 256,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands144.png",
+		"x" : 0,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands145.png",
+		"x" : 64,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands146.png",
+		"x" : 128,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands147.png",
+		"x" : 192,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands148.png",
+		"x" : 256,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands149.png",
+		"x" : 320,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands150.png",
+		"x" : 384,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands151.png",
+		"x" : 448,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands152.png",
+		"x" : 512,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands153.png",
+		"x" : 576,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands154.png",
+		"x" : 640,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands155.png",
+		"x" : 704,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands156.png",
+		"x" : 768,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands157.png",
+		"x" : 832,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands158.png",
+		"x" : 896,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands159.png",
+		"x" : 960,
+		"y" : 288,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands160.png",
+		"x" : 0,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands161.png",
+		"x" : 64,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands162.png",
+		"x" : 128,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands163.png",
+		"x" : 192,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands164.png",
+		"x" : 256,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands165.png",
+		"x" : 320,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands166.png",
+		"x" : 384,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands167.png",
+		"x" : 448,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands168.png",
+		"x" : 512,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands169.png",
+		"x" : 576,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands170.png",
+		"x" : 640,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands171.png",
+		"x" : 704,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands172.png",
+		"x" : 768,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands173.png",
+		"x" : 832,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands174.png",
+		"x" : 896,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands175.png",
+		"x" : 960,
+		"y" : 320,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands176.png",
+		"x" : 0,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands177.png",
+		"x" : 64,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands178.png",
+		"x" : 128,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands179.png",
+		"x" : 192,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands180.png",
+		"x" : 256,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands181.png",
+		"x" : 320,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands182.png",
+		"x" : 384,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands183.png",
+		"x" : 448,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands184.png",
+		"x" : 512,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands185.png",
+		"x" : 576,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands186.png",
+		"x" : 640,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands187.png",
+		"x" : 704,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands188.png",
+		"x" : 768,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands189.png",
+		"x" : 832,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands190.png",
+		"x" : 896,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands191.png",
+		"x" : 960,
+		"y" : 352,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands192.png",
+		"x" : 0,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands193.png",
+		"x" : 64,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands194.png",
+		"x" : 128,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands195.png",
+		"x" : 192,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands196.png",
+		"x" : 256,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands197.png",
+		"x" : 320,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands198.png",
+		"x" : 384,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands199.png",
+		"x" : 448,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands200.png",
+		"x" : 512,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands201.png",
+		"x" : 576,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands202.png",
+		"x" : 640,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands203.png",
+		"x" : 704,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands204.png",
+		"x" : 768,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands205.png",
+		"x" : 832,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands206.png",
+		"x" : 896,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands207.png",
+		"x" : 960,
+		"y" : 384,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands208.png",
+		"x" : 0,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands209.png",
+		"x" : 64,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands210.png",
+		"x" : 128,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands211.png",
+		"x" : 192,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands212.png",
+		"x" : 256,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands213.png",
+		"x" : 320,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands214.png",
+		"x" : 384,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands215.png",
+		"x" : 448,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands216.png",
+		"x" : 512,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands217.png",
+		"x" : 576,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands218.png",
+		"x" : 640,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands219.png",
+		"x" : 704,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands220.png",
+		"x" : 768,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands221.png",
+		"x" : 832,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands222.png",
+		"x" : 896,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands223.png",
+		"x" : 960,
+		"y" : 416,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands224.png",
+		"x" : 0,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands225.png",
+		"x" : 64,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands226.png",
+		"x" : 128,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands227.png",
+		"x" : 192,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands228.png",
+		"x" : 256,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands229.png",
+		"x" : 320,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands230.png",
+		"x" : 384,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands231.png",
+		"x" : 448,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands232.png",
+		"x" : 512,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands233.png",
+		"x" : 576,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands234.png",
+		"x" : 640,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands235.png",
+		"x" : 704,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands236.png",
+		"x" : 768,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands237.png",
+		"x" : 832,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands238.png",
+		"x" : 896,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands239.png",
+		"x" : 960,
+		"y" : 448,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands240.png",
+		"x" : 0,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands241.png",
+		"x" : 64,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands242.png",
+		"x" : 128,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands243.png",
+		"x" : 192,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands244.png",
+		"x" : 256,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands245.png",
+		"x" : 320,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands246.png",
+		"x" : 384,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands247.png",
+		"x" : 448,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands248.png",
+		"x" : 512,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands249.png",
+		"x" : 576,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands250.png",
+		"x" : 640,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands251.png",
+		"x" : 704,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands252.png",
+		"x" : 768,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands253.png",
+		"x" : 832,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands254.png",
+		"x" : 896,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands255.png",
+		"x" : 960,
+		"y" : 480,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands256.png",
+		"x" : 0,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands257.png",
+		"x" : 64,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands258.png",
+		"x" : 128,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands259.png",
+		"x" : 192,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands260.png",
+		"x" : 256,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands261.png",
+		"x" : 320,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands262.png",
+		"x" : 384,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands263.png",
+		"x" : 448,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands264.png",
+		"x" : 512,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands265.png",
+		"x" : 576,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands266.png",
+		"x" : 640,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands267.png",
+		"x" : 704,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands268.png",
+		"x" : 768,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands269.png",
+		"x" : 832,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands270.png",
+		"x" : 896,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands271.png",
+		"x" : 960,
+		"y" : 512,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands272.png",
+		"x" : 0,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands273.png",
+		"x" : 64,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands274.png",
+		"x" : 128,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands275.png",
+		"x" : 192,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands276.png",
+		"x" : 256,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands277.png",
+		"x" : 320,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands278.png",
+		"x" : 384,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands279.png",
+		"x" : 448,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands280.png",
+		"x" : 512,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands281.png",
+		"x" : 576,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands282.png",
+		"x" : 640,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands283.png",
+		"x" : 704,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands284.png",
+		"x" : 768,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands285.png",
+		"x" : 832,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands286.png",
+		"x" : 896,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands287.png",
+		"x" : 960,
+		"y" : 544,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands288.png",
+		"x" : 0,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands289.png",
+		"x" : 64,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands290.png",
+		"x" : 128,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands291.png",
+		"x" : 192,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands292.png",
+		"x" : 256,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands293.png",
+		"x" : 320,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands294.png",
+		"x" : 384,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands295.png",
+		"x" : 448,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands296.png",
+		"x" : 512,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands297.png",
+		"x" : 576,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands298.png",
+		"x" : 640,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands299.png",
+		"x" : 704,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands300.png",
+		"x" : 768,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands301.png",
+		"x" : 832,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands302.png",
+		"x" : 896,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands303.png",
+		"x" : 960,
+		"y" : 576,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands304.png",
+		"x" : 0,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands305.png",
+		"x" : 64,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands306.png",
+		"x" : 128,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands307.png",
+		"x" : 192,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands308.png",
+		"x" : 256,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands309.png",
+		"x" : 320,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands310.png",
+		"x" : 384,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands311.png",
+		"x" : 448,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands312.png",
+		"x" : 512,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands313.png",
+		"x" : 576,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands314.png",
+		"x" : 640,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands315.png",
+		"x" : 704,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands316.png",
+		"x" : 768,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands317.png",
+		"x" : 832,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands318.png",
+		"x" : 896,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands319.png",
+		"x" : 960,
+		"y" : 608,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands320.png",
+		"x" : 0,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands321.png",
+		"x" : 64,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands322.png",
+		"x" : 128,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands323.png",
+		"x" : 192,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands324.png",
+		"x" : 256,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands325.png",
+		"x" : 320,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands326.png",
+		"x" : 384,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands327.png",
+		"x" : 448,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands328.png",
+		"x" : 512,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands329.png",
+		"x" : 576,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands330.png",
+		"x" : 640,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands331.png",
+		"x" : 704,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands332.png",
+		"x" : 768,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands333.png",
+		"x" : 832,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands334.png",
+		"x" : 896,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands335.png",
+		"x" : 960,
+		"y" : 640,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands336.png",
+		"x" : 0,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands337.png",
+		"x" : 64,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands338.png",
+		"x" : 128,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands339.png",
+		"x" : 192,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands340.png",
+		"x" : 256,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands341.png",
+		"x" : 320,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands342.png",
+		"x" : 384,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands343.png",
+		"x" : 448,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands344.png",
+		"x" : 512,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands345.png",
+		"x" : 576,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands346.png",
+		"x" : 640,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands347.png",
+		"x" : 704,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands348.png",
+		"x" : 768,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands349.png",
+		"x" : 832,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands350.png",
+		"x" : 896,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands351.png",
+		"x" : 960,
+		"y" : 672,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands352.png",
+		"x" : 0,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands353.png",
+		"x" : 64,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands354.png",
+		"x" : 128,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands355.png",
+		"x" : 192,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands356.png",
+		"x" : 256,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands357.png",
+		"x" : 320,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands358.png",
+		"x" : 384,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands359.png",
+		"x" : 448,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands360.png",
+		"x" : 512,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands361.png",
+		"x" : 576,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands362.png",
+		"x" : 640,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands363.png",
+		"x" : 704,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands364.png",
+		"x" : 768,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands365.png",
+		"x" : 832,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands366.png",
+		"x" : 896,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands367.png",
+		"x" : 960,
+		"y" : 704,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands368.png",
+		"x" : 0,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands369.png",
+		"x" : 64,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands370.png",
+		"x" : 128,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands371.png",
+		"x" : 192,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands372.png",
+		"x" : 256,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands373.png",
+		"x" : 320,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands374.png",
+		"x" : 384,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands375.png",
+		"x" : 448,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands376.png",
+		"x" : 512,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands377.png",
+		"x" : 576,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands378.png",
+		"x" : 640,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands379.png",
+		"x" : 704,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands380.png",
+		"x" : 768,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands381.png",
+		"x" : 832,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands382.png",
+		"x" : 896,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands383.png",
+		"x" : 960,
+		"y" : 736,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands384.png",
+		"x" : 0,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands385.png",
+		"x" : 64,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands386.png",
+		"x" : 128,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands387.png",
+		"x" : 192,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands388.png",
+		"x" : 256,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands389.png",
+		"x" : 320,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands390.png",
+		"x" : 384,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands391.png",
+		"x" : 448,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands392.png",
+		"x" : 512,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands393.png",
+		"x" : 576,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands394.png",
+		"x" : 640,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands395.png",
+		"x" : 704,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands396.png",
+		"x" : 768,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands397.png",
+		"x" : 832,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands398.png",
+		"x" : 896,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands399.png",
+		"x" : 960,
+		"y" : 768,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands400.png",
+		"x" : 0,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands401.png",
+		"x" : 64,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands402.png",
+		"x" : 128,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands403.png",
+		"x" : 192,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands404.png",
+		"x" : 256,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands405.png",
+		"x" : 320,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands406.png",
+		"x" : 384,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands407.png",
+		"x" : 448,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands408.png",
+		"x" : 512,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands409.png",
+		"x" : 576,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands410.png",
+		"x" : 640,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands411.png",
+		"x" : 704,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands412.png",
+		"x" : 768,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands413.png",
+		"x" : 832,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands414.png",
+		"x" : 896,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands415.png",
+		"x" : 960,
+		"y" : 800,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands416.png",
+		"x" : 0,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands417.png",
+		"x" : 64,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands418.png",
+		"x" : 128,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands419.png",
+		"x" : 192,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands420.png",
+		"x" : 256,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands421.png",
+		"x" : 320,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands422.png",
+		"x" : 384,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands423.png",
+		"x" : 448,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands424.png",
+		"x" : 512,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands425.png",
+		"x" : 576,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands426.png",
+		"x" : 640,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands427.png",
+		"x" : 704,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands428.png",
+		"x" : 768,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands429.png",
+		"x" : 832,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands430.png",
+		"x" : 896,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands431.png",
+		"x" : 960,
+		"y" : 832,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands432.png",
+		"x" : 0,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands433.png",
+		"x" : 64,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands434.png",
+		"x" : 128,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands435.png",
+		"x" : 192,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands436.png",
+		"x" : 256,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands437.png",
+		"x" : 320,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands438.png",
+		"x" : 384,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands439.png",
+		"x" : 448,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands440.png",
+		"x" : 512,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands441.png",
+		"x" : 576,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands442.png",
+		"x" : 640,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands443.png",
+		"x" : 704,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands444.png",
+		"x" : 768,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands445.png",
+		"x" : 832,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands446.png",
+		"x" : 896,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands447.png",
+		"x" : 960,
+		"y" : 864,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands448.png",
+		"x" : 0,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands449.png",
+		"x" : 64,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands450.png",
+		"x" : 128,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands451.png",
+		"x" : 192,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands452.png",
+		"x" : 256,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands453.png",
+		"x" : 320,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands454.png",
+		"x" : 384,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands455.png",
+		"x" : 448,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands456.png",
+		"x" : 512,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands457.png",
+		"x" : 576,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands458.png",
+		"x" : 640,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands459.png",
+		"x" : 704,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands460.png",
+		"x" : 768,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands461.png",
+		"x" : 832,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands462.png",
+		"x" : 896,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands463.png",
+		"x" : 960,
+		"y" : 896,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands464.png",
+		"x" : 0,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands465.png",
+		"x" : 64,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands466.png",
+		"x" : 128,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands467.png",
+		"x" : 192,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands468.png",
+		"x" : 256,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands469.png",
+		"x" : 320,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands470.png",
+		"x" : 384,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands471.png",
+		"x" : 448,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands472.png",
+		"x" : 512,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands473.png",
+		"x" : 576,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands474.png",
+		"x" : 640,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands475.png",
+		"x" : 704,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands476.png",
+		"x" : 768,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands477.png",
+		"x" : 832,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands478.png",
+		"x" : 896,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands479.png",
+		"x" : 960,
+		"y" : 928,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands480.png",
+		"x" : 0,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands481.png",
+		"x" : 64,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands482.png",
+		"x" : 128,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands483.png",
+		"x" : 192,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands484.png",
+		"x" : 256,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands485.png",
+		"x" : 320,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands486.png",
+		"x" : 384,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands487.png",
+		"x" : 448,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands488.png",
+		"x" : 512,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands489.png",
+		"x" : 576,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands490.png",
+		"x" : 640,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands491.png",
+		"x" : 704,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands492.png",
+		"x" : 768,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands493.png",
+		"x" : 832,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands494.png",
+		"x" : 896,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands495.png",
+		"x" : 960,
+		"y" : 960,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands496.png",
+		"x" : 0,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands497.png",
+		"x" : 64,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands498.png",
+		"x" : 128,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands499.png",
+		"x" : 192,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands500.png",
+		"x" : 256,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands501.png",
+		"x" : 320,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands502.png",
+		"x" : 384,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands503.png",
+		"x" : 448,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands504.png",
+		"x" : 512,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands505.png",
+		"x" : 576,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands506.png",
+		"x" : 640,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands507.png",
+		"x" : 704,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands508.png",
+		"x" : 768,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands509.png",
+		"x" : 832,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands510.png",
+		"x" : 896,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands511.png",
+		"x" : 960,
+		"y" : 992,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands512.png",
+		"x" : 0,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands513.png",
+		"x" : 64,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands514.png",
+		"x" : 128,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands515.png",
+		"x" : 192,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands516.png",
+		"x" : 256,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands517.png",
+		"x" : 320,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands518.png",
+		"x" : 384,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands519.png",
+		"x" : 448,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands520.png",
+		"x" : 512,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands521.png",
+		"x" : 576,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands522.png",
+		"x" : 640,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands523.png",
+		"x" : 704,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands524.png",
+		"x" : 768,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands525.png",
+		"x" : 832,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands526.png",
+		"x" : 896,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands527.png",
+		"x" : 960,
+		"y" : 1024,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands528.png",
+		"x" : 0,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands529.png",
+		"x" : 64,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands530.png",
+		"x" : 128,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands531.png",
+		"x" : 192,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands532.png",
+		"x" : 256,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands533.png",
+		"x" : 320,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands534.png",
+		"x" : 384,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands535.png",
+		"x" : 448,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands536.png",
+		"x" : 512,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands537.png",
+		"x" : 576,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands538.png",
+		"x" : 640,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands539.png",
+		"x" : 704,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands540.png",
+		"x" : 768,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands541.png",
+		"x" : 832,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands542.png",
+		"x" : 896,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands543.png",
+		"x" : 960,
+		"y" : 1056,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands544.png",
+		"x" : 0,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands545.png",
+		"x" : 64,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands546.png",
+		"x" : 128,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands547.png",
+		"x" : 192,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands548.png",
+		"x" : 256,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands549.png",
+		"x" : 320,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands550.png",
+		"x" : 384,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands551.png",
+		"x" : 448,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands552.png",
+		"x" : 512,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands553.png",
+		"x" : 576,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands554.png",
+		"x" : 640,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands555.png",
+		"x" : 704,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands556.png",
+		"x" : 768,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands557.png",
+		"x" : 832,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands558.png",
+		"x" : 896,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands559.png",
+		"x" : 960,
+		"y" : 1088,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands560.png",
+		"x" : 0,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands561.png",
+		"x" : 64,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands562.png",
+		"x" : 128,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands563.png",
+		"x" : 192,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands564.png",
+		"x" : 256,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands565.png",
+		"x" : 320,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands566.png",
+		"x" : 384,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands567.png",
+		"x" : 448,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands568.png",
+		"x" : 512,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands569.png",
+		"x" : 576,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands570.png",
+		"x" : 640,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands571.png",
+		"x" : 704,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands572.png",
+		"x" : 768,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands573.png",
+		"x" : 832,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands574.png",
+		"x" : 896,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands575.png",
+		"x" : 960,
+		"y" : 1120,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands576.png",
+		"x" : 0,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands577.png",
+		"x" : 64,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands578.png",
+		"x" : 128,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands579.png",
+		"x" : 192,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands580.png",
+		"x" : 256,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands581.png",
+		"x" : 320,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands582.png",
+		"x" : 384,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands583.png",
+		"x" : 448,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands584.png",
+		"x" : 512,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands585.png",
+		"x" : 576,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands586.png",
+		"x" : 640,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands587.png",
+		"x" : 704,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands588.png",
+		"x" : 768,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands589.png",
+		"x" : 832,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands590.png",
+		"x" : 896,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands591.png",
+		"x" : 960,
+		"y" : 1152,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands592.png",
+		"x" : 0,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands593.png",
+		"x" : 64,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands594.png",
+		"x" : 128,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands595.png",
+		"x" : 192,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands596.png",
+		"x" : 256,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands597.png",
+		"x" : 320,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands598.png",
+		"x" : 384,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands599.png",
+		"x" : 448,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands600.png",
+		"x" : 512,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands601.png",
+		"x" : 576,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands602.png",
+		"x" : 640,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands603.png",
+		"x" : 704,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands604.png",
+		"x" : 768,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands605.png",
+		"x" : 832,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands606.png",
+		"x" : 896,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands607.png",
+		"x" : 960,
+		"y" : 1184,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands608.png",
+		"x" : 0,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands609.png",
+		"x" : 64,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands610.png",
+		"x" : 128,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands611.png",
+		"x" : 192,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands612.png",
+		"x" : 256,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands613.png",
+		"x" : 320,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands614.png",
+		"x" : 384,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands615.png",
+		"x" : 448,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands616.png",
+		"x" : 512,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands617.png",
+		"x" : 576,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands618.png",
+		"x" : 640,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands619.png",
+		"x" : 704,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands620.png",
+		"x" : 768,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands621.png",
+		"x" : 832,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands622.png",
+		"x" : 896,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands623.png",
+		"x" : 960,
+		"y" : 1216,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands624.png",
+		"x" : 0,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands625.png",
+		"x" : 64,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands626.png",
+		"x" : 128,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands627.png",
+		"x" : 192,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands628.png",
+		"x" : 256,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands629.png",
+		"x" : 320,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands630.png",
+		"x" : 384,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands631.png",
+		"x" : 448,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands632.png",
+		"x" : 512,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands633.png",
+		"x" : 576,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands634.png",
+		"x" : 640,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands635.png",
+		"x" : 704,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands636.png",
+		"x" : 768,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands637.png",
+		"x" : 832,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands638.png",
+		"x" : 896,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands639.png",
+		"x" : 960,
+		"y" : 1248,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands640.png",
+		"x" : 0,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands641.png",
+		"x" : 64,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands642.png",
+		"x" : 128,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands643.png",
+		"x" : 192,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands644.png",
+		"x" : 256,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands645.png",
+		"x" : 320,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands646.png",
+		"x" : 384,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands647.png",
+		"x" : 448,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands648.png",
+		"x" : 512,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands649.png",
+		"x" : 576,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands650.png",
+		"x" : 640,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands651.png",
+		"x" : 704,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands652.png",
+		"x" : 768,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands653.png",
+		"x" : 832,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands654.png",
+		"x" : 896,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands655.png",
+		"x" : 960,
+		"y" : 1280,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands656.png",
+		"x" : 0,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands657.png",
+		"x" : 64,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands658.png",
+		"x" : 128,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands659.png",
+		"x" : 192,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands660.png",
+		"x" : 256,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands661.png",
+		"x" : 320,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands662.png",
+		"x" : 384,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands663.png",
+		"x" : 448,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands664.png",
+		"x" : 512,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands665.png",
+		"x" : 576,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands666.png",
+		"x" : 640,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands667.png",
+		"x" : 704,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands668.png",
+		"x" : 768,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands669.png",
+		"x" : 832,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands670.png",
+		"x" : 896,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	},
+	{
+		"filename" : "gfx/tiles/grasslands671.png",
+		"x" : 960,
+		"y" : 1312,
+		"w" : 64,
+		"h" : 32,
+		"rotated" : 0,
+		"tile" : 22
+	}
+]

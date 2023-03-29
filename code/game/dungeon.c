@@ -7,6 +7,7 @@
 #include "../system/utils.h"
 #include "../system/job.h"
 #include "../system/memory.h"
+#include "../json/cJSON.h"
 
 #include "entityFactory.h"
 #include "entity.h"
@@ -16,22 +17,111 @@
 extern Dungeon dungeon;
 extern App     app;
 
-static double   accumulator;
-static uint32_t ticks;
-static char     fpsBuf[MAX_NAME_LENGTH];
+static int walkableTiles[] = {0, 1};
+
+static inline bool isTileWalkable(int tile)
+{
+    return ((tile == walkableTiles[0]) || (tile == walkableTiles[1]));
+}
 
 static void initTile(MapTile * tile, char * spritePath, int tileType)
 {
-    tile->sprite = getSprite(spritePath);
-    tile->tile = tileType;
+    if(spritePath)
+    {
+        tile->sprite = getSprite(spritePath);
+        tile->tile = tileType;
+    }
+    else
+    {
+        tile->sprite = NULL;
+        tile->tile = TILE_NULL;
+    }
 }
 
-static inline MapTile * getTileAtRowColRaw(int row, int col)
+MapTile * getTileAtRowColLayerRaw(int row, int col, int layer)
 {
-    MapTile * result = &dungeon.map[row * MAP_WIDTH + col];
+    MapTile * result = &dungeon.map[layer * (MAP_WIDTH * MAP_HEIGHT) + row * MAP_WIDTH + col];
+    return result;
+}
+
+static MapTile * initTileAtRowColLayerRaw(int row, int col, int layer)
+{
+    MapTile * result = getTileAtRowColLayerRaw(row, col, layer);
     result->p.x = (float)col;
     result->p.y = (float)row;
     return result;
+}
+
+static void loadLevel(char *path)
+{
+    char * text = readFile(path);
+    if(text == NULL)
+    {
+        return;
+    }
+
+    cJSON * root = cJSON_Parse(text);
+
+    if(root == NULL)
+    {
+        printf("no root\n");
+        return;
+    }
+
+    cJSON * layers = cJSON_GetObjectItem(root, "layers");
+
+    if(layers == NULL)
+    {
+        printf("no layers!\n");
+        return;
+    }
+
+    char buf[64];
+    int layer = 0;
+
+    for(cJSON * node = layers->child; node != NULL; node = node->next)
+    {
+        printf("loading layer %d\n", layer);
+
+        int width = cJSON_GetObjectItem(node, "width")->valueint;
+        int height = cJSON_GetObjectItem(node, "height")->valueint;
+
+        cJSON * arr = cJSON_GetObjectItem(node, "data");
+        cJSON * node;
+
+        int tileType;
+
+        int col = 0;
+        int row = 0;
+
+        for(node = arr->child; node != NULL; node = node->next)
+        {
+            MapTile * tile = initTileAtRowColLayerRaw(row, col, layer);
+            int val = node->valueint; //tiled increments values
+            memset(buf, 0, 64);
+
+            char * spritePath;
+
+            if(val > 0)
+            {
+                tileType = (isTileWalkable(val)) ? TILE_GROUND : TILE_WALL;
+                sprintf(buf, "gfx/tiles/grasslands%d.png", val-1);
+                spritePath = buf;
+            }
+            else
+            {
+                spritePath = NULL;
+            }
+            initTile(tile, spritePath, tileType);
+
+            if (++col == width)
+            {
+                col = 0;
+                row++;
+            }
+        }
+        layer++;
+    }
 }
 
 static void createDungeon(void)
@@ -42,26 +132,7 @@ static void createDungeon(void)
     dungeon.floor = dungeon.newFloor;
     dungeon.boss = NULL;
 
-    for(int row = 0; row < MAP_HEIGHT; row++)
-    {
-        for(int col = 0; col < MAP_WIDTH; col++)
-        {
-            MapTile * tile = getTileAtRowColRaw(row, col);
-
-            if(col == row)
-            {
-                initTile(tile, "gfx/tiles/2.png", TILE_WALL);
-            }
-            else if(row == MAP_HEIGHT/2)
-            {
-                initTile(tile, "gfx/tiles/12.png", TILE_GROUND);
-            }
-            else
-            {
-                initTile(tile, "gfx/tiles/0.png", TILE_GROUND);
-            }
-        }
-    }
+    loadLevel("../data/map.tmj");
 }
 
 bool initDungeon(void)
@@ -178,7 +249,8 @@ static void tileVisibilityJob(void * context)
         Rect tileRect = {screenPos.x, screenPos.y, TILE_WIDTH, TILE_HEIGHT};
         Rect screenRect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
         
-        if(rectangleRectangleCollision(tileRect, screenRect) == true)
+        if((rectangleRectangleCollision(tileRect, screenRect) == true) && 
+           (tile->tile != TILE_NULL))
         {
             addTileToDrawList(tile, screenPos, thread);
         }
@@ -198,7 +270,12 @@ static void reset(void)
     resetEntityUpdates();
 }
 
-static void update(void)
+void renderDungeon(void)
+{
+    drawAll();
+}
+
+void updateDungeon(void)
 {
     Input * input = &app.input;
 
@@ -218,39 +295,4 @@ static void update(void)
     doEntityFirstPass();
 
     updateEntities();
-}
-
-void drawFPS(void)
-{
-    double fps = (1.0 / app.input.secElapsed);
-
-    if(ticks == 0) sprintf(fpsBuf, "FPS: %.1f", fps);
-
-    ticks++;
-    
-    if(ticks == FPS_DRAW_TICKS) ticks = 0;
-
-    app.fontScale = 1;
-
-    drawText(fpsBuf, SCREEN_WIDTH - 200, SCREEN_HEIGHT - 100, 255, 255, 255, TEXT_ALIGN_CENTER, 0);
-}
-
-void updateAndRenderDungeon(void)
-{
-    accumulator += app.input.secElapsed;
-    
-    while(accumulator > 1.0/61.0)
-    {
-        update();
-
-        accumulator -= 1.0/59.0;
-
-        if(accumulator < 0.0)
-        {
-            accumulator = 0.0;
-        }
-    }
-
-    drawAll();
-    drawFPS();
 }

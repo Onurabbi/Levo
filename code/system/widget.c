@@ -22,7 +22,6 @@ static uint32_t     numSliderWidgets;
 static double   sliderDelay;
 static double   cursorBlink;
 static bool     showCursor;
-static double   accumulator;
 
 #define SLIDER_WIDGET_OFFSET_PX 50
 
@@ -386,22 +385,14 @@ void update(void)
     clearInput(&app.input);
 }
 
-void updateAndRenderMenu(void)
+void renderMenu(void)
 {
-    accumulator += app.input.secElapsed;
-    cursorBlink += app.input.secElapsed;
-
-    while(accumulator > 1.0/61.0)
-    {
-        update();
-        accumulator -= 1.0/59.0;
-
-        if(accumulator < 0.0)
-        {
-            accumulator = 0.0;
-        }
-    }
-
     drawWidgets("pause");
+}
+
+void updateMenu(double secElapsed)
+{
+    cursorBlink += secElapsed;
+    update();
 }
 

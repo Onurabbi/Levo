@@ -1,7 +1,8 @@
 #ifndef TITLE_H_
 #define TITLE_H_
 
-void updateAndRenderTitle(void);
+void updateTitle(void);
+void renderTitle(void);
 bool initTitle(void);
 
 #endif

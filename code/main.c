@@ -25,40 +25,110 @@
 App app;
 Dungeon dungeon;
 
-static void updateAndRenderInventory(void)
+static double   accumulator;
+static uint32_t ticks;
+static char     fpsBuf[MAX_NAME_LENGTH];
+
+void drawFPS(void)
+{
+    double fps = (1.0 / app.input.secElapsed);
+
+    if(ticks == 0) sprintf(fpsBuf, "FPS: %.1f", fps);
+
+    ticks++;
+    
+    if(ticks == FPS_DRAW_TICKS) ticks = 0;
+
+    app.fontScale = 1;
+
+    drawText(fpsBuf, SCREEN_WIDTH - 200, SCREEN_HEIGHT - 100, 255, 255, 255, TEXT_ALIGN_CENTER, 0);
+}
+
+static void updateInventory(void)
+{
+
+}
+
+static void renderInventory(void)
 {
     drawText("INVENTORY", 0, 0, 255, 0, 0, TEXT_ALIGN_LEFT, 0);
 }
 
-void updateAndRender(double timeElapsedSeconds)
+static void render(void)
 {
-    handleInput(&app.input, timeElapsedSeconds);
-
-    //TODO: could calling these before update functions be slow?
-    //maybe I should separate update and renders
-    prepareScene();
-
     switch(app.gameMode)
     {
         case GAME_MODE_TITLE:
-            updateAndRenderTitle();
+            renderTitle();
             break;
         case GAME_MODE_DUNGEON:
-            updateAndRenderDungeon();
+            renderDungeon();
             break;
         case GAME_MODE_INVENTORY:
-            updateAndRenderInventory();
+            renderInventory();
             break;
         case GAME_MODE_MENU:
-            updateAndRenderMenu();
+            renderMenu();
             break;
         default:
             SDL_LogMessage(SDL_LOG_CATEGORY_ASSERT, SDL_LOG_PRIORITY_CRITICAL, "Invalid game mode!!!!!\n");
             SDL_assert(0);
             break;
     }
+}
+
+static void update(void)
+{
+    accumulator += app.input.secElapsed;
+
+    while (accumulator > 1.0/61.0)
+    {
+        double secElapsed = 1.0 / 59.0;
+
+        switch(app.gameMode)
+        {
+            case GAME_MODE_TITLE:
+                updateTitle();
+                break;
+            case GAME_MODE_DUNGEON:
+                updateDungeon();
+                break;
+            case GAME_MODE_INVENTORY:
+                updateInventory();
+                break;
+            case GAME_MODE_MENU:
+                updateMenu(secElapsed);
+                break;
+            default:
+                SDL_LogMessage(SDL_LOG_CATEGORY_ASSERT, SDL_LOG_PRIORITY_CRITICAL, "Invalid game mode!!!!!\n");
+                SDL_assert(0);
+                break;
+        }
+
+        accumulator -= secElapsed;
+        
+        if(accumulator < 0)
+        {
+            accumulator = 0;
+        }
+    }
+}
+
+void updateAndRender(double timeElapsedSeconds)
+{
+    handleInput(&app.input, timeElapsedSeconds);
+
+    prepareScene();
+
+    update();
+
+    render();
+
+    drawFPS();
+
     presentScene();
 }
+
 
 int main(int argc, char* args[])
 {
@@ -77,6 +147,7 @@ int main(int argc, char* args[])
     }
 
     app.run = true;
+    accumulator = 0.0;
 
     uint64_t currentTicks = SDL_GetPerformanceCounter();
     uint64_t lastTicks    = 0;

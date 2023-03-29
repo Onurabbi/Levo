@@ -67,7 +67,7 @@ static bool loadAtlasData(char * dataPath, SDL_Texture * spriteTexture)
             w = cJSON_GetObjectItem(node, "w")->valueint;
             h = cJSON_GetObjectItem(node, "h")->valueint;
             rotated = cJSON_GetObjectItem(node, "rotated")->valueint;
-   
+            
             STRNCPY(s->fileName, fileName, nameLen);
             s->rect.x = x;
             s->rect.y = y;
@@ -105,21 +105,24 @@ static bool initAtlas(char * texturePath, char * dataPath)
 bool initSprites(void)
 {
 #if 0
-    if(initAtlas("../assets/textures/roguelikeAtlas.png", "../data/roguelikeAtlas.json") == false)
-    {
-        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/roguelikeAtlas.png");
-        return false;
-    }
-
     if(initAtlas("../assets/textures/nordiclady.png", "../data/nordicladyatlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/nordiclady.png");
         return false;
     }
+    
+
 #endif
+
     if(initAtlas("../assets/textures/isometricAtlas.png", "../data/isometricAtlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/isometricAtlas.png");
+        return false;        
+    }
+
+    if(initAtlas("../assets/textures/grassland_tiles.png", "../data/grasslandsAtlas.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/grassland_tiles.png");
         return false;        
     }
 
