@@ -13,28 +13,34 @@ typedef struct
 
 typedef struct
 {
-    char fileName[MAX_FILENAME_LENGTH];
+    char          fileName[MAX_FILENAME_LENGTH];
     SDL_Texture * texture;
 } Texture;
 
 typedef struct
 {
-    char fileName[MAX_FILENAME_LENGTH];
+    char          fileName[MAX_FILENAME_LENGTH];
     SDL_Texture * texture;
-    SDL_Rect rect;
-    int rotated;
-    int nameLength;
+    SDL_Rect      rect;
+    int           rotated;
+    int           nameLength;
 } Sprite;
 
 typedef struct
 {
-    char     fileName[MAX_FILENAME_LENGTH];
-    uint32_t spriteIndices[MAX_ANIMATION_SPRITES];
-    uint32_t numSpriteIndices;
-    uint32_t currentSpriteIndex;
-    double   secPerFrame;
+    uint32_t frames[MAX_NUM_ANIMATION_SPRITES];
+    uint32_t numFrames;
+    double   lengthSeconds;
     double   AnimTimer;
 } Animation;
+
+typedef struct
+{
+    char           fileName[MAX_FILENAME_LENGTH];
+    Animation      animations[MAX_NUM_ANIMATIONS_PER_GROUP];
+    uint32_t       animationState;
+    uint32_t       numAnimations;
+}AnimationGroup;
 
 typedef struct
 {
@@ -44,11 +50,10 @@ typedef struct
     float       width, height;
     uint32_t    facing;
     double      angle;
-    Sprite *    sprite;
-    Animation * animation;
+    Sprite      *sprite;
     EntityType  entityType;
     uint64_t    flags;
-    void *      data;
+    void        *data;
 } Entity;
 
 typedef struct
@@ -60,8 +65,13 @@ typedef struct
 
 typedef struct 
 {
-    uint32_t health;
-    float    velocity;
+    Entity           *owner;
+    AnimationGroup   *animGroup;
+    Vec2f            dP;
+    uint32_t         facing;
+    bool             shooting;
+    uint32_t         health;
+    float            velocity;
 } Actor;
 
 typedef struct 
@@ -178,7 +188,5 @@ typedef struct
     MemoryArena permanent;
     MemoryArena transient;
 }GameMemory;
-
-
 
 #endif

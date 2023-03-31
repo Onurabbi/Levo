@@ -11,53 +11,53 @@ collision.o actor.o player.o job.o memory.o
 CC = gcc -O3 -DNDEBUG
 
 game: $(OBJECTS) 
-	$(CC) $(INCLUDE) $(LFLAGS) $(OBJECTS) -o game $(LIBS)
+	$(CC) $(OBJECTS) -o game $(LIBS)
 
 main.o: ../code/main.c $(INCLUDES)
 	$(CC) $(LFLAGS) -c ../code/main.c $(LIBS)
 
 #SYSTEM
-init.o: $(SYS_DIR)/init.c $(SYS_DIR)/init.h
+init.o: $(SYS_DIR)/init.c $(SYS_DIR)/init.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/init.c 
-texture.o: $(SYS_DIR)/texture.c $(SYS_DIR)/texture.h
+texture.o: $(SYS_DIR)/texture.c $(SYS_DIR)/texture.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/texture.c 
-draw.o: $(SYS_DIR)/draw.c $(SYS_DIR)/draw.h
+draw.o: $(SYS_DIR)/draw.c $(SYS_DIR)/draw.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/draw.c 
-asset.o: $(SYS_DIR)/atlas.c $(SYS_DIR)/asset.h
+asset.o: $(SYS_DIR)/atlas.c $(SYS_DIR)/asset.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/asset.c 
-atlas.o: $(SYS_DIR)/atlas.c $(SYS_DIR)/atlas.h
+atlas.o: $(SYS_DIR)/atlas.c $(SYS_DIR)/atlas.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/atlas.c 
-animation.o: $(SYS_DIR)/animation.c $(SYS_DIR)/animation.h
+animation.o: $(SYS_DIR)/animation.c $(SYS_DIR)/animation.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/animation.c 
-utils.o: $(SYS_DIR)/utils.c $(SYS_DIR)/utils.h
+utils.o: $(SYS_DIR)/utils.c $(SYS_DIR)/utils.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/utils.c 
-input.o: $(SYS_DIR)/input.c $(SYS_DIR)/input.h
+input.o: $(SYS_DIR)/input.c $(SYS_DIR)/input.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/input.c 
-sound.o: $(SYS_DIR)/sound.c $(SYS_DIR)/sound.h
+sound.o: $(SYS_DIR)/sound.c $(SYS_DIR)/sound.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/sound.c
-text.o: $(SYS_DIR)/text.c $(SYS_DIR)/text.h
+text.o: $(SYS_DIR)/text.c $(SYS_DIR)/text.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/text.c 
-widget.o: $(SYS_DIR)/widget.c $(SYS_DIR)/widget.h
+widget.o: $(SYS_DIR)/widget.c $(SYS_DIR)/widget.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/widget.c 
-job.o: $(SYS_DIR)/job.c $(SYS_DIR)/job.h
+job.o: $(SYS_DIR)/job.c $(SYS_DIR)/job.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/job.c 
-memory.o: $(SYS_DIR)/memory.c $(SYS_DIR)/memory.h
+memory.o: $(SYS_DIR)/memory.c $(SYS_DIR)/memory.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/memory.c 
 
 #GAME
-entity.o: $(GAME_DIR)/entity.c $(GAME_DIR)/entity.h
+entity.o: $(GAME_DIR)/entity.c $(GAME_DIR)/entity.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(GAME_DIR)/entity.c 
-entityFactory.o : $(GAME_DIR)/entityFactory.c $(GAME_DIR)/entityFactory.h
+entityFactory.o : $(GAME_DIR)/entityFactory.c $(GAME_DIR)/entityFactory.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(GAME_DIR)/entityFactory.c 
-dungeon.o: $(GAME_DIR)/dungeon.c $(GAME_DIR)/dungeon.h
+dungeon.o: $(GAME_DIR)/dungeon.c $(GAME_DIR)/dungeon.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(GAME_DIR)/dungeon.c 
-title.o: $(GAME_DIR)/title.c $(GAME_DIR)/title.h
+title.o: $(GAME_DIR)/title.c $(GAME_DIR)/title.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(GAME_DIR)/title.c 
-collision.o: $(GAME_DIR)/collision.c $(GAME_DIR)/collision.h
+collision.o: $(GAME_DIR)/collision.c $(GAME_DIR)/collision.h $(INCLUDES) 
 	$(CC) -c $(GAME_DIR)/collision.c
-actor.o: $(GAME_DIR)/actor.c $(GAME_DIR)/actor.h
+actor.o: $(GAME_DIR)/actor.c $(GAME_DIR)/actor.h $(INCLUDES) 
 	$(CC) -c $(GAME_DIR)/actor.c
-player.o: $(GAME_DIR)/player.c $(GAME_DIR)/player.h
+player.o: $(GAME_DIR)/player.c $(GAME_DIR)/player.h $(INCLUDES) 
 	$(CC) -c $(GAME_DIR)/player.c
 
 #MISC

@@ -39,17 +39,37 @@ bool pointRectangleCollisionf(Rect rect, Vec2f point)
 
 bool rectangleRectangleCollision(Rect rect1, Rect rect2)
 {
-    bool success = false;
+    float top1 = rect1.y;
+    float top2 = rect2.y;
 
-    Vec2f topLeft = {rect1.x, rect1.y};
-    Vec2f topRight = {rect1.x + rect1.w, rect1.y};
-    Vec2f bottomLeft = {rect1.x, rect1.y + rect1.h};
-    Vec2f bottomRight = {rect1.x + rect1.w, rect1.y + rect1.h};
+    float bot1 = rect1.y + rect1.h;
+    float bot2 = rect2.y + rect2.h;
 
-    success = (pointRectangleCollisionf(rect2, topLeft) ||
-               pointRectangleCollisionf(rect2, topRight) ||
-               pointRectangleCollisionf(rect2, bottomLeft) ||
-               pointRectangleCollisionf(rect2, bottomRight));
+    float left1 = rect1.x;
+    float left2 = rect2.x;
 
-    return success;
+    float right1 = rect1.x + rect1.w;
+    float right2 = rect2.x + rect2.w;
+
+    if (top1 >= bot2)
+    {
+        return false;
+    }
+
+    if (bot1 <= top2)
+    {
+        return false;
+    }
+
+    if (left1 >= right2)
+    {
+        return false;
+    }
+
+    if (right1 <= left2)
+    {
+        return false;
+    }
+
+    return true;
 }

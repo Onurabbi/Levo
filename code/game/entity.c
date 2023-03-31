@@ -17,6 +17,18 @@ extern Dungeon dungeon;
 static uint32_t * entities;
 static uint32_t   numEntities[MAX_NUM_THREADS];
 
+static inline uint32_t getEntityIndex(uint32_t i, uint32_t thread)
+{
+    uint32_t * base = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
+    return base[i];
+}
+
+static inline void setEntityIndex(uint32_t i, uint32_t thread)
+{
+    uint32_t * base = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
+    base[numEntities[thread]] = i;
+}
+
 void resetEntityUpdates(void)
 {
     memset(numEntities, 0, sizeof(uint32_t) * MAX_NUM_THREADS);
@@ -40,8 +52,7 @@ bool initEntities(void)
 
 void addEntityToUpdateList(uint32_t index, uint32_t thread)
 {
-    uint32_t * base = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
-    base[numEntities[thread]] = index;
+    setEntityIndex(index, thread);
     numEntities[thread]++;
     SDL_assert(numEntities[thread] <= MAX_ENTITY_COUNT_PER_THREAD);
 }
@@ -49,43 +60,44 @@ void addEntityToUpdateList(uint32_t index, uint32_t thread)
 void moveEntity(Entity * entity, float dx, float dy)
 {
     float newX, newY;
+
     Actor * actor = (Actor *)entity->data;
-    SDL_assert(actor !=  NULL);
     float vel = actor->velocity;
+    actor->dP.x = 0.0f;
+    actor->dP.y = 0.0f;
+    
+    if(dx > 0)
+    {
+        actor->facing = FACING_RIGHT;
+    }
+    else if (dx < 0)
+    {
+        actor->facing = FACING_LEFT;
+    }
 
     newX = entity->p.x + dx * vel;
     newY = entity->p.y + dy * vel;
 
-    if(dx > 0)
-    {
-        entity->facing = FACING_RIGHT;
-    }
-    else if (dx < 0)
-    {
-        entity->facing = FACING_LEFT;
-    }
-
     bool move = true;
 
-    Rect entityRect = {newX, newY, entity->width, entity->width};
+    Rect entityRect = {newX - entity->width/2.0f, newY - entity->width/2.0f, entity->width, entity->width};
 
-    MapTile* playerTiles[8];
-    playerTiles[0] = getTileAtRowColLayerRaw((int)newY - 1, (int)newX - 1, 1);
-    playerTiles[1] = getTileAtRowColLayerRaw((int)newY - 1, (int)newX, 1);
-    playerTiles[2] = getTileAtRowColLayerRaw((int)newY - 1, (int)newX + 1, 1);
-    playerTiles[3] = getTileAtRowColLayerRaw((int)newY, (int)newX - 1, 1);
-    playerTiles[4] = getTileAtRowColLayerRaw((int)newY, (int)newX + 1, 1);
-    playerTiles[5] = getTileAtRowColLayerRaw((int)newY + 1, (int)newX - 1, 1);
-    playerTiles[6] = getTileAtRowColLayerRaw((int)newY + 1, (int)newX, 1);
-    playerTiles[7] = getTileAtRowColLayerRaw((int)newY + 1, (int)newX + 1, 1);
+    MapTile * tiles[9];
 
-    for(int i = 0; i < 8; i++)
+    tiles[0]  = getTileAtRowColLayerRaw((int)(newY), (int)(newX), 1);
+    tiles[1]  = getTileAtRowColLayerRaw((int)(newY - 1), (int)(newX - 1), 1);
+    tiles[2]  = getTileAtRowColLayerRaw((int)(newY - 1), (int)(newX), 1);
+    tiles[3]  = getTileAtRowColLayerRaw((int)(newY - 1), (int)(newX + 1), 1);
+    tiles[4]  = getTileAtRowColLayerRaw((int)(newY), (int)(newX - 1), 1);
+    tiles[5]  = getTileAtRowColLayerRaw((int)(newY), (int)(newX + 1), 1);
+    tiles[6]  = getTileAtRowColLayerRaw((int)(newY + 1), (int)(newX - 1), 1);
+    tiles[7]  = getTileAtRowColLayerRaw((int)(newY + 1), (int)(newX), 1);
+    tiles[8]  = getTileAtRowColLayerRaw((int)(newY + 1), (int)(newX + 1), 1);
+
+    for(int i = 0; i < 9; i++)
     {
-        MapTile * tile = playerTiles[i];
-
-        Rect tileRect = {tile->p.x, tile->p.y, 0.75f, 0.75f};
-
-        if((tile->tile == TILE_WALL) && rectangleRectangleCollision(tileRect, entityRect))
+        Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 0.75f, 0.375f};
+        if((tiles[i]->tile == TILE_WALL) && rectangleRectangleCollision(tileRect, entityRect))
         {
             move = false;
         }
@@ -93,13 +105,11 @@ void moveEntity(Entity * entity, float dx, float dy)
 
     if((newX >= 0) && (newX < MAP_WIDTH) && (newY >= 0) && (newY < MAP_HEIGHT) && (move == true))
     {
-        for(int i = 0; i < MAX_NUM_THREADS; i++)
+        for(int thread = 0; thread < MAX_NUM_THREADS; thread++)
         {
-            uint32_t * base = entities + i * MAX_ENTITY_COUNT_PER_THREAD;
-
-            for(int j = 0; j < numEntities[i]; j++)
+            for(int i = 0; i < numEntities[thread]; i++)
             {
-                uint32_t index = base[j];
+                uint32_t index = getEntityIndex(i, thread);
                 Entity * collider = &dungeon.entities[index];
                 if (entity != collider)
                 {
@@ -123,6 +133,9 @@ void moveEntity(Entity * entity, float dx, float dy)
 
     if(move == true)
     {
+        actor->dP.x = dx * vel;
+        actor->dP.y = dy * vel;
+        
         entity->p.x = newX;
         entity->p.y = newY;
     }
@@ -142,12 +155,6 @@ bool isEntityAlive(Entity * entity)
 static void updateBarrel(Entity * entity)
 {
 
-}
-
-static inline uint32_t getEntityIndex(uint32_t i, uint32_t thread)
-{
-    uint32_t * base = entities + i * MAX_ENTITY_COUNT_PER_THREAD;
-    return base[i];
 }
 
 void updateEntities(void)

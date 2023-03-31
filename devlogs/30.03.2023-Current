@@ -1,0 +1,22 @@
+30.03.2023:
+============================
+Total number of hours worked: 
+    2 as of 10.30
+    11.33 - 12.16
+    15.13 - 16.20
+    17.48 - 21.10
++
+------------------------------    
+    7 hr 20 min
+Work done: 
+    -Defined animation group, animation, animation state structs.
+    -Simplified asset system interface. Size and max count aren't needed from outside the module now.
+    -Can do sprite animation now. Need to do animation trees next.
+
+30.03.2023:
+============================
+Total number of hours worked: 
+    07.11 - 07.54
+    08.28 - 11.00
+    11.45 - 13.07
+    14.45 - 

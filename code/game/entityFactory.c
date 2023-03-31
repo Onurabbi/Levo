@@ -3,7 +3,6 @@
 #include "../system/atlas.h"
 #include "../system/animation.h"
 
-
 #include "entityFactory.h"
 #include "entity.h"
 #include "actor.h"
@@ -65,7 +64,7 @@ static void initPlayer(Entity * player)
     player->angle = 0.0;
     player->width = 0.7f;
     player->height = 0.50f;
-    player->sprite = getSprite("gfx/entities/barrel.png");
+    player->sprite = getSprite("gfx/entities/heroineLeftRun1.png");
     player->flags = 0;
 
     player->flags =  BIT_SET(player->flags, ENTITY_CAN_UPDATE_BIT) | 
@@ -75,7 +74,10 @@ static void initPlayer(Entity * player)
 
     Actor * playerActor = getNewActor();
     playerActor->health = 10;
-    playerActor->velocity = 1.0f;
+    playerActor->velocity = 0.2f;
+    playerActor->animGroup = getAnimationGroup("gfx/animations/heroine.animGroup");
+    
+    playerActor->owner = player;
     player->data = playerActor;
 }
 

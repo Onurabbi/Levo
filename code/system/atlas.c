@@ -11,22 +11,22 @@ extern App app;
 
 Sprite * getSpriteByIndex(uint32_t index)
 {
-    return (Sprite *)getAssetByIndex(AT_SPRITE, index, sizeof(Sprite));
+    return (Sprite *)getAssetByIndex(AT_SPRITE, index);
 }
 
 uint32_t getSpriteIndex(char * fileName)
 {
-    return getAssetIndex(AT_SPRITE, fileName, sizeof(Sprite), MAX_NUM_SPRITES);
+    return getAssetIndex(AT_SPRITE, fileName);
 }
 
 Sprite * getSprite(char * fileName)
 {
-    return (Sprite *)getAsset(AT_SPRITE, fileName, sizeof(Sprite), MAX_NUM_SPRITES);
+    return (Sprite *)getAsset(AT_SPRITE, fileName);
 }
 
 Sprite * createSprite(char * fileName, int * new)
 {
-    return (Sprite *)createAsset(AT_SPRITE, fileName, sizeof(Sprite), (uint32_t)MAX_NUM_SPRITES, new);
+    return (Sprite *)createAsset(AT_SPRITE, fileName, new);
 }
 
 static bool loadAtlasData(char * dataPath, SDL_Texture * spriteTexture)
@@ -49,6 +49,7 @@ static bool loadAtlasData(char * dataPath, SDL_Texture * spriteTexture)
 
     if(root == NULL)
     {
+        free(text);
         return false;
     }
 
@@ -113,6 +114,12 @@ bool initSprites(void)
     
 
 #endif
+
+    if(initAtlas("../assets/textures/Heroine/clothes.png", "../data/heroineAtlas.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Herone/clothes.png");
+        return false;
+    }
 
     if(initAtlas("../assets/textures/isometricAtlas.png", "../data/isometricAtlas.json") == false)
     {

@@ -1,8 +1,10 @@
 #ifndef ANIMATION_H_
 #define ANIMATION_H_
 
-uint32_t    getAnimationIndex(char * fileName);
-Animation * getAnimation(char * fileName);
-bool        initAnimations(void);
+AnimationGroup * getAnimationGroupByIndex(uint32_t index);
+uint32_t         getAnimationGroupIndex(char * fileName);
+AnimationGroup * getAnimationGroup(char * fileName);
+AnimationGroup * createAnimationGroup(char * fileName, int * new);
+bool             initAnimations(void);
 
 #endif

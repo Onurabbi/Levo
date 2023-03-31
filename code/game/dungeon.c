@@ -64,7 +64,7 @@ static void loadLevel(char *path)
 
     if(root == NULL)
     {
-        printf("no root\n");
+        free(text);
         return;
     }
 
@@ -72,7 +72,8 @@ static void loadLevel(char *path)
 
     if(layers == NULL)
     {
-        printf("no layers!\n");
+        free(text);
+        cJSON_Delete(root);
         return;
     }
 
@@ -81,23 +82,20 @@ static void loadLevel(char *path)
 
     for(cJSON * node = layers->child; node != NULL; node = node->next)
     {
-        printf("loading layer %d\n", layer);
-
         int width = cJSON_GetObjectItem(node, "width")->valueint;
         int height = cJSON_GetObjectItem(node, "height")->valueint;
 
         cJSON * arr = cJSON_GetObjectItem(node, "data");
-        cJSON * node;
 
         int tileType;
 
         int col = 0;
         int row = 0;
 
-        for(node = arr->child; node != NULL; node = node->next)
+        for(cJSON * child = arr->child; child != NULL; child = child->next)
         {
             MapTile * tile = initTileAtRowColLayerRaw(row, col, layer);
-            int val = node->valueint; //tiled increments values
+            int val = child->valueint; //tiled increments values
             memset(buf, 0, 64);
 
             char * spritePath;
@@ -122,6 +120,8 @@ static void loadLevel(char *path)
         }
         layer++;
     }
+    free(text);
+    cJSON_Delete(root);
 }
 
 static void createDungeon(void)
@@ -132,7 +132,7 @@ static void createDungeon(void)
     dungeon.floor = dungeon.newFloor;
     dungeon.boss = NULL;
 
-    loadLevel("../data/map.tmj");
+    loadLevel("../data/test.tmj");
 }
 
 bool initDungeon(void)
@@ -195,8 +195,7 @@ bool initDungeon(void)
     e->p.y = dungeon.player->p.y + 5;
 
     app.gameMode = GAME_MODE_DUNGEON;
-
-    printf("Dungeon initialized!\n");
+    
     return true;
 }
 
@@ -221,6 +220,7 @@ static void entityFirstPassJob(void * context)
 
         if(isEntityAlive(entity) && rectangleRectangleCollision(entityRect, screenRect) == true)
         {
+            //entity visibility will be resolved later.
             addEntityToDrawList(entity, screenPos, thread);
             addEntityToUpdateList(i, thread);
         }
@@ -247,7 +247,7 @@ static void tileVisibilityJob(void * context)
         Vec2f screenPos;
         toIso(tile->p.x, tile->p.y, &screenPos.x, &screenPos.y);
         Rect tileRect = {screenPos.x, screenPos.y, TILE_WIDTH, TILE_HEIGHT};
-        Rect screenRect = {0, 0, SCREEN_WIDTH, SCREEN_HEIGHT};
+        Rect screenRect = {0, 0, SCREEN_WIDTH + TILE_WIDTH,  SCREEN_HEIGHT + TILE_HEIGHT};
         
         if((rectangleRectangleCollision(tileRect, screenRect) == true) && 
            (tile->tile != TILE_NULL))

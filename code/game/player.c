@@ -14,8 +14,21 @@ extern Dungeon dungeon;
 static Entity * projectile = NULL;
 static Vec2f projectiledP;
 
+typedef struct 
+{
+
+}AnimationUpdate;
+
+void updateActor(Entity * player)
+{
+    
+}
+
 void updatePlayer(Entity * player)
 {
+    Actor * playerActor = (Actor *)player->data;
+    playerActor->shooting = false;
+
     Input * input = &app.input;
 
     float dx = 0.0f;
@@ -45,6 +58,9 @@ void updatePlayer(Entity * player)
 
     moveEntity(player, deltaX, deltaY);
 
+    //set player sprite
+    player->sprite = getSpriteToShow(playerActor);
+
     if(projectile)
     {
         if(projectile->p.x > 0 && projectile->p.x < MAP_WIDTH && projectile->p.y > 0 && projectile->p.y < MAP_HEIGHT)
@@ -58,12 +74,8 @@ void updatePlayer(Entity * player)
 
     if(input->mouse.buttons[1] == 1)
     {
-        projectile = initEntity("Projectile");
-        projectile->p.x = player->p.x+1;
-        projectile->p.y = player->p.y+1;
-        Vec2f projectileTarget = toCartesian(app.mouseScreenPosition);
-        projectiledP.x = 1.0f;
-        projectiledP.y = 1.0f; 
+        playerActor->shooting = true;
+        printf("shooting\n");
     }
 
     if(input->mouse.buttons[2] == 1)
@@ -75,6 +87,8 @@ void updatePlayer(Entity * player)
         printf("created new barrel at: %f %f\n", barrelPos.x, barrelPos.y);
     }
 
+    //do animations
+    
     dungeon.camera.x = player->p.x - dungeon.camera.w / 2;
     dungeon.camera.y = player->p.y - dungeon.camera.h / 2;
 

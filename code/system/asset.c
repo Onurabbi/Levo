@@ -7,12 +7,14 @@
 #include "atlas.h"
 #include "texture.h"
 
-static Animation * animations;
-static uint32_t    numAnimations;
-static Sprite    * sprites;
-static uint32_t    numSprites;
-static Texture   * textures;
-static uint32_t    numTextures;
+static AnimationGroup * animationGroups;
+static uint32_t         numAnimationGroups;
+
+static Sprite *  sprites;
+static uint32_t  numSprites;
+
+static Texture * textures;
+static uint32_t  numTextures;
 
 static inline uint8_t * getAssetStore(AssetType type)
 {
@@ -26,8 +28,8 @@ static inline uint8_t * getAssetStore(AssetType type)
         case AT_SPRITE:
             result = (uint8_t *)sprites;
             break;
-        case AT_ANIMATION:
-            result = (uint8_t *)animations;
+        case AT_ANIMATION_GROUP:
+            result = (uint8_t *)animationGroups;
             break;
         default:
             result = NULL;
@@ -48,26 +50,75 @@ static void incrementAssetCount(AssetType type)
             numSprites++;
             SDL_assert(numSprites <= MAX_NUM_SPRITES);
             break;
-        case AT_ANIMATION:
-            numAnimations++;
-            SDL_assert(numAnimations <= MAX_NUM_ANIMATIONS);
+        case AT_ANIMATION_GROUP:
+            numAnimationGroups++;
+            SDL_assert(numAnimationGroups <= MAX_NUM_ANIMATION_GROUPS);
             break;
         default:
             break;
     }
 }
 
-uint8_t * getAssetByIndex(AssetType assetType, uint32_t index, size_t size)
+static size_t getAssetSize(AssetType type)
+{
+    size_t result = 0;
+
+    switch(type)
+    {
+        case AT_TEXTURE:
+            result = sizeof(Texture);
+            break;
+        case AT_SPRITE:
+            result = sizeof(Sprite);
+            break;
+        case AT_ANIMATION_GROUP:
+            result = sizeof(AnimationGroup);
+            break;
+        default:
+            break;
+    }
+
+    return result;
+}
+
+static uint32_t getMaxAssetCount(AssetType type)
+{
+    uint32_t result = 0;
+
+    switch(type)
+    {
+        case AT_TEXTURE:
+            result = MAX_NUM_TEXTURES;
+            break;
+        case AT_SPRITE:
+            result = MAX_NUM_SPRITES;
+            break;
+        case AT_ANIMATION_GROUP:
+            result = MAX_NUM_ANIMATION_GROUPS;
+            break;
+        default:
+            break;
+    }
+
+    return result;   
+}
+
+uint8_t * getAssetByIndex(AssetType assetType, uint32_t index)
 {
     uint8_t * assetStore = getAssetStore(assetType);
+    size_t size = getAssetSize(assetType);
     return (assetStore + index * size);
 }
 
-uint8_t * getAsset(AssetType assetType, char * fileName, size_t size, uint32_t maxCount)
+uint8_t * getAsset(AssetType assetType, char * fileName)
 {
     uint8_t * result;
 
     uint8_t * assetStore = getAssetStore(assetType);
+
+    size_t size = getAssetSize(assetType);
+
+    uint32_t maxCount = getMaxAssetCount(assetType);
 
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
 
@@ -84,11 +135,15 @@ uint8_t * getAsset(AssetType assetType, char * fileName, size_t size, uint32_t m
     return NULL;
 }
 
-uint8_t * createAsset(AssetType assetType, char * fileName, size_t size, uint32_t maxCount, int *new)
+uint8_t * createAsset(AssetType assetType, char * fileName, int *new)
 {
     uint8_t * result;
 
     uint8_t * assetStore = getAssetStore(assetType);
+
+    size_t size = getAssetSize(assetType);
+
+    uint32_t maxCount = getMaxAssetCount(assetType);
 
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
 
@@ -113,10 +168,14 @@ uint8_t * createAsset(AssetType assetType, char * fileName, size_t size, uint32_
     return NULL;
 }
 
-uint32_t getAssetIndex(AssetType assetType, char * fileName, size_t size, uint32_t maxCount)
+uint32_t getAssetIndex(AssetType assetType, char * fileName)
 {
     uint8_t * assetStore = getAssetStore(assetType);
 
+    size_t size = getAssetSize(assetType);
+
+    uint32_t maxCount = getMaxAssetCount(assetType);
+    
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
 
     for(int index = i; index != i - 1; index++)
@@ -133,14 +192,14 @@ uint32_t getAssetIndex(AssetType assetType, char * fileName, size_t size, uint32
 
 bool initAssets(void)
 {
-    animations = allocatePermanentMemory(MAX_NUM_ANIMATIONS * sizeof(Animation));
+    animationGroups = allocatePermanentMemory(MAX_NUM_ANIMATION_GROUPS * sizeof(AnimationGroup));
 
-    if(animations == NULL)
+    if(animationGroups == NULL)
     {
         return false;
     }
 
-    numAnimations = 0;
+    numAnimationGroups = 0;
 
     sprites = allocatePermanentMemory(MAX_NUM_SPRITES * sizeof(Sprite));
 

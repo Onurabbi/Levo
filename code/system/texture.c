@@ -10,22 +10,22 @@ extern App app;
 
 Texture * getTextureByIndex(uint32_t index)
 {
-    return (Texture *)getAssetByIndex(AT_TEXTURE, index, sizeof(Texture));
+    return (Texture *)getAssetByIndex(AT_TEXTURE, index);
 }
 
 uint32_t getTextureIndex(char * fileName)
 {
-    return getAssetIndex(AT_TEXTURE, fileName, sizeof(Texture), MAX_NUM_TEXTURES);
+    return getAssetIndex(AT_TEXTURE, fileName);
 }
 
 Texture * getTexture(char * fileName)
 {
-    return (Texture *)getAsset(AT_TEXTURE, fileName, sizeof(Texture), MAX_NUM_TEXTURES);
+    return (Texture *)getAsset(AT_TEXTURE, fileName);
 }
 
 Texture * createTexture(char * fileName, int * new)
 {
-    return (Texture *)createAsset(AT_TEXTURE, fileName, sizeof(Texture), MAX_NUM_TEXTURES, new);
+    return (Texture *)createAsset(AT_TEXTURE, fileName, new);
 }
 
 SDL_Texture * toTexture(SDL_Surface * surface, bool destroySurface)
