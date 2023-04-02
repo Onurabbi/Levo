@@ -31,7 +31,7 @@ static char     fpsBuf[MAX_NAME_LENGTH];
 
 void drawFPS(void)
 {
-    if(ticks == 0) sprintf(fpsBuf, "Ms per Frame: %.3f", 1.0f / app.input.secElapsed);
+    if(ticks == 0) sprintf(fpsBuf, "FPS: %.1f", 1.0f / app.input.secElapsed);
 
     ticks++;
     

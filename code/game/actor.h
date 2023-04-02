@@ -2,6 +2,6 @@
 #define ACTOR_H_
 
 Actor *  getNewActor(void);
-EntityVisibleSprites getSpriteToShow(Actor * actor);
+void getSpritesToShow(Actor * actor);
 
 #endif

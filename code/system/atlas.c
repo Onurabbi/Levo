@@ -125,6 +125,18 @@ bool initSprites(void)
         return false;
     }
 
+    if(initAtlas("../assets/textures/Heroine/shield.png", "../data/shieldAtlas.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/shield.png");
+        return false;
+    }
+
+    if(initAtlas("../assets/textures/Heroine/longsword.png", "../data/longswordAtlas.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/longsword.png");
+        return false;
+    }
+
     if(initAtlas("../assets/textures/isometricAtlas.png", "../data/isometricAtlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/isometricAtlas.png");

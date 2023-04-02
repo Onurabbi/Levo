@@ -11,6 +11,12 @@ typedef struct
     int x,y;
 }Vec2i;
 
+typedef struct 
+{
+    Vec2f origin;
+    Vec2f dir;
+}Ray;
+
 typedef struct
 {
     char          fileName[MAX_FILENAME_LENGTH];
@@ -44,22 +50,21 @@ typedef struct
 
 typedef struct 
 {
-    Sprite *head;
-    Sprite *body;
+    Sprite * sprites[MAX_DRAWABLES_PER_ENTITY];
+    uint32_t drawableCount;
 }EntityVisibleSprites;
 
 typedef struct
 {
-    uint32_t    id;
-    uint32_t    entityIndex;
-    Vec2f       p;
-    float       width, height;
-    double      angle;
-    Sprite      *sprites[MAX_DRAWABLES_PER_ENTITY];
-    uint32_t    numDrawables;
-    EntityType  entityType;
-    uint64_t    flags;
-    void        *data;
+    uint32_t             id;
+    uint32_t             entityIndex;
+    Vec2f                p;
+    float                width, height;
+    double               angle;
+    EntityVisibleSprites entitySprites;
+    EntityType           entityType;
+    uint64_t             flags;
+    void                 *data;
 } Entity;
 
 typedef struct

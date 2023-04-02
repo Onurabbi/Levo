@@ -4,6 +4,7 @@
 #include "../system/input.h"
 #include "../system/utils.h"
 #include "../system/sound.h"
+#include "../system/ray.h"
 
 #include "entityFactory.h"
 #include "player.h"
@@ -64,11 +65,7 @@ void updatePlayer(Entity * player)
         moveEntity(player, deltaX, deltaY);
     }
 
-    EntityVisibleSprites spritesToShow = getSpriteToShow(playerActor);
-    
-    player->sprites[HEAD] = spritesToShow.head;
-    player->sprites[BODY] = spritesToShow.body;
-    
+    getSpritesToShow(playerActor);
 
     if(projectile)
     {
@@ -99,6 +96,16 @@ void updatePlayer(Entity * player)
 
     dungeon.camera.x = player->p.x - dungeon.camera.w / 2;
     dungeon.camera.y = player->p.y - dungeon.camera.h / 2;
-
+    Vec2f rayDir = {1.0f, 0.0f};
+    Ray playerRay = {player->p, rayDir};
+    float t;
+    for(int i = 1; i < dungeon.numEntities; i++)
+    {
+        if (rayCircleIntersection(playerRay, dungeon.entities[i].p, 1.0f, &t) == true)
+        {
+            //entity hit
+            printf("entity hit: %d at t: %f\n", i, t);
+        }
+    }
     clearInput(&app.input);
 }

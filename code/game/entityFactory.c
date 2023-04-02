@@ -50,8 +50,8 @@ static void initProjectile(Entity * projectile)
     projectile->angle = 0.0;
     projectile->width = 0.375f;
     projectile->height = 0.50f;
-    projectile->sprites[0] = getSprite("gfx/entities/knife1.png");
-    projectile->numDrawables = 1;
+    projectile->entitySprites.sprites[0] = getSprite("gfx/entities/knife1.png");
+    projectile->entitySprites.drawableCount = 1;
 
     projectile->flags = 0;
 
@@ -67,9 +67,13 @@ static void initPlayer(Entity * player)
     player->width = 0.7f;
     player->height = 0.50f;
     player->flags = 0;
-    player->sprites[HEAD] = getSprite("gfx/entities/heroineLeftIdle1.png");
-    player->sprites[BODY] = getSprite("gfx/entities/headLongLeftIdle1.png");
-    player->numDrawables = 2;
+    
+    player->entitySprites.sprites[HEAD] = getSprite("gfx/entities/heroineLeftIdle1.png");
+    player->entitySprites.sprites[BODY] = getSprite("gfx/entities/headLongLeftIdle1.png");
+    player->entitySprites.sprites[OFFHAND] = getSprite("gfx/entities/shieldLeftIdle1.png");
+    player->entitySprites.sprites[WEAPON_HAND] = getSprite("gfx/entities/longswordLeftIdle1.png");
+    
+    player->entitySprites.drawableCount = MAX_DRAWABLES_PER_ENTITY;
 
     player->flags =  BIT_SET(player->flags, ENTITY_CAN_UPDATE_BIT) | 
                      BIT_SET(player->flags, ENTITY_CAN_COLLIDE_BIT) |
@@ -94,8 +98,8 @@ static void initBarrel(Entity * barrel)
     barrel->angle = 0.0;
     barrel->width = 0.7f;
     barrel->height = 0.50f;
-    barrel->sprites[0] = getSprite("gfx/entities/barrel.png");
-    barrel->numDrawables = 1;
+    barrel->entitySprites.sprites[0] = getSprite("gfx/entities/barrel.png");
+    barrel->entitySprites.drawableCount = 1;
     
     barrel->flags = 0;
     barrel->flags =  BIT_SET(barrel->flags, ENTITY_CAN_UPDATE_BIT) | 
@@ -113,8 +117,8 @@ static void initTree(Entity * tree)
     tree->angle = 0.0;
     tree->width = 0.75f;
     tree->height = 0.75f;
-    tree->sprites[0] = getSprite("gfx/entities/tree1.png");
-    tree->numDrawables = 1;
+    tree->entitySprites.sprites[0] = getSprite("gfx/entities/tree1.png");
+    tree->entitySprites.drawableCount = 1;
 
     tree->data = NULL;
 }

@@ -7,17 +7,25 @@
 			{
 				"filename" : "gfx/animations/heroineLeftIdle.anim",
 				"numframes" : 4,
-				"lengthseconds" : 0.75,
+				"lengthseconds" : 2.00,
 				"frames" :
 				[
 					"gfx/entities/heroineLeftIdle1.png",
 					"gfx/entities/headLongLeftIdle1.png",
+					"gfx/entities/shieldLeftIdle1.png",
+					"gfx/entities/longswordLeftIdle1.png",
 					"gfx/entities/heroineLeftIdle2.png",
 					"gfx/entities/headLongLeftIdle2.png",
+					"gfx/entities/shieldLeftIdle2.png",
+					"gfx/entities/longswordLeftIdle2.png",
 					"gfx/entities/heroineLeftIdle3.png",
 					"gfx/entities/headLongLeftIdle3.png",
+					"gfx/entities/shieldLeftIdle3.png",
+					"gfx/entities/longswordLeftIdle3.png",
 					"gfx/entities/heroineLeftIdle4.png",
-					"gfx/entities/headLongLeftIdle4.png"
+					"gfx/entities/headLongLeftIdle4.png",
+					"gfx/entities/shieldLeftIdle4.png",
+					"gfx/entities/longswordLeftIdle4.png"
 				]
 			},
 			{
@@ -28,20 +36,36 @@
 				[
 					"gfx/entities/heroineLeftRun1.png",
 					"gfx/entities/headLongLeftRun1.png",
+					"gfx/entities/shieldLeftRun1.png",
+					"gfx/entities/longswordLeftRun1.png",
 					"gfx/entities/heroineLeftRun2.png",
 					"gfx/entities/headLongLeftRun2.png",
+					"gfx/entities/shieldLeftRun2.png",
+					"gfx/entities/longswordLeftRun2.png",
 					"gfx/entities/heroineLeftRun3.png",
 					"gfx/entities/headLongLeftRun3.png",
+					"gfx/entities/shieldLeftRun3.png",
+					"gfx/entities/longswordLeftRun3.png",
 					"gfx/entities/heroineLeftRun4.png",
 					"gfx/entities/headLongLeftRun4.png",
+					"gfx/entities/shieldLeftRun4.png",
+					"gfx/entities/longswordLeftRun4.png",
 					"gfx/entities/heroineLeftRun5.png",
 					"gfx/entities/headLongLeftRun5.png",
+					"gfx/entities/shieldLeftRun5.png",
+					"gfx/entities/longswordLeftRun5.png",
 					"gfx/entities/heroineLeftRun6.png",
 					"gfx/entities/headLongLeftRun6.png",
+					"gfx/entities/shieldLeftRun6.png",
+					"gfx/entities/longswordLeftRun6.png",
 					"gfx/entities/heroineLeftRun7.png",
 					"gfx/entities/headLongLeftRun7.png",
+					"gfx/entities/shieldLeftRun7.png",
+					"gfx/entities/longswordLeftRun7.png",
 					"gfx/entities/heroineLeftRun8.png",
-					"gfx/entities/headLongLeftRun8.png"
+					"gfx/entities/headLongLeftRun8.png",
+					"gfx/entities/shieldLeftRun8.png",
+					"gfx/entities/longswordLeftRun8.png"
 				]
 			},
 			{
@@ -52,12 +76,20 @@
 				[
 					"gfx/entities/heroineLeftMelee1.png",
 					"gfx/entities/headLongLeftMelee1.png",
+					"gfx/entities/shieldLeftMelee1.png",
+					"gfx/entities/longswordLeftMelee1.png",
 					"gfx/entities/heroineLeftMelee2.png",
 					"gfx/entities/headLongLeftMelee2.png",
+					"gfx/entities/shieldLeftMelee2.png",
+					"gfx/entities/longswordLeftMelee2.png",
 					"gfx/entities/heroineLeftMelee3.png",
 					"gfx/entities/headLongLeftMelee3.png",
+					"gfx/entities/shieldLeftMelee3.png",
+					"gfx/entities/longswordLeftMelee3.png",
 					"gfx/entities/heroineLeftMelee4.png",
-					"gfx/entities/headLongLeftMelee4.png"
+					"gfx/entities/headLongLeftMelee4.png",
+					"gfx/entities/shieldLeftMelee4.png",
+					"gfx/entities/longswordLeftMelee4.png"
 				]
 			},
 			{
@@ -68,8 +100,12 @@
 				[
 					"gfx/entities/heroineLeftBlock1.png",
 					"gfx/entities/headLongLeftBlock1.png",
+					"gfx/entities/shieldLeftBlock1.png",
+					"gfx/entities/longswordLeftBlock1.png",
 					"gfx/entities/heroineLeftBlock2.png",
-					"gfx/entities/headLongLeftBlock2.png"
+					"gfx/entities/headLongLeftBlock2.png",
+					"gfx/entities/shieldLeftBlock2.png",
+					"gfx/entities/longswordLeftBlock2.png"
 				]
 			},
 			{
@@ -80,16 +116,28 @@
 				[
 					"gfx/entities/heroineLeftDeath1.png",
 					"gfx/entities/headLongLeftDeath1.png",
+					"gfx/entities/shieldLeftDeath1.png",
+					"gfx/entities/longswordLeftDeath1.png",
 					"gfx/entities/heroineLeftDeath2.png",
 					"gfx/entities/headLongLeftDeath2.png",
+					"gfx/entities/shieldLeftDeath2.png",
+					"gfx/entities/longswordLeftDeath2.png",
 					"gfx/entities/heroineLeftDeath3.png",
 					"gfx/entities/headLongLeftDeath3.png",
+					"gfx/entities/shieldLeftDeath3.png",
+					"gfx/entities/longswordLeftDeath3.png",
 					"gfx/entities/heroineLeftDeath4.png",
 					"gfx/entities/headLongLeftDeath4.png",
+					"gfx/entities/shieldLeftDeath4.png",
+					"gfx/entities/longswordLeftDeath4.png",
 					"gfx/entities/heroineLeftDeath5.png",
 					"gfx/entities/headLongLeftDeath5.png",
+					"gfx/entities/shieldLeftDeath5.png",
+					"gfx/entities/longswordLeftDeath5.png",
 					"gfx/entities/heroineLeftDeath6.png",
-					"gfx/entities/headLongLeftDeath6.png"
+					"gfx/entities/headLongLeftDeath6.png",
+					"gfx/entities/shieldLeftDeath6.png",
+					"gfx/entities/longswordLeftDeath6.png"
 				]
 			},
 			{
@@ -100,20 +148,36 @@
 				[
 					"gfx/entities/heroineLeftBowShoot1.png",
 					"gfx/entities/headLongLeftBowShoot1.png",
+					"gfx/entities/shieldLeftBowShoot1.png",
+					"gfx/entities/longswordLeftBowShoot1.png",
 					"gfx/entities/heroineLeftBowShoot2.png",
 					"gfx/entities/headLongLeftBowShoot2.png",
+					"gfx/entities/shieldLeftBowShoot2.png",
+					"gfx/entities/longswordLeftBowShoot2.png",
 					"gfx/entities/heroineLeftBowShoot3.png",
 					"gfx/entities/headLongLeftBowShoot3.png",
+					"gfx/entities/shieldLeftBowShoot3.png",
+					"gfx/entities/longswordLeftBowShoot3.png",
 					"gfx/entities/heroineLeftBowShoot4.png",
 					"gfx/entities/headLongLeftBowShoot4.png",
+					"gfx/entities/shieldLeftBowShoot4.png",
+					"gfx/entities/longswordLeftBowShoot4.png",
 					"gfx/entities/heroineLeftBowShoot5.png",
 					"gfx/entities/headLongLeftBowShoot5.png",
+					"gfx/entities/shieldLeftBowShoot5.png",
+					"gfx/entities/longswordLeftBowShoot5.png",
 					"gfx/entities/heroineLeftBowShoot6.png",
 					"gfx/entities/headLongLeftBowShoot6.png",
+					"gfx/entities/shieldLeftBowShoot6.png",
+					"gfx/entities/longswordLeftBowShoot6.png",
 					"gfx/entities/heroineLeftBowShoot7.png",
 					"gfx/entities/headLongLeftBowShoot7.png",
+					"gfx/entities/shieldLeftBowShoot7.png",
+					"gfx/entities/longswordLeftBowShoot7.png",
 					"gfx/entities/heroineLeftBowShoot8.png",
-					"gfx/entities/headLongLeftBowShoot8.png"
+					"gfx/entities/headLongLeftBowShoot8.png",
+					"gfx/entities/shieldLeftBowShoot8.png",
+					"gfx/entities/longswordLeftBowShoot8.png"
 				]
 			},
 			{
@@ -124,12 +188,20 @@
 				[
 					"gfx/entities/heroineLeftUpIdle1.png",
 					"gfx/entities/headLongLeftUpIdle1.png",
+					"gfx/entities/shieldLeftUpIdle1.png",
+					"gfx/entities/longswordLeftUpIdle1.png",
 					"gfx/entities/heroineLeftUpIdle2.png",
 					"gfx/entities/headLongLeftUpIdle2.png",
+					"gfx/entities/shieldLeftUpIdle2.png",
+					"gfx/entities/longswordLeftUpIdle2.png",
 					"gfx/entities/heroineLeftUpIdle3.png",
 					"gfx/entities/headLongLeftUpIdle3.png",
+					"gfx/entities/shieldLeftUpIdle3.png",
+					"gfx/entities/longswordLeftUpIdle3.png",
 					"gfx/entities/heroineLeftUpIdle4.png",
-					"gfx/entities/headLongLeftUpIdle4.png"
+					"gfx/entities/headLongLeftUpIdle4.png",
+					"gfx/entities/shieldLeftUpIdle4.png",
+					"gfx/entities/longswordLeftUpIdle4.png"
 				]
 			},
 			{
@@ -140,20 +212,36 @@
 				[
 					"gfx/entities/heroineLeftUpRun1.png",
 					"gfx/entities/headLongLeftUpRun1.png",
+					"gfx/entities/shieldLeftUpRun1.png",
+					"gfx/entities/longswordLeftUpRun1.png",
 					"gfx/entities/heroineLeftUpRun2.png",
 					"gfx/entities/headLongLeftUpRun2.png",
+					"gfx/entities/shieldLeftUpRun2.png",
+					"gfx/entities/longswordLeftUpRun2.png",
 					"gfx/entities/heroineLeftUpRun3.png",
 					"gfx/entities/headLongLeftUpRun3.png",
+					"gfx/entities/shieldLeftUpRun3.png",
+					"gfx/entities/longswordLeftUpRun3.png",
 					"gfx/entities/heroineLeftUpRun4.png",
 					"gfx/entities/headLongLeftUpRun4.png",
+					"gfx/entities/shieldLeftUpRun4.png",
+					"gfx/entities/longswordLeftUpRun4.png",
 					"gfx/entities/heroineLeftUpRun5.png",
 					"gfx/entities/headLongLeftUpRun5.png",
+					"gfx/entities/shieldLeftUpRun5.png",
+					"gfx/entities/longswordLeftUpRun5.png",
 					"gfx/entities/heroineLeftUpRun6.png",
 					"gfx/entities/headLongLeftUpRun6.png",
+					"gfx/entities/shieldLeftUpRun6.png",
+					"gfx/entities/longswordLeftUpRun6.png",
 					"gfx/entities/heroineLeftUpRun7.png",
 					"gfx/entities/headLongLeftUpRun7.png",
+					"gfx/entities/shieldLeftUpRun7.png",
+					"gfx/entities/longswordLeftUpRun7.png",
 					"gfx/entities/heroineLeftUpRun8.png",
-					"gfx/entities/headLongLeftUpRun8.png"
+					"gfx/entities/headLongLeftUpRun8.png",
+					"gfx/entities/shieldLeftUpRun8.png",
+					"gfx/entities/longswordLeftUpRun8.png"
 				]
 			},
 			{
@@ -164,12 +252,20 @@
 				[
 					"gfx/entities/heroineLeftUpMelee1.png",
 					"gfx/entities/headLongLeftUpMelee1.png",
+					"gfx/entities/shieldLeftUpMelee1.png",
+					"gfx/entities/longswordLeftUpMelee1.png",
 					"gfx/entities/heroineLeftUpMelee2.png",
 					"gfx/entities/headLongLeftUpMelee2.png",
+					"gfx/entities/shieldLeftUpMelee2.png",
+					"gfx/entities/longswordLeftUpMelee2.png",
 					"gfx/entities/heroineLeftUpMelee3.png",
 					"gfx/entities/headLongLeftUpMelee3.png",
+					"gfx/entities/shieldLeftUpMelee3.png",
+					"gfx/entities/longswordLeftUpMelee3.png",
 					"gfx/entities/heroineLeftUpMelee4.png",
-					"gfx/entities/headLongLeftUpMelee4.png"
+					"gfx/entities/headLongLeftUpMelee4.png",
+					"gfx/entities/shieldLeftUpMelee4.png",
+					"gfx/entities/longswordLeftUpMelee4.png"
 				]
 			},
 			{
@@ -180,8 +276,12 @@
 				[
 					"gfx/entities/heroineLeftUpBlock1.png",
 					"gfx/entities/headLongLeftUpBlock1.png",
+					"gfx/entities/shieldLeftUpBlock1.png",
+					"gfx/entities/longswordLeftUpBlock1.png",
 					"gfx/entities/heroineLeftUpBlock2.png",
-					"gfx/entities/headLongLeftUpBlock2.png"
+					"gfx/entities/headLongLeftUpBlock2.png",
+					"gfx/entities/shieldLeftUpBlock2.png",
+					"gfx/entities/longswordLeftUpBlock2.png"
 				]
 			},
 			{
@@ -192,16 +292,28 @@
 				[
 					"gfx/entities/heroineLeftUpDeath1.png",
 					"gfx/entities/headLongLeftUpDeath1.png",
+					"gfx/entities/shieldLeftUpDeath1.png",
+					"gfx/entities/longswordLeftUpDeath1.png",
 					"gfx/entities/heroineLeftUpDeath2.png",
 					"gfx/entities/headLongLeftUpDeath2.png",
+					"gfx/entities/shieldLeftUpDeath2.png",
+					"gfx/entities/longswordLeftUpDeath2.png",
 					"gfx/entities/heroineLeftUpDeath3.png",
 					"gfx/entities/headLongLeftUpDeath3.png",
+					"gfx/entities/shieldLeftUpDeath3.png",
+					"gfx/entities/longswordLeftUpDeath3.png",
 					"gfx/entities/heroineLeftUpDeath4.png",
 					"gfx/entities/headLongLeftUpDeath4.png",
+					"gfx/entities/shieldLeftUpDeath4.png",
+					"gfx/entities/longswordLeftUpDeath4.png",
 					"gfx/entities/heroineLeftUpDeath5.png",
 					"gfx/entities/headLongLeftUpDeath5.png",
+					"gfx/entities/shieldLeftUpDeath5.png",
+					"gfx/entities/longswordLeftUpDeath5.png",
 					"gfx/entities/heroineLeftUpDeath6.png",
-					"gfx/entities/headLongLeftUpDeath6.png"
+					"gfx/entities/headLongLeftUpDeath6.png",
+					"gfx/entities/shieldLeftUpDeath6.png",
+					"gfx/entities/longswordLeftUpDeath6.png"
 				]
 			},
 			{
@@ -212,20 +324,36 @@
 				[
 					"gfx/entities/heroineLeftUpBowShoot1.png",
 					"gfx/entities/headLongLeftUpBowShoot1.png",
+					"gfx/entities/shieldLeftUpBowShoot1.png",
+					"gfx/entities/longswordLeftUpBowShoot1.png",
 					"gfx/entities/heroineLeftUpBowShoot2.png",
 					"gfx/entities/headLongLeftUpBowShoot2.png",
+					"gfx/entities/shieldLeftUpBowShoot2.png",
+					"gfx/entities/longswordLeftUpBowShoot2.png",
 					"gfx/entities/heroineLeftUpBowShoot3.png",
 					"gfx/entities/headLongLeftUpBowShoot3.png",
+					"gfx/entities/shieldLeftUpBowShoot3.png",
+					"gfx/entities/longswordLeftUpBowShoot3.png",
 					"gfx/entities/heroineLeftUpBowShoot4.png",
 					"gfx/entities/headLongLeftUpBowShoot4.png",
+					"gfx/entities/shieldLeftUpBowShoot4.png",
+					"gfx/entities/longswordLeftUpBowShoot4.png",
 					"gfx/entities/heroineLeftUpBowShoot5.png",
 					"gfx/entities/headLongLeftUpBowShoot5.png",
+					"gfx/entities/shieldLeftUpBowShoot5.png",
+					"gfx/entities/longswordLeftUpBowShoot5.png",
 					"gfx/entities/heroineLeftUpBowShoot6.png",
 					"gfx/entities/headLongLeftUpBowShoot6.png",
+					"gfx/entities/shieldLeftUpBowShoot6.png",
+					"gfx/entities/longswordLeftUpBowShoot6.png",
 					"gfx/entities/heroineLeftUpBowShoot7.png",
 					"gfx/entities/headLongLeftUpBowShoot7.png",
+					"gfx/entities/shieldLeftUpBowShoot7.png",
+					"gfx/entities/longswordLeftUpBowShoot7.png",
 					"gfx/entities/heroineLeftUpBowShoot8.png",
-					"gfx/entities/headLongLeftUpBowShoot8.png"
+					"gfx/entities/headLongLeftUpBowShoot8.png",
+					"gfx/entities/shieldLeftUpBowShoot8.png",
+					"gfx/entities/longswordLeftUpBowShoot8.png"
 				]
 			},
 			{
@@ -236,12 +364,20 @@
 				[
 					"gfx/entities/heroineLeftDownIdle1.png",
 					"gfx/entities/headLongLeftDownIdle1.png",
+					"gfx/entities/shieldLeftDownIdle1.png",
+					"gfx/entities/longswordLeftDownIdle1.png",
 					"gfx/entities/heroineLeftDownIdle2.png",
 					"gfx/entities/headLongLeftDownIdle2.png",
+					"gfx/entities/shieldLeftDownIdle2.png",
+					"gfx/entities/longswordLeftDownIdle2.png",
 					"gfx/entities/heroineLeftDownIdle3.png",
 					"gfx/entities/headLongLeftDownIdle3.png",
+					"gfx/entities/shieldLeftDownIdle3.png",
+					"gfx/entities/longswordLeftDownIdle3.png",
 					"gfx/entities/heroineLeftDownIdle4.png",
-					"gfx/entities/headLongLeftDownIdle4.png"
+					"gfx/entities/headLongLeftDownIdle4.png",
+					"gfx/entities/shieldLeftDownIdle4.png",
+					"gfx/entities/longswordLeftDownIdle4.png"
 				]
 			},
 			{
@@ -252,20 +388,36 @@
 				[
 					"gfx/entities/heroineLeftDownRun1.png",
 					"gfx/entities/headLongLeftDownRun1.png",
+					"gfx/entities/shieldLeftDownRun1.png",
+					"gfx/entities/longswordLeftDownRun1.png",
 					"gfx/entities/heroineLeftDownRun2.png",
 					"gfx/entities/headLongLeftDownRun2.png",
+					"gfx/entities/shieldLeftDownRun2.png",
+					"gfx/entities/longswordLeftDownRun2.png",
 					"gfx/entities/heroineLeftDownRun3.png",
 					"gfx/entities/headLongLeftDownRun3.png",
+					"gfx/entities/shieldLeftDownRun3.png",
+					"gfx/entities/longswordLeftDownRun3.png",
 					"gfx/entities/heroineLeftDownRun4.png",
 					"gfx/entities/headLongLeftDownRun4.png",
+					"gfx/entities/shieldLeftDownRun4.png",
+					"gfx/entities/longswordLeftDownRun4.png",
 					"gfx/entities/heroineLeftDownRun5.png",
 					"gfx/entities/headLongLeftDownRun5.png",
+					"gfx/entities/shieldLeftDownRun5.png",
+					"gfx/entities/longswordLeftDownRun5.png",
 					"gfx/entities/heroineLeftDownRun6.png",
 					"gfx/entities/headLongLeftDownRun6.png",
+					"gfx/entities/shieldLeftDownRun6.png",
+					"gfx/entities/longswordLeftDownRun6.png",
 					"gfx/entities/heroineLeftDownRun7.png",
 					"gfx/entities/headLongLeftDownRun7.png",
+					"gfx/entities/shieldLeftDownRun7.png",
+					"gfx/entities/longswordLeftDownRun7.png",
 					"gfx/entities/heroineLeftDownRun8.png",
-					"gfx/entities/headLongLeftDownRun8.png"
+					"gfx/entities/headLongLeftDownRun8.png",
+					"gfx/entities/shieldLeftDownRun8.png",
+					"gfx/entities/longswordLeftDownRun8.png"
 				]
 			},
 			{
@@ -276,12 +428,20 @@
 				[
 					"gfx/entities/heroineLeftDownMelee1.png",
 					"gfx/entities/headLongLeftDownMelee1.png",
+					"gfx/entities/shieldLeftDownMelee1.png",
+					"gfx/entities/longswordLeftDownMelee1.png",
 					"gfx/entities/heroineLeftDownMelee2.png",
 					"gfx/entities/headLongLeftDownMelee2.png",
+					"gfx/entities/shieldLeftDownMelee2.png",
+					"gfx/entities/longswordLeftDownMelee2.png",
 					"gfx/entities/heroineLeftDownMelee3.png",
 					"gfx/entities/headLongLeftDownMelee3.png",
+					"gfx/entities/shieldLeftDownMelee3.png",
+					"gfx/entities/longswordLeftDownMelee3.png",
 					"gfx/entities/heroineLeftDownMelee4.png",
-					"gfx/entities/headLongLeftDownMelee4.png"
+					"gfx/entities/headLongLeftDownMelee4.png",
+					"gfx/entities/shieldLeftDownMelee4.png",
+					"gfx/entities/longswordLeftDownMelee4.png"
 				]
 			},
 			{
@@ -292,8 +452,12 @@
 				[
 					"gfx/entities/heroineLeftDownBlock1.png",
 					"gfx/entities/headLongLeftDownBlock1.png",
+					"gfx/entities/shieldLeftDownBlock1.png",
+					"gfx/entities/longswordLeftDownBlock1.png",
 					"gfx/entities/heroineLeftDownBlock2.png",
-					"gfx/entities/headLongLeftDownBlock2.png"
+					"gfx/entities/headLongLeftDownBlock2.png",
+					"gfx/entities/shieldLeftDownBlock2.png",
+					"gfx/entities/longswordLeftDownBlock2.png"
 				]
 			},
 			{
@@ -304,16 +468,28 @@
 				[
 					"gfx/entities/heroineLeftDownDeath1.png",
 					"gfx/entities/headLongLeftDownDeath1.png",
+					"gfx/entities/shieldLeftDownDeath1.png",
+					"gfx/entities/longswordLeftDownDeath1.png",
 					"gfx/entities/heroineLeftDownDeath2.png",
 					"gfx/entities/headLongLeftDownDeath2.png",
+					"gfx/entities/shieldLeftDownDeath2.png",
+					"gfx/entities/longswordLeftDownDeath2.png",
 					"gfx/entities/heroineLeftDownDeath3.png",
 					"gfx/entities/headLongLeftDownDeath3.png",
+					"gfx/entities/shieldLeftDownDeath3.png",
+					"gfx/entities/longswordLeftDownDeath3.png",
 					"gfx/entities/heroineLeftDownDeath4.png",
 					"gfx/entities/headLongLeftDownDeath4.png",
+					"gfx/entities/shieldLeftDownDeath4.png",
+					"gfx/entities/longswordLeftDownDeath4.png",
 					"gfx/entities/heroineLeftDownDeath5.png",
 					"gfx/entities/headLongLeftDownDeath5.png",
+					"gfx/entities/shieldLeftDownDeath5.png",
+					"gfx/entities/longswordLeftDownDeath5.png",
 					"gfx/entities/heroineLeftDownDeath6.png",
-					"gfx/entities/headLongLeftDownDeath6.png"
+					"gfx/entities/headLongLeftDownDeath6.png",
+					"gfx/entities/shieldLeftDownDeath6.png",
+					"gfx/entities/longswordLeftDownDeath6.png"
 				]
 			},
 			{
@@ -324,20 +500,36 @@
 				[
 					"gfx/entities/heroineLeftDownBowShoot1.png",
 					"gfx/entities/headLongLeftDownBowShoot1.png",
+					"gfx/entities/shieldLeftDownBowShoot1.png",
+					"gfx/entities/longswordLeftDownBowShoot1.png",
 					"gfx/entities/heroineLeftDownBowShoot2.png",
 					"gfx/entities/headLongLeftDownBowShoot2.png",
+					"gfx/entities/shieldLeftDownBowShoot2.png",
+					"gfx/entities/longswordLeftDownBowShoot2.png",
 					"gfx/entities/heroineLeftDownBowShoot3.png",
 					"gfx/entities/headLongLeftDownBowShoot3.png",
+					"gfx/entities/shieldLeftDownBowShoot3.png",
+					"gfx/entities/longswordLeftDownBowShoot3.png",
 					"gfx/entities/heroineLeftDownBowShoot4.png",
 					"gfx/entities/headLongLeftDownBowShoot4.png",
+					"gfx/entities/shieldLeftDownBowShoot4.png",
+					"gfx/entities/longswordLeftDownBowShoot4.png",
 					"gfx/entities/heroineLeftDownBowShoot5.png",
 					"gfx/entities/headLongLeftDownBowShoot5.png",
+					"gfx/entities/shieldLeftDownBowShoot5.png",
+					"gfx/entities/longswordLeftDownBowShoot5.png",
 					"gfx/entities/heroineLeftDownBowShoot6.png",
 					"gfx/entities/headLongLeftDownBowShoot6.png",
+					"gfx/entities/shieldLeftDownBowShoot6.png",
+					"gfx/entities/longswordLeftDownBowShoot6.png",
 					"gfx/entities/heroineLeftDownBowShoot7.png",
 					"gfx/entities/headLongLeftDownBowShoot7.png",
+					"gfx/entities/shieldLeftDownBowShoot7.png",
+					"gfx/entities/longswordLeftDownBowShoot7.png",
 					"gfx/entities/heroineLeftDownBowShoot8.png",
-					"gfx/entities/headLongLeftDownBowShoot8.png"
+					"gfx/entities/headLongLeftDownBowShoot8.png",
+					"gfx/entities/shieldLeftDownBowShoot8.png",
+					"gfx/entities/longswordLeftDownBowShoot8.png"
 				]
 			},
 			{
@@ -348,12 +540,20 @@
 				[
 					"gfx/entities/heroineRightIdle1.png",
 					"gfx/entities/headLongRightIdle1.png",
+					"gfx/entities/shieldRightIdle1.png",
+					"gfx/entities/longswordRightIdle1.png",
 					"gfx/entities/heroineRightIdle2.png",
 					"gfx/entities/headLongRightIdle2.png",
+					"gfx/entities/shieldRightIdle2.png",
+					"gfx/entities/longswordRightIdle2.png",
 					"gfx/entities/heroineRightIdle3.png",
 					"gfx/entities/headLongRightIdle3.png",
+					"gfx/entities/shieldRightIdle3.png",
+					"gfx/entities/longswordRightIdle3.png",
 					"gfx/entities/heroineRightIdle4.png",
-					"gfx/entities/headLongRightIdle4.png"
+					"gfx/entities/headLongRightIdle4.png",
+					"gfx/entities/shieldRightIdle4.png",
+					"gfx/entities/longswordRightIdle4.png"
 				]
 			},
 			{
@@ -364,20 +564,36 @@
 				[
 					"gfx/entities/heroineRightRun1.png",
 					"gfx/entities/headLongRightRun1.png",
+					"gfx/entities/shieldRightRun1.png",
+					"gfx/entities/longswordRightRun1.png",
 					"gfx/entities/heroineRightRun2.png",
 					"gfx/entities/headLongRightRun2.png",
+					"gfx/entities/shieldRightRun2.png",
+					"gfx/entities/longswordRightRun2.png",
 					"gfx/entities/heroineRightRun3.png",
 					"gfx/entities/headLongRightRun3.png",
+					"gfx/entities/shieldRightRun3.png",
+					"gfx/entities/longswordRightRun3.png",
 					"gfx/entities/heroineRightRun4.png",
 					"gfx/entities/headLongRightRun4.png",
+					"gfx/entities/shieldRightRun4.png",
+					"gfx/entities/longswordRightRun4.png",
 					"gfx/entities/heroineRightRun5.png",
 					"gfx/entities/headLongRightRun5.png",
+					"gfx/entities/shieldRightRun5.png",
+					"gfx/entities/longswordRightRun5.png",
 					"gfx/entities/heroineRightRun6.png",
 					"gfx/entities/headLongRightRun6.png",
+					"gfx/entities/shieldRightRun6.png",
+					"gfx/entities/longswordRightRun6.png",
 					"gfx/entities/heroineRightRun7.png",
 					"gfx/entities/headLongRightRun7.png",
+					"gfx/entities/shieldRightRun7.png",
+					"gfx/entities/longswordRightRun7.png",
 					"gfx/entities/heroineRightRun8.png",
-					"gfx/entities/headLongRightRun8.png"
+					"gfx/entities/headLongRightRun8.png",
+					"gfx/entities/shieldRightRun8.png",
+					"gfx/entities/longswordRightRun8.png"
 				]
 			},
 			{
@@ -388,12 +604,20 @@
 				[
 					"gfx/entities/heroineRightMelee1.png",
 					"gfx/entities/headLongRightMelee1.png",
+					"gfx/entities/shieldRightMelee1.png",
+					"gfx/entities/longswordRightMelee1.png",
 					"gfx/entities/heroineRightMelee2.png",
 					"gfx/entities/headLongRightMelee2.png",
+					"gfx/entities/shieldRightMelee2.png",
+					"gfx/entities/longswordRightMelee2.png",
 					"gfx/entities/heroineRightMelee3.png",
 					"gfx/entities/headLongRightMelee3.png",
+					"gfx/entities/shieldRightMelee3.png",
+					"gfx/entities/longswordRightMelee3.png",
 					"gfx/entities/heroineRightMelee4.png",
-					"gfx/entities/headLongRightMelee4.png"
+					"gfx/entities/headLongRightMelee4.png",
+					"gfx/entities/shieldRightMelee4.png",
+					"gfx/entities/longswordRightMelee4.png"
 				]
 			},
 			{
@@ -404,8 +628,12 @@
 				[
 					"gfx/entities/heroineRightBlock1.png",
 					"gfx/entities/headLongRightBlock1.png",
+					"gfx/entities/shieldRightBlock1.png",
+					"gfx/entities/longswordRightBlock1.png",
 					"gfx/entities/heroineRightBlock2.png",
-					"gfx/entities/headLongRightBlock2.png"
+					"gfx/entities/headLongRightBlock2.png",
+					"gfx/entities/shieldRightBlock2.png",
+					"gfx/entities/longswordRightBlock2.png"
 				]
 			},
 			{
@@ -416,16 +644,28 @@
 				[
 					"gfx/entities/heroineRightDeath1.png",
 					"gfx/entities/headLongRightDeath1.png",
+					"gfx/entities/shieldRightDeath1.png",
+					"gfx/entities/longswordRightDeath1.png",
 					"gfx/entities/heroineRightDeath2.png",
 					"gfx/entities/headLongRightDeath2.png",
+					"gfx/entities/shieldRightDeath2.png",
+					"gfx/entities/longswordRightDeath2.png",
 					"gfx/entities/heroineRightDeath3.png",
 					"gfx/entities/headLongRightDeath3.png",
+					"gfx/entities/shieldRightDeath3.png",
+					"gfx/entities/longswordRightDeath3.png",
 					"gfx/entities/heroineRightDeath4.png",
 					"gfx/entities/headLongRightDeath4.png",
+					"gfx/entities/shieldRightDeath4.png",
+					"gfx/entities/longswordRightDeath4.png",
 					"gfx/entities/heroineRightDeath5.png",
 					"gfx/entities/headLongRightDeath5.png",
+					"gfx/entities/shieldRightDeath5.png",
+					"gfx/entities/longswordRightDeath5.png",
 					"gfx/entities/heroineRightDeath6.png",
-					"gfx/entities/headLongRightDeath6.png"
+					"gfx/entities/headLongRightDeath6.png",
+					"gfx/entities/shieldRightDeath6.png",
+					"gfx/entities/longswordRightDeath6.png"
 				]
 			},
 			{
@@ -436,20 +676,36 @@
 				[
 					"gfx/entities/heroineRightBowShoot1.png",
 					"gfx/entities/headLongRightBowShoot1.png",
+					"gfx/entities/shieldRightBowShoot1.png",
+					"gfx/entities/longswordRightBowShoot1.png",
 					"gfx/entities/heroineRightBowShoot2.png",
 					"gfx/entities/headLongRightBowShoot2.png",
+					"gfx/entities/shieldRightBowShoot2.png",
+					"gfx/entities/longswordRightBowShoot2.png",
 					"gfx/entities/heroineRightBowShoot3.png",
 					"gfx/entities/headLongRightBowShoot3.png",
+					"gfx/entities/shieldRightBowShoot3.png",
+					"gfx/entities/longswordRightBowShoot3.png",
 					"gfx/entities/heroineRightBowShoot4.png",
 					"gfx/entities/headLongRightBowShoot4.png",
+					"gfx/entities/shieldRightBowShoot4.png",
+					"gfx/entities/longswordRightBowShoot4.png",
 					"gfx/entities/heroineRightBowShoot5.png",
 					"gfx/entities/headLongRightBowShoot5.png",
+					"gfx/entities/shieldRightBowShoot5.png",
+					"gfx/entities/longswordRightBowShoot5.png",
 					"gfx/entities/heroineRightBowShoot6.png",
 					"gfx/entities/headLongRightBowShoot6.png",
+					"gfx/entities/shieldRightBowShoot6.png",
+					"gfx/entities/longswordRightBowShoot6.png",
 					"gfx/entities/heroineRightBowShoot7.png",
 					"gfx/entities/headLongRightBowShoot7.png",
+					"gfx/entities/shieldRightBowShoot7.png",
+					"gfx/entities/longswordRightBowShoot7.png",
 					"gfx/entities/heroineRightBowShoot8.png",
-					"gfx/entities/headLongRightBowShoot8.png"
+					"gfx/entities/headLongRightBowShoot8.png",
+					"gfx/entities/shieldRightBowShoot8.png",
+					"gfx/entities/longswordRightBowShoot8.png"
 				]
 			},
 			{
@@ -460,12 +716,20 @@
 				[
 					"gfx/entities/heroineRightUpIdle1.png",
 					"gfx/entities/headLongRightUpIdle1.png",
+					"gfx/entities/shieldRightUpIdle1.png",
+					"gfx/entities/longswordRightUpIdle1.png",
 					"gfx/entities/heroineRightUpIdle2.png",
 					"gfx/entities/headLongRightUpIdle2.png",
+					"gfx/entities/shieldRightUpIdle2.png",
+					"gfx/entities/longswordRightUpIdle2.png",
 					"gfx/entities/heroineRightUpIdle3.png",
 					"gfx/entities/headLongRightUpIdle3.png",
+					"gfx/entities/shieldRightUpIdle3.png",
+					"gfx/entities/longswordRightUpIdle3.png",
 					"gfx/entities/heroineRightUpIdle4.png",
-					"gfx/entities/headLongRightUpIdle4.png"
+					"gfx/entities/headLongRightUpIdle4.png",
+					"gfx/entities/shieldRightUpIdle4.png",
+					"gfx/entities/longswordRightUpIdle4.png"
 				]
 			},
 			{
@@ -476,20 +740,36 @@
 				[
 					"gfx/entities/heroineRightUpRun1.png",
 					"gfx/entities/headLongRightUpRun1.png",
+					"gfx/entities/shieldRightUpRun1.png",
+					"gfx/entities/longswordRightUpRun1.png",
 					"gfx/entities/heroineRightUpRun2.png",
 					"gfx/entities/headLongRightUpRun2.png",
+					"gfx/entities/shieldRightUpRun2.png",
+					"gfx/entities/longswordRightUpRun2.png",
 					"gfx/entities/heroineRightUpRun3.png",
 					"gfx/entities/headLongRightUpRun3.png",
+					"gfx/entities/shieldRightUpRun3.png",
+					"gfx/entities/longswordRightUpRun3.png",
 					"gfx/entities/heroineRightUpRun4.png",
 					"gfx/entities/headLongRightUpRun4.png",
+					"gfx/entities/shieldRightUpRun4.png",
+					"gfx/entities/longswordRightUpRun4.png",
 					"gfx/entities/heroineRightUpRun5.png",
 					"gfx/entities/headLongRightUpRun5.png",
+					"gfx/entities/shieldRightUpRun5.png",
+					"gfx/entities/longswordRightUpRun5.png",
 					"gfx/entities/heroineRightUpRun6.png",
 					"gfx/entities/headLongRightUpRun6.png",
+					"gfx/entities/shieldRightUpRun6.png",
+					"gfx/entities/longswordRightUpRun6.png",
 					"gfx/entities/heroineRightUpRun7.png",
 					"gfx/entities/headLongRightUpRun7.png",
+					"gfx/entities/shieldRightUpRun7.png",
+					"gfx/entities/longswordRightUpRun7.png",
 					"gfx/entities/heroineRightUpRun8.png",
-					"gfx/entities/headLongRightUpRun8.png"
+					"gfx/entities/headLongRightUpRun8.png",
+					"gfx/entities/shieldRightUpRun8.png",
+					"gfx/entities/longswordRightUpRun8.png"
 				]
 			},
 			{
@@ -500,12 +780,20 @@
 				[
 					"gfx/entities/heroineRightUpMelee1.png",
 					"gfx/entities/headLongRightUpMelee1.png",
+					"gfx/entities/shieldRightUpMelee1.png",
+					"gfx/entities/longswordRightUpMelee1.png",
 					"gfx/entities/heroineRightUpMelee2.png",
 					"gfx/entities/headLongRightUpMelee2.png",
+					"gfx/entities/shieldRightUpMelee2.png",
+					"gfx/entities/longswordRightUpMelee2.png",
 					"gfx/entities/heroineRightUpMelee3.png",
 					"gfx/entities/headLongRightUpMelee3.png",
+					"gfx/entities/shieldRightUpMelee3.png",
+					"gfx/entities/longswordRightUpMelee3.png",
 					"gfx/entities/heroineRightUpMelee4.png",
-					"gfx/entities/headLongRightUpMelee4.png"
+					"gfx/entities/headLongRightUpMelee4.png",
+					"gfx/entities/shieldRightUpMelee4.png",
+					"gfx/entities/longswordRightUpMelee4.png"
 				]
 			},
 			{
@@ -516,8 +804,12 @@
 				[
 					"gfx/entities/heroineRightUpBlock1.png",
 					"gfx/entities/headLongRightUpBlock1.png",
+					"gfx/entities/shieldRightUpBlock1.png",
+					"gfx/entities/longswordRightUpBlock1.png",
 					"gfx/entities/heroineRightUpBlock2.png",
-					"gfx/entities/headLongRightUpBlock2.png"
+					"gfx/entities/headLongRightUpBlock2.png",
+					"gfx/entities/shieldRightUpBlock2.png",
+					"gfx/entities/longswordRightUpBlock2.png"
 				]
 			},
 			{
@@ -528,16 +820,28 @@
 				[
 					"gfx/entities/heroineRightUpDeath1.png",
 					"gfx/entities/headLongRightUpDeath1.png",
+					"gfx/entities/shieldRightUpDeath1.png",
+					"gfx/entities/longswordRightUpDeath1.png",
 					"gfx/entities/heroineRightUpDeath2.png",
 					"gfx/entities/headLongRightUpDeath2.png",
+					"gfx/entities/shieldRightUpDeath2.png",
+					"gfx/entities/longswordRightUpDeath2.png",
 					"gfx/entities/heroineRightUpDeath3.png",
 					"gfx/entities/headLongRightUpDeath3.png",
+					"gfx/entities/shieldRightUpDeath3.png",
+					"gfx/entities/longswordRightUpDeath3.png",
 					"gfx/entities/heroineRightUpDeath4.png",
 					"gfx/entities/headLongRightUpDeath4.png",
+					"gfx/entities/shieldRightUpDeath4.png",
+					"gfx/entities/longswordRightUpDeath4.png",
 					"gfx/entities/heroineRightUpDeath5.png",
 					"gfx/entities/headLongRightUpDeath5.png",
+					"gfx/entities/shieldRightUpDeath5.png",
+					"gfx/entities/longswordRightUpDeath5.png",
 					"gfx/entities/heroineRightUpDeath6.png",
-					"gfx/entities/headLongRightUpDeath6.png"
+					"gfx/entities/headLongRightUpDeath6.png",
+					"gfx/entities/shieldRightUpDeath6.png",
+					"gfx/entities/longswordRightUpDeath6.png"
 				]
 			},
 			{
@@ -548,20 +852,36 @@
 				[
 					"gfx/entities/heroineRightUpBowShoot1.png",
 					"gfx/entities/headLongRightUpBowShoot1.png",
+					"gfx/entities/shieldRightUpBowShoot1.png",
+					"gfx/entities/longswordRightUpBowShoot1.png",
 					"gfx/entities/heroineRightUpBowShoot2.png",
 					"gfx/entities/headLongRightUpBowShoot2.png",
+					"gfx/entities/shieldRightUpBowShoot2.png",
+					"gfx/entities/longswordRightUpBowShoot2.png",
 					"gfx/entities/heroineRightUpBowShoot3.png",
 					"gfx/entities/headLongRightUpBowShoot3.png",
+					"gfx/entities/shieldRightUpBowShoot3.png",
+					"gfx/entities/longswordRightUpBowShoot3.png",
 					"gfx/entities/heroineRightUpBowShoot4.png",
 					"gfx/entities/headLongRightUpBowShoot4.png",
+					"gfx/entities/shieldRightUpBowShoot4.png",
+					"gfx/entities/longswordRightUpBowShoot4.png",
 					"gfx/entities/heroineRightUpBowShoot5.png",
 					"gfx/entities/headLongRightUpBowShoot5.png",
+					"gfx/entities/shieldRightUpBowShoot5.png",
+					"gfx/entities/longswordRightUpBowShoot5.png",
 					"gfx/entities/heroineRightUpBowShoot6.png",
 					"gfx/entities/headLongRightUpBowShoot6.png",
+					"gfx/entities/shieldRightUpBowShoot6.png",
+					"gfx/entities/longswordRightUpBowShoot6.png",
 					"gfx/entities/heroineRightUpBowShoot7.png",
 					"gfx/entities/headLongRightUpBowShoot7.png",
+					"gfx/entities/shieldRightUpBowShoot7.png",
+					"gfx/entities/longswordRightUpBowShoot7.png",
 					"gfx/entities/heroineRightUpBowShoot8.png",
-					"gfx/entities/headLongRightUpBowShoot8.png"
+					"gfx/entities/headLongRightUpBowShoot8.png",
+					"gfx/entities/shieldRightUpBowShoot8.png",
+					"gfx/entities/longswordRightUpBowShoot8.png"
 				]
 			},
 			{
@@ -572,12 +892,20 @@
 				[
 					"gfx/entities/heroineRightDownIdle1.png",
 					"gfx/entities/headLongRightDownIdle1.png",
+					"gfx/entities/shieldRightDownIdle1.png",
+					"gfx/entities/longswordRightDownIdle1.png",
 					"gfx/entities/heroineRightDownIdle2.png",
 					"gfx/entities/headLongRightDownIdle2.png",
+					"gfx/entities/shieldRightDownIdle2.png",
+					"gfx/entities/longswordRightDownIdle2.png",
 					"gfx/entities/heroineRightDownIdle3.png",
 					"gfx/entities/headLongRightDownIdle3.png",
+					"gfx/entities/shieldRightDownIdle3.png",
+					"gfx/entities/longswordRightDownIdle3.png",
 					"gfx/entities/heroineRightDownIdle4.png",
-					"gfx/entities/headLongRightDownIdle4.png"
+					"gfx/entities/headLongRightDownIdle4.png",
+					"gfx/entities/shieldRightDownIdle4.png",
+					"gfx/entities/longswordRightDownIdle4.png"
 				]
 			},
 			{
@@ -588,20 +916,36 @@
 				[
 					"gfx/entities/heroineRightDownRun1.png",
 					"gfx/entities/headLongRightDownRun1.png",
+					"gfx/entities/shieldRightDownRun1.png",
+					"gfx/entities/longswordRightDownRun1.png",
 					"gfx/entities/heroineRightDownRun2.png",
 					"gfx/entities/headLongRightDownRun2.png",
+					"gfx/entities/shieldRightDownRun2.png",
+					"gfx/entities/longswordRightDownRun2.png",
 					"gfx/entities/heroineRightDownRun3.png",
 					"gfx/entities/headLongRightDownRun3.png",
+					"gfx/entities/shieldRightDownRun3.png",
+					"gfx/entities/longswordRightDownRun3.png",
 					"gfx/entities/heroineRightDownRun4.png",
 					"gfx/entities/headLongRightDownRun4.png",
+					"gfx/entities/shieldRightDownRun4.png",
+					"gfx/entities/longswordRightDownRun4.png",
 					"gfx/entities/heroineRightDownRun5.png",
 					"gfx/entities/headLongRightDownRun5.png",
+					"gfx/entities/shieldRightDownRun5.png",
+					"gfx/entities/longswordRightDownRun5.png",
 					"gfx/entities/heroineRightDownRun6.png",
 					"gfx/entities/headLongRightDownRun6.png",
+					"gfx/entities/shieldRightDownRun6.png",
+					"gfx/entities/longswordRightDownRun6.png",
 					"gfx/entities/heroineRightDownRun7.png",
 					"gfx/entities/headLongRightDownRun7.png",
+					"gfx/entities/shieldRightDownRun7.png",
+					"gfx/entities/longswordRightDownRun7.png",
 					"gfx/entities/heroineRightDownRun8.png",
-					"gfx/entities/headLongRightDownRun8.png"
+					"gfx/entities/headLongRightDownRun8.png",
+					"gfx/entities/shieldRightDownRun8.png",
+					"gfx/entities/longswordRightDownRun8.png"
 				]
 			},
 			{
@@ -612,12 +956,20 @@
 				[
 					"gfx/entities/heroineRightDownMelee1.png",
 					"gfx/entities/headLongRightDownMelee1.png",
+					"gfx/entities/shieldRightDownMelee1.png",
+					"gfx/entities/longswordRightDownMelee1.png",
 					"gfx/entities/heroineRightDownMelee2.png",
 					"gfx/entities/headLongRightDownMelee2.png",
+					"gfx/entities/shieldRightDownMelee2.png",
+					"gfx/entities/longswordRightDownMelee2.png",
 					"gfx/entities/heroineRightDownMelee3.png",
 					"gfx/entities/headLongRightDownMelee3.png",
+					"gfx/entities/shieldRightDownMelee3.png",
+					"gfx/entities/longswordRightDownMelee3.png",
 					"gfx/entities/heroineRightDownMelee4.png",
-					"gfx/entities/headLongRightDownMelee4.png"
+					"gfx/entities/headLongRightDownMelee4.png",
+					"gfx/entities/shieldRightDownMelee4.png",
+					"gfx/entities/longswordRightDownMelee4.png"
 				]
 			},
 			{
@@ -628,8 +980,12 @@
 				[
 					"gfx/entities/heroineRightDownBlock1.png",
 					"gfx/entities/headLongRightDownBlock1.png",
+					"gfx/entities/shieldRightDownBlock1.png",
+					"gfx/entities/longswordRightDownBlock1.png",
 					"gfx/entities/heroineRightDownBlock2.png",
-					"gfx/entities/headLongRightDownBlock2.png"
+					"gfx/entities/headLongRightDownBlock2.png",
+					"gfx/entities/shieldRightDownBlock2.png",
+					"gfx/entities/longswordRightDownBlock2.png"
 				]
 			},
 			{
@@ -640,16 +996,28 @@
 				[
 					"gfx/entities/heroineRightDownDeath1.png",
 					"gfx/entities/headLongRightDownDeath1.png",
+					"gfx/entities/shieldRightDownDeath1.png",
+					"gfx/entities/longswordRightDownDeath1.png",
 					"gfx/entities/heroineRightDownDeath2.png",
 					"gfx/entities/headLongRightDownDeath2.png",
+					"gfx/entities/shieldRightDownDeath2.png",
+					"gfx/entities/longswordRightDownDeath2.png",
 					"gfx/entities/heroineRightDownDeath3.png",
 					"gfx/entities/headLongRightDownDeath3.png",
+					"gfx/entities/shieldRightDownDeath3.png",
+					"gfx/entities/longswordRightDownDeath3.png",
 					"gfx/entities/heroineRightDownDeath4.png",
 					"gfx/entities/headLongRightDownDeath4.png",
+					"gfx/entities/shieldRightDownDeath4.png",
+					"gfx/entities/longswordRightDownDeath4.png",
 					"gfx/entities/heroineRightDownDeath5.png",
 					"gfx/entities/headLongRightDownDeath5.png",
+					"gfx/entities/shieldRightDownDeath5.png",
+					"gfx/entities/longswordRightDownDeath5.png",
 					"gfx/entities/heroineRightDownDeath6.png",
-					"gfx/entities/headLongRightDownDeath6.png"
+					"gfx/entities/headLongRightDownDeath6.png",
+					"gfx/entities/shieldRightDownDeath6.png",
+					"gfx/entities/longswordRightDownDeath6.png"
 				]
 			},
 			{
@@ -660,20 +1028,36 @@
 				[
 					"gfx/entities/heroineRightDownBowShoot1.png",
 					"gfx/entities/headLongRightDownBowShoot1.png",
+					"gfx/entities/shieldRightDownBowShoot1.png",
+					"gfx/entities/longswordRightDownBowShoot1.png",
 					"gfx/entities/heroineRightDownBowShoot2.png",
 					"gfx/entities/headLongRightDownBowShoot2.png",
+					"gfx/entities/shieldRightDownBowShoot2.png",
+					"gfx/entities/longswordRightDownBowShoot2.png",
 					"gfx/entities/heroineRightDownBowShoot3.png",
 					"gfx/entities/headLongRightDownBowShoot3.png",
+					"gfx/entities/shieldRightDownBowShoot3.png",
+					"gfx/entities/longswordRightDownBowShoot3.png",
 					"gfx/entities/heroineRightDownBowShoot4.png",
 					"gfx/entities/headLongRightDownBowShoot4.png",
+					"gfx/entities/shieldRightDownBowShoot4.png",
+					"gfx/entities/longswordRightDownBowShoot4.png",
 					"gfx/entities/heroineRightDownBowShoot5.png",
 					"gfx/entities/headLongRightDownBowShoot5.png",
+					"gfx/entities/shieldRightDownBowShoot5.png",
+					"gfx/entities/longswordRightDownBowShoot5.png",
 					"gfx/entities/heroineRightDownBowShoot6.png",
 					"gfx/entities/headLongRightDownBowShoot6.png",
+					"gfx/entities/shieldRightDownBowShoot6.png",
+					"gfx/entities/longswordRightDownBowShoot6.png",
 					"gfx/entities/heroineRightDownBowShoot7.png",
 					"gfx/entities/headLongRightDownBowShoot7.png",
+					"gfx/entities/shieldRightDownBowShoot7.png",
+					"gfx/entities/longswordRightDownBowShoot7.png",
 					"gfx/entities/heroineRightDownBowShoot8.png",
-					"gfx/entities/headLongRightDownBowShoot8.png"
+					"gfx/entities/headLongRightDownBowShoot8.png",
+					"gfx/entities/shieldRightDownBowShoot8.png",
+					"gfx/entities/longswordRightDownBowShoot8.png"
 				]
 			},
 			{
@@ -684,12 +1068,20 @@
 				[
 					"gfx/entities/heroineDownIdle1.png",
 					"gfx/entities/headLongDownIdle1.png",
+					"gfx/entities/shieldDownIdle1.png",
+					"gfx/entities/longswordDownIdle1.png",
 					"gfx/entities/heroineDownIdle2.png",
 					"gfx/entities/headLongDownIdle2.png",
+					"gfx/entities/shieldDownIdle2.png",
+					"gfx/entities/longswordDownIdle2.png",
 					"gfx/entities/heroineDownIdle3.png",
 					"gfx/entities/headLongDownIdle3.png",
+					"gfx/entities/shieldDownIdle3.png",
+					"gfx/entities/longswordDownIdle3.png",
 					"gfx/entities/heroineDownIdle4.png",
-					"gfx/entities/headLongDownIdle4.png"
+					"gfx/entities/headLongDownIdle4.png",
+					"gfx/entities/shieldDownIdle4.png",
+					"gfx/entities/longswordDownIdle4.png"
 				]
 			},
 			{
@@ -700,20 +1092,36 @@
 				[
 					"gfx/entities/heroineDownRun1.png",
 					"gfx/entities/headLongDownRun1.png",
+					"gfx/entities/shieldDownRun1.png",
+					"gfx/entities/longswordDownRun1.png",
 					"gfx/entities/heroineDownRun2.png",
 					"gfx/entities/headLongDownRun2.png",
+					"gfx/entities/shieldDownRun2.png",
+					"gfx/entities/longswordDownRun2.png",
 					"gfx/entities/heroineDownRun3.png",
 					"gfx/entities/headLongDownRun3.png",
+					"gfx/entities/shieldDownRun3.png",
+					"gfx/entities/longswordDownRun3.png",
 					"gfx/entities/heroineDownRun4.png",
 					"gfx/entities/headLongDownRun4.png",
+					"gfx/entities/shieldDownRun4.png",
+					"gfx/entities/longswordDownRun4.png",
 					"gfx/entities/heroineDownRun5.png",
 					"gfx/entities/headLongDownRun5.png",
+					"gfx/entities/shieldDownRun5.png",
+					"gfx/entities/longswordDownRun5.png",
 					"gfx/entities/heroineDownRun6.png",
 					"gfx/entities/headLongDownRun6.png",
+					"gfx/entities/shieldDownRun6.png",
+					"gfx/entities/longswordDownRun6.png",
 					"gfx/entities/heroineDownRun7.png",
 					"gfx/entities/headLongDownRun7.png",
+					"gfx/entities/shieldDownRun7.png",
+					"gfx/entities/longswordDownRun7.png",
 					"gfx/entities/heroineDownRun8.png",
-					"gfx/entities/headLongDownRun8.png"
+					"gfx/entities/headLongDownRun8.png",
+					"gfx/entities/shieldDownRun8.png",
+					"gfx/entities/longswordDownRun8.png"
 				]
 			},
 			{
@@ -724,12 +1132,20 @@
 				[
 					"gfx/entities/heroineDownMelee1.png",
 					"gfx/entities/headLongDownMelee1.png",
+					"gfx/entities/shieldDownMelee1.png",
+					"gfx/entities/longswordDownMelee1.png",
 					"gfx/entities/heroineDownMelee2.png",
 					"gfx/entities/headLongDownMelee2.png",
+					"gfx/entities/shieldDownMelee2.png",
+					"gfx/entities/longswordDownMelee2.png",
 					"gfx/entities/heroineDownMelee3.png",
 					"gfx/entities/headLongDownMelee3.png",
+					"gfx/entities/shieldDownMelee3.png",
+					"gfx/entities/longswordDownMelee3.png",
 					"gfx/entities/heroineDownMelee4.png",
-					"gfx/entities/headLongDownMelee4.png"
+					"gfx/entities/headLongDownMelee4.png",
+					"gfx/entities/shieldDownMelee4.png",
+					"gfx/entities/longswordDownMelee4.png"
 				]
 			},
 			{
@@ -740,8 +1156,12 @@
 				[
 					"gfx/entities/heroineDownBlock1.png",
 					"gfx/entities/headLongDownBlock1.png",
+					"gfx/entities/shieldDownBlock1.png",
+					"gfx/entities/longswordDownBlock1.png",
 					"gfx/entities/heroineDownBlock2.png",
-					"gfx/entities/headLongDownBlock2.png"
+					"gfx/entities/headLongDownBlock2.png",
+					"gfx/entities/shieldDownBlock2.png",
+					"gfx/entities/longswordDownBlock2.png"
 				]
 			},
 			{
@@ -752,16 +1172,28 @@
 				[
 					"gfx/entities/heroineDownDeath1.png",
 					"gfx/entities/headLongDownDeath1.png",
+					"gfx/entities/shieldDownDeath1.png",
+					"gfx/entities/longswordDownDeath1.png",
 					"gfx/entities/heroineDownDeath2.png",
 					"gfx/entities/headLongDownDeath2.png",
+					"gfx/entities/shieldDownDeath2.png",
+					"gfx/entities/longswordDownDeath2.png",
 					"gfx/entities/heroineDownDeath3.png",
 					"gfx/entities/headLongDownDeath3.png",
+					"gfx/entities/shieldDownDeath3.png",
+					"gfx/entities/longswordDownDeath3.png",
 					"gfx/entities/heroineDownDeath4.png",
 					"gfx/entities/headLongDownDeath4.png",
+					"gfx/entities/shieldDownDeath4.png",
+					"gfx/entities/longswordDownDeath4.png",
 					"gfx/entities/heroineDownDeath5.png",
 					"gfx/entities/headLongDownDeath5.png",
+					"gfx/entities/shieldDownDeath5.png",
+					"gfx/entities/longswordDownDeath5.png",
 					"gfx/entities/heroineDownDeath6.png",
-					"gfx/entities/headLongDownDeath6.png"
+					"gfx/entities/headLongDownDeath6.png",
+					"gfx/entities/shieldDownDeath6.png",
+					"gfx/entities/longswordDownDeath6.png"
 				]
 			},
 			{
@@ -772,20 +1204,36 @@
 				[
 					"gfx/entities/heroineDownBowShoot1.png",
 					"gfx/entities/headLongDownBowShoot1.png",
+					"gfx/entities/shieldDownBowShoot1.png",
+					"gfx/entities/longswordDownBowShoot1.png",
 					"gfx/entities/heroineDownBowShoot2.png",
 					"gfx/entities/headLongDownBowShoot2.png",
+					"gfx/entities/shieldDownBowShoot2.png",
+					"gfx/entities/longswordDownBowShoot2.png",
 					"gfx/entities/heroineDownBowShoot3.png",
 					"gfx/entities/headLongDownBowShoot3.png",
+					"gfx/entities/shieldDownBowShoot3.png",
+					"gfx/entities/longswordDownBowShoot3.png",
 					"gfx/entities/heroineDownBowShoot4.png",
 					"gfx/entities/headLongDownBowShoot4.png",
+					"gfx/entities/shieldDownBowShoot4.png",
+					"gfx/entities/longswordDownBowShoot4.png",
 					"gfx/entities/heroineDownBowShoot5.png",
 					"gfx/entities/headLongDownBowShoot5.png",
+					"gfx/entities/shieldDownBowShoot5.png",
+					"gfx/entities/longswordDownBowShoot5.png",
 					"gfx/entities/heroineDownBowShoot6.png",
 					"gfx/entities/headLongDownBowShoot6.png",
+					"gfx/entities/shieldDownBowShoot6.png",
+					"gfx/entities/longswordDownBowShoot6.png",
 					"gfx/entities/heroineDownBowShoot7.png",
 					"gfx/entities/headLongDownBowShoot7.png",
+					"gfx/entities/shieldDownBowShoot7.png",
+					"gfx/entities/longswordDownBowShoot7.png",
 					"gfx/entities/heroineDownBowShoot8.png",
-					"gfx/entities/headLongDownBowShoot8.png"
+					"gfx/entities/headLongDownBowShoot8.png",
+					"gfx/entities/shieldDownBowShoot8.png",
+					"gfx/entities/longswordDownBowShoot8.png"
 				]
 			},
 			{
@@ -796,12 +1244,20 @@
 				[
 					"gfx/entities/heroineUpIdle1.png",
 					"gfx/entities/headLongUpIdle1.png",
+					"gfx/entities/shieldUpIdle1.png",
+					"gfx/entities/longswordUpIdle1.png",
 					"gfx/entities/heroineUpIdle2.png",
 					"gfx/entities/headLongUpIdle2.png",
+					"gfx/entities/shieldUpIdle2.png",
+					"gfx/entities/longswordUpIdle2.png",
 					"gfx/entities/heroineUpIdle3.png",
 					"gfx/entities/headLongUpIdle3.png",
+					"gfx/entities/shieldUpIdle3.png",
+					"gfx/entities/longswordUpIdle3.png",
 					"gfx/entities/heroineUpIdle4.png",
-					"gfx/entities/headLongUpIdle4.png"
+					"gfx/entities/headLongUpIdle4.png",
+					"gfx/entities/shieldUpIdle4.png",
+					"gfx/entities/longswordUpIdle4.png"
 				]
 			},
 			{
@@ -812,20 +1268,36 @@
 				[
 					"gfx/entities/heroineUpRun1.png",
 					"gfx/entities/headLongUpRun1.png",
+					"gfx/entities/shieldUpRun1.png",
+					"gfx/entities/longswordUpRun1.png",
 					"gfx/entities/heroineUpRun2.png",
 					"gfx/entities/headLongUpRun2.png",
+					"gfx/entities/shieldUpRun2.png",
+					"gfx/entities/longswordUpRun2.png",
 					"gfx/entities/heroineUpRun3.png",
 					"gfx/entities/headLongUpRun3.png",
+					"gfx/entities/shieldUpRun3.png",
+					"gfx/entities/longswordUpRun3.png",
 					"gfx/entities/heroineUpRun4.png",
 					"gfx/entities/headLongUpRun4.png",
+					"gfx/entities/shieldUpRun4.png",
+					"gfx/entities/longswordUpRun4.png",
 					"gfx/entities/heroineUpRun5.png",
 					"gfx/entities/headLongUpRun5.png",
+					"gfx/entities/shieldUpRun5.png",
+					"gfx/entities/longswordUpRun5.png",
 					"gfx/entities/heroineUpRun6.png",
 					"gfx/entities/headLongUpRun6.png",
+					"gfx/entities/shieldUpRun6.png",
+					"gfx/entities/longswordUpRun6.png",
 					"gfx/entities/heroineUpRun7.png",
 					"gfx/entities/headLongUpRun7.png",
+					"gfx/entities/shieldUpRun7.png",
+					"gfx/entities/longswordUpRun7.png",
 					"gfx/entities/heroineUpRun8.png",
-					"gfx/entities/headLongUpRun8.png"
+					"gfx/entities/headLongUpRun8.png",
+					"gfx/entities/shieldUpRun8.png",
+					"gfx/entities/longswordUpRun8.png"
 				]
 			},
 			{
@@ -836,12 +1308,20 @@
 				[
 					"gfx/entities/heroineUpMelee1.png",
 					"gfx/entities/headLongUpMelee1.png",
+					"gfx/entities/shieldUpMelee1.png",
+					"gfx/entities/longswordUpMelee1.png",
 					"gfx/entities/heroineUpMelee2.png",
 					"gfx/entities/headLongUpMelee2.png",
+					"gfx/entities/shieldUpMelee2.png",
+					"gfx/entities/longswordUpMelee2.png",
 					"gfx/entities/heroineUpMelee3.png",
 					"gfx/entities/headLongUpMelee3.png",
+					"gfx/entities/shieldUpMelee3.png",
+					"gfx/entities/longswordUpMelee3.png",
 					"gfx/entities/heroineUpMelee4.png",
-					"gfx/entities/headLongUpMelee4.png"
+					"gfx/entities/headLongUpMelee4.png",
+					"gfx/entities/shieldUpMelee4.png",
+					"gfx/entities/longswordUpMelee4.png"
 				]
 			},
 			{
@@ -852,8 +1332,12 @@
 				[
 					"gfx/entities/heroineUpBlock1.png",
 					"gfx/entities/headLongUpBlock1.png",
+					"gfx/entities/shieldUpBlock1.png",
+					"gfx/entities/longswordUpBlock1.png",
 					"gfx/entities/heroineUpBlock2.png",
-					"gfx/entities/headLongUpBlock2.png"
+					"gfx/entities/headLongUpBlock2.png",
+					"gfx/entities/shieldUpBlock2.png",
+					"gfx/entities/longswordUpBlock2.png"
 				]
 			},
 			{
@@ -864,16 +1348,28 @@
 				[
 					"gfx/entities/heroineUpDeath1.png",
 					"gfx/entities/headLongUpDeath1.png",
+					"gfx/entities/shieldUpDeath1.png",
+					"gfx/entities/longswordUpDeath1.png",
 					"gfx/entities/heroineUpDeath2.png",
 					"gfx/entities/headLongUpDeath2.png",
+					"gfx/entities/shieldUpDeath2.png",
+					"gfx/entities/longswordUpDeath2.png",
 					"gfx/entities/heroineUpDeath3.png",
 					"gfx/entities/headLongUpDeath3.png",
+					"gfx/entities/shieldUpDeath3.png",
+					"gfx/entities/longswordUpDeath3.png",
 					"gfx/entities/heroineUpDeath4.png",
 					"gfx/entities/headLongUpDeath4.png",
+					"gfx/entities/shieldUpDeath4.png",
+					"gfx/entities/longswordUpDeath4.png",
 					"gfx/entities/heroineUpDeath5.png",
 					"gfx/entities/headLongUpDeath5.png",
+					"gfx/entities/shieldUpDeath5.png",
+					"gfx/entities/longswordUpDeath5.png",
 					"gfx/entities/heroineUpDeath6.png",
-					"gfx/entities/headLongUpDeath6.png"
+					"gfx/entities/headLongUpDeath6.png",
+					"gfx/entities/shieldUpDeath6.png",
+					"gfx/entities/longswordUpDeath6.png"
 				]
 			},
 			{
@@ -884,20 +1380,36 @@
 				[
 					"gfx/entities/heroineUpBowShoot1.png",
 					"gfx/entities/headLongUpBowShoot1.png",
+					"gfx/entities/shieldUpBowShoot1.png",
+					"gfx/entities/longswordUpBowShoot1.png",
 					"gfx/entities/heroineUpBowShoot2.png",
 					"gfx/entities/headLongUpBowShoot2.png",
+					"gfx/entities/shieldUpBowShoot2.png",
+					"gfx/entities/longswordUpBowShoot2.png",
 					"gfx/entities/heroineUpBowShoot3.png",
 					"gfx/entities/headLongUpBowShoot3.png",
+					"gfx/entities/shieldUpBowShoot3.png",
+					"gfx/entities/longswordUpBowShoot3.png",
 					"gfx/entities/heroineUpBowShoot4.png",
 					"gfx/entities/headLongUpBowShoot4.png",
+					"gfx/entities/shieldUpBowShoot4.png",
+					"gfx/entities/longswordUpBowShoot4.png",
 					"gfx/entities/heroineUpBowShoot5.png",
 					"gfx/entities/headLongUpBowShoot5.png",
+					"gfx/entities/shieldUpBowShoot5.png",
+					"gfx/entities/longswordUpBowShoot5.png",
 					"gfx/entities/heroineUpBowShoot6.png",
 					"gfx/entities/headLongUpBowShoot6.png",
+					"gfx/entities/shieldUpBowShoot6.png",
+					"gfx/entities/longswordUpBowShoot6.png",
 					"gfx/entities/heroineUpBowShoot7.png",
 					"gfx/entities/headLongUpBowShoot7.png",
+					"gfx/entities/shieldUpBowShoot7.png",
+					"gfx/entities/longswordUpBowShoot7.png",
 					"gfx/entities/heroineUpBowShoot8.png",
-					"gfx/entities/headLongUpBowShoot8.png"
+					"gfx/entities/headLongUpBowShoot8.png",
+					"gfx/entities/shieldUpBowShoot8.png",
+					"gfx/entities/longswordUpBowShoot8.png"
 				]
 			}
 		]

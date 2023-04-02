@@ -98,9 +98,19 @@ static Animation * getNewAnimation(Actor* actor)
     return newAnimation;
 }
 
-EntityVisibleSprites getSpriteToShow(Actor * actor)
+static inline void getAnimationVisibleSprites(Animation *animation, EntityVisibleSprites *sprites, int frameIndex)
 {
-    EntityVisibleSprites result = {};
+    for(int i = 0; i < MAX_DRAWABLES_PER_ENTITY; i++)
+    {
+        sprites->sprites[i] = getSpriteByIndex(animation->frames[i][frameIndex]);
+    }
+}
+
+void getSpritesToShow(Actor * actor)
+{
+    Entity * owner = actor->owner;
+
+    SDL_assert(owner);
 
     actor->facing = getActorFacingDirection(actor->facing);
 
@@ -132,10 +142,7 @@ EntityVisibleSprites getSpriteToShow(Actor * actor)
 
     SDL_assert(frameIndex >= 0 && frameIndex < currentAnimation->numFrames);
 
-    result.head = getSpriteByIndex(currentAnimation->frames[HEAD][frameIndex]);
-    result.body = getSpriteByIndex(currentAnimation->frames[BODY][frameIndex]);
-    
-    return result;
+    getAnimationVisibleSprites(currentAnimation, &owner->entitySprites, frameIndex);
 }
 
 Actor * getNewActor(void)

@@ -5,6 +5,41 @@
 extern App app;
 extern Dungeon dungeon;
 
+void swap(float *a, float *b)
+{
+    float temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+bool solveQuadratic(const float *a, const float *b, const float *c, float *x1, float *x2)
+{
+    float discriminant = (*b) * (*b) - 4 * (*a) * (*c); 
+
+    if (discriminant < 0)
+    {
+        return false;
+    }
+    else if (discriminant == 0)
+    {
+        *x1 = *x2 = (-0.5f * (*b) / (*a));
+    }
+    else
+    {
+        float q = (*b > 0) ? -0.5 * (*b + sqrtf(discriminant)) : -0.5 * (*b - sqrtf(discriminant));
+        *x1 = q / *a;
+        *x2 = *c / q;
+    }
+
+    if (*x1 > *x2)
+    {
+        swap(x1, x2);
+    }
+
+    return true;
+}
+
 float sqAmplitude(Vec2f v)
 {
     return (v.x * v.x + v.y * v.y);

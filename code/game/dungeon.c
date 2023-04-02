@@ -172,6 +172,10 @@ bool initDungeon(void)
     dungeon.player->p.x = (float)(MAP_WIDTH/2);
     dungeon.player->p.y = (float)(MAP_HEIGHT/2);
     
+    Entity* barrel = initEntity("Barrel");
+    barrel->p.x = dungeon.player->p.x + 5;
+    barrel->p.y = dungeon.player->p.y + 5;
+    
     dungeon.camera.w = MAP_RENDER_WIDTH;
     dungeon.camera.h = MAP_RENDER_HEIGHT;
 

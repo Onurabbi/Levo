@@ -3,12 +3,12 @@ JSON_DIR = ../code/json
 GAME_DIR = ../code/game
 INCLUDES = ../code/common.h ../code/defs.h ../code/structs.h 
 #LFLAGS = -L "C:/Dev/Dependencies/lib/lib"
-LIBS = -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2
+LIBS = -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2 -lm
 OBJECTS = main.o init.o texture.o draw.o atlas.o animation.o utils.o input.o \
 sound.o entity.o cJSON.o entityFactory.o text.o dungeon.o title.o widget.o asset.o \
-collision.o actor.o player.o job.o memory.o
+collision.o actor.o player.o job.o memory.o ray.o vector.o
 
-CC = gcc -O3 -DNDEBUG
+CC = gcc -O0 -DDEBUG
 
 game: $(OBJECTS) 
 	$(CC) $(OBJECTS) -o game $(LIBS)
@@ -43,6 +43,10 @@ job.o: $(SYS_DIR)/job.c $(SYS_DIR)/job.h $(INCLUDES)
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/job.c 
 memory.o: $(SYS_DIR)/memory.c $(SYS_DIR)/memory.h $(INCLUDES) 
 	$(CC) $(LFLAGS) -c $(SYS_DIR)/memory.c 
+ray.o: $(SYS_DIR)/ray.c $(SYS_DIR)/ray.h $(INCLUDES) 
+	$(CC) $(LFLAGS) -c $(SYS_DIR)/ray.c 
+vector.o: $(SYS_DIR)/vector.c $(SYS_DIR)/vector.h $(INCLUDES) 
+	$(CC) $(LFLAGS) -c $(SYS_DIR)/vector.c
 
 #GAME
 entity.o: $(GAME_DIR)/entity.c $(GAME_DIR)/entity.h $(INCLUDES) 

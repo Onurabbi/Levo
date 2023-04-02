@@ -44,7 +44,7 @@ static void incrementAssetCount(AssetType type)
     {
         case AT_TEXTURE:
             numTextures++;
-            SDL_assert(numSprites <= MAX_NUM_TEXTURES);
+            SDL_assert(numTextures <= MAX_NUM_TEXTURES);
             break;
         case AT_SPRITE:
             numSprites++;

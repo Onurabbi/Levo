@@ -232,12 +232,12 @@ static Drawable * getNewDrawable(int layer, int thread)
 
 void addEntityToDrawList(Entity * e, Vec2f p, int thread)
 {
-    for(int i = 0; i < e->numDrawables; i++)
+    for(int i = 0; i < e->entitySprites.drawableCount; i++)
     {   
         Drawable * drawable = getNewDrawable(DL_ENTITY, thread);
         if(drawable)
         {
-            drawable->sprite = e->sprites[i];
+            drawable->sprite = e->entitySprites.sprites[i];
             drawable->x = p.x;
             drawable->y = p.y;
         }

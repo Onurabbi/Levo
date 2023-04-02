@@ -83,8 +83,8 @@ static bool loadAnimationData(char * filePath)
 
                 for(cJSON * frameNode = frames->child; frameNode != NULL; frameNode = frameNode->next)
                 {
-                    int index1 = frameCount % 2;
-                    int index2 = frameCount / 2;
+                    int index1 = frameCount % MAX_DRAWABLES_PER_ENTITY;
+                    int index2 = frameCount / MAX_DRAWABLES_PER_ENTITY;
                     
                     printf("framecount: %d index1: %d index2: %d\n", frameCount, index1, index2);
 

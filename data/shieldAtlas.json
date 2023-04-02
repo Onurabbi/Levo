@@ -1,0 +1,2050 @@
+[
+	{
+		"filename" : "gfx/entities/shieldLeftIdle1.png",
+		"x" : 0,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftIdle2.png",
+		"x" : 128,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftIdle3.png",
+		"x" : 256,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftIdle4.png",
+		"x" : 384,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun1.png",
+		"x" : 512,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun2.png",
+		"x" : 640,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun3.png",
+		"x" : 768,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun4.png",
+		"x" : 896,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun5.png",
+		"x" : 1024,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun6.png",
+		"x" : 1152,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun7.png",
+		"x" : 1280,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftRun8.png",
+		"x" : 1408,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftMelee1.png",
+		"x" : 1536,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftMelee2.png",
+		"x" : 1664,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftMelee3.png",
+		"x" : 1792,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftMelee4.png",
+		"x" : 1920,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftBlock1.png",
+		"x" : 2048,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftBlock2.png",
+		"x" : 2176,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDeath1.png",
+		"x" : 2304,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDeath2.png",
+		"x" : 2432,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDeath3.png",
+		"x" : 2560,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDeath4.png",
+		"x" : 2688,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDeath5.png",
+		"x" : 2816,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDeath6.png",
+		"x" : 2944,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpIdle1.png",
+		"x" : 0,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpIdle2.png",
+		"x" : 128,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpIdle3.png",
+		"x" : 256,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpIdle4.png",
+		"x" : 384,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun1.png",
+		"x" : 512,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun2.png",
+		"x" : 640,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun3.png",
+		"x" : 768,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun4.png",
+		"x" : 896,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun5.png",
+		"x" : 1024,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun6.png",
+		"x" : 1152,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun7.png",
+		"x" : 1280,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpRun8.png",
+		"x" : 1408,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpMelee1.png",
+		"x" : 1536,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpMelee2.png",
+		"x" : 1664,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpMelee3.png",
+		"x" : 1792,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpMelee4.png",
+		"x" : 1920,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpBlock1.png",
+		"x" : 2048,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpBlock2.png",
+		"x" : 2176,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpDeath1.png",
+		"x" : 2304,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpDeath2.png",
+		"x" : 2432,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpDeath3.png",
+		"x" : 2560,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpDeath4.png",
+		"x" : 2688,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpDeath5.png",
+		"x" : 2816,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpDeath6.png",
+		"x" : 2944,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpIdle1.png",
+		"x" : 0,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpIdle2.png",
+		"x" : 128,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpIdle3.png",
+		"x" : 256,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpIdle4.png",
+		"x" : 384,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun1.png",
+		"x" : 512,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun2.png",
+		"x" : 640,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun3.png",
+		"x" : 768,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun4.png",
+		"x" : 896,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun5.png",
+		"x" : 1024,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun6.png",
+		"x" : 1152,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun7.png",
+		"x" : 1280,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpRun8.png",
+		"x" : 1408,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpMelee1.png",
+		"x" : 1536,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpMelee2.png",
+		"x" : 1664,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpMelee3.png",
+		"x" : 1792,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpMelee4.png",
+		"x" : 1920,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpBlock1.png",
+		"x" : 2048,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpBlock2.png",
+		"x" : 2176,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpDeath1.png",
+		"x" : 2304,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpDeath2.png",
+		"x" : 2432,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpDeath3.png",
+		"x" : 2560,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpDeath4.png",
+		"x" : 2688,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpDeath5.png",
+		"x" : 2816,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpDeath6.png",
+		"x" : 2944,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpIdle1.png",
+		"x" : 0,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpIdle2.png",
+		"x" : 128,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpIdle3.png",
+		"x" : 256,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpIdle4.png",
+		"x" : 384,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun1.png",
+		"x" : 512,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun2.png",
+		"x" : 640,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun3.png",
+		"x" : 768,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun4.png",
+		"x" : 896,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun5.png",
+		"x" : 1024,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun6.png",
+		"x" : 1152,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun7.png",
+		"x" : 1280,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpRun8.png",
+		"x" : 1408,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpMelee1.png",
+		"x" : 1536,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpMelee2.png",
+		"x" : 1664,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpMelee3.png",
+		"x" : 1792,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpMelee4.png",
+		"x" : 1920,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpBlock1.png",
+		"x" : 2048,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpBlock2.png",
+		"x" : 2176,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpDeath1.png",
+		"x" : 2304,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpDeath2.png",
+		"x" : 2432,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpDeath3.png",
+		"x" : 2560,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpDeath4.png",
+		"x" : 2688,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpDeath5.png",
+		"x" : 2816,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpDeath6.png",
+		"x" : 2944,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightIdle1.png",
+		"x" : 0,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightIdle2.png",
+		"x" : 128,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightIdle3.png",
+		"x" : 256,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightIdle4.png",
+		"x" : 384,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun1.png",
+		"x" : 512,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun2.png",
+		"x" : 640,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun3.png",
+		"x" : 768,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun4.png",
+		"x" : 896,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun5.png",
+		"x" : 1024,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun6.png",
+		"x" : 1152,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun7.png",
+		"x" : 1280,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightRun8.png",
+		"x" : 1408,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightMelee1.png",
+		"x" : 1536,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightMelee2.png",
+		"x" : 1664,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightMelee3.png",
+		"x" : 1792,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightMelee4.png",
+		"x" : 1920,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightBlock1.png",
+		"x" : 2048,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightBlock2.png",
+		"x" : 2176,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDeath1.png",
+		"x" : 2304,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDeath2.png",
+		"x" : 2432,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDeath3.png",
+		"x" : 2560,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDeath4.png",
+		"x" : 2688,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDeath5.png",
+		"x" : 2816,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDeath6.png",
+		"x" : 2944,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownIdle1.png",
+		"x" : 0,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownIdle2.png",
+		"x" : 128,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownIdle3.png",
+		"x" : 256,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownIdle4.png",
+		"x" : 384,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun1.png",
+		"x" : 512,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun2.png",
+		"x" : 640,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun3.png",
+		"x" : 768,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun4.png",
+		"x" : 896,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun5.png",
+		"x" : 1024,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun6.png",
+		"x" : 1152,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun7.png",
+		"x" : 1280,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownRun8.png",
+		"x" : 1408,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownMelee1.png",
+		"x" : 1536,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownMelee2.png",
+		"x" : 1664,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownMelee3.png",
+		"x" : 1792,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownMelee4.png",
+		"x" : 1920,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownBlock1.png",
+		"x" : 2048,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownBlock2.png",
+		"x" : 2176,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownDeath1.png",
+		"x" : 2304,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownDeath2.png",
+		"x" : 2432,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownDeath3.png",
+		"x" : 2560,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownDeath4.png",
+		"x" : 2688,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownDeath5.png",
+		"x" : 2816,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownDeath6.png",
+		"x" : 2944,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldRightDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownIdle1.png",
+		"x" : 0,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownIdle2.png",
+		"x" : 128,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownIdle3.png",
+		"x" : 256,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownIdle4.png",
+		"x" : 384,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun1.png",
+		"x" : 512,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun2.png",
+		"x" : 640,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun3.png",
+		"x" : 768,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun4.png",
+		"x" : 896,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun5.png",
+		"x" : 1024,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun6.png",
+		"x" : 1152,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun7.png",
+		"x" : 1280,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownRun8.png",
+		"x" : 1408,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownMelee1.png",
+		"x" : 1536,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownMelee2.png",
+		"x" : 1664,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownMelee3.png",
+		"x" : 1792,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownMelee4.png",
+		"x" : 1920,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownBlock1.png",
+		"x" : 2048,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownBlock2.png",
+		"x" : 2176,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownDeath1.png",
+		"x" : 2304,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownDeath2.png",
+		"x" : 2432,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownDeath3.png",
+		"x" : 2560,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownDeath4.png",
+		"x" : 2688,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownDeath5.png",
+		"x" : 2816,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownDeath6.png",
+		"x" : 2944,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownIdle1.png",
+		"x" : 0,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownIdle2.png",
+		"x" : 128,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownIdle3.png",
+		"x" : 256,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownIdle4.png",
+		"x" : 384,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun1.png",
+		"x" : 512,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun2.png",
+		"x" : 640,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun3.png",
+		"x" : 768,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun4.png",
+		"x" : 896,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun5.png",
+		"x" : 1024,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun6.png",
+		"x" : 1152,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun7.png",
+		"x" : 1280,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownRun8.png",
+		"x" : 1408,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownMelee1.png",
+		"x" : 1536,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownMelee2.png",
+		"x" : 1664,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownMelee3.png",
+		"x" : 1792,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownMelee4.png",
+		"x" : 1920,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownBlock1.png",
+		"x" : 2048,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownBlock2.png",
+		"x" : 2176,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownDeath1.png",
+		"x" : 2304,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownDeath2.png",
+		"x" : 2432,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownDeath3.png",
+		"x" : 2560,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownDeath4.png",
+		"x" : 2688,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownDeath5.png",
+		"x" : 2816,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownDeath6.png",
+		"x" : 2944,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/shieldLeftDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	}
+]
