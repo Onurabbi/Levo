@@ -111,13 +111,17 @@ bool initSprites(void)
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/nordiclady.png");
         return false;
     }
-    
-
 #endif
 
     if(initAtlas("../assets/textures/Heroine/clothes.png", "../data/heroineAtlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Herone/clothes.png");
+        return false;
+    }
+
+    if(initAtlas("../assets/textures/Heroine/head_long.png", "../data/headLongAtlas.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/head_long.png");
         return false;
     }
 

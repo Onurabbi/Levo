@@ -50,7 +50,9 @@ static void initProjectile(Entity * projectile)
     projectile->angle = 0.0;
     projectile->width = 0.375f;
     projectile->height = 0.50f;
-    projectile->sprite = getSprite("gfx/entities/knife1.png");
+    projectile->sprites[0] = getSprite("gfx/entities/knife1.png");
+    projectile->numDrawables = 1;
+
     projectile->flags = 0;
 
     projectile->flags = BIT_SET(projectile->flags, ENTITY_CAN_UPDATE_BIT) | 
@@ -64,8 +66,10 @@ static void initPlayer(Entity * player)
     player->angle = 0.0;
     player->width = 0.7f;
     player->height = 0.50f;
-    player->sprite = getSprite("gfx/entities/heroineLeftRun1.png");
     player->flags = 0;
+    player->sprites[HEAD] = getSprite("gfx/entities/heroineLeftIdle1.png");
+    player->sprites[BODY] = getSprite("gfx/entities/headLongLeftIdle1.png");
+    player->numDrawables = 2;
 
     player->flags =  BIT_SET(player->flags, ENTITY_CAN_UPDATE_BIT) | 
                      BIT_SET(player->flags, ENTITY_CAN_COLLIDE_BIT) |
@@ -73,11 +77,15 @@ static void initPlayer(Entity * player)
 
 
     Actor * playerActor = getNewActor();
-    playerActor->health = 10;
-    playerActor->velocity = 0.2f;
-    playerActor->animGroup = getAnimationGroup("gfx/animations/heroine.animGroup");
-    
     playerActor->owner = player;
+    playerActor->animGroup = getAnimationGroup("gfx/animations/heroine.animGroup");
+    playerActor->dP.x = 0;
+    playerActor->dP.y = 0;
+    playerActor->facing = FACING_LEFT;
+    playerActor->attacking = false;
+    playerActor->switchAnim = false;
+    playerActor->health = 10;
+    playerActor->velocity = 0.15f;
     player->data = playerActor;
 }
 
@@ -86,7 +94,9 @@ static void initBarrel(Entity * barrel)
     barrel->angle = 0.0;
     barrel->width = 0.7f;
     barrel->height = 0.50f;
-    barrel->sprite = getSprite("gfx/entities/barrel.png");
+    barrel->sprites[0] = getSprite("gfx/entities/barrel.png");
+    barrel->numDrawables = 1;
+    
     barrel->flags = 0;
     barrel->flags =  BIT_SET(barrel->flags, ENTITY_CAN_UPDATE_BIT) | 
                      BIT_SET(barrel->flags, ENTITY_CAN_COLLIDE_BIT) |
@@ -103,7 +113,9 @@ static void initTree(Entity * tree)
     tree->angle = 0.0;
     tree->width = 0.75f;
     tree->height = 0.75f;
-    tree->sprite = getSprite("gfx/entities/tree1.png");
+    tree->sprites[0] = getSprite("gfx/entities/tree1.png");
+    tree->numDrawables = 1;
+
     tree->data = NULL;
 }
 

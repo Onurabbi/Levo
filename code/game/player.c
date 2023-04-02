@@ -1,7 +1,9 @@
 #include "../common.h"
 
+#include "../system/atlas.h"
 #include "../system/input.h"
 #include "../system/utils.h"
+#include "../system/sound.h"
 
 #include "entityFactory.h"
 #include "player.h"
@@ -27,7 +29,8 @@ void updateActor(Entity * player)
 void updatePlayer(Entity * player)
 {
     Actor * playerActor = (Actor *)player->data;
-    playerActor->shooting = false;
+
+    SDL_assert(playerActor);
 
     Input * input = &app.input;
 
@@ -55,11 +58,17 @@ void updatePlayer(Entity * player)
     
     deltaX = (dx + dy) / 2.0f;
     deltaY = (dy - dx) / 2.0f;
+    
+    if(playerActor->attacking == false)
+    {
+        moveEntity(player, deltaX, deltaY);
+    }
 
-    moveEntity(player, deltaX, deltaY);
-
-    //set player sprite
-    player->sprite = getSpriteToShow(playerActor);
+    EntityVisibleSprites spritesToShow = getSpriteToShow(playerActor);
+    
+    player->sprites[HEAD] = spritesToShow.head;
+    player->sprites[BODY] = spritesToShow.body;
+    
 
     if(projectile)
     {
@@ -74,8 +83,9 @@ void updatePlayer(Entity * player)
 
     if(input->mouse.buttons[1] == 1)
     {
-        playerActor->shooting = true;
-        printf("shooting\n");
+        playerActor->attacking = true;
+        playerActor->switchAnim = true;
+        playSound(SND_HIT, 0);
     }
 
     if(input->mouse.buttons[2] == 1)
@@ -87,8 +97,6 @@ void updatePlayer(Entity * player)
         printf("created new barrel at: %f %f\n", barrelPos.x, barrelPos.y);
     }
 
-    //do animations
-    
     dungeon.camera.x = player->p.x - dungeon.camera.w / 2;
     dungeon.camera.y = player->p.y - dungeon.camera.h / 2;
 

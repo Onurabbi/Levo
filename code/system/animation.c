@@ -60,6 +60,8 @@ static bool loadAnimationData(char * filePath)
             STRNCPY(animGroup->fileName, fileName, nameLen);
             
             animGroup->numAnimations = cJSON_GetObjectItem(node, "numanims")->valueint;
+            
+            animGroup->animationState = 0;
 
             cJSON * animations = cJSON_GetObjectItem(node, "animations");
 
@@ -70,20 +72,25 @@ static bool loadAnimationData(char * filePath)
                 Animation * currentAnimation = &animGroup->animations[animIndex++];
                 //this is not used
                 char * animFileName = cJSON_GetObjectItem(animNode, "filename")->valuestring;
-                printf("%s\n", animFileName);
+
                 currentAnimation->numFrames = cJSON_GetObjectItem(animNode, "numframes")->valueint;
 
                 currentAnimation->lengthSeconds = cJSON_GetObjectItem(animNode, "lengthseconds")->valuedouble;
 
                 cJSON * frames = cJSON_GetObjectItem(animNode, "frames");
                 
-                int frameIndex = 0;
+                int frameCount = 0;
 
                 for(cJSON * frameNode = frames->child; frameNode != NULL; frameNode = frameNode->next)
                 {
+                    int index1 = frameCount % 2;
+                    int index2 = frameCount / 2;
+                    
+                    printf("framecount: %d index1: %d index2: %d\n", frameCount, index1, index2);
+
                     char * spritePath = frameNode->valuestring;
-                    printf("sprite path: %s\n", spritePath);
-                    currentAnimation->frames[frameIndex++] = getSpriteIndex(spritePath);
+                    currentAnimation->frames[index1][index2] = getSpriteIndex(spritePath);
+                    frameCount++;
                 }
             }
         }

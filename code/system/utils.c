@@ -5,6 +5,11 @@
 extern App app;
 extern Dungeon dungeon;
 
+float sqAmplitude(Vec2f v)
+{
+    return (v.x * v.x + v.y * v.y);
+}
+
 float sqDistance(Vec2f v1, Vec2f v2)
 {
     float xDistSq = (v1.x - v2.x) * (v1.x - v2.x);

@@ -15,7 +15,15 @@ extern App app;
 extern Dungeon dungeon;
 
 static uint32_t * entities;
-static uint32_t   numEntities[MAX_NUM_THREADS];
+static uint32_t * numEntities;
+
+void resetEntityUpdates(void)
+{
+    for(int thread = 0; thread < MAX_NUM_THREADS; thread++)
+    {
+        numEntities[thread] = 0;
+    }
+}
 
 static inline uint32_t getEntityIndex(uint32_t i, uint32_t thread)
 {
@@ -29,11 +37,6 @@ static inline void setEntityIndex(uint32_t i, uint32_t thread)
     base[numEntities[thread]] = i;
 }
 
-void resetEntityUpdates(void)
-{
-    memset(numEntities, 0, sizeof(uint32_t) * MAX_NUM_THREADS);
-}
-
 bool initEntities(void)
 {
     entities = allocateTransientMemory(MAX_NUM_ENTITIES * sizeof(uint32_t));
@@ -42,9 +45,10 @@ bool initEntities(void)
         return false;
     }
 
-    for(int i = 0; i < MAX_NUM_THREADS; i++)
+    numEntities = allocateTransientMemory(MAX_NUM_ENTITIES * sizeof(uint32_t));
+    if(numEntities == NULL)
     {
-        numEntities[i] = 0;   
+        return false;
     }
  
     return true;
@@ -66,15 +70,6 @@ void moveEntity(Entity * entity, float dx, float dy)
     actor->dP.x = 0.0f;
     actor->dP.y = 0.0f;
     
-    if(dx > 0)
-    {
-        actor->facing = FACING_RIGHT;
-    }
-    else if (dx < 0)
-    {
-        actor->facing = FACING_LEFT;
-    }
-
     newX = entity->p.x + dx * vel;
     newY = entity->p.y + dy * vel;
 

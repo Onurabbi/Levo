@@ -7,10 +7,10 @@
 
 bool     isEntityAlive(Entity * entity);
 bool     initEntities(void);
-void     resetEntityUpdates(void);
 void     updateEntities(void);
 void     addEntityToUpdateList(uint32_t index, uint32_t thread);
 void     moveEntity(Entity *e, float dx, float dy);
 void     removeEntityFromDungeon(Entity * e);
+void     resetEntityUpdates(void);
 
 #endif

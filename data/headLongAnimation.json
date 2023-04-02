@@ -1,902 +1,646 @@
 [
 	{
-		"filename" : "gfx/animations/heroine.animGroup",
+		"filename" : "gfx/animations/headLong.animGroup",
 		"numanims" : 48,
 		"animations" :
 		[
 			{
-				"filename" : "gfx/animations/heroineLeftIdle.anim",
+				"filename" : "gfx/animations/headLongLeftIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftIdle1.png",
 					"gfx/entities/headLongLeftIdle1.png",
-					"gfx/entities/heroineLeftIdle2.png",
 					"gfx/entities/headLongLeftIdle2.png",
-					"gfx/entities/heroineLeftIdle3.png",
 					"gfx/entities/headLongLeftIdle3.png",
-					"gfx/entities/heroineLeftIdle4.png",
 					"gfx/entities/headLongLeftIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftRun.anim",
+				"filename" : "gfx/animations/headLongLeftRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftRun1.png",
 					"gfx/entities/headLongLeftRun1.png",
-					"gfx/entities/heroineLeftRun2.png",
 					"gfx/entities/headLongLeftRun2.png",
-					"gfx/entities/heroineLeftRun3.png",
 					"gfx/entities/headLongLeftRun3.png",
-					"gfx/entities/heroineLeftRun4.png",
 					"gfx/entities/headLongLeftRun4.png",
-					"gfx/entities/heroineLeftRun5.png",
 					"gfx/entities/headLongLeftRun5.png",
-					"gfx/entities/heroineLeftRun6.png",
 					"gfx/entities/headLongLeftRun6.png",
-					"gfx/entities/heroineLeftRun7.png",
 					"gfx/entities/headLongLeftRun7.png",
-					"gfx/entities/heroineLeftRun8.png",
 					"gfx/entities/headLongLeftRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftMelee.anim",
+				"filename" : "gfx/animations/headLongLeftMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftMelee1.png",
 					"gfx/entities/headLongLeftMelee1.png",
-					"gfx/entities/heroineLeftMelee2.png",
 					"gfx/entities/headLongLeftMelee2.png",
-					"gfx/entities/heroineLeftMelee3.png",
 					"gfx/entities/headLongLeftMelee3.png",
-					"gfx/entities/heroineLeftMelee4.png",
 					"gfx/entities/headLongLeftMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftBlock.anim",
+				"filename" : "gfx/animations/headLongLeftBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftBlock1.png",
 					"gfx/entities/headLongLeftBlock1.png",
-					"gfx/entities/heroineLeftBlock2.png",
 					"gfx/entities/headLongLeftBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftDeath.anim",
+				"filename" : "gfx/animations/headLongLeftDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftDeath1.png",
 					"gfx/entities/headLongLeftDeath1.png",
-					"gfx/entities/heroineLeftDeath2.png",
 					"gfx/entities/headLongLeftDeath2.png",
-					"gfx/entities/heroineLeftDeath3.png",
 					"gfx/entities/headLongLeftDeath3.png",
-					"gfx/entities/heroineLeftDeath4.png",
 					"gfx/entities/headLongLeftDeath4.png",
-					"gfx/entities/heroineLeftDeath5.png",
 					"gfx/entities/headLongLeftDeath5.png",
-					"gfx/entities/heroineLeftDeath6.png",
 					"gfx/entities/headLongLeftDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftBowShoot.anim",
+				"filename" : "gfx/animations/headLongLeftBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftBowShoot1.png",
 					"gfx/entities/headLongLeftBowShoot1.png",
-					"gfx/entities/heroineLeftBowShoot2.png",
 					"gfx/entities/headLongLeftBowShoot2.png",
-					"gfx/entities/heroineLeftBowShoot3.png",
 					"gfx/entities/headLongLeftBowShoot3.png",
-					"gfx/entities/heroineLeftBowShoot4.png",
 					"gfx/entities/headLongLeftBowShoot4.png",
-					"gfx/entities/heroineLeftBowShoot5.png",
 					"gfx/entities/headLongLeftBowShoot5.png",
-					"gfx/entities/heroineLeftBowShoot6.png",
 					"gfx/entities/headLongLeftBowShoot6.png",
-					"gfx/entities/heroineLeftBowShoot7.png",
 					"gfx/entities/headLongLeftBowShoot7.png",
-					"gfx/entities/heroineLeftBowShoot8.png",
 					"gfx/entities/headLongLeftBowShoot8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftUpIdle.anim",
+				"filename" : "gfx/animations/headLongLeftUpIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftUpIdle1.png",
 					"gfx/entities/headLongLeftUpIdle1.png",
-					"gfx/entities/heroineLeftUpIdle2.png",
 					"gfx/entities/headLongLeftUpIdle2.png",
-					"gfx/entities/heroineLeftUpIdle3.png",
 					"gfx/entities/headLongLeftUpIdle3.png",
-					"gfx/entities/heroineLeftUpIdle4.png",
 					"gfx/entities/headLongLeftUpIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftUpRun.anim",
+				"filename" : "gfx/animations/headLongLeftUpRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftUpRun1.png",
 					"gfx/entities/headLongLeftUpRun1.png",
-					"gfx/entities/heroineLeftUpRun2.png",
 					"gfx/entities/headLongLeftUpRun2.png",
-					"gfx/entities/heroineLeftUpRun3.png",
 					"gfx/entities/headLongLeftUpRun3.png",
-					"gfx/entities/heroineLeftUpRun4.png",
 					"gfx/entities/headLongLeftUpRun4.png",
-					"gfx/entities/heroineLeftUpRun5.png",
 					"gfx/entities/headLongLeftUpRun5.png",
-					"gfx/entities/heroineLeftUpRun6.png",
 					"gfx/entities/headLongLeftUpRun6.png",
-					"gfx/entities/heroineLeftUpRun7.png",
 					"gfx/entities/headLongLeftUpRun7.png",
-					"gfx/entities/heroineLeftUpRun8.png",
 					"gfx/entities/headLongLeftUpRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftUpMelee.anim",
+				"filename" : "gfx/animations/headLongLeftUpMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftUpMelee1.png",
 					"gfx/entities/headLongLeftUpMelee1.png",
-					"gfx/entities/heroineLeftUpMelee2.png",
 					"gfx/entities/headLongLeftUpMelee2.png",
-					"gfx/entities/heroineLeftUpMelee3.png",
 					"gfx/entities/headLongLeftUpMelee3.png",
-					"gfx/entities/heroineLeftUpMelee4.png",
 					"gfx/entities/headLongLeftUpMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftUpBlock.anim",
+				"filename" : "gfx/animations/headLongLeftUpBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftUpBlock1.png",
 					"gfx/entities/headLongLeftUpBlock1.png",
-					"gfx/entities/heroineLeftUpBlock2.png",
 					"gfx/entities/headLongLeftUpBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftUpDeath.anim",
+				"filename" : "gfx/animations/headLongLeftUpDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftUpDeath1.png",
 					"gfx/entities/headLongLeftUpDeath1.png",
-					"gfx/entities/heroineLeftUpDeath2.png",
 					"gfx/entities/headLongLeftUpDeath2.png",
-					"gfx/entities/heroineLeftUpDeath3.png",
 					"gfx/entities/headLongLeftUpDeath3.png",
-					"gfx/entities/heroineLeftUpDeath4.png",
 					"gfx/entities/headLongLeftUpDeath4.png",
-					"gfx/entities/heroineLeftUpDeath5.png",
 					"gfx/entities/headLongLeftUpDeath5.png",
-					"gfx/entities/heroineLeftUpDeath6.png",
 					"gfx/entities/headLongLeftUpDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftUpBowShoot.anim",
+				"filename" : "gfx/animations/headLongLeftUpBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftUpBowShoot1.png",
 					"gfx/entities/headLongLeftUpBowShoot1.png",
-					"gfx/entities/heroineLeftUpBowShoot2.png",
 					"gfx/entities/headLongLeftUpBowShoot2.png",
-					"gfx/entities/heroineLeftUpBowShoot3.png",
 					"gfx/entities/headLongLeftUpBowShoot3.png",
-					"gfx/entities/heroineLeftUpBowShoot4.png",
 					"gfx/entities/headLongLeftUpBowShoot4.png",
-					"gfx/entities/heroineLeftUpBowShoot5.png",
 					"gfx/entities/headLongLeftUpBowShoot5.png",
-					"gfx/entities/heroineLeftUpBowShoot6.png",
 					"gfx/entities/headLongLeftUpBowShoot6.png",
-					"gfx/entities/heroineLeftUpBowShoot7.png",
 					"gfx/entities/headLongLeftUpBowShoot7.png",
-					"gfx/entities/heroineLeftUpBowShoot8.png",
 					"gfx/entities/headLongLeftUpBowShoot8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftDownIdle.anim",
+				"filename" : "gfx/animations/headLongLeftDownIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftDownIdle1.png",
 					"gfx/entities/headLongLeftDownIdle1.png",
-					"gfx/entities/heroineLeftDownIdle2.png",
 					"gfx/entities/headLongLeftDownIdle2.png",
-					"gfx/entities/heroineLeftDownIdle3.png",
 					"gfx/entities/headLongLeftDownIdle3.png",
-					"gfx/entities/heroineLeftDownIdle4.png",
 					"gfx/entities/headLongLeftDownIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftDownRun.anim",
+				"filename" : "gfx/animations/headLongLeftDownRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftDownRun1.png",
 					"gfx/entities/headLongLeftDownRun1.png",
-					"gfx/entities/heroineLeftDownRun2.png",
 					"gfx/entities/headLongLeftDownRun2.png",
-					"gfx/entities/heroineLeftDownRun3.png",
 					"gfx/entities/headLongLeftDownRun3.png",
-					"gfx/entities/heroineLeftDownRun4.png",
 					"gfx/entities/headLongLeftDownRun4.png",
-					"gfx/entities/heroineLeftDownRun5.png",
 					"gfx/entities/headLongLeftDownRun5.png",
-					"gfx/entities/heroineLeftDownRun6.png",
 					"gfx/entities/headLongLeftDownRun6.png",
-					"gfx/entities/heroineLeftDownRun7.png",
 					"gfx/entities/headLongLeftDownRun7.png",
-					"gfx/entities/heroineLeftDownRun8.png",
 					"gfx/entities/headLongLeftDownRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftDownMelee.anim",
+				"filename" : "gfx/animations/headLongLeftDownMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftDownMelee1.png",
 					"gfx/entities/headLongLeftDownMelee1.png",
-					"gfx/entities/heroineLeftDownMelee2.png",
 					"gfx/entities/headLongLeftDownMelee2.png",
-					"gfx/entities/heroineLeftDownMelee3.png",
 					"gfx/entities/headLongLeftDownMelee3.png",
-					"gfx/entities/heroineLeftDownMelee4.png",
 					"gfx/entities/headLongLeftDownMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftDownBlock.anim",
+				"filename" : "gfx/animations/headLongLeftDownBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftDownBlock1.png",
 					"gfx/entities/headLongLeftDownBlock1.png",
-					"gfx/entities/heroineLeftDownBlock2.png",
 					"gfx/entities/headLongLeftDownBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftDownDeath.anim",
+				"filename" : "gfx/animations/headLongLeftDownDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftDownDeath1.png",
 					"gfx/entities/headLongLeftDownDeath1.png",
-					"gfx/entities/heroineLeftDownDeath2.png",
 					"gfx/entities/headLongLeftDownDeath2.png",
-					"gfx/entities/heroineLeftDownDeath3.png",
 					"gfx/entities/headLongLeftDownDeath3.png",
-					"gfx/entities/heroineLeftDownDeath4.png",
 					"gfx/entities/headLongLeftDownDeath4.png",
-					"gfx/entities/heroineLeftDownDeath5.png",
 					"gfx/entities/headLongLeftDownDeath5.png",
-					"gfx/entities/heroineLeftDownDeath6.png",
 					"gfx/entities/headLongLeftDownDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineLeftDownBowShoot.anim",
+				"filename" : "gfx/animations/headLongLeftDownBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineLeftDownBowShoot1.png",
 					"gfx/entities/headLongLeftDownBowShoot1.png",
-					"gfx/entities/heroineLeftDownBowShoot2.png",
 					"gfx/entities/headLongLeftDownBowShoot2.png",
-					"gfx/entities/heroineLeftDownBowShoot3.png",
 					"gfx/entities/headLongLeftDownBowShoot3.png",
-					"gfx/entities/heroineLeftDownBowShoot4.png",
 					"gfx/entities/headLongLeftDownBowShoot4.png",
-					"gfx/entities/heroineLeftDownBowShoot5.png",
 					"gfx/entities/headLongLeftDownBowShoot5.png",
-					"gfx/entities/heroineLeftDownBowShoot6.png",
 					"gfx/entities/headLongLeftDownBowShoot6.png",
-					"gfx/entities/heroineLeftDownBowShoot7.png",
 					"gfx/entities/headLongLeftDownBowShoot7.png",
-					"gfx/entities/heroineLeftDownBowShoot8.png",
 					"gfx/entities/headLongLeftDownBowShoot8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightIdle.anim",
+				"filename" : "gfx/animations/headLongRightIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineRightIdle1.png",
 					"gfx/entities/headLongRightIdle1.png",
-					"gfx/entities/heroineRightIdle2.png",
 					"gfx/entities/headLongRightIdle2.png",
-					"gfx/entities/heroineRightIdle3.png",
 					"gfx/entities/headLongRightIdle3.png",
-					"gfx/entities/heroineRightIdle4.png",
 					"gfx/entities/headLongRightIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightRun.anim",
+				"filename" : "gfx/animations/headLongRightRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightRun1.png",
 					"gfx/entities/headLongRightRun1.png",
-					"gfx/entities/heroineRightRun2.png",
 					"gfx/entities/headLongRightRun2.png",
-					"gfx/entities/heroineRightRun3.png",
 					"gfx/entities/headLongRightRun3.png",
-					"gfx/entities/heroineRightRun4.png",
 					"gfx/entities/headLongRightRun4.png",
-					"gfx/entities/heroineRightRun5.png",
 					"gfx/entities/headLongRightRun5.png",
-					"gfx/entities/heroineRightRun6.png",
 					"gfx/entities/headLongRightRun6.png",
-					"gfx/entities/heroineRightRun7.png",
 					"gfx/entities/headLongRightRun7.png",
-					"gfx/entities/heroineRightRun8.png",
 					"gfx/entities/headLongRightRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightMelee.anim",
+				"filename" : "gfx/animations/headLongRightMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightMelee1.png",
 					"gfx/entities/headLongRightMelee1.png",
-					"gfx/entities/heroineRightMelee2.png",
 					"gfx/entities/headLongRightMelee2.png",
-					"gfx/entities/heroineRightMelee3.png",
 					"gfx/entities/headLongRightMelee3.png",
-					"gfx/entities/heroineRightMelee4.png",
 					"gfx/entities/headLongRightMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightBlock.anim",
+				"filename" : "gfx/animations/headLongRightBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightBlock1.png",
 					"gfx/entities/headLongRightBlock1.png",
-					"gfx/entities/heroineRightBlock2.png",
 					"gfx/entities/headLongRightBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightDeath.anim",
+				"filename" : "gfx/animations/headLongRightDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineRightDeath1.png",
 					"gfx/entities/headLongRightDeath1.png",
-					"gfx/entities/heroineRightDeath2.png",
 					"gfx/entities/headLongRightDeath2.png",
-					"gfx/entities/heroineRightDeath3.png",
 					"gfx/entities/headLongRightDeath3.png",
-					"gfx/entities/heroineRightDeath4.png",
 					"gfx/entities/headLongRightDeath4.png",
-					"gfx/entities/heroineRightDeath5.png",
 					"gfx/entities/headLongRightDeath5.png",
-					"gfx/entities/heroineRightDeath6.png",
 					"gfx/entities/headLongRightDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightBowShoot.anim",
+				"filename" : "gfx/animations/headLongRightBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineRightBowShoot1.png",
 					"gfx/entities/headLongRightBowShoot1.png",
-					"gfx/entities/heroineRightBowShoot2.png",
 					"gfx/entities/headLongRightBowShoot2.png",
-					"gfx/entities/heroineRightBowShoot3.png",
 					"gfx/entities/headLongRightBowShoot3.png",
-					"gfx/entities/heroineRightBowShoot4.png",
 					"gfx/entities/headLongRightBowShoot4.png",
-					"gfx/entities/heroineRightBowShoot5.png",
 					"gfx/entities/headLongRightBowShoot5.png",
-					"gfx/entities/heroineRightBowShoot6.png",
 					"gfx/entities/headLongRightBowShoot6.png",
-					"gfx/entities/heroineRightBowShoot7.png",
 					"gfx/entities/headLongRightBowShoot7.png",
-					"gfx/entities/heroineRightBowShoot8.png",
 					"gfx/entities/headLongRightBowShoot8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightUpIdle.anim",
+				"filename" : "gfx/animations/headLongRightUpIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineRightUpIdle1.png",
 					"gfx/entities/headLongRightUpIdle1.png",
-					"gfx/entities/heroineRightUpIdle2.png",
 					"gfx/entities/headLongRightUpIdle2.png",
-					"gfx/entities/heroineRightUpIdle3.png",
 					"gfx/entities/headLongRightUpIdle3.png",
-					"gfx/entities/heroineRightUpIdle4.png",
 					"gfx/entities/headLongRightUpIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightUpRun.anim",
+				"filename" : "gfx/animations/headLongRightUpRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightUpRun1.png",
 					"gfx/entities/headLongRightUpRun1.png",
-					"gfx/entities/heroineRightUpRun2.png",
 					"gfx/entities/headLongRightUpRun2.png",
-					"gfx/entities/heroineRightUpRun3.png",
 					"gfx/entities/headLongRightUpRun3.png",
-					"gfx/entities/heroineRightUpRun4.png",
 					"gfx/entities/headLongRightUpRun4.png",
-					"gfx/entities/heroineRightUpRun5.png",
 					"gfx/entities/headLongRightUpRun5.png",
-					"gfx/entities/heroineRightUpRun6.png",
 					"gfx/entities/headLongRightUpRun6.png",
-					"gfx/entities/heroineRightUpRun7.png",
 					"gfx/entities/headLongRightUpRun7.png",
-					"gfx/entities/heroineRightUpRun8.png",
 					"gfx/entities/headLongRightUpRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightUpMelee.anim",
+				"filename" : "gfx/animations/headLongRightUpMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightUpMelee1.png",
 					"gfx/entities/headLongRightUpMelee1.png",
-					"gfx/entities/heroineRightUpMelee2.png",
 					"gfx/entities/headLongRightUpMelee2.png",
-					"gfx/entities/heroineRightUpMelee3.png",
 					"gfx/entities/headLongRightUpMelee3.png",
-					"gfx/entities/heroineRightUpMelee4.png",
 					"gfx/entities/headLongRightUpMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightUpBlock.anim",
+				"filename" : "gfx/animations/headLongRightUpBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightUpBlock1.png",
 					"gfx/entities/headLongRightUpBlock1.png",
-					"gfx/entities/heroineRightUpBlock2.png",
 					"gfx/entities/headLongRightUpBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightUpDeath.anim",
+				"filename" : "gfx/animations/headLongRightUpDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineRightUpDeath1.png",
 					"gfx/entities/headLongRightUpDeath1.png",
-					"gfx/entities/heroineRightUpDeath2.png",
 					"gfx/entities/headLongRightUpDeath2.png",
-					"gfx/entities/heroineRightUpDeath3.png",
 					"gfx/entities/headLongRightUpDeath3.png",
-					"gfx/entities/heroineRightUpDeath4.png",
 					"gfx/entities/headLongRightUpDeath4.png",
-					"gfx/entities/heroineRightUpDeath5.png",
 					"gfx/entities/headLongRightUpDeath5.png",
-					"gfx/entities/heroineRightUpDeath6.png",
 					"gfx/entities/headLongRightUpDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightUpBowShoot.anim",
+				"filename" : "gfx/animations/headLongRightUpBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineRightUpBowShoot1.png",
 					"gfx/entities/headLongRightUpBowShoot1.png",
-					"gfx/entities/heroineRightUpBowShoot2.png",
 					"gfx/entities/headLongRightUpBowShoot2.png",
-					"gfx/entities/heroineRightUpBowShoot3.png",
 					"gfx/entities/headLongRightUpBowShoot3.png",
-					"gfx/entities/heroineRightUpBowShoot4.png",
 					"gfx/entities/headLongRightUpBowShoot4.png",
-					"gfx/entities/heroineRightUpBowShoot5.png",
 					"gfx/entities/headLongRightUpBowShoot5.png",
-					"gfx/entities/heroineRightUpBowShoot6.png",
 					"gfx/entities/headLongRightUpBowShoot6.png",
-					"gfx/entities/heroineRightUpBowShoot7.png",
 					"gfx/entities/headLongRightUpBowShoot7.png",
-					"gfx/entities/heroineRightUpBowShoot8.png",
 					"gfx/entities/headLongRightUpBowShoot8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightDownIdle.anim",
+				"filename" : "gfx/animations/headLongRightDownIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineRightDownIdle1.png",
 					"gfx/entities/headLongRightDownIdle1.png",
-					"gfx/entities/heroineRightDownIdle2.png",
 					"gfx/entities/headLongRightDownIdle2.png",
-					"gfx/entities/heroineRightDownIdle3.png",
 					"gfx/entities/headLongRightDownIdle3.png",
-					"gfx/entities/heroineRightDownIdle4.png",
 					"gfx/entities/headLongRightDownIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightDownRun.anim",
+				"filename" : "gfx/animations/headLongRightDownRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightDownRun1.png",
 					"gfx/entities/headLongRightDownRun1.png",
-					"gfx/entities/heroineRightDownRun2.png",
 					"gfx/entities/headLongRightDownRun2.png",
-					"gfx/entities/heroineRightDownRun3.png",
 					"gfx/entities/headLongRightDownRun3.png",
-					"gfx/entities/heroineRightDownRun4.png",
 					"gfx/entities/headLongRightDownRun4.png",
-					"gfx/entities/heroineRightDownRun5.png",
 					"gfx/entities/headLongRightDownRun5.png",
-					"gfx/entities/heroineRightDownRun6.png",
 					"gfx/entities/headLongRightDownRun6.png",
-					"gfx/entities/heroineRightDownRun7.png",
 					"gfx/entities/headLongRightDownRun7.png",
-					"gfx/entities/heroineRightDownRun8.png",
 					"gfx/entities/headLongRightDownRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightDownMelee.anim",
+				"filename" : "gfx/animations/headLongRightDownMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightDownMelee1.png",
 					"gfx/entities/headLongRightDownMelee1.png",
-					"gfx/entities/heroineRightDownMelee2.png",
 					"gfx/entities/headLongRightDownMelee2.png",
-					"gfx/entities/heroineRightDownMelee3.png",
 					"gfx/entities/headLongRightDownMelee3.png",
-					"gfx/entities/heroineRightDownMelee4.png",
 					"gfx/entities/headLongRightDownMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightDownBlock.anim",
+				"filename" : "gfx/animations/headLongRightDownBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineRightDownBlock1.png",
 					"gfx/entities/headLongRightDownBlock1.png",
-					"gfx/entities/heroineRightDownBlock2.png",
 					"gfx/entities/headLongRightDownBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightDownDeath.anim",
+				"filename" : "gfx/animations/headLongRightDownDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineRightDownDeath1.png",
 					"gfx/entities/headLongRightDownDeath1.png",
-					"gfx/entities/heroineRightDownDeath2.png",
 					"gfx/entities/headLongRightDownDeath2.png",
-					"gfx/entities/heroineRightDownDeath3.png",
 					"gfx/entities/headLongRightDownDeath3.png",
-					"gfx/entities/heroineRightDownDeath4.png",
 					"gfx/entities/headLongRightDownDeath4.png",
-					"gfx/entities/heroineRightDownDeath5.png",
 					"gfx/entities/headLongRightDownDeath5.png",
-					"gfx/entities/heroineRightDownDeath6.png",
 					"gfx/entities/headLongRightDownDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineRightDownBowShoot.anim",
+				"filename" : "gfx/animations/headLongRightDownBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineRightDownBowShoot1.png",
 					"gfx/entities/headLongRightDownBowShoot1.png",
-					"gfx/entities/heroineRightDownBowShoot2.png",
 					"gfx/entities/headLongRightDownBowShoot2.png",
-					"gfx/entities/heroineRightDownBowShoot3.png",
 					"gfx/entities/headLongRightDownBowShoot3.png",
-					"gfx/entities/heroineRightDownBowShoot4.png",
 					"gfx/entities/headLongRightDownBowShoot4.png",
-					"gfx/entities/heroineRightDownBowShoot5.png",
 					"gfx/entities/headLongRightDownBowShoot5.png",
-					"gfx/entities/heroineRightDownBowShoot6.png",
 					"gfx/entities/headLongRightDownBowShoot6.png",
-					"gfx/entities/heroineRightDownBowShoot7.png",
 					"gfx/entities/headLongRightDownBowShoot7.png",
-					"gfx/entities/heroineRightDownBowShoot8.png",
 					"gfx/entities/headLongRightDownBowShoot8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineDownIdle.anim",
+				"filename" : "gfx/animations/headLongDownIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineDownIdle1.png",
 					"gfx/entities/headLongDownIdle1.png",
-					"gfx/entities/heroineDownIdle2.png",
 					"gfx/entities/headLongDownIdle2.png",
-					"gfx/entities/heroineDownIdle3.png",
 					"gfx/entities/headLongDownIdle3.png",
-					"gfx/entities/heroineDownIdle4.png",
 					"gfx/entities/headLongDownIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineDownRun.anim",
+				"filename" : "gfx/animations/headLongDownRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineDownRun1.png",
 					"gfx/entities/headLongDownRun1.png",
-					"gfx/entities/heroineDownRun2.png",
 					"gfx/entities/headLongDownRun2.png",
-					"gfx/entities/heroineDownRun3.png",
 					"gfx/entities/headLongDownRun3.png",
-					"gfx/entities/heroineDownRun4.png",
 					"gfx/entities/headLongDownRun4.png",
-					"gfx/entities/heroineDownRun5.png",
 					"gfx/entities/headLongDownRun5.png",
-					"gfx/entities/heroineDownRun6.png",
 					"gfx/entities/headLongDownRun6.png",
-					"gfx/entities/heroineDownRun7.png",
 					"gfx/entities/headLongDownRun7.png",
-					"gfx/entities/heroineDownRun8.png",
 					"gfx/entities/headLongDownRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineDownMelee.anim",
+				"filename" : "gfx/animations/headLongDownMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineDownMelee1.png",
 					"gfx/entities/headLongDownMelee1.png",
-					"gfx/entities/heroineDownMelee2.png",
 					"gfx/entities/headLongDownMelee2.png",
-					"gfx/entities/heroineDownMelee3.png",
 					"gfx/entities/headLongDownMelee3.png",
-					"gfx/entities/heroineDownMelee4.png",
 					"gfx/entities/headLongDownMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineDownBlock.anim",
+				"filename" : "gfx/animations/headLongDownBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineDownBlock1.png",
 					"gfx/entities/headLongDownBlock1.png",
-					"gfx/entities/heroineDownBlock2.png",
 					"gfx/entities/headLongDownBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineDownDeath.anim",
+				"filename" : "gfx/animations/headLongDownDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineDownDeath1.png",
 					"gfx/entities/headLongDownDeath1.png",
-					"gfx/entities/heroineDownDeath2.png",
 					"gfx/entities/headLongDownDeath2.png",
-					"gfx/entities/heroineDownDeath3.png",
 					"gfx/entities/headLongDownDeath3.png",
-					"gfx/entities/heroineDownDeath4.png",
 					"gfx/entities/headLongDownDeath4.png",
-					"gfx/entities/heroineDownDeath5.png",
 					"gfx/entities/headLongDownDeath5.png",
-					"gfx/entities/heroineDownDeath6.png",
 					"gfx/entities/headLongDownDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineDownBowShoot.anim",
+				"filename" : "gfx/animations/headLongDownBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineDownBowShoot1.png",
 					"gfx/entities/headLongDownBowShoot1.png",
-					"gfx/entities/heroineDownBowShoot2.png",
 					"gfx/entities/headLongDownBowShoot2.png",
-					"gfx/entities/heroineDownBowShoot3.png",
 					"gfx/entities/headLongDownBowShoot3.png",
-					"gfx/entities/heroineDownBowShoot4.png",
 					"gfx/entities/headLongDownBowShoot4.png",
-					"gfx/entities/heroineDownBowShoot5.png",
 					"gfx/entities/headLongDownBowShoot5.png",
-					"gfx/entities/heroineDownBowShoot6.png",
 					"gfx/entities/headLongDownBowShoot6.png",
-					"gfx/entities/heroineDownBowShoot7.png",
 					"gfx/entities/headLongDownBowShoot7.png",
-					"gfx/entities/heroineDownBowShoot8.png",
 					"gfx/entities/headLongDownBowShoot8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineUpIdle.anim",
+				"filename" : "gfx/animations/headLongUpIdle.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineUpIdle1.png",
 					"gfx/entities/headLongUpIdle1.png",
-					"gfx/entities/heroineUpIdle2.png",
 					"gfx/entities/headLongUpIdle2.png",
-					"gfx/entities/heroineUpIdle3.png",
 					"gfx/entities/headLongUpIdle3.png",
-					"gfx/entities/heroineUpIdle4.png",
 					"gfx/entities/headLongUpIdle4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineUpRun.anim",
+				"filename" : "gfx/animations/headLongUpRun.anim",
 				"numframes" : 8,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineUpRun1.png",
 					"gfx/entities/headLongUpRun1.png",
-					"gfx/entities/heroineUpRun2.png",
 					"gfx/entities/headLongUpRun2.png",
-					"gfx/entities/heroineUpRun3.png",
 					"gfx/entities/headLongUpRun3.png",
-					"gfx/entities/heroineUpRun4.png",
 					"gfx/entities/headLongUpRun4.png",
-					"gfx/entities/heroineUpRun5.png",
 					"gfx/entities/headLongUpRun5.png",
-					"gfx/entities/heroineUpRun6.png",
 					"gfx/entities/headLongUpRun6.png",
-					"gfx/entities/heroineUpRun7.png",
 					"gfx/entities/headLongUpRun7.png",
-					"gfx/entities/heroineUpRun8.png",
 					"gfx/entities/headLongUpRun8.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineUpMelee.anim",
+				"filename" : "gfx/animations/headLongUpMelee.anim",
 				"numframes" : 4,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineUpMelee1.png",
 					"gfx/entities/headLongUpMelee1.png",
-					"gfx/entities/heroineUpMelee2.png",
 					"gfx/entities/headLongUpMelee2.png",
-					"gfx/entities/heroineUpMelee3.png",
 					"gfx/entities/headLongUpMelee3.png",
-					"gfx/entities/heroineUpMelee4.png",
 					"gfx/entities/headLongUpMelee4.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineUpBlock.anim",
+				"filename" : "gfx/animations/headLongUpBlock.anim",
 				"numframes" : 2,
 				"lengthseconds" : 0.50,
 				"frames" :
 				[
-					"gfx/entities/heroineUpBlock1.png",
 					"gfx/entities/headLongUpBlock1.png",
-					"gfx/entities/heroineUpBlock2.png",
 					"gfx/entities/headLongUpBlock2.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineUpDeath.anim",
+				"filename" : "gfx/animations/headLongUpDeath.anim",
 				"numframes" : 6,
 				"lengthseconds" : 0.75,
 				"frames" :
 				[
-					"gfx/entities/heroineUpDeath1.png",
 					"gfx/entities/headLongUpDeath1.png",
-					"gfx/entities/heroineUpDeath2.png",
 					"gfx/entities/headLongUpDeath2.png",
-					"gfx/entities/heroineUpDeath3.png",
 					"gfx/entities/headLongUpDeath3.png",
-					"gfx/entities/heroineUpDeath4.png",
 					"gfx/entities/headLongUpDeath4.png",
-					"gfx/entities/heroineUpDeath5.png",
 					"gfx/entities/headLongUpDeath5.png",
-					"gfx/entities/heroineUpDeath6.png",
 					"gfx/entities/headLongUpDeath6.png"
 				]
 			},
 			{
-				"filename" : "gfx/animations/heroineUpBowShoot.anim",
+				"filename" : "gfx/animations/headLongUpBowShoot.anim",
 				"numframes" : 8,
 				"lengthseconds" : 1.00,
 				"frames" :
 				[
-					"gfx/entities/heroineUpBowShoot1.png",
 					"gfx/entities/headLongUpBowShoot1.png",
-					"gfx/entities/heroineUpBowShoot2.png",
 					"gfx/entities/headLongUpBowShoot2.png",
-					"gfx/entities/heroineUpBowShoot3.png",
 					"gfx/entities/headLongUpBowShoot3.png",
-					"gfx/entities/heroineUpBowShoot4.png",
 					"gfx/entities/headLongUpBowShoot4.png",
-					"gfx/entities/heroineUpBowShoot5.png",
 					"gfx/entities/headLongUpBowShoot5.png",
-					"gfx/entities/heroineUpBowShoot6.png",
 					"gfx/entities/headLongUpBowShoot6.png",
-					"gfx/entities/heroineUpBowShoot7.png",
 					"gfx/entities/headLongUpBowShoot7.png",
-					"gfx/entities/heroineUpBowShoot8.png",
 					"gfx/entities/headLongUpBowShoot8.png"
 				]
 			}

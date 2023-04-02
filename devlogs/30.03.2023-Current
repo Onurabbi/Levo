@@ -1,3 +1,5 @@
+~100-150 hours before starting recording hours
+
 30.03.2023:
 ============================
 Total number of hours worked: 
@@ -6,17 +8,44 @@ Total number of hours worked:
     15.13 - 16.20
     17.48 - 21.10
 +
-------------------------------    
+---------------------------- 
     7 hr 20 min
 Work done: 
     -Defined animation group, animation, animation state structs.
     -Simplified asset system interface. Size and max count aren't needed from outside the module now.
     -Can do sprite animation now. Need to do animation trees next.
 
-30.03.2023:
+31.03.2023:
 ============================
 Total number of hours worked: 
     07.11 - 07.54
     08.28 - 11.00
     11.45 - 13.07
-    14.45 - 
+    14.45 - 17.00
+    18.30 - 19.00
+    20.24 - 21.30
++
+---------------------------
+    7 hrs
+Work done:
+    -Got basic animation system working.
+    -Animation state bit field instead of booleans could be nice to have.
+
+01.04.2023:
+=================================
+Total number of hours worked:
+    07.30 - 09.41
+    12.30 - 14.00
+    17.00 - 19.53
++--------------------------------
+    6.30 hrs
+Work done:
+    -Two visible parts per entity can be animated. It's trivial to add more drawables per entity but the drawable max count might need to be incremented.
+
+02.04.2023:
+=================================
+Total number of hours worked:
+    07.23 - 
+Work done:
+
+

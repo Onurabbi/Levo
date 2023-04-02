@@ -28,7 +28,7 @@ typedef struct
 
 typedef struct
 {
-    uint32_t frames[MAX_NUM_ANIMATION_SPRITES];
+    uint32_t frames[MAX_DRAWABLES_PER_ENTITY][MAX_NUM_ANIMATION_SPRITES];
     uint32_t numFrames;
     double   lengthSeconds;
     double   AnimTimer;
@@ -42,15 +42,21 @@ typedef struct
     uint32_t       numAnimations;
 }AnimationGroup;
 
+typedef struct 
+{
+    Sprite *head;
+    Sprite *body;
+}EntityVisibleSprites;
+
 typedef struct
 {
     uint32_t    id;
     uint32_t    entityIndex;
     Vec2f       p;
     float       width, height;
-    uint32_t    facing;
     double      angle;
-    Sprite      *sprite;
+    Sprite      *sprites[MAX_DRAWABLES_PER_ENTITY];
+    uint32_t    numDrawables;
     EntityType  entityType;
     uint64_t    flags;
     void        *data;
@@ -69,9 +75,10 @@ typedef struct
     AnimationGroup   *animGroup;
     Vec2f            dP;
     uint32_t         facing;
-    bool             shooting;
     uint32_t         health;
     float            velocity;
+    bool             attacking;//TODO: bit field
+    bool             switchAnim;
 } Actor;
 
 typedef struct 

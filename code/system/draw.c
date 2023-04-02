@@ -14,10 +14,19 @@ extern Dungeon dungeon;
 static Sprite *  pointerSprite;
 
 static Drawable * tiles;
-static uint32_t   numTiles[MAX_NUM_THREADS];
+static uint32_t * numTiles;
 
 static Drawable * entities;
-static uint32_t   numEntities[MAX_NUM_THREADS];
+static uint32_t * numEntities;
+
+void resetDraw(void)
+{
+    for(int thread = 0; thread < MAX_NUM_THREADS; thread++)
+    {
+        numEntities[thread] = 0;
+        numTiles[thread] = 0;
+    }
+}
 
 static Drawable * getDrawableEntity(uint32_t i, uint32_t thread)
 {
@@ -51,14 +60,6 @@ static int compareDrawables(const void * a, const void * b)
     Drawable * d2 = (Drawable *)b;
 
     return (d2->y - d1->y);
-}
-
-void resetDraw(void)
-{
-    memset(tiles, 0, sizeof(Drawable) * MAX_NUM_TILES);
-    memset(entities, 0, sizeof(Drawable) * MAX_NUM_ENTITIES);
-    memset(numTiles, 0, sizeof(uint32_t) * MAX_NUM_THREADS);
-    memset(numEntities, 0, sizeof(uint32_t) * MAX_NUM_THREADS);
 }
 
 void drawAll(void)
@@ -114,10 +115,16 @@ bool initDraw(void)
         return false;
     }
 
-    for(int i = 0; i < MAX_NUM_THREADS; i++)
-    {   
-        numEntities[i] = 0;
-        numTiles[i] = 0;
+    numEntities = allocateTransientMemory(MAX_NUM_THREADS * sizeof(uint32_t));
+    if(numEntities == NULL)
+    {
+        return false;
+    }
+
+    numTiles = allocateTransientMemory(MAX_NUM_THREADS * sizeof(uint32_t));
+    if(numTiles == NULL)
+    {
+        return false;
     }
 
     return true;
@@ -225,16 +232,19 @@ static Drawable * getNewDrawable(int layer, int thread)
 
 void addEntityToDrawList(Entity * e, Vec2f p, int thread)
 {
-    Drawable * drawable = getNewDrawable(DL_ENTITY, thread);
-    if(drawable)
-    {
-        drawable->sprite = e->sprite;
-        drawable->x = p.x;
-        drawable->y = p.y;
-    }
-    else
-    {
-        printf("Can't get drawable\n");
+    for(int i = 0; i < e->numDrawables; i++)
+    {   
+        Drawable * drawable = getNewDrawable(DL_ENTITY, thread);
+        if(drawable)
+        {
+            drawable->sprite = e->sprites[i];
+            drawable->x = p.x;
+            drawable->y = p.y;
+        }
+        else
+        {
+            printf("Can't get drawable\n");
+        }
     }
 }
 

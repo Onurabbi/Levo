@@ -7,6 +7,7 @@
         "defs.h": "c",
         "structs.h": "c",
         "title.h": "c",
-        "actor.h": "c"
+        "actor.h": "c",
+        "sound.h": "c"
     }
 }

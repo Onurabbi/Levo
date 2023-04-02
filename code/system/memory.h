@@ -12,5 +12,6 @@
 bool   initMemory(void);
 void * allocatePermanentMemory(size_t size);
 void * allocateTransientMemory(size_t size);
+void   resetTransientMemory(void);
 
 #endif

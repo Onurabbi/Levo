@@ -171,28 +171,12 @@ bool initDungeon(void)
     dungeon.player = initEntity("Player");
     dungeon.player->p.x = (float)(MAP_WIDTH/2);
     dungeon.player->p.y = (float)(MAP_HEIGHT/2);
-
+    
     dungeon.camera.w = MAP_RENDER_WIDTH;
     dungeon.camera.h = MAP_RENDER_HEIGHT;
 
     dungeon.camera.x = dungeon.player->p.x - dungeon.camera.w / 2;
     dungeon.camera.y = dungeon.player->p.y - dungeon.camera.h / 2;
-
-    Entity * e = initEntity("Barrel");
-    e->p.x = dungeon.player->p.x + 5;
-    e->p.y = dungeon.player->p.y + 5;
-
-    e = initEntity("Barrel");
-    e->p.x = dungeon.player->p.x - 5;
-    e->p.y = dungeon.player->p.y - 5;
-    
-    e = initEntity("Barrel");
-    e->p.x = dungeon.player->p.x + 5;
-    e->p.y = dungeon.player->p.y - 5;
-    
-    e = initEntity("Barrel");
-    e->p.x = dungeon.player->p.x - 5;
-    e->p.y = dungeon.player->p.y + 5;
 
     app.gameMode = GAME_MODE_DUNGEON;
     
@@ -293,6 +277,6 @@ void updateDungeon(void)
     findVisibleTiles();
 
     doEntityFirstPass();
-
+    
     updateEntities();
 }
