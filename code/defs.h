@@ -4,9 +4,9 @@
 #define SCREEN_WIDTH  1920
 #define SCREEN_HEIGHT 1080
 
-#define BIT_SET(number, bit) ((number) | (1ULL << bit))
-#define BIT_CLEAR(number, bit) ((number) & ~(1ULL << bit))
-#define BIT_CHECK(number, bit) ((number) & (1ULL << bit))
+#define BIT_SET(number, bit)   ((number) |= (1ULL << bit))
+#define BIT_CLEAR(number, bit) ((number) &= ~(1ULL << bit))
+#define BIT_CHECK(number, bit) ((number) &= (1ULL << bit))
 
 #define INIT_CHECK(function, s) do{ \
     bool success = function();      \
@@ -38,21 +38,23 @@ do {								  \
 #define MAX_DESCRIPTION_LENGTH 		256
 #define MAX_FILENAME_LENGTH    		256
 #define MAX_NAME_LENGTH        		32
-#define MAX_NUM_SPRITES        		4096
+
+#define MAX_NUM_ENTITIES       		1024
+#define MAX_NUM_WEAPONS				128
+#define MAX_NUM_ACTORS				MAX_NUM_ENTITIES
+#define MAX_NUM_INIT_FUNCS     		32
+
+#define MAX_NUM_SPRITES        		MAX_NUM_ENTITIES * 16
 #define MAX_NUM_TEXTURES       		128
 #define MAX_MOUSE_BUTTONS      		8
 #define MAX_KEYBOARD_KEYS      		350
 #define MAX_SND_CHANNELS       		16
-#define MAX_NUM_ENTITIES       		1024
 
 #define MAP_WIDTH 			   		64
 #define MAP_HEIGHT 			  	 	64
 #define MAX_NUM_MAP_LAYERS     		2
 
 #define MAX_NUM_TILES		   	    (MAP_WIDTH * MAP_HEIGHT * MAX_NUM_MAP_LAYERS)
-
-#define MAX_NUM_ACTORS				1024
-#define MAX_NUM_INIT_FUNCS     		32
 
 //because isometric, these two need to be different
 #define TILE_WIDTH		       		64 * ZOOM
@@ -74,14 +76,14 @@ do {								  \
 
 #define MAX_NUM_THREADS 				8
 #define MAX_TILE_COUNT_PER_THREAD		((MAX_NUM_TILES) / MAX_NUM_THREADS)
-#define MAX_ENTITY_COUNT_PER_THREAD (	(MAX_NUM_ENTITIES) / MAX_NUM_THREADS)
+#define MAX_ENTITY_COUNT_PER_THREAD     ((MAX_NUM_ENTITIES) / MAX_NUM_THREADS)
 
 typedef enum
 {
 	ET_PLAYER,
 	ET_BARREL,
 	ET_PROJECTILE,
-	ET_TREE1,
+	ET_LONGSWORD,
 	ET_MAX
 } EntityType;
 
@@ -254,8 +256,8 @@ enum
 {
 	BODY,
 	HEAD,
-	OFFHAND,
 	WEAPON_HAND,
+	OFFHAND,
 	MAX_DRAWABLES_PER_ENTITY
 };
 

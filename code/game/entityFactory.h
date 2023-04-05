@@ -4,5 +4,5 @@
 bool     initEntityFactory(void);
 Entity * initEntity(char *name);
 void     removeEntity(Entity * e);
-
+void     removeActor(Actor *a);
 #endif

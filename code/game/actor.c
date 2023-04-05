@@ -4,10 +4,24 @@
 #include "../system/animation.h"
 #include "../system/atlas.h"
 
+#include "entity.h"
 #include "actor.h"
 
 extern Dungeon dungeon;
 extern App app;
+
+void takeDamage(Actor *actor, Actor * attacker, uint32_t damage)
+{
+    Entity * owner = actor->owner;
+    SDL_assert(owner);
+
+    actor->health--;
+    if(actor->health == 0)
+    {
+        printf("killing actor %d\n", actor->actorIndex);
+        die(owner);
+    }
+}
 
 static inline bool isActorMoving(Vec2f dP)
 {
@@ -23,6 +37,7 @@ static int getActorFacingDirection(int oldFacing)
     if (input->keyboardState[SDL_SCANCODE_W] == 1)
     {
         if (input->keyboardState[SDL_SCANCODE_D] == 1)
+
         {
             newFacing = FACING_RIGHT_UP;
         }
@@ -38,6 +53,7 @@ static int getActorFacingDirection(int oldFacing)
     else if (input->keyboardState[SDL_SCANCODE_S] == 1)
     {
         if (input->keyboardState[SDL_SCANCODE_D] == 1)
+
         {
             newFacing = FACING_RIGHT_DOWN;
         }
@@ -100,9 +116,11 @@ static Animation * getNewAnimation(Actor* actor)
 
 static inline void getAnimationVisibleSprites(Animation *animation, EntityVisibleSprites *sprites, int frameIndex)
 {
-    for(int i = 0; i < MAX_DRAWABLES_PER_ENTITY; i++)
+    int partCount = sprites->drawableCount;
+    
+    for(int i = 0; i < sprites->drawableCount; i++)
     {
-        sprites->sprites[i] = getSpriteByIndex(animation->frames[i][frameIndex]);
+        sprites->sprites[i] = getSpriteByIndex(animation->frames[i + partCount * frameIndex]);
     }
 }
 
@@ -143,10 +161,4 @@ void getSpritesToShow(Actor * actor)
     SDL_assert(frameIndex >= 0 && frameIndex < currentAnimation->numFrames);
 
     getAnimationVisibleSprites(currentAnimation, &owner->entitySprites, frameIndex);
-}
-
-Actor * getNewActor(void)
-{
-    SDL_assert(dungeon.numActors < MAX_NUM_ACTORS);
-    return &dungeon.actors[dungeon.numActors++];
 }

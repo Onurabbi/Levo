@@ -19,6 +19,42 @@ static uint32_t * numTiles;
 static Drawable * entities;
 static uint32_t * numEntities;
 
+static uint32_t totalNumTiles;
+static uint32_t totalNumEntities;
+
+void denselyPackDrawableEntities(void)
+{
+    Drawable *dest =  entities + numEntities[0];
+    totalNumEntities = numEntities[0];
+    for(int i = 0; i < MAX_NUM_THREADS - 1; i++)
+    {
+        Drawable *src = entities + (i+1) * MAX_ENTITY_COUNT_PER_THREAD;
+        uint32_t bytes = numEntities[i+1] * sizeof(Drawable);
+
+        memcpy(dest, src, bytes);
+
+        dest += numEntities[i+1];
+        totalNumEntities += numEntities[i+1];
+    }
+}
+
+void denselyPackDrawableTiles(void)
+{
+    Drawable *dest = tiles + numTiles[0];
+    totalNumTiles = numTiles[0];
+
+    for(int i = 0; i < MAX_NUM_THREADS - 1; i++)
+    {
+        Drawable *src = tiles + (i+1) * MAX_TILE_COUNT_PER_THREAD;
+        uint32_t bytes = numTiles[i+1] * sizeof(Drawable);
+
+        memcpy(dest, src, bytes);
+
+        dest += numTiles[i+1];
+        totalNumTiles += numTiles[i+1];
+    }
+}
+
 void resetDraw(void)
 {
     for(int thread = 0; thread < MAX_NUM_THREADS; thread++)
@@ -26,6 +62,8 @@ void resetDraw(void)
         numEntities[thread] = 0;
         numTiles[thread] = 0;
     }
+    totalNumEntities = 0;
+    totalNumTiles = 0;
 }
 
 static Drawable * getDrawableEntity(uint32_t i, uint32_t thread)
@@ -64,19 +102,9 @@ static int compareDrawables(const void * a, const void * b)
 
 void drawAll(void)
 {
-    for(uint32_t i = 0; i < MAX_NUM_THREADS; i++)
+    for(int i = 0; i < totalNumTiles; i++)
     {
-        Drawable * base = tiles + i * MAX_TILE_COUNT_PER_THREAD;
-        qsort(base, numTiles[i], sizeof(Drawable), compareDrawables);
-    }
-
-    for(uint32_t thread = 0; thread < MAX_NUM_THREADS; thread++)
-    {
-        for(uint32_t  i = 0; i < numTiles[thread]; i++)
-        {
-            Drawable * tile = getDrawableTile(i, thread);
-            blitSprite(tile->sprite, (int)tile->x, (int)tile->y, false, SDL_FLIP_NONE);
-        }
+        blitSprite(tiles[i].sprite, (int)tiles[i].x, (int)tiles[i].y, false, SDL_FLIP_NONE);
     }
     
 #if 0
@@ -89,16 +117,14 @@ void drawAll(void)
         }
     }
 #endif
-
-    for(uint32_t thread = 0; thread < MAX_NUM_THREADS; thread++)
+    for(int i = 0; i < totalNumEntities; i++)
     {
-        for(uint32_t i = 0; i < numEntities[thread]; i++)
-        {
-            Drawable * entity = getDrawableEntity(i, thread);
-            blitSprite(entity->sprite, (int)entity->x, (int)entity->y, true, SDL_FLIP_NONE);
-        }
+        blitSprite(entities[i].sprite, (int)entities[i].x,(int)entities[i].y, true, SDL_FLIP_NONE);
     }
-
+    
+    float x, y;
+    toIso(dungeon.player->p.x, dungeon.player->p.y, &x, &y);
+    SDL_RenderDrawLine(app.renderer,  x, y, (int)app.lineX, (int)app.lineY);
 }
 
 bool initDraw(void)

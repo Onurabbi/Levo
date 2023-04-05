@@ -115,7 +115,7 @@ bool initSprites(void)
 
     if(initAtlas("../assets/textures/Heroine/clothes.png", "../data/heroineAtlas.json") == false)
     {
-        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Herone/clothes.png");
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/clothes.png");
         return false;
     }
 

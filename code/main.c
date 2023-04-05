@@ -127,7 +127,6 @@ void updateAndRender(double timeElapsedSeconds)
     presentScene();
 }
 
-
 int main(int argc, char* args[])
 {
     memset(&app, 0, sizeof(App));

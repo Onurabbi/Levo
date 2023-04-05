@@ -53,8 +53,3 @@ void * allocateTransientMemory(size_t size)
 
     return allocated;
 }
-
-void resetTransientMemory(void)
-{
-    memset(gameMemory.transient.base, 0, gameMemory.transient.used);
-}

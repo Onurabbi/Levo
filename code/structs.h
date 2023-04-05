@@ -34,7 +34,7 @@ typedef struct
 
 typedef struct
 {
-    uint32_t frames[MAX_DRAWABLES_PER_ENTITY][MAX_NUM_ANIMATION_SPRITES];
+    uint32_t *frames;
     uint32_t numFrames;
     double   lengthSeconds;
     double   AnimTimer;
@@ -46,6 +46,8 @@ typedef struct
     Animation      animations[MAX_NUM_ANIMATIONS_PER_GROUP];
     uint32_t       animationState;
     uint32_t       numAnimations;
+    uint32_t       numBodyParts;
+    uint32_t       maxNumBodyParts;
 }AnimationGroup;
 
 typedef struct 
@@ -67,6 +69,16 @@ typedef struct
     void                 *data;
 } Entity;
 
+typedef struct 
+{
+    uint32_t       id;
+    uint32_t       weaponIndex;
+    Entity *       owner;
+    float          reach;
+    uint32_t       damage;
+    AnimationGroup *animGroup;
+} Weapon;
+
 typedef struct
 {
     Sprite * sprite;
@@ -76,6 +88,8 @@ typedef struct
 
 typedef struct 
 {
+    uint32_t         id;
+    uint32_t         actorIndex;
     Entity           *owner;
     AnimationGroup   *animGroup;
     Vec2f            dP;
@@ -142,6 +156,8 @@ typedef struct
     int            soundVolume;
     int            musicVolume;
     
+    float lineX,lineY;
+
     /*uint64_t flags?*/
     bool showPointer;
     bool paused;
@@ -160,11 +176,13 @@ typedef struct
 {
     Entity       *player, *current, *attackingEntity, *boss;
     //storage
-    Entity *     entities;
-    Actor *      actors;
-
+    Entity       *entities;
+    Actor        *actors;
+    Weapon       *weapons;
+    
     uint32_t     numEntities;
     uint32_t     numActors;
+    uint32_t     numWeapons;
 
     uint32_t     entityId;
     
@@ -200,5 +218,11 @@ typedef struct
     MemoryArena permanent;
     MemoryArena transient;
 }GameMemory;
+
+typedef struct
+{
+    uint32_t * entities;
+    uint32_t   totalNumEntities;
+}SimulationRegion;
 
 #endif

@@ -158,6 +158,14 @@ bool initDungeon(void)
     }
     dungeon.numActors = 0;
 
+    dungeon.weapons = allocatePermanentMemory(MAX_NUM_WEAPONS * sizeof(Weapon));
+    if(dungeon.weapons == NULL)
+    {
+        printf("can't allocate weapon memory!\n");
+        return false;
+    }
+    dungeon.numWeapons = 0;
+
     dungeon.map = allocatePermanentMemory(MAX_NUM_TILES * sizeof(MapTile));
     if(dungeon.map == NULL)
     {
@@ -176,6 +184,10 @@ bool initDungeon(void)
     barrel->p.x = dungeon.player->p.x + 5;
     barrel->p.y = dungeon.player->p.y + 5;
     
+    Entity *sword = initEntity("Longsword");
+    sword->p.x = dungeon.player->p.x - 5;
+    sword->p.y = dungeon.player->p.y - 5;
+
     dungeon.camera.w = MAP_RENDER_WIDTH;
     dungeon.camera.h = MAP_RENDER_HEIGHT;
 
@@ -221,6 +233,8 @@ static void entityFirstPassJob(void * context)
 static void doEntityFirstPass(void)
 {
     performJobs(entityFirstPassJob);
+    denselyPackEntities();
+    denselyPackDrawableEntities();
 }
 
 static void tileVisibilityJob(void * context)
@@ -250,6 +264,7 @@ static void tileVisibilityJob(void * context)
 static void findVisibleTiles(void)
 {
     performJobs(tileVisibilityJob);
+    denselyPackDrawableTiles();
 }
 
 static void reset(void)

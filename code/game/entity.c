@@ -4,8 +4,10 @@
 #include "../system/atlas.h"
 #include "../system/utils.h"
 #include "../system/memory.h"
+#include "../system/vector.h"
 
-#include"dungeon.h"
+#include "entityFactory.h"
+#include "dungeon.h"
 
 #include "collision.h"
 #include "entity.h"
@@ -16,6 +18,56 @@ extern Dungeon dungeon;
 
 static uint32_t * entities;
 static uint32_t * numEntities;
+static uint32_t   totalNumEntities;
+
+static Vec2f frontVectors[] = 
+{
+    {-0.5f, 0.5f},
+    {-1.0f, 0.0f},
+    {0.0f, 1.0f},
+    {0.5f, -0.5f},
+    {0.0f, -1.0f},
+    {1.0f, 0.0f},
+    {0.5f, 0.5f},
+    {-0.5f, -0.5f}
+};
+
+void die(Entity *e)
+{
+    Actor * actor = (Actor *)e->data;
+    removeActor(actor);
+    removeEntity(e);
+}
+
+Vec2f getEntityFrontVector(int facing)
+{
+    return frontVectors[facing];
+}
+
+SimulationRegion getSimulationRegion(void)
+{
+    SimulationRegion result = {};
+    result.entities = entities;
+    result.totalNumEntities = totalNumEntities;
+    return result;
+}
+
+void denselyPackEntities(void)
+{
+    uint32_t *dest = entities + numEntities[0];
+    totalNumEntities = numEntities[0];
+
+    for(int i = 0; i < MAX_NUM_THREADS - 1; i++)
+    {
+        uint32_t *src = entities + (i + 1) * MAX_ENTITY_COUNT_PER_THREAD;
+        uint32_t bytes = numEntities[i+1] * sizeof(uint32_t);
+
+        memcpy(dest, src, bytes);
+
+        dest += numEntities[i+1];
+        totalNumEntities += numEntities[i+1];
+    }
+}
 
 void resetEntityUpdates(void)
 {
@@ -23,6 +75,7 @@ void resetEntityUpdates(void)
     {
         numEntities[thread] = 0;
     }
+    totalNumEntities = 0;
 }
 
 static inline uint32_t getEntityIndex(uint32_t i, uint32_t thread)
@@ -33,7 +86,7 @@ static inline uint32_t getEntityIndex(uint32_t i, uint32_t thread)
 
 static inline void setEntityIndex(uint32_t i, uint32_t thread)
 {
-    uint32_t * base = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
+    uint32_t *base = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
     base[numEntities[thread]] = i;
 }
 
@@ -100,23 +153,20 @@ void moveEntity(Entity * entity, float dx, float dy)
 
     if((newX >= 0) && (newX < MAP_WIDTH) && (newY >= 0) && (newY < MAP_HEIGHT) && (move == true))
     {
-        for(int thread = 0; thread < MAX_NUM_THREADS; thread++)
+        for(int i = 0; i < totalNumEntities; i++)
         {
-            for(int i = 0; i < numEntities[thread]; i++)
+            uint32_t index = entities[i];
+            Entity * collider = &dungeon.entities[index];
+            if (entity != collider)
             {
-                uint32_t index = getEntityIndex(i, thread);
-                Entity * collider = &dungeon.entities[index];
-                if (entity != collider)
+                Vec2f newPos = {newX + entity->width/2.0f, newY + entity->width/2.0f};
+                Actor * colliderActor = (Actor *)collider->data;
+                if (colliderActor && 
+                    (circleCircleCollision(newPos, entity->width / 2.0f, collider->p, collider->width/2.0f) == true) && 
+                    colliderActor->health > 0)
                 {
-                    Vec2f newPos = {newX + entity->width/2.0f, newY + entity->width/2.0f};
-                    Actor * colliderActor = (Actor *)collider->data;
-                    if (colliderActor && 
-                        (circleCircleCollision(newPos, entity->width / 2.0f, collider->p, collider->width/2.0f) == true) && 
-                        colliderActor->health > 0)
-                    {
-                        move = false;
-                        break;
-                    }
+                    move = false;
+                    break;
                 }
             }
         }
@@ -154,24 +204,21 @@ static void updateBarrel(Entity * entity)
 
 void updateEntities(void)
 {
-    for(int i = 0; i < MAX_NUM_THREADS; i++)
+    for(int i = 0; i < totalNumEntities; i++)
     {
-        for(int j = 0; j < numEntities[i]; j++)
+        uint32_t index = entities[i];
+        Entity *entity = &dungeon.entities[index];
+
+        switch(entity->entityType)
         {
-            uint32_t index = getEntityIndex(j, i);
-            Entity * entity = &dungeon.entities[index];
-            
-            switch(entity->entityType)
-            {
-                case ET_PLAYER:
-                    updatePlayer(entity);
-                    break;
-                case ET_BARREL:
-                    updateBarrel(entity);
-                    break;
-                default:
-                    break;
-            }
+            case ET_PLAYER:
+                updatePlayer(entity);
+                break;
+            case ET_BARREL:
+                updateBarrel(entity);
+                break;
+            default:
+                break;
         }
     }
 }

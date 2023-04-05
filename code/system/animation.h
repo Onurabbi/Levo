@@ -6,5 +6,5 @@ uint32_t         getAnimationGroupIndex(char * fileName);
 AnimationGroup * getAnimationGroup(char * fileName);
 AnimationGroup * createAnimationGroup(char * fileName, int * new);
 bool             initAnimations(void);
-
+void             addAnimationToEntityAnimGroup(Entity *e, AnimationGroup *animGroup, char *path);
 #endif

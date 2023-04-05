@@ -5,12 +5,16 @@
 #define ENTITY_CAN_UPDATE_BIT (1)
 #define ENTITY_CAN_COLLIDE_BIT (2)
 
-bool     isEntityAlive(Entity * entity);
-bool     initEntities(void);
-void     updateEntities(void);
-void     addEntityToUpdateList(uint32_t index, uint32_t thread);
-void     moveEntity(Entity *e, float dx, float dy);
-void     removeEntityFromDungeon(Entity * e);
-void     resetEntityUpdates(void);
+bool  isEntityAlive(Entity * entity);
+bool  initEntities(void);
+void  updateEntities(void);
+void  addEntityToUpdateList(uint32_t index, uint32_t thread);
+void  moveEntity(Entity *e, float dx, float dy);
+void  resetEntityUpdates(void);
+void  denselyPackEntities(void);
+Vec2f getEntityFrontVector(int facing);
+void  die(Entity *entity);
+
+SimulationRegion getSimulationRegion(void);
 
 #endif

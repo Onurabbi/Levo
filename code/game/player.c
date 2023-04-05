@@ -5,6 +5,8 @@
 #include "../system/utils.h"
 #include "../system/sound.h"
 #include "../system/ray.h"
+#include "../system/vector.h"
+#include "../system/animation.h"
 
 #include "entityFactory.h"
 #include "player.h"
@@ -16,16 +18,6 @@ extern Dungeon dungeon;
 
 static Entity * projectile = NULL;
 static Vec2f projectiledP;
-
-typedef struct 
-{
-
-}AnimationUpdate;
-
-void updateActor(Entity * player)
-{
-    
-}
 
 void updatePlayer(Entity * player)
 {
@@ -40,23 +32,54 @@ void updatePlayer(Entity * player)
 
     float deltaX, deltaY;
 
-    if(input->keyboardState[SDL_SCANCODE_W] == 1)
+    if (input->keyboardState[SDL_SCANCODE_W] == 1)
     {
-        dy = -1.0f;
+        if (input->keyboardState[SDL_SCANCODE_D] == 1)
+
+        {
+            dx = 1.0f;
+            dy = -1.0f;
+        }
+        else if (input->keyboardState[SDL_SCANCODE_A] == 1)
+        {
+            dx = -1.0f;
+            dy = -1.0f;
+        }
+        else
+        {
+            dx = 0.0f;
+            dy = -1.0f;
+        }
     }
-    if(input->keyboardState[SDL_SCANCODE_S] == 1)
+    else if (input->keyboardState[SDL_SCANCODE_S] == 1)
     {
-        dy = 1.0f;
+        if (input->keyboardState[SDL_SCANCODE_D] == 1)
+
+        {
+            dy = 1.0f;
+            dx = 1.0f;
+        }
+        else if (input->keyboardState[SDL_SCANCODE_A] == 1)
+        {
+            dy = 1.0f;
+            dx = -1.0f;
+        }
+        else
+        {
+            dy = 1.0f;
+            dx = 0.0f;
+        }
     }
-    if(input->keyboardState[SDL_SCANCODE_D] == 1)
+    else if (input->keyboardState[SDL_SCANCODE_D] == 1)
     {
         dx = 1.0f;
+        dy = 0.0f;
     }
-    if(input->keyboardState[SDL_SCANCODE_A] == 1)
+    else if (input->keyboardState[SDL_SCANCODE_A] == 1)
     {
         dx = -1.0f;
     }
-    
+
     deltaX = (dx + dy) / 2.0f;
     deltaY = (dy - dx) / 2.0f;
     
@@ -77,35 +100,67 @@ void updatePlayer(Entity * player)
     }
 
     Entity * playerTargetEntity = &dungeon.entities[app.entityOverCursorIndex];
+    
+    Vec2f frontVector = vectorNormalize(getEntityFrontVector(playerActor->facing));
+    
+    Vec2f lineEnd = vectorAdd(vectorMultiply(frontVector, 2.0f), player->p);
+
+    toIso(lineEnd.x, lineEnd.y, &app.lineX, &app.lineY);
 
     if(input->mouse.buttons[1] == 1)
     {
         playerActor->attacking = true;
         playerActor->switchAnim = true;
         playSound(SND_HIT, 0);
+        SimulationRegion simRegion = getSimulationRegion();
+
+        float sqWeaponLength = 4.0f;
+
+        for(int i = 0; i < simRegion.totalNumEntities; i++)
+        {
+            if(i != player->entityIndex)
+            {
+                uint32_t entityIndex = simRegion.entities[i];
+                Entity *e = &dungeon.entities[entityIndex];
+                Vec2f normalDir = vectorNormalize(vectorSubtract(e->p, player->p));
+
+                if(sqDistance(player->p, e->p) <= sqWeaponLength)
+                {
+                    float dot = vectorDotProduct(normalDir, frontVector);
+                    
+                    switch(e->entityType)
+                    {
+                        case ET_BARREL:
+                            Actor * barrelActor = (Actor *)e->data;
+                            if(dot > 0)
+                            {
+                                takeDamage(barrelActor, playerActor, 1);
+                            }
+                            break;
+                        default:
+                            printf("Non barrel entity type hit\n");
+                            break;
+                    }
+                }
+            }
+
+        }
     }
 
+    static bool weaponEquipped = false;
+    
     if(input->mouse.buttons[2] == 1)
     {
-        Vec2f barrelPos = toCartesian(app.mouseScreenPosition);
-        Entity * newBarrel = initEntity("Barrel");
-        newBarrel->p.x = barrelPos.x;
-        newBarrel->p.y = barrelPos.y;
-        printf("created new barrel at: %f %f\n", barrelPos.x, barrelPos.y);
+        if(weaponEquipped == false)
+        {
+            addAnimationToEntityAnimGroup(player, playerActor->animGroup, "gfx/animations/longsword.animGroup");
+            printf("added sword!\n");
+            weaponEquipped = true;
+        }
     }
 
     dungeon.camera.x = player->p.x - dungeon.camera.w / 2;
     dungeon.camera.y = player->p.y - dungeon.camera.h / 2;
-    Vec2f rayDir = {1.0f, 0.0f};
-    Ray playerRay = {player->p, rayDir};
-    float t;
-    for(int i = 1; i < dungeon.numEntities; i++)
-    {
-        if (rayCircleIntersection(playerRay, dungeon.entities[i].p, 1.0f, &t) == true)
-        {
-            //entity hit
-            printf("entity hit: %d at t: %f\n", i, t);
-        }
-    }
+
     clearInput(&app.input);
 }

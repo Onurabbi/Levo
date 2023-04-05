@@ -149,7 +149,11 @@ uint8_t * createAsset(AssetType assetType, char * fileName, int *new)
 
     *new = 0;
 
-    for(int index = i; index != i - 1; index++)
+    int index = i;
+
+    static int spriteCollisions;
+
+    while(index != i-1)
     {
         index %= maxCount;
         result = assetStore + (index * size);
@@ -164,6 +168,9 @@ uint8_t * createAsset(AssetType assetType, char * fileName, int *new)
             *new = 1;
             return result;
         }
+        printf("sprite collisions: %d\n", spriteCollisions);
+        spriteCollisions++;
+        index = (index + 1) % maxCount;
     }
     return NULL;
 }
@@ -178,7 +185,9 @@ uint32_t getAssetIndex(AssetType assetType, char * fileName)
     
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
 
-    for(int index = i; index != i - 1; index++)
+    int index = i;
+
+    while (index != i - 1)
     {
         index %= maxCount;
         const char *assetName = (const char *)assetStore + (index * size);
@@ -186,6 +195,7 @@ uint32_t getAssetIndex(AssetType assetType, char * fileName)
         {
             return index;
         }
+        index = (index + 1) % maxCount;
     }
     return maxCount;
 }

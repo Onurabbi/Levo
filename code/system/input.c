@@ -74,7 +74,7 @@ void handleInput(Input * input, double timeElapsedSeconds)
 
     for(int i = 0; i < NUM_HOLD_KEYS; i++)
     {
-        if(keyboardState[keys[i]] == 1)
+        if (keyboardState[keys[i]] == 1)
         {
             input->keyboardState[keys[i]] = 1;
         }

@@ -1,5 +1,5 @@
 Things to do as of 30.03.2023 (in no particular order):
 1: Replace all printf with SDL_LogMessage()
-2: Animation system.
-3: Attacking/Damaging.
-4: Picking things up, equipping.
+2: Weapon class.
+3: Enemies.
+4: Gamepad control.
