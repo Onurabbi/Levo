@@ -155,7 +155,6 @@ uint8_t * createAsset(AssetType assetType, char * fileName, int *new)
 
     while(index != i-1)
     {
-        index %= maxCount;
         result = assetStore + (index * size);
         const char * assetName = (const char *)result;
         if(strcmp(fileName, assetName) == 0)
@@ -189,7 +188,6 @@ uint32_t getAssetIndex(AssetType assetType, char * fileName)
 
     while (index != i - 1)
     {
-        index %= maxCount;
         const char *assetName = (const char *)assetStore + (index * size);
         if(strcmp(fileName, assetName) == 0)
         {

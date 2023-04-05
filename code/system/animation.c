@@ -33,17 +33,18 @@ AnimationGroup *createAnimationGroup(char * fileName, int * new)
 void addAnimationToEntityAnimGroup(Entity *e, AnimationGroup *animGroup, char *path)
 {
     AnimationGroup *toAdd = getAnimationGroup(path);
-    int slot = e->entitySprites.drawableCount;
+
     for(int i = 0; i < MAX_NUM_ANIMATIONS_PER_GROUP; i++)
     {
         Animation *anim = &animGroup->animations[i];
+
         for(int j = 0; j < anim->numFrames; j++)
         {
-            anim->frames[slot + animGroup->numBodyParts *j] = toAdd->animations[i].frames[j];
+            anim->frames[j * anim->maxNumBodyParts + anim->numBodyParts] = toAdd->animations[i].frames[j];
         }
+
+        anim->numBodyParts++;
     }
-    e->entitySprites.sprites[slot] = getSprite("gfx/entities/longswordLeftIdle1.png");
-    e->entitySprites.drawableCount++;
 }
 
 static bool loadAnimationData(char * filePath, bool character)
@@ -76,21 +77,11 @@ static bool loadAnimationData(char * filePath, bool character)
         if(new == 1)
         {
             STRNCPY(animGroup->fileName, fileName, nameLen);
-            
-            animGroup->numAnimations = cJSON_GetObjectItem(node, "numanims")->valueint;
-            
+    
             animGroup->animationState = 0;
             
-            if(character == true)
-            {
-                animGroup->maxNumBodyParts = MAX_DRAWABLES_PER_ENTITY;
-                animGroup->numBodyParts = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
-            }
-            else
-            {
-                animGroup->numBodyParts = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
-                animGroup->maxNumBodyParts = animGroup->numBodyParts;
-            }
+            int numBodyParts    = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
+            int maxNumBodyParts = (character == true) ? MAX_DRAWABLES_PER_ENTITY : numBodyParts;
 
             cJSON * animations = cJSON_GetObjectItem(node, "animations");
 
@@ -99,9 +90,12 @@ static bool loadAnimationData(char * filePath, bool character)
             for(cJSON * animNode = animations->child; animNode != NULL; animNode = animNode->next)
             {
                 Animation * currentAnimation = &animGroup->animations[animIndex++];
-                //this is not used
+
+                currentAnimation->maxNumBodyParts = maxNumBodyParts;
+                currentAnimation->numBodyParts = numBodyParts;
+
                 currentAnimation->numFrames = cJSON_GetObjectItem(animNode, "numframes")->valueint;
-                currentAnimation->frames = allocatePermanentMemory(currentAnimation->numFrames * animGroup->maxNumBodyParts * sizeof(uint32_t));
+                currentAnimation->frames    = allocatePermanentMemory(currentAnimation->numFrames * currentAnimation->maxNumBodyParts * sizeof(uint32_t));
 
                 char * animFileName = cJSON_GetObjectItem(animNode, "filename")->valuestring;
 
@@ -113,11 +107,12 @@ static bool loadAnimationData(char * filePath, bool character)
 
                 for(cJSON * frameNode = frames->child; frameNode != NULL; frameNode = frameNode->next)
                 {
-                    int bodyPart = frameCount % animGroup->numBodyParts;
-                    int frameIndex = frameCount / animGroup->numBodyParts;
+                    int bodyPart = frameCount % currentAnimation->numBodyParts;
+                    int frameIndex = frameCount / currentAnimation->numBodyParts;
 
                     char * spritePath = frameNode->valuestring;
-                    currentAnimation->frames[frameIndex * animGroup->maxNumBodyParts + bodyPart] = getSpriteIndex(spritePath);
+                    currentAnimation->frames[frameIndex * currentAnimation->maxNumBodyParts + bodyPart] = getSpriteIndex(spritePath);
+                    frameCount++;
                 }
             }
         }

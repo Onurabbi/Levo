@@ -34,10 +34,12 @@ typedef struct
 
 typedef struct
 {
+    double    lengthSeconds;
+    double    AnimTimer;
     uint32_t *frames;
-    uint32_t numFrames;
-    double   lengthSeconds;
-    double   AnimTimer;
+    uint32_t  numFrames;
+    uint32_t  numBodyParts;
+    uint32_t  maxNumBodyParts;
 } Animation;
 
 typedef struct
@@ -45,9 +47,6 @@ typedef struct
     char           fileName[MAX_FILENAME_LENGTH];
     Animation      animations[MAX_NUM_ANIMATIONS_PER_GROUP];
     uint32_t       animationState;
-    uint32_t       numAnimations;
-    uint32_t       numBodyParts;
-    uint32_t       maxNumBodyParts;
 }AnimationGroup;
 
 typedef struct 
