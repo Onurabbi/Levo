@@ -1,0 +1,2050 @@
+[
+	{
+		"filename" : "gfx/entities/headLongLeftIdle1.png",
+		"x" : 0,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftIdle2.png",
+		"x" : 128,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftIdle3.png",
+		"x" : 256,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftIdle4.png",
+		"x" : 384,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun1.png",
+		"x" : 512,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun2.png",
+		"x" : 640,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun3.png",
+		"x" : 768,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun4.png",
+		"x" : 896,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun5.png",
+		"x" : 1024,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun6.png",
+		"x" : 1152,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun7.png",
+		"x" : 1280,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftRun8.png",
+		"x" : 1408,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftMelee1.png",
+		"x" : 1536,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftMelee2.png",
+		"x" : 1664,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftMelee3.png",
+		"x" : 1792,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftMelee4.png",
+		"x" : 1920,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftBlock1.png",
+		"x" : 2048,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftBlock2.png",
+		"x" : 2176,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDeath1.png",
+		"x" : 2304,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDeath2.png",
+		"x" : 2432,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDeath3.png",
+		"x" : 2560,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDeath4.png",
+		"x" : 2688,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDeath5.png",
+		"x" : 2816,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDeath6.png",
+		"x" : 2944,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpIdle1.png",
+		"x" : 0,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpIdle2.png",
+		"x" : 128,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpIdle3.png",
+		"x" : 256,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpIdle4.png",
+		"x" : 384,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun1.png",
+		"x" : 512,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun2.png",
+		"x" : 640,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun3.png",
+		"x" : 768,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun4.png",
+		"x" : 896,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun5.png",
+		"x" : 1024,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun6.png",
+		"x" : 1152,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun7.png",
+		"x" : 1280,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpRun8.png",
+		"x" : 1408,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpMelee1.png",
+		"x" : 1536,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpMelee2.png",
+		"x" : 1664,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpMelee3.png",
+		"x" : 1792,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpMelee4.png",
+		"x" : 1920,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpBlock1.png",
+		"x" : 2048,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpBlock2.png",
+		"x" : 2176,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpDeath1.png",
+		"x" : 2304,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpDeath2.png",
+		"x" : 2432,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpDeath3.png",
+		"x" : 2560,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpDeath4.png",
+		"x" : 2688,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpDeath5.png",
+		"x" : 2816,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpDeath6.png",
+		"x" : 2944,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpIdle1.png",
+		"x" : 0,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpIdle2.png",
+		"x" : 128,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpIdle3.png",
+		"x" : 256,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpIdle4.png",
+		"x" : 384,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun1.png",
+		"x" : 512,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun2.png",
+		"x" : 640,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun3.png",
+		"x" : 768,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun4.png",
+		"x" : 896,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun5.png",
+		"x" : 1024,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun6.png",
+		"x" : 1152,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun7.png",
+		"x" : 1280,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpRun8.png",
+		"x" : 1408,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpMelee1.png",
+		"x" : 1536,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpMelee2.png",
+		"x" : 1664,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpMelee3.png",
+		"x" : 1792,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpMelee4.png",
+		"x" : 1920,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpBlock1.png",
+		"x" : 2048,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpBlock2.png",
+		"x" : 2176,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpDeath1.png",
+		"x" : 2304,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpDeath2.png",
+		"x" : 2432,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpDeath3.png",
+		"x" : 2560,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpDeath4.png",
+		"x" : 2688,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpDeath5.png",
+		"x" : 2816,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpDeath6.png",
+		"x" : 2944,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpIdle1.png",
+		"x" : 0,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpIdle2.png",
+		"x" : 128,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpIdle3.png",
+		"x" : 256,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpIdle4.png",
+		"x" : 384,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun1.png",
+		"x" : 512,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun2.png",
+		"x" : 640,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun3.png",
+		"x" : 768,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun4.png",
+		"x" : 896,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun5.png",
+		"x" : 1024,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun6.png",
+		"x" : 1152,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun7.png",
+		"x" : 1280,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpRun8.png",
+		"x" : 1408,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpMelee1.png",
+		"x" : 1536,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpMelee2.png",
+		"x" : 1664,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpMelee3.png",
+		"x" : 1792,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpMelee4.png",
+		"x" : 1920,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpBlock1.png",
+		"x" : 2048,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpBlock2.png",
+		"x" : 2176,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpDeath1.png",
+		"x" : 2304,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpDeath2.png",
+		"x" : 2432,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpDeath3.png",
+		"x" : 2560,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpDeath4.png",
+		"x" : 2688,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpDeath5.png",
+		"x" : 2816,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpDeath6.png",
+		"x" : 2944,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightIdle1.png",
+		"x" : 0,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightIdle2.png",
+		"x" : 128,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightIdle3.png",
+		"x" : 256,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightIdle4.png",
+		"x" : 384,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun1.png",
+		"x" : 512,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun2.png",
+		"x" : 640,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun3.png",
+		"x" : 768,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun4.png",
+		"x" : 896,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun5.png",
+		"x" : 1024,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun6.png",
+		"x" : 1152,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun7.png",
+		"x" : 1280,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightRun8.png",
+		"x" : 1408,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightMelee1.png",
+		"x" : 1536,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightMelee2.png",
+		"x" : 1664,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightMelee3.png",
+		"x" : 1792,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightMelee4.png",
+		"x" : 1920,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightBlock1.png",
+		"x" : 2048,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightBlock2.png",
+		"x" : 2176,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDeath1.png",
+		"x" : 2304,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDeath2.png",
+		"x" : 2432,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDeath3.png",
+		"x" : 2560,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDeath4.png",
+		"x" : 2688,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDeath5.png",
+		"x" : 2816,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDeath6.png",
+		"x" : 2944,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownIdle1.png",
+		"x" : 0,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownIdle2.png",
+		"x" : 128,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownIdle3.png",
+		"x" : 256,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownIdle4.png",
+		"x" : 384,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun1.png",
+		"x" : 512,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun2.png",
+		"x" : 640,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun3.png",
+		"x" : 768,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun4.png",
+		"x" : 896,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun5.png",
+		"x" : 1024,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun6.png",
+		"x" : 1152,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun7.png",
+		"x" : 1280,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownRun8.png",
+		"x" : 1408,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownMelee1.png",
+		"x" : 1536,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownMelee2.png",
+		"x" : 1664,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownMelee3.png",
+		"x" : 1792,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownMelee4.png",
+		"x" : 1920,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownBlock1.png",
+		"x" : 2048,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownBlock2.png",
+		"x" : 2176,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownDeath1.png",
+		"x" : 2304,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownDeath2.png",
+		"x" : 2432,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownDeath3.png",
+		"x" : 2560,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownDeath4.png",
+		"x" : 2688,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownDeath5.png",
+		"x" : 2816,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownDeath6.png",
+		"x" : 2944,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongRightDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownIdle1.png",
+		"x" : 0,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownIdle2.png",
+		"x" : 128,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownIdle3.png",
+		"x" : 256,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownIdle4.png",
+		"x" : 384,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun1.png",
+		"x" : 512,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun2.png",
+		"x" : 640,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun3.png",
+		"x" : 768,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun4.png",
+		"x" : 896,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun5.png",
+		"x" : 1024,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun6.png",
+		"x" : 1152,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun7.png",
+		"x" : 1280,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownRun8.png",
+		"x" : 1408,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownMelee1.png",
+		"x" : 1536,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownMelee2.png",
+		"x" : 1664,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownMelee3.png",
+		"x" : 1792,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownMelee4.png",
+		"x" : 1920,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownBlock1.png",
+		"x" : 2048,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownBlock2.png",
+		"x" : 2176,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownDeath1.png",
+		"x" : 2304,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownDeath2.png",
+		"x" : 2432,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownDeath3.png",
+		"x" : 2560,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownDeath4.png",
+		"x" : 2688,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownDeath5.png",
+		"x" : 2816,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownDeath6.png",
+		"x" : 2944,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownIdle1.png",
+		"x" : 0,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownIdle2.png",
+		"x" : 128,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownIdle3.png",
+		"x" : 256,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownIdle4.png",
+		"x" : 384,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun1.png",
+		"x" : 512,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun2.png",
+		"x" : 640,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun3.png",
+		"x" : 768,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun4.png",
+		"x" : 896,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun5.png",
+		"x" : 1024,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun6.png",
+		"x" : 1152,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun7.png",
+		"x" : 1280,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownRun8.png",
+		"x" : 1408,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownMelee1.png",
+		"x" : 1536,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownMelee2.png",
+		"x" : 1664,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownMelee3.png",
+		"x" : 1792,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownMelee4.png",
+		"x" : 1920,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownBlock1.png",
+		"x" : 2048,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownBlock2.png",
+		"x" : 2176,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownDeath1.png",
+		"x" : 2304,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownDeath2.png",
+		"x" : 2432,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownDeath3.png",
+		"x" : 2560,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownDeath4.png",
+		"x" : 2688,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownDeath5.png",
+		"x" : 2816,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownDeath6.png",
+		"x" : 2944,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/headLongLeftDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	}
+]

@@ -1,0 +1,2050 @@
+[
+	{
+		"filename" : "gfx/entities/heroineLeftIdle1.png",
+		"x" : 0,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftIdle2.png",
+		"x" : 128,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftIdle3.png",
+		"x" : 256,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftIdle4.png",
+		"x" : 384,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun1.png",
+		"x" : 512,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun2.png",
+		"x" : 640,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun3.png",
+		"x" : 768,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun4.png",
+		"x" : 896,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun5.png",
+		"x" : 1024,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun6.png",
+		"x" : 1152,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun7.png",
+		"x" : 1280,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftRun8.png",
+		"x" : 1408,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftMelee1.png",
+		"x" : 1536,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftMelee2.png",
+		"x" : 1664,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftMelee3.png",
+		"x" : 1792,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftMelee4.png",
+		"x" : 1920,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftBlock1.png",
+		"x" : 2048,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftBlock2.png",
+		"x" : 2176,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDeath1.png",
+		"x" : 2304,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDeath2.png",
+		"x" : 2432,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDeath3.png",
+		"x" : 2560,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDeath4.png",
+		"x" : 2688,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDeath5.png",
+		"x" : 2816,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDeath6.png",
+		"x" : 2944,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 0,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpIdle1.png",
+		"x" : 0,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpIdle2.png",
+		"x" : 128,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpIdle3.png",
+		"x" : 256,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpIdle4.png",
+		"x" : 384,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun1.png",
+		"x" : 512,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun2.png",
+		"x" : 640,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun3.png",
+		"x" : 768,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun4.png",
+		"x" : 896,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun5.png",
+		"x" : 1024,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun6.png",
+		"x" : 1152,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun7.png",
+		"x" : 1280,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpRun8.png",
+		"x" : 1408,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpMelee1.png",
+		"x" : 1536,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpMelee2.png",
+		"x" : 1664,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpMelee3.png",
+		"x" : 1792,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpMelee4.png",
+		"x" : 1920,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpBlock1.png",
+		"x" : 2048,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpBlock2.png",
+		"x" : 2176,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpDeath1.png",
+		"x" : 2304,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpDeath2.png",
+		"x" : 2432,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpDeath3.png",
+		"x" : 2560,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpDeath4.png",
+		"x" : 2688,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpDeath5.png",
+		"x" : 2816,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpDeath6.png",
+		"x" : 2944,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 128,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpIdle1.png",
+		"x" : 0,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpIdle2.png",
+		"x" : 128,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpIdle3.png",
+		"x" : 256,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpIdle4.png",
+		"x" : 384,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun1.png",
+		"x" : 512,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun2.png",
+		"x" : 640,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun3.png",
+		"x" : 768,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun4.png",
+		"x" : 896,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun5.png",
+		"x" : 1024,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun6.png",
+		"x" : 1152,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun7.png",
+		"x" : 1280,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpRun8.png",
+		"x" : 1408,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpMelee1.png",
+		"x" : 1536,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpMelee2.png",
+		"x" : 1664,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpMelee3.png",
+		"x" : 1792,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpMelee4.png",
+		"x" : 1920,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpBlock1.png",
+		"x" : 2048,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpBlock2.png",
+		"x" : 2176,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpDeath1.png",
+		"x" : 2304,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpDeath2.png",
+		"x" : 2432,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpDeath3.png",
+		"x" : 2560,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpDeath4.png",
+		"x" : 2688,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpDeath5.png",
+		"x" : 2816,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpDeath6.png",
+		"x" : 2944,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 256,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpIdle1.png",
+		"x" : 0,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpIdle2.png",
+		"x" : 128,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpIdle3.png",
+		"x" : 256,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpIdle4.png",
+		"x" : 384,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun1.png",
+		"x" : 512,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun2.png",
+		"x" : 640,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun3.png",
+		"x" : 768,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun4.png",
+		"x" : 896,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun5.png",
+		"x" : 1024,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun6.png",
+		"x" : 1152,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun7.png",
+		"x" : 1280,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpRun8.png",
+		"x" : 1408,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpMelee1.png",
+		"x" : 1536,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpMelee2.png",
+		"x" : 1664,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpMelee3.png",
+		"x" : 1792,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpMelee4.png",
+		"x" : 1920,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpBlock1.png",
+		"x" : 2048,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpBlock2.png",
+		"x" : 2176,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpDeath1.png",
+		"x" : 2304,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpDeath2.png",
+		"x" : 2432,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpDeath3.png",
+		"x" : 2560,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpDeath4.png",
+		"x" : 2688,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpDeath5.png",
+		"x" : 2816,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpDeath6.png",
+		"x" : 2944,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightUpLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 384,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightIdle1.png",
+		"x" : 0,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightIdle2.png",
+		"x" : 128,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightIdle3.png",
+		"x" : 256,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightIdle4.png",
+		"x" : 384,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun1.png",
+		"x" : 512,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun2.png",
+		"x" : 640,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun3.png",
+		"x" : 768,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun4.png",
+		"x" : 896,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun5.png",
+		"x" : 1024,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun6.png",
+		"x" : 1152,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun7.png",
+		"x" : 1280,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightRun8.png",
+		"x" : 1408,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightMelee1.png",
+		"x" : 1536,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightMelee2.png",
+		"x" : 1664,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightMelee3.png",
+		"x" : 1792,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightMelee4.png",
+		"x" : 1920,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightBlock1.png",
+		"x" : 2048,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightBlock2.png",
+		"x" : 2176,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDeath1.png",
+		"x" : 2304,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDeath2.png",
+		"x" : 2432,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDeath3.png",
+		"x" : 2560,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDeath4.png",
+		"x" : 2688,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDeath5.png",
+		"x" : 2816,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDeath6.png",
+		"x" : 2944,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 512,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownIdle1.png",
+		"x" : 0,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownIdle2.png",
+		"x" : 128,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownIdle3.png",
+		"x" : 256,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownIdle4.png",
+		"x" : 384,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun1.png",
+		"x" : 512,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun2.png",
+		"x" : 640,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun3.png",
+		"x" : 768,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun4.png",
+		"x" : 896,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun5.png",
+		"x" : 1024,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun6.png",
+		"x" : 1152,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun7.png",
+		"x" : 1280,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownRun8.png",
+		"x" : 1408,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownMelee1.png",
+		"x" : 1536,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownMelee2.png",
+		"x" : 1664,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownMelee3.png",
+		"x" : 1792,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownMelee4.png",
+		"x" : 1920,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownBlock1.png",
+		"x" : 2048,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownBlock2.png",
+		"x" : 2176,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownDeath1.png",
+		"x" : 2304,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownDeath2.png",
+		"x" : 2432,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownDeath3.png",
+		"x" : 2560,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownDeath4.png",
+		"x" : 2688,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownDeath5.png",
+		"x" : 2816,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownDeath6.png",
+		"x" : 2944,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineRightDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 640,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownIdle1.png",
+		"x" : 0,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownIdle2.png",
+		"x" : 128,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownIdle3.png",
+		"x" : 256,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownIdle4.png",
+		"x" : 384,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun1.png",
+		"x" : 512,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun2.png",
+		"x" : 640,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun3.png",
+		"x" : 768,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun4.png",
+		"x" : 896,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun5.png",
+		"x" : 1024,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun6.png",
+		"x" : 1152,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun7.png",
+		"x" : 1280,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownRun8.png",
+		"x" : 1408,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownMelee1.png",
+		"x" : 1536,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownMelee2.png",
+		"x" : 1664,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownMelee3.png",
+		"x" : 1792,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownMelee4.png",
+		"x" : 1920,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownBlock1.png",
+		"x" : 2048,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownBlock2.png",
+		"x" : 2176,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownDeath1.png",
+		"x" : 2304,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownDeath2.png",
+		"x" : 2432,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownDeath3.png",
+		"x" : 2560,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownDeath4.png",
+		"x" : 2688,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownDeath5.png",
+		"x" : 2816,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownDeath6.png",
+		"x" : 2944,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 768,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownIdle1.png",
+		"x" : 0,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownIdle2.png",
+		"x" : 128,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownIdle3.png",
+		"x" : 256,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownIdle4.png",
+		"x" : 384,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun1.png",
+		"x" : 512,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun2.png",
+		"x" : 640,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun3.png",
+		"x" : 768,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun4.png",
+		"x" : 896,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun5.png",
+		"x" : 1024,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun6.png",
+		"x" : 1152,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun7.png",
+		"x" : 1280,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownRun8.png",
+		"x" : 1408,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownMelee1.png",
+		"x" : 1536,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownMelee2.png",
+		"x" : 1664,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownMelee3.png",
+		"x" : 1792,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownMelee4.png",
+		"x" : 1920,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownBlock1.png",
+		"x" : 2048,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownBlock2.png",
+		"x" : 2176,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownDeath1.png",
+		"x" : 2304,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownDeath2.png",
+		"x" : 2432,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownDeath3.png",
+		"x" : 2560,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownDeath4.png",
+		"x" : 2688,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownDeath5.png",
+		"x" : 2816,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownDeath6.png",
+		"x" : 2944,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot1.png",
+		"x" : 3072,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot2.png",
+		"x" : 3200,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot3.png",
+		"x" : 3328,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot4.png",
+		"x" : 3456,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot5.png",
+		"x" : 3584,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot6.png",
+		"x" : 3712,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot7.png",
+		"x" : 3840,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	},
+	{
+		"filename" : "gfx/entities/heroineLeftDownLongBowShoot8.png",
+		"x" : 3968,
+		"y" : 896,
+		"w" : 128,
+		"h" : 128,
+		"rotated" : 0
+	}
+]

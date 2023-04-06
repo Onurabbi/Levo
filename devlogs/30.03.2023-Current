@@ -1,0 +1,81 @@
+~100-150 hours before starting recording hours
+
+30.03.2023:
+============================
+Total number of hours worked: 
+    2 as of 10.30
+    11.33 - 12.16
+    15.13 - 16.20
+    17.48 - 21.10
++
+---------------------------- 
+    7 hr 20 min
+Work done: 
+    -Defined animation group, animation, animation state structs.
+    -Simplified asset system interface. Size and max count aren't needed from outside the module now.
+    -Can do sprite animation now. Need to do animation trees next.
+
+31.03.2023:
+============================
+Total number of hours worked: 
+    07.11 - 07.54
+    08.28 - 11.00
+    11.45 - 13.07
+    14.45 - 17.00
+    18.30 - 19.00
+    20.24 - 21.30
++
+---------------------------
+    7 hrs
+Work done:
+    -Got basic animation system working.
+    -Animation state bit field instead of booleans could be nice to have.
+
+01.04.2023:
+=================================
+Total number of hours worked:
+    07.30 - 09.41
+    12.30 - 14.00
+    17.00 - 19.53
++
+----------------------------------
+    6.30 hrs
+Work done:
+    -Two visible parts per entity can be animated. It's trivial to add more drawables per entity but the drawable max count might need to be incremented.
+
+02.04.2023:
+=================================
+Total number of hours worked:
+    07.23 - 09.36
+    11.49 - 13.20
+    13.45 - 14.23
+    18.18 - 19.30
++
+------------------------------------
+    5.30 hrs
+Work done:
+    -Four sprites per entity can be rendered per entity (head/body/weapon/offhand)
+
+03.04.2023:
+==================================
+Total number of hours worked:
+    06.57 - 09.00
+    16.45 - 19.30 2 hrs
++
+----------------------------------
+    ~4.00 hrs
+
+04.04.2023:
+===================================
+Total number of hours worked:
+    06.48 - 08.05
+    18.35 - 20.00
++
+------------------------------------
+    ~3.00 hrs
+
+05.04.2023
+    06.30 - 08.44
+    16.14 - 
+    
+
