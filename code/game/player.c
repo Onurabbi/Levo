@@ -147,16 +147,8 @@ void updatePlayer(Entity * player)
         }
     }
 
-    static bool weaponEquipped = false;
-    
     if(input->mouse.buttons[2] == 1)
     {
-        if(weaponEquipped == false)
-        {
-            addAnimationToEntityAnimGroup(player, playerActor->animGroup, "gfx/animations/longsword.animGroup");
-            printf("added sword!\n");
-            weaponEquipped = true;
-        }
     }
 
     dungeon.camera.x = player->p.x - dungeon.camera.w / 2;

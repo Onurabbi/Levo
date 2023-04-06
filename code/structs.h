@@ -39,7 +39,6 @@ typedef struct
     uint32_t *frames;
     uint32_t  numFrames;
     uint32_t  numBodyParts;
-    uint32_t  maxNumBodyParts;
 } Animation;
 
 typedef struct
@@ -68,28 +67,23 @@ typedef struct
     void                 *data;
 } Entity;
 
-typedef struct 
+typedef struct
 {
     uint32_t       id;
     uint32_t       weaponIndex;
-    Entity *       owner;
+    Entity         *owner;
+    Entity         *equipper;
     float          reach;
     uint32_t       damage;
     AnimationGroup *animGroup;
 } Weapon;
-
-typedef struct
-{
-    Sprite * sprite;
-	int      tile;
-    Vec2f    p;
-} MapTile;
 
 typedef struct 
 {
     uint32_t         id;
     uint32_t         actorIndex;
     Entity           *owner;
+    Entity           *weapon;
     AnimationGroup   *animGroup;
     Vec2f            dP;
     uint32_t         facing;
@@ -98,6 +92,16 @@ typedef struct
     bool             attacking;//TODO: bit field
     bool             switchAnim;
 } Actor;
+
+
+typedef struct
+{
+    Sprite * sprite;
+	int      tile;
+    Vec2f    p;
+} MapTile;
+
+
 
 typedef struct 
 {

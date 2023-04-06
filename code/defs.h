@@ -6,7 +6,7 @@
 
 #define BIT_SET(number, bit)   ((number) |= (1ULL << bit))
 #define BIT_CLEAR(number, bit) ((number) &= ~(1ULL << bit))
-#define BIT_CHECK(number, bit) ((number) &= (1ULL << bit))
+#define BIT_CHECK(number, bit) ((number) & (1ULL << bit))
 
 #define INIT_CHECK(function, s) do{ \
     bool success = function();      \

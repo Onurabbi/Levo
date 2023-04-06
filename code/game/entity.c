@@ -197,6 +197,12 @@ bool isEntityAlive(Entity * entity)
     return alive;
 }
 
+bool isEntityVisible(Entity *entity)
+{
+    bool visible = BIT_CHECK(entity->flags, ENTITY_IS_VISIBLE_BIT);
+    return visible;
+}
+
 static void updateBarrel(Entity * entity)
 {
 

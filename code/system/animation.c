@@ -30,24 +30,7 @@ AnimationGroup *createAnimationGroup(char * fileName, int * new)
     return (AnimationGroup *)createAsset(AT_ANIMATION_GROUP, fileName, new);
 }
 
-void addAnimationToEntityAnimGroup(Entity *e, AnimationGroup *animGroup, char *path)
-{
-    AnimationGroup *toAdd = getAnimationGroup(path);
-
-    for(int i = 0; i < MAX_NUM_ANIMATIONS_PER_GROUP; i++)
-    {
-        Animation *anim = &animGroup->animations[i];
-
-        for(int j = 0; j < anim->numFrames; j++)
-        {
-            anim->frames[j * anim->maxNumBodyParts + anim->numBodyParts] = toAdd->animations[i].frames[j];
-        }
-
-        anim->numBodyParts++;
-    }
-}
-
-static bool loadAnimationData(char * filePath, bool character)
+static bool loadAnimationData(char * filePath)
 {
     char * text = readFile(filePath);
 
@@ -79,9 +62,8 @@ static bool loadAnimationData(char * filePath, bool character)
             STRNCPY(animGroup->fileName, fileName, nameLen);
     
             animGroup->animationState = 0;
-            
-            int numBodyParts    = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
-            int maxNumBodyParts = (character == true) ? MAX_DRAWABLES_PER_ENTITY : numBodyParts;
+
+            int numBodyParts = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
 
             cJSON * animations = cJSON_GetObjectItem(node, "animations");
 
@@ -91,11 +73,9 @@ static bool loadAnimationData(char * filePath, bool character)
             {
                 Animation * currentAnimation = &animGroup->animations[animIndex++];
 
-                currentAnimation->maxNumBodyParts = maxNumBodyParts;
-                currentAnimation->numBodyParts = numBodyParts;
-
                 currentAnimation->numFrames = cJSON_GetObjectItem(animNode, "numframes")->valueint;
-                currentAnimation->frames    = allocatePermanentMemory(currentAnimation->numFrames * currentAnimation->maxNumBodyParts * sizeof(uint32_t));
+                currentAnimation->numBodyParts = numBodyParts;
+                currentAnimation->frames    = allocatePermanentMemory(currentAnimation->numFrames * currentAnimation->numBodyParts * sizeof(uint32_t));
 
                 char * animFileName = cJSON_GetObjectItem(animNode, "filename")->valuestring;
 
@@ -111,7 +91,9 @@ static bool loadAnimationData(char * filePath, bool character)
                     int frameIndex = frameCount / currentAnimation->numBodyParts;
 
                     char * spritePath = frameNode->valuestring;
-                    currentAnimation->frames[frameIndex * currentAnimation->maxNumBodyParts + bodyPart] = getSpriteIndex(spritePath);
+                    int index = frameIndex * numBodyParts + bodyPart;
+                    currentAnimation->frames[index] = getSpriteIndex(spritePath);
+                    printf("loaded animation: %s, %d\n", spritePath, index);
                     frameCount++;
                 }
             }
@@ -126,13 +108,13 @@ static bool loadAnimationData(char * filePath, bool character)
 
 bool initAnimations(void)
 {
-    if(loadAnimationData("../data/heroineUnarmedAnimation.json", true) == false)
+    if(loadAnimationData("../data/heroineUnarmedAnimation.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load heroine animation data!\n");
         return false;
     }
 
-    if(loadAnimationData("../data/longswordAnimation.json", false) == false)
+    if(loadAnimationData("../data/longswordAnimation.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load longsword animation data!\n");
         return false;

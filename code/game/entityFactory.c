@@ -127,6 +127,7 @@ static void initProjectile(Entity * projectile)
     BIT_SET(projectile->flags, ENTITY_CAN_UPDATE_BIT);
     BIT_SET(projectile->flags, ENTITY_CAN_COLLIDE_BIT);
     BIT_SET(projectile->flags, ENTITY_IS_ALIVE_BIT);
+    BIT_SET(projectile->flags, ENTITY_IS_VISIBLE_BIT);
 }
 
 static void initLongsword(Entity * longSword)
@@ -135,14 +136,15 @@ static void initLongsword(Entity * longSword)
     longSword->width = 0.0f;
     longSword->height = 0.0f;
     longSword->flags = 0;
-
+    //weapon sprite is only visible until it's picked up. we can (and probably should) actually use some entirely different sprite here. 
     longSword->entitySprites.sprites[0] = getSprite("gfx/entities/longswordLeftIdle1.png");
     longSword->entitySprites.drawableCount = 1;
 
     BIT_SET(longSword->flags, ENTITY_CAN_UPDATE_BIT);
     BIT_SET(longSword->flags, ENTITY_CAN_COLLIDE_BIT);
     BIT_SET(longSword->flags, ENTITY_IS_ALIVE_BIT);
-    
+    BIT_SET(longSword->flags, ENTITY_IS_VISIBLE_BIT);
+
     uint32_t longSwordIndex = getNewIndex(&weaponQueue, WEAPON_QUEUE);
 
     Weapon *longSwordWeapon = &dungeon.weapons[longSwordIndex];
@@ -165,6 +167,7 @@ static void initPlayer(Entity * player)
     BIT_SET(player->flags, ENTITY_CAN_UPDATE_BIT);
     BIT_SET(player->flags, ENTITY_CAN_COLLIDE_BIT);
     BIT_SET(player->flags, ENTITY_IS_ALIVE_BIT);
+    BIT_SET(player->flags, ENTITY_IS_VISIBLE_BIT);
 
     uint32_t actorIndex = getNewIndex(&actorQueue, ACTOR_QUEUE);
 
@@ -194,6 +197,7 @@ static void initBarrel(Entity * barrel)
     BIT_SET(barrel->flags, ENTITY_CAN_UPDATE_BIT);
     BIT_SET(barrel->flags, ENTITY_CAN_COLLIDE_BIT);
     BIT_SET(barrel->flags, ENTITY_IS_ALIVE_BIT);
+    BIT_SET(barrel->flags, ENTITY_IS_VISIBLE_BIT);
 
     uint32_t actorIndex = getNewIndex(&actorQueue, ACTOR_QUEUE);
     Actor * barrelActor = &dungeon.actors[actorIndex];
@@ -235,7 +239,6 @@ void removeActor(Actor *a)
 
 void removeEntity(Entity * e)
 {
-    //what about other resources?
     if(queueIsFull(&entityQueue) == false)
     {
         printf("pushing entity %d to queue!\n", e->entityIndex);

@@ -116,12 +116,13 @@ static Animation * getNewAnimation(Actor* actor)
 
 static inline void getAnimationVisibleSprites(Animation *animation, EntityVisibleSprites *sprites, int frameIndex)
 {   
-    int pitch = animation->maxNumBodyParts;
+    int pitch = animation->numBodyParts;
     sprites->drawableCount = animation->numBodyParts;
+    printf("drawable count: %d\n", sprites->drawableCount);
     for(int i = 0; i < sprites->drawableCount; i++)
     {
         sprites->sprites[i] = getSpriteByIndex(animation->frames[i + pitch * frameIndex]);
-        printf("%s\n", sprites->sprites[i]->fileName);
+        printf("drawing sprite: %s\n", sprites->sprites[i]->fileName);
     }
 }
 

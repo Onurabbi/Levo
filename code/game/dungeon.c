@@ -221,7 +221,10 @@ static void entityFirstPassJob(void * context)
         if(isEntityAlive(entity) && rectangleRectangleCollision(entityRect, screenRect) == true)
         {
             //entity visibility will be resolved later.
-            addEntityToDrawList(entity, screenPos, thread);
+            if(isEntityVisible(entity) == true)
+            {
+                addEntityToDrawList(entity, screenPos, thread);
+            }
             addEntityToUpdateList(i, thread);
         }
     }
