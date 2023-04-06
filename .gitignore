@@ -1,5 +1,7 @@
 *.o
 ./devlogs/
 ./assets/
+.build/game
+./data/
 
 
