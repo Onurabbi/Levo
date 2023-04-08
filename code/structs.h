@@ -1,6 +1,12 @@
 #ifndef STRUCTS_H_
 #define STRUCTS_H_
 
+typedef struct 
+{
+    char     *data;
+    uint32_t count;    
+} String;
+
 typedef struct
 {
     float x,y;
@@ -19,14 +25,14 @@ typedef struct
 
 typedef struct
 {
-    char          fileName[MAX_FILENAME_LENGTH];
-    SDL_Texture * texture;
+    String        fileName;
+    SDL_Texture   *texture;
 } Texture;
 
 typedef struct
 {
-    char          fileName[MAX_FILENAME_LENGTH];
-    SDL_Texture * texture;
+    String        fileName;
+    SDL_Texture   *texture;
     SDL_Rect      rect;
     int           rotated;
     int           nameLength;
@@ -34,23 +40,36 @@ typedef struct
 
 typedef struct
 {
+    String    fileName;
     double    lengthSeconds;
-    double    AnimTimer;
-    uint32_t *frames;
-    uint32_t  numFrames;
-    uint32_t  numBodyParts;
+    Sprite    animationSprites[MAX_NUM_ANIMATION_SPRITES];
+    uint32_t  numSprites;
+    uint32_t  animationType;
+    uint32_t  animationSlot;
 } Animation;
 
 typedef struct
 {
-    char           fileName[MAX_FILENAME_LENGTH];
-    Animation      animations[MAX_NUM_ANIMATIONS_PER_GROUP];
-    uint32_t       animationState;
-}AnimationGroup;
+    String   fileName;
+    uint32_t animationIndices[MAX_NUM_ANIMATIONS_PER_BODY_PART];
+} AnimationGroup;
 
-typedef struct 
+typedef struct
 {
-    Sprite * sprites[MAX_DRAWABLES_PER_ENTITY];
+    //these are animation pointers effectively
+    uint32_t       animationIndices[MAX_NUM_BODY_PARTS][MAX_NUM_ANIMATIONS_PER_BODY_PART];
+
+    double         animTimer;
+    double         animLengthInSeconds;
+    uint32_t       numFrames;
+    //index in animationIndices as in animationIndices[bodyPart][currentAnimationIndex];
+    uint32_t       currentAnimationIndex; 
+    uint32_t       numBodyParts;
+} AnimationController;
+
+typedef struct
+{
+    Sprite   *sprites[MAX_DRAWABLES_PER_ENTITY];
     uint32_t drawableCount;
 }EntityVisibleSprites;
 
@@ -75,22 +94,22 @@ typedef struct
     Entity         *equipper;
     float          reach;
     uint32_t       damage;
-    AnimationGroup *animGroup;
 } Weapon;
 
 typedef struct 
 {
-    uint32_t         id;
-    uint32_t         actorIndex;
-    Entity           *owner;
-    Entity           *weapon;
-    AnimationGroup   *animGroup;
-    Vec2f            dP;
-    uint32_t         facing;
-    uint32_t         health;
-    float            velocity;
-    bool             attacking;//TODO: bit field
-    bool             switchAnim;
+    AnimationController *animationController;
+
+    uint32_t  id;
+    uint32_t  actorIndex;
+    Entity    *owner;
+    Weapon    *weapon;
+    Vec2f     dP;
+    uint32_t  facing;
+    uint32_t  health;
+    float     velocity;
+    bool      attacking;//TODO: bit field
+    bool      switchAnim;
 } Actor;
 
 
@@ -108,7 +127,7 @@ typedef struct
     float x;
     float y;
     uint32_t layer;
-    Sprite * sprite;
+    Sprite   *sprite;
 } Drawable;
 
 typedef struct
@@ -179,17 +198,19 @@ typedef struct
 {
     Entity       *player, *current, *attackingEntity, *boss;
     //storage
-    Entity       *entities;
-    Actor        *actors;
-    Weapon       *weapons;
-    
+    Entity              *entities;
+    Actor               *actors;
+    Weapon              *weapons;
+    AnimationController *animationControllers;
+
     uint32_t     numEntities;
     uint32_t     numActors;
     uint32_t     numWeapons;
+    uint32_t     numAnimationControllers;
 
     uint32_t     entityId;
     
-    MapTile *    map;
+    MapTile      *map;
     uint32_t     numTiles;
 
     uint32_t     floor;
@@ -211,7 +232,7 @@ typedef struct
 
 typedef struct 
 {
-    void * base;
+    void   *base;
     size_t size;
     size_t used;
 }MemoryArena;
@@ -224,7 +245,7 @@ typedef struct
 
 typedef struct
 {
-    uint32_t * entities;
+    uint32_t   *entities;
     uint32_t   totalNumEntities;
 }SimulationRegion;
 

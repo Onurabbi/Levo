@@ -2,6 +2,5 @@
 #define PLAYER_H_
 
 void updatePlayer(Entity * player);
-void updateActor(Entity * player);
 
 #endif

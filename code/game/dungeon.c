@@ -174,6 +174,14 @@ bool initDungeon(void)
     }
     dungeon.numTiles = 0;
 
+    dungeon.animationControllers = allocatePermanentMemory(MAX_NUM_ANIMATION_CONTROLLERS * sizeof(AnimationController));
+    if(dungeon.animationControllers == NULL)
+    {
+        printf("can't allocate animation control memory");
+        return false;
+    }
+    dungeon.numAnimationControllers = 0;
+    
     createDungeon();
 
     dungeon.player = initEntity("Player");
@@ -237,7 +245,7 @@ static void doEntityFirstPass(void)
 {
     performJobs(entityFirstPassJob);
     denselyPackEntities();
-    denselyPackDrawableEntities();
+    denselyPackAndSortDrawableEntities();
 }
 
 static void tileVisibilityJob(void * context)

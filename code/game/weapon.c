@@ -4,10 +4,6 @@
 
 void equipWeapon(Weapon * weapon, Actor *equipper)
 {
-    Entity * equippingEntity = equipper->owner;
-    if(equippingEntity)
-    {
-        weapon->equipper = equipper;
-        equipper->weapon = weapon;
-    }
+    //should increment visible sprite count.
+    
 }

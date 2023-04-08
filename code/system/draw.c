@@ -22,7 +22,17 @@ static uint32_t * numEntities;
 static uint32_t totalNumTiles;
 static uint32_t totalNumEntities;
 
-void denselyPackDrawableEntities(void)
+static int compareDrawables(const void * a, const void * b)
+{
+    SDL_assert(a && b);
+
+    Drawable * d1 = (Drawable *)a;
+    Drawable * d2 = (Drawable *)b;
+
+    return (d1->y - d2->y);
+}
+
+void denselyPackAndSortDrawableEntities(void)
 {
     Drawable *dest =  entities + numEntities[0];
     totalNumEntities = numEntities[0];
@@ -36,6 +46,7 @@ void denselyPackDrawableEntities(void)
         dest += numEntities[i+1];
         totalNumEntities += numEntities[i+1];
     }
+    qsort(entities, totalNumEntities, sizeof(Drawable), compareDrawables);
 }
 
 void denselyPackDrawableTiles(void)
@@ -90,16 +101,6 @@ static void setDrawableTile(Drawable drawable, uint32_t thread)
     base[numTiles[thread]] = drawable;
 }
 
-static int compareDrawables(const void * a, const void * b)
-{
-    SDL_assert(a && b);
-
-    Drawable * d1 = (Drawable *)a;
-    Drawable * d2 = (Drawable *)b;
-
-    return (d2->y - d1->y);
-}
-
 void drawAll(void)
 {
     for(int i = 0; i < totalNumTiles; i++)
@@ -107,24 +108,16 @@ void drawAll(void)
         blitSprite(tiles[i].sprite, (int)tiles[i].x, (int)tiles[i].y, false, SDL_FLIP_NONE);
     }
     
-#if 0
-    for(uint32_t i = 0; i < MAX_NUM_THREADS; i++)
-    {
-        for(uint32_t j = 0; j < numTiles[i]; j++)
-        {
-            Drawable * tile = &tiles[i][j];
-            blitSprite(tile->sprite, (int)tile->x, (int)tile->y, false, SDL_FLIP_NONE);
-        }
-    }
-#endif
     for(int i = 0; i < totalNumEntities; i++)
     {
         blitSprite(entities[i].sprite, (int)entities[i].x,(int)entities[i].y, true, SDL_FLIP_NONE);
     }
     
+#if 0
     float x, y;
     toIso(dungeon.player->p.x, dungeon.player->p.y, &x, &y);
     SDL_RenderDrawLine(app.renderer,  x, y, (int)app.lineX, (int)app.lineY);
+#endif
 }
 
 bool initDraw(void)

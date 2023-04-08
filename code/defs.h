@@ -33,32 +33,35 @@ do {								  \
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
-#define epsilon						(0.001)
-#define ZOOM						2
-#define MAX_DESCRIPTION_LENGTH 		256
-#define MAX_FILENAME_LENGTH    		256
-#define MAX_NAME_LENGTH        		32
+#define epsilon							(0.001)
+#define ZOOM							2
+#define MAX_DESCRIPTION_LENGTH 			256
+#define MAX_FILENAME_LENGTH    			256
+#define MAX_NAME_LENGTH        			32
 
-#define MAX_NUM_ENTITIES       		1024
-#define MAX_NUM_WEAPONS				128
-#define MAX_NUM_ACTORS				MAX_NUM_ENTITIES
-#define MAX_NUM_INIT_FUNCS     		32
+#define MAX_NUM_ENTITIES       			1024
+#define MAX_NUM_WEAPONS					128
+#define MAX_NUM_ACTORS					MAX_NUM_ENTITIES
+#define MAX_NUM_ANIMATION_CONTROLLERS   MAX_NUM_ACTORS
+#define MAX_NUM_INIT_FUNCS     			32
+#define MAX_NUM_ANIMATIONS         		MAX_NUM_ACTORS * MAX_NUM_ANIMATIONS_PER_BODY_PART * MAX_NUM_BODY_PARTS
+#define MAX_NUM_ANIMATION_SPRITES		8
+#define MAX_NUM_ANIMATION_GROUPS		MAX_NUM_ACTORS
+#define MAX_NUM_SPRITES        			MAX_NUM_ANIMATIONS * MAX_NUM_ANIMATION_SPRITES
+#define MAX_NUM_TEXTURES       			128
+#define MAX_MOUSE_BUTTONS      			8
+#define MAX_KEYBOARD_KEYS      			350
+#define MAX_SND_CHANNELS       			16
 
-#define MAX_NUM_SPRITES        		MAX_NUM_ENTITIES * 16
-#define MAX_NUM_TEXTURES       		128
-#define MAX_MOUSE_BUTTONS      		8
-#define MAX_KEYBOARD_KEYS      		350
-#define MAX_SND_CHANNELS       		16
+#define MAP_WIDTH 			   			64
+#define MAP_HEIGHT 			  	 		64
+#define MAX_NUM_MAP_LAYERS     			2
 
-#define MAP_WIDTH 			   		64
-#define MAP_HEIGHT 			  	 	64
-#define MAX_NUM_MAP_LAYERS     		2
-
-#define MAX_NUM_TILES		   	    (MAP_WIDTH * MAP_HEIGHT * MAX_NUM_MAP_LAYERS)
+#define MAX_NUM_TILES		   	        (MAP_WIDTH * MAP_HEIGHT * MAX_NUM_MAP_LAYERS)
 
 //because isometric, these two need to be different
-#define TILE_WIDTH		       		64 * ZOOM
-#define TILE_HEIGHT		       		32 * ZOOM
+#define TILE_WIDTH		       		    64 * ZOOM
+#define TILE_HEIGHT		       		    32 * ZOOM
 
 #define MAP_RENDER_WIDTH       			((SCREEN_WIDTH) / (TILE_WIDTH))
 #define MAP_RENDER_HEIGHT      			((SCREEN_HEIGHT) / (TILE_HEIGHT))
@@ -69,10 +72,6 @@ do {								  \
 #define MAX_NUM_WIDGETS					128
 #define MAX_NUM_SLIDER_WIDGETS			64
 #define CURSOR_BLINK_TIME_SEC   		0.50
-
-#define MAX_NUM_ANIMATION_GROUPS		1024
-#define MAX_NUM_ANIMATIONS_PER_GROUP	64
-#define MAX_NUM_ANIMATION_SPRITES		8
 
 #define MAX_NUM_THREADS 				8
 #define MAX_TILE_COUNT_PER_THREAD		((MAX_NUM_TILES) / MAX_NUM_THREADS)
@@ -91,6 +90,7 @@ typedef enum
 {
 	AT_TEXTURE,
 	AT_SPRITE, 
+	AT_ANIMATION,
 	AT_ANIMATION_GROUP,
 	AT_MAX
 } AssetType;
@@ -249,7 +249,8 @@ enum
 	HEROINE_UP_BOW_SHOOT,
 
 	MAX_ANIMATION_STATE,
-	NULL_ANIMATION_STATE = MAX_ANIMATION_STATE
+	NULL_ANIMATION_STATE = MAX_ANIMATION_STATE,
+	MAX_NUM_ANIMATIONS_PER_BODY_PART = MAX_ANIMATION_STATE
 };
 
 enum
@@ -258,7 +259,8 @@ enum
 	HEAD,
 	WEAPON_HAND,
 	OFFHAND,
-	MAX_DRAWABLES_PER_ENTITY
+	MAX_DRAWABLES_PER_ENTITY,
+	MAX_NUM_BODY_PARTS = MAX_DRAWABLES_PER_ENTITY
 };
 
 #endif

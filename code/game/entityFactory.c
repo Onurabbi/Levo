@@ -9,11 +9,14 @@
 #include "actor.h"
 #include "weapon.h"
 
+#define MAX_QUEUE_SIZE 256
+
 enum
 {
     ENTITY_QUEUE,
     ACTOR_QUEUE,
     WEAPON_QUEUE,
+    ANIMATION_CONTROLLER_QUEUE
 };
 
 typedef struct 
@@ -33,6 +36,7 @@ static uint32_t numInitFuncs;
 static IndexQueue entityQueue;
 static IndexQueue actorQueue;
 static IndexQueue weaponQueue;
+static IndexQueue animationControllerQueue;
 
 static inline bool queueIsEmpty(IndexQueue *indexQueue)
 {
@@ -106,6 +110,9 @@ static uint32_t getNewIndex(IndexQueue *queue, int type)
             case WEAPON_QUEUE:
                 result = dungeon.numWeapons++;
                 break;
+            case ANIMATION_CONTROLLER_QUEUE:
+                result = dungeon.numAnimationControllers++;
+                break;
             default:
                 break;
         }
@@ -158,23 +165,33 @@ static void initPlayer(Entity * player)
     player->width = 0.7f;
     player->height = 0.50f;
     player->flags = 0;
-    
-    player->entitySprites.sprites[HEAD] = getSprite("gfx/entities/heroineLeftIdle1.png");
-    player->entitySprites.sprites[BODY] = getSprite("gfx/entities/headLongLeftIdle1.png");
-    
-    player->entitySprites.drawableCount = 2;
 
     BIT_SET(player->flags, ENTITY_CAN_UPDATE_BIT);
     BIT_SET(player->flags, ENTITY_CAN_COLLIDE_BIT);
     BIT_SET(player->flags, ENTITY_IS_ALIVE_BIT);
     BIT_SET(player->flags, ENTITY_IS_VISIBLE_BIT);
 
-    uint32_t actorIndex = getNewIndex(&actorQueue, ACTOR_QUEUE);
+    player->entitySprites.sprites[BODY] = getSprite("gfx/entities/head_longLeftIdle1.png");
+    player->entitySprites.sprites[HEAD] = getSprite("gfx/entities/clothesLeftIdle1.png");
+    player->entitySprites.drawableCount = 2;
 
+    uint32_t actorIndex = getNewIndex(&actorQueue, ACTOR_QUEUE);
     Actor * playerActor = &dungeon.actors[actorIndex];
     playerActor->actorIndex = actorIndex;
     playerActor->owner = player;
-    playerActor->animGroup = getAnimationGroup("gfx/animations/heroine.animGroup");
+    
+    uint32_t animControllerIndex = getNewIndex(&animationControllerQueue, ANIMATION_CONTROLLER_QUEUE);
+    AnimationController *animController = &dungeon.animationControllers[animControllerIndex];
+    (void)addAnimationGroupToAnimationController("gfx/animations/clothes.animGroup", animController, "Body");
+    (void)addAnimationGroupToAnimationController("gfx/animations/head_long.animGroup", animController, "Head");
+    animController->animTimer = 0.0;
+    animController->currentAnimationIndex = 0;
+    uint32_t initialAnimIndex = animController->animationIndices[0][0];
+    Animation *initialAnim = getAnimationByIndex(initialAnimIndex);
+    animController->animLengthInSeconds = initialAnim->lengthSeconds;
+    animController->numFrames = initialAnim->numSprites;
+    playerActor->animationController = animController;
+
     playerActor->dP.x = 0;
     playerActor->dP.y = 0;
     playerActor->facing = FACING_LEFT;
@@ -182,6 +199,7 @@ static void initPlayer(Entity * player)
     playerActor->switchAnim = false;
     playerActor->health = 10;
     playerActor->velocity = 0.15f;
+    
     player->data = playerActor;
 }
 
@@ -277,19 +295,25 @@ bool initEntityFactory(void)
     memset(initFuncs, 0, sizeof(initFuncs));
     numInitFuncs = 0;
 
-    if(initQueue(&entityQueue, MAX_NUM_ENTITIES) == false)
+    if(initQueue(&entityQueue, MAX_QUEUE_SIZE) == false)
     {
         //TODO: LOGGING
         return false;
     }
 
-    if(initQueue(&actorQueue, MAX_NUM_ACTORS) == false)
+    if(initQueue(&actorQueue, MAX_QUEUE_SIZE) == false)
     {
         //TODO: LOGGING
         return false;
     }
 
-    if(initQueue(&weaponQueue, MAX_NUM_WEAPONS) == false)
+    if(initQueue(&weaponQueue, MAX_QUEUE_SIZE) == false)
+    {
+        //TODO: LOGGING
+        return false;
+    }
+
+    if(initQueue(&animationControllerQueue, MAX_QUEUE_SIZE) == false)
     {
         //TODO: LOGGING
         return false;

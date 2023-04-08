@@ -7,8 +7,11 @@
 #include "atlas.h"
 #include "texture.h"
 
-static AnimationGroup * animationGroups;
-static uint32_t         numAnimationGroups;
+static AnimationGroup *animationGroups;
+static uint32_t       numAnimationGroups;
+
+static Animation  *animations;
+static uint32_t   numAnimations;
 
 static Sprite *  sprites;
 static uint32_t  numSprites;
@@ -27,6 +30,9 @@ static inline uint8_t * getAssetStore(AssetType type)
             break;
         case AT_SPRITE:
             result = (uint8_t *)sprites;
+            break;
+        case AT_ANIMATION:
+            result = (uint8_t *)animations;
             break;
         case AT_ANIMATION_GROUP:
             result = (uint8_t *)animationGroups;
@@ -50,10 +56,13 @@ static void incrementAssetCount(AssetType type)
             numSprites++;
             SDL_assert(numSprites <= MAX_NUM_SPRITES);
             break;
+        case AT_ANIMATION:
+            numAnimations++;
+            SDL_assert(numAnimations <= MAX_NUM_ANIMATIONS);
+            break;
         case AT_ANIMATION_GROUP:
             numAnimationGroups++;
             SDL_assert(numAnimationGroups <= MAX_NUM_ANIMATION_GROUPS);
-            break;
         default:
             break;
     }
@@ -70,6 +79,9 @@ static size_t getAssetSize(AssetType type)
             break;
         case AT_SPRITE:
             result = sizeof(Sprite);
+            break;
+        case AT_ANIMATION:
+            result = sizeof(Animation);
             break;
         case AT_ANIMATION_GROUP:
             result = sizeof(AnimationGroup);
@@ -92,6 +104,9 @@ static uint32_t getMaxAssetCount(AssetType type)
             break;
         case AT_SPRITE:
             result = MAX_NUM_SPRITES;
+            break;
+        case AT_ANIMATION:
+            result = MAX_NUM_ANIMATIONS;
             break;
         case AT_ANIMATION_GROUP:
             result = MAX_NUM_ANIMATION_GROUPS;
@@ -122,15 +137,16 @@ uint8_t * getAsset(AssetType assetType, char * fileName)
 
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
 
-    for(int index = i; index != i - 1; index++)
+    int index = i;
+    while(index != i - 1)
     {
-        index %= maxCount;
-        const char *assetName = (const char *)assetStore + (index * size);
-        if(strcmp(fileName, assetName) == 0)
+        result = assetStore + size * index;
+        String *fileNameStr = (String *)result;
+        if(strcmp(fileNameStr->data, fileName) == 0)
         {
-            result = (uint8_t *)assetName;
             return result;
         }
+        index = (index + 1) % maxCount;
     }
     return NULL;
 }
@@ -155,18 +171,27 @@ uint8_t * createAsset(AssetType assetType, char * fileName, int *new)
 
     while(index != i-1)
     {
-        result = assetStore + (index * size);
-        const char * assetName = (const char *)result;
-        if(strcmp(fileName, assetName) == 0)
-        {
-            return result;
-        }
-        else if(*result == 0) //uninitialized
+        result = assetStore + size * index;
+        String *fileNameStr = (String *)result;
+
+        if(fileNameStr->count == 0) //uninitialized
         {
             incrementAssetCount(assetType);
             *new = 1;
+
+            fileNameStr->data = allocatePermanentMemory(MAX_FILENAME_LENGTH);
+            fileNameStr->count = MAX_FILENAME_LENGTH;
+
             return result;
         }
+        else
+        {
+            if(strcmp(fileNameStr->data, fileName) == 0)
+            {
+                return result;
+            }
+        }
+
         printf("sprite collisions: %d\n", spriteCollisions);
         spriteCollisions++;
         index = (index + 1) % maxCount;
@@ -185,28 +210,35 @@ uint32_t getAssetIndex(AssetType assetType, char * fileName)
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
 
     int index = i;
-
-    while (index != i - 1)
+    while(index != i - 1)
     {
-        const char *assetName = (const char *)assetStore + (index * size);
-        if(strcmp(fileName, assetName) == 0)
+        uint8_t *result = assetStore + size * index;
+        String *fileNameStr = (String *)result;
+        if(strcmp(fileNameStr->data, fileName) == 0)
         {
             return index;
         }
         index = (index + 1) % maxCount;
     }
+
     return maxCount;
 }
 
 bool initAssets(void)
 {
-    animationGroups = allocatePermanentMemory(MAX_NUM_ANIMATION_GROUPS * sizeof(AnimationGroup));
+    animations = allocatePermanentMemory(MAX_NUM_ANIMATIONS * sizeof(Animation));
 
+    if(animations == NULL)
+    {
+        return false;
+    }
+    numAnimations = 0;
+
+    animationGroups = allocatePermanentMemory(MAX_NUM_ANIMATION_GROUPS * sizeof(AnimationGroup));
     if(animationGroups == NULL)
     {
         return false;
     }
-
     numAnimationGroups = 0;
 
     sprites = allocatePermanentMemory(MAX_NUM_SPRITES * sizeof(Sprite));
@@ -226,6 +258,7 @@ bool initAssets(void)
     }    
     
     numTextures = 0;
-
+    
+    
     return true;
 }

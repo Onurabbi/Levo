@@ -13,5 +13,5 @@ void       drawOutlineRect(int x, int y, int w, int h, int r, int g, int b, int 
 void       drawAll(void);
 void       resetDraw(void);
 void       denselyPackDrawableTiles(void);
-void       denselyPackDrawableEntities(void);
+void       denselyPackAndSortDrawableEntities(void);
 #endif

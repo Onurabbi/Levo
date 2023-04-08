@@ -2,6 +2,8 @@
 
 #include "../common.h"
 
+#include "memory.h"
+
 #include "asset.h"
 #include "utils.h"
 #include "texture.h"
@@ -55,7 +57,8 @@ Texture * loadTexture(char *fileName)//this probably needs error code
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "Loading %s ...", fileName);
         newTexture = IMG_LoadTexture(app.renderer, fileName);
         uint32_t nameLen = strlen(fileName);
-        STRNCPY(result->fileName, fileName, nameLen);
+
+        STRNCPY(result->fileName.data, fileName, nameLen);
         result->texture = newTexture;
     }
     else

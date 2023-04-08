@@ -88,79 +88,90 @@ static int getAnimIndex(int facing, int pose)
     return (facing * POSE_COUNT + pose);
 }
 
-static Animation * getNewAnimation(Actor* actor)
+
+static inline void getAnimationVisibleSprites(AnimationController *animController, EntityVisibleSprites *sprites, uint32_t frameIndex)
 {
-    int animIndex = actor->animGroup->animationState;
+    sprites->drawableCount = 0;
 
-    AnimationGroup * animGroup = actor->animGroup;
+    for(int i = 0; i < animController->numBodyParts; i++)
+    {
+        uint32_t animationIndex = animController->animationIndices[i][animController->currentAnimationIndex];
+        Animation *animation = getAnimationByIndex(animationIndex);
 
-    if((actor->attacking == true) && (actor->switchAnim == true))
+        sprites->sprites[i] = &animation->animationSprites[frameIndex];
+        sprites->drawableCount++;
+    }
+}
+
+static uint32_t updateAnimationIndex(Actor* actor, AnimationController *animController)
+{
+    int animIndex = actor->animationController->currentAnimationIndex;
+
+    if ((actor->attacking == true) && (actor->switchAnim == true))
     {
         actor->switchAnim = false;
-
         animIndex = getAnimIndex(actor->facing, POSE_MELEE);
     }
     else if (actor->attacking != true)
     {
-        bool moving = isActorMoving(actor->dP);
-        int pose = moving ? POSE_RUN : POSE_IDLE;
+        int pose = isActorMoving(actor->dP) ? POSE_RUN : POSE_IDLE;
         animIndex = getAnimIndex(actor->facing, pose);
     }
-
-    actor->animGroup->animationState = animIndex;
-
-    Animation * newAnimation = &actor->animGroup->animations[animIndex];
     
-    return newAnimation;
+    return animIndex;
 }
 
-static inline void getAnimationVisibleSprites(Animation *animation, EntityVisibleSprites *sprites, int frameIndex)
-{   
-    int pitch = animation->numBodyParts;
-    sprites->drawableCount = animation->numBodyParts;
-    printf("drawable count: %d\n", sprites->drawableCount);
-    for(int i = 0; i < sprites->drawableCount; i++)
-    {
-        sprites->sprites[i] = getSpriteByIndex(animation->frames[i + pitch * frameIndex]);
-        printf("drawing sprite: %s\n", sprites->sprites[i]->fileName);
-    }
-}
-
-void getSpritesToShow(Actor * actor)
+static double updateAnimationTimer(Actor *actor, AnimationController *animController)
 {
-    Entity * owner = actor->owner;
+    double result = 0.0;
 
-    SDL_assert(owner);
-
-    actor->facing = getActorFacingDirection(actor->facing);
-
-    Animation * currentAnimation = getNewAnimation(actor);
-
-    int numFrames = currentAnimation->numFrames;
-
-    double timePerFrame = currentAnimation->lengthSeconds / (double)numFrames;
-
-    int frameIndex = (int)(currentAnimation->AnimTimer / timePerFrame);
-
-    double animTime = currentAnimation->AnimTimer + 1.0/59.0;
+    result = animController->animTimer + 1.0/59.0;
  
-    if(animTime > currentAnimation->lengthSeconds)
+    if(result > animController->animLengthInSeconds)
     {
-        animTime = 0.0;
+        result = 0.0;
 
         if(actor->attacking)
         {
             actor->attacking = false;
         }
-        else
-        {
-            frameIndex = ((int)(animTime / timePerFrame));
-        }
     }
 
-    currentAnimation->AnimTimer = animTime;
+    return result;
+}
 
-    SDL_assert(frameIndex >= 0 && frameIndex < currentAnimation->numFrames);
+static void updateAnimationState(Actor * actor)
+{
+    Entity * owner = actor->owner;
+    AnimationController *animController = actor->animationController;
 
-    getAnimationVisibleSprites(currentAnimation, &owner->entitySprites, frameIndex);
+    actor->facing = getActorFacingDirection(actor->facing);
+    //Animation controller is always initialised properly in entityfactory
+    //update animation timer
+    animController->animTimer = updateAnimationTimer(actor, animController);
+
+    //update animation index
+    uint32_t newAnimIndex = updateAnimationIndex(actor, animController);
+    if (animController->currentAnimationIndex != newAnimIndex)
+    {
+        //update animation controller
+        //any body part will do
+        int newIndex = animController->animationIndices[0][newAnimIndex];
+        Animation * newAnim = getAnimationByIndex(newIndex);
+        animController->animLengthInSeconds = newAnim->lengthSeconds;
+        animController->numFrames = newAnim->numSprites;
+        animController->animTimer = 0.0;
+    }
+
+    animController->currentAnimationIndex = newAnimIndex;
+    uint32_t numFrames = animController->numFrames;
+    double timePerFrame = animController->animLengthInSeconds / (double)numFrames;
+    uint32_t frameIndex = (int)(animController->animTimer / timePerFrame);
+
+    getAnimationVisibleSprites(animController, &owner->entitySprites, frameIndex);
+}
+
+void updateActor(Actor *actor)
+{
+    updateAnimationState(actor);
 }

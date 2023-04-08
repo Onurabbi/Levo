@@ -1,6 +1,7 @@
 #ifndef WEAPON_H_
 #define WEAPON_H_
 
-void equipWeapon(Weapon * weapon, Actor *equipper);
+
+void updateWeapon(void);
 
 #endif

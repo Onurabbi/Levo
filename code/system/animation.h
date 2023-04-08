@@ -1,9 +1,18 @@
 #ifndef ANIMATION_H_
 #define ANIMATION_H_
 
-AnimationGroup * getAnimationGroupByIndex(uint32_t index);
-uint32_t         getAnimationGroupIndex(char * fileName);
-AnimationGroup * getAnimationGroup(char * fileName);
-AnimationGroup * createAnimationGroup(char * fileName, int * new);
-bool             initAnimations(void);
+Animation      *getAnimationByIndex(uint32_t index);
+AnimationGroup *getAnimationGroupByIndex(uint32_t index);
+
+uint32_t getAnimationIndex(char * fileName);
+uint32_t getAnimationGroupIndex(char *fileName);
+
+Animation      *getAnimation(char * fileName);
+AnimationGroup *getAnimationGroup(char *fileName);
+
+Animation *createAnimation(char * fileName, int * new);
+bool       initAnimations(void);
+bool       addAnimationGroupToAnimationController(char *filePath, 
+                                                  AnimationController *controller, 
+                                                  char *animationSlot);
 #endif

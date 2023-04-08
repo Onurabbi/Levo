@@ -1,8 +1,8 @@
 *.o
-./devlogs/
-./assets/
-.build/game
-./data/
-./fonts/
+devlogs/
+assets/
+build/game
+data/
+fonts/
 
 

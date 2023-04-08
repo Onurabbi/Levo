@@ -10,26 +10,130 @@
 
 extern App app;
 
-AnimationGroup * getAnimationGroupByIndex(uint32_t index)
+static char * animationTypes[] = 
 {
-    return (AnimationGroup *)getAssetByIndex(AT_ANIMATION_GROUP, index);
+    "Idle",
+    "Run",
+    "Melee",
+    "Block",
+    "Death",
+    "LongBowShoot"
+};
+
+static char *animationSlots[] = 
+{
+    "Body",
+    "Head",
+    "Weapon",
+    "Offhand"
+};
+
+static uint32_t getAnimationType(char *animType)
+{
+    for (int i = 0; i < POSE_COUNT; i++)
+    {
+        if(strcmp(animType, animationTypes[i]) == 0)
+        {
+            return i;
+        }
+    }
+    return POSE_COUNT;
 }
 
-uint32_t getAnimationGroupIndex(char * fileName)
+static uint32_t getAnimationSlot(char *animSlot)
 {
-    return getAssetIndex(AT_ANIMATION_GROUP, fileName);
+    for (int i = 0; i < MAX_NUM_BODY_PARTS; i++)
+    {
+        if(strcmp(animSlot, animationSlots[i]) == 0)
+        {
+            return i;
+        }
+    }
+    return MAX_NUM_BODY_PARTS;    
 }
 
-AnimationGroup *getAnimationGroup(char * fileName)
+Animation *getAnimationByIndex(uint32_t index)
+{
+    return (Animation *)getAssetByIndex(AT_ANIMATION, index);
+}
+
+uint32_t getAnimationIndex(char * fileName)
+{
+    return getAssetIndex(AT_ANIMATION, fileName);
+}
+
+Animation *getAnimation(char * fileName)
+{
+    return (Animation *)getAsset(AT_ANIMATION, fileName);
+}
+
+AnimationGroup *getAnimationGroup(char *fileName)
 {
     return (AnimationGroup *)getAsset(AT_ANIMATION_GROUP, fileName);
 }
 
-AnimationGroup *createAnimationGroup(char * fileName, int * new)
+Animation *createAnimation(char * fileName, int * new)
+{
+    return (Animation *)createAsset(AT_ANIMATION, fileName, new);
+}
+
+AnimationGroup *createAnimationGroup(char *fileName, int *new)
 {
     return (AnimationGroup *)createAsset(AT_ANIMATION_GROUP, fileName, new);
 }
 
+bool addAnimationGroupToAnimationController(char *fileName, AnimationController *controller, char *animationSlot)
+{
+    //first get the animation type from slot
+    uint32_t animSlot = getAnimationSlot(animationSlot);
+    //if we don't already have this animation slot, we will append the animations to the end
+    //otherwise we will replace the animations for that slot
+    uint32_t bodyPart = controller->numBodyParts;
+    //find the correct slot
+    for (int i = 0; i < controller->numBodyParts; i++)
+    {
+        //check the type of first animation
+        int animIndex = controller->animationIndices[i][0];
+        Animation *anim = getAnimationByIndex(animIndex);
+        if (anim->animationSlot == animSlot)
+        {
+            bodyPart = i;
+        }
+    }
+
+    //if the controller doesn't have animations for this body part,
+    //we need to increment the body part count.
+    if (bodyPart == controller->numBodyParts)
+    {
+        controller->numBodyParts++;
+    }
+
+    if(controller->numBodyParts == MAX_NUM_BODY_PARTS)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "Can't add more body parts!\n");
+        return false;
+    }
+
+    //get the animation group which just holds the indices to the animations of this group
+    //now we know which slot they should go.
+    AnimationGroup *animGroup = getAnimationGroup(fileName);
+
+    if(animGroup == NULL)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR, 
+                       "Why the fuck does %s animation group not exist?\n", fileName);
+        return false;
+    }
+    
+    for(int i = 0; i < MAX_NUM_ANIMATIONS_PER_BODY_PART; i++)
+    {
+        controller->animationIndices[bodyPart][i] = animGroup->animationIndices[i];
+    }
+
+    return true;
+}
+
+//should create animationgroup and individual animation assets
 static bool loadAnimationData(char * filePath)
 {
     char * text = readFile(filePath);
@@ -49,56 +153,60 @@ static bool loadAnimationData(char * filePath)
 
     for(cJSON * node = root->child; node != NULL; node = node->next)
     {
-        char * fileName = cJSON_GetObjectItem(node, "filename")->valuestring;
+        int newAnimGroup;
 
-        uint32_t nameLen = strlen(fileName);
+        char *groupFileName = cJSON_GetObjectItem(node, "filename")->valuestring;
 
-        int new;
+        AnimationGroup *animGroup = createAnimationGroup(groupFileName, &newAnimGroup);
 
-        AnimationGroup *animGroup = createAnimationGroup(fileName, &new);
-        
-        if(new == 1)
+        int animCount = 0;
+
+        if (newAnimGroup == true)
         {
-            STRNCPY(animGroup->fileName, fileName, nameLen);
-    
-            animGroup->animationState = 0;
+            int animGroupNameLength = strlen(groupFileName);
 
-            int numBodyParts = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
+            STRNCPY(animGroup->fileName.data, groupFileName, animGroupNameLength);
 
             cJSON * animations = cJSON_GetObjectItem(node, "animations");
 
-            int animIndex = 0;
+            uint32_t numBodyParts = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
+
+            uint32_t animationSlot = getAnimationSlot(cJSON_GetObjectItem(node, "slot")->valuestring);
 
             for(cJSON * animNode = animations->child; animNode != NULL; animNode = animNode->next)
             {
-                Animation * currentAnimation = &animGroup->animations[animIndex++];
+                int newAnim;
 
-                currentAnimation->numFrames = cJSON_GetObjectItem(animNode, "numframes")->valueint;
-                currentAnimation->numBodyParts = numBodyParts;
-                currentAnimation->frames    = allocatePermanentMemory(currentAnimation->numFrames * currentAnimation->numBodyParts * sizeof(uint32_t));
+                char *fileName = cJSON_GetObjectItem(animNode, "filename")->valuestring;
 
-                char * animFileName = cJSON_GetObjectItem(animNode, "filename")->valuestring;
-
-                currentAnimation->lengthSeconds = cJSON_GetObjectItem(animNode, "lengthseconds")->valuedouble;
-
-                cJSON * frames = cJSON_GetObjectItem(animNode, "frames");
-
-                int frameCount = 0;
-
-                for(cJSON * frameNode = frames->child; frameNode != NULL; frameNode = frameNode->next)
+                Animation * currentAnimation = createAnimation(fileName, &newAnim);
+                if(newAnim == true)
                 {
-                    int bodyPart = frameCount % currentAnimation->numBodyParts;
-                    int frameIndex = frameCount / currentAnimation->numBodyParts;
+                    STRNCPY(currentAnimation->fileName.data, fileName, strlen(fileName));
+                    uint32_t animIndex = getAnimationIndex(fileName);
+                    if(animIndex != MAX_NUM_ANIMATIONS)
+                    {
+                        animGroup->animationIndices[animCount++] = animIndex;
+                    }
+                    currentAnimation->numSprites = cJSON_GetObjectItem(animNode, "numframes")->valueint;
+                    currentAnimation->lengthSeconds = cJSON_GetObjectItem(animNode, "lengthseconds")->valuedouble;
+                    char *type = cJSON_GetObjectItem(animNode, "animationtype")->valuestring;
+                    currentAnimation->animationType = getAnimationType(type);
+                    currentAnimation->animationSlot = animationSlot;
+                    cJSON * frames = cJSON_GetObjectItem(animNode, "frames");
 
-                    char * spritePath = frameNode->valuestring;
-                    int index = frameIndex * numBodyParts + bodyPart;
-                    currentAnimation->frames[index] = getSpriteIndex(spritePath);
-                    printf("loaded animation: %s, %d\n", spritePath, index);
-                    frameCount++;
+                    int frameCount = 0;
+                    for(cJSON * frameNode = frames->child; frameNode != NULL; frameNode = frameNode->next)
+                    {
+                        char * spritePath = frameNode->valuestring;
+                        currentAnimation->animationSprites[frameCount] = *(getSprite(spritePath));
+                        frameCount++;
+                    }
                 }
             }
-        }
+        } 
     }
+
 
     free(text);
     cJSON_Delete(root);
@@ -108,9 +216,15 @@ static bool loadAnimationData(char * filePath)
 
 bool initAnimations(void)
 {
-    if(loadAnimationData("../data/heroineUnarmedAnimation.json") == false)
+    if(loadAnimationData("../data/clothesAnimation.json") == false)
     {
-        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load heroine animation data!\n");
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load clothes animation data!\n");
+        return false;
+    }
+
+    if(loadAnimationData("../data/head_longAnimation.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load head_long animation data!\n");
         return false;
     }
 

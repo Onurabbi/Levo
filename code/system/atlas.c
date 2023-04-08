@@ -3,6 +3,7 @@
 #include "../common.h"
 
 #include "../json/cJSON.h"
+#include "memory.h"
 #include "utils.h"
 #include "asset.h"
 #include "atlas.h"
@@ -69,7 +70,7 @@ static bool loadAtlasData(char * dataPath, SDL_Texture * spriteTexture)
             h = cJSON_GetObjectItem(node, "h")->valueint;
             rotated = cJSON_GetObjectItem(node, "rotated")->valueint;
             
-            STRNCPY(s->fileName, fileName, nameLen);
+            STRNCPY(s->fileName.data, fileName, nameLen);
             s->rect.x = x;
             s->rect.y = y;
             s->rect.w = w;
@@ -80,7 +81,8 @@ static bool loadAtlasData(char * dataPath, SDL_Texture * spriteTexture)
         }
         else
         {
-            //No need to load
+            SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, 
+                           "Asset already exists: %s\n", fileName);
         }
     }
 
@@ -113,13 +115,13 @@ bool initSprites(void)
     }
 #endif
 
-    if(initAtlas("../assets/textures/Heroine/clothes.png", "../data/heroineAtlas.json") == false)
+    if(initAtlas("../assets/textures/Heroine/clothes.png", "../data/clothesAtlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/clothes.png");
         return false;
     }
 
-    if(initAtlas("../assets/textures/Heroine/head_long.png", "../data/headLongAtlas.json") == false)
+    if(initAtlas("../assets/textures/Heroine/head_long.png", "../data/head_longAtlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/head_long.png");
         return false;

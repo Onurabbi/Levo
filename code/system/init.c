@@ -86,9 +86,7 @@ bool initGameSystem(void)
     INIT_CHECK(initMemory, "initMemory");
     INIT_CHECK(initAssets, "initAssets");
     INIT_CHECK(initSprites, "initSprites");
-#if 1
     INIT_CHECK(initAnimations, "initAnimations");
-#endif
     INIT_CHECK(initDraw, "initDraw");
     INIT_CHECK(initSound, "initSound");
     INIT_CHECK(initFonts, "initFonts");
