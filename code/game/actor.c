@@ -31,13 +31,10 @@ static inline bool isActorMoving(Vec2f dP)
 static int getActorFacingDirection(int oldFacing)
 {
     Input *input = &app.input;
-
     int newFacing;
-
     if (input->keyboardState[SDL_SCANCODE_W] == 1)
     {
         if (input->keyboardState[SDL_SCANCODE_D] == 1)
-
         {
             newFacing = FACING_RIGHT_UP;
         }
@@ -53,7 +50,6 @@ static int getActorFacingDirection(int oldFacing)
     else if (input->keyboardState[SDL_SCANCODE_S] == 1)
     {
         if (input->keyboardState[SDL_SCANCODE_D] == 1)
-
         {
             newFacing = FACING_RIGHT_DOWN;
         }
@@ -78,9 +74,7 @@ static int getActorFacingDirection(int oldFacing)
     {
         newFacing = oldFacing; 
     }
-
     return newFacing;
-
 }
 
 static int getAnimIndex(int facing, int pose)
@@ -97,7 +91,6 @@ static inline void getAnimationVisibleSprites(AnimationController *animControlle
     {
         uint32_t animationIndex = animController->animationIndices[i][animController->currentAnimationIndex];
         Animation *animation = getAnimationByIndex(animationIndex);
-
         sprites->sprites[i] = &animation->animationSprites[frameIndex];
         sprites->drawableCount++;
     }
@@ -124,9 +117,7 @@ static uint32_t updateAnimationIndex(Actor* actor, AnimationController *animCont
 static double updateAnimationTimer(Actor *actor, AnimationController *animController)
 {
     double result = 0.0;
-
     result = animController->animTimer + 1.0/59.0;
- 
     if(result > animController->animLengthInSeconds)
     {
         result = 0.0;
@@ -136,7 +127,6 @@ static double updateAnimationTimer(Actor *actor, AnimationController *animContro
             actor->attacking = false;
         }
     }
-
     return result;
 }
 
@@ -144,12 +134,10 @@ static void updateAnimationState(Actor * actor)
 {
     Entity * owner = actor->owner;
     AnimationController *animController = actor->animationController;
-
     actor->facing = getActorFacingDirection(actor->facing);
     //Animation controller is always initialised properly in entityfactory
     //update animation timer
     animController->animTimer = updateAnimationTimer(actor, animController);
-
     //update animation index
     uint32_t newAnimIndex = updateAnimationIndex(actor, animController);
     if (animController->currentAnimationIndex != newAnimIndex)
@@ -162,12 +150,10 @@ static void updateAnimationState(Actor * actor)
         animController->numFrames = newAnim->numSprites;
         animController->animTimer = 0.0;
     }
-
     animController->currentAnimationIndex = newAnimIndex;
     uint32_t numFrames = animController->numFrames;
     double timePerFrame = animController->animLengthInSeconds / (double)numFrames;
     uint32_t frameIndex = (int)(animController->animTimer / timePerFrame);
-
     getAnimationVisibleSprites(animController, &owner->entitySprites, frameIndex);
 }
 

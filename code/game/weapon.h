@@ -2,6 +2,6 @@
 #define WEAPON_H_
 
 
-void updateWeapon(void);
+void updateWeapon(Entity *e);
 
 #endif

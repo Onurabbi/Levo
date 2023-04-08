@@ -19,9 +19,9 @@ extern Dungeon dungeon;
 static Entity * projectile = NULL;
 static Vec2f projectiledP;
 
-void updatePlayer(Entity * player)
+void updatePlayer(Entity * e)
 {
-    Actor * playerActor = (Actor *)player->data;
+    Actor * player = (Actor *)e->data;
 
     Input * input = &app.input;
 
@@ -81,46 +81,46 @@ void updatePlayer(Entity * player)
     deltaX = (dx + dy) / 2.0f;
     deltaY = (dy - dx) / 2.0f;
     
-    if(playerActor->attacking == false)
+    if(player->attacking == false)
     {
-        moveEntity(player, deltaX, deltaY);
+        moveEntity(e, deltaX, deltaY);
     }
 
-    updateActor(playerActor);
+    updateActor(player);
 
     Entity * playerTargetEntity = &dungeon.entities[app.entityOverCursorIndex];
-    Vec2f frontVector = vectorNormalize(getEntityFrontVector(playerActor->facing));
-    Vec2f lineEnd = vectorAdd(vectorMultiply(frontVector, 2.0f), player->p);
+    Vec2f frontVector = vectorNormalize(getEntityFrontVector(player->facing));
+    Vec2f lineEnd = vectorAdd(vectorMultiply(frontVector, 2.0f), e->p);
     toIso(lineEnd.x, lineEnd.y, &app.lineX, &app.lineY);
     
     SimulationRegion simRegion = getSimulationRegion();
 
     if(input->mouse.buttons[1] == 1)
     {
-        playerActor->attacking = true;
-        playerActor->switchAnim = true;
+        player->attacking = true;
+        player->switchAnim = true;
         playSound(SND_HIT, 0);
         float sqWeaponLength = 4.0f;
 
         for(int i = 0; i < simRegion.totalNumEntities; i++)
         {
-            if(i != player->entityIndex)
+            if(i != e->entityIndex)
             {
                 uint32_t entityIndex = simRegion.entities[i];
-                Entity *e = &dungeon.entities[entityIndex];
-                Vec2f normalDir = vectorNormalize(vectorSubtract(e->p, player->p));
+                Entity *entity = &dungeon.entities[entityIndex];
+                Vec2f normalDir = vectorNormalize(vectorSubtract(entity->p, e->p));
 
-                if(sqDistance(player->p, e->p) <= sqWeaponLength)
+                if(sqDistance(e->p, entity->p) <= sqWeaponLength)
                 {
                     float dot = vectorDotProduct(normalDir, frontVector);
                     
-                    switch(e->entityType)
+                    switch(entity->entityType)
                     {
                         case ET_BARREL:
-                            Actor * barrelActor = (Actor *)e->data;
+                            Actor * barrel = (Actor *)entity->data;
                             if(dot > sqrt(2) * 0.5f)
                             {
-                                takeDamage(barrelActor, playerActor, 1);
+                                takeDamage(barrel, player, 1);
                             }
                             break;
                         default:
@@ -133,8 +133,8 @@ void updatePlayer(Entity * player)
         }
     }
 
-    dungeon.camera.x = player->p.x - dungeon.camera.w / 2;
-    dungeon.camera.y = player->p.y - dungeon.camera.h / 2;
+    dungeon.camera.x = e->p.x - dungeon.camera.w / 2;
+    dungeon.camera.y = e->p.y - dungeon.camera.h / 2;
 
     clearInput(&app.input);
 }
