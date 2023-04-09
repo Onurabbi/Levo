@@ -84,6 +84,12 @@ AnimationGroup *createAnimationGroup(char *fileName, int *new)
 
 bool addAnimationGroupToAnimationController(char *fileName, AnimationController *controller, char *animationSlot)
 {
+    if(controller->numBodyParts == MAX_NUM_BODY_PARTS)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "Can't add more body parts!\n");
+        return false;
+    }
+    
     //first get the animation type from slot
     uint32_t animSlot = getAnimationSlot(animationSlot);
     //if we don't already have this animation slot, we will append the animations to the end
@@ -106,12 +112,6 @@ bool addAnimationGroupToAnimationController(char *fileName, AnimationController 
     if (bodyPart == controller->numBodyParts)
     {
         controller->numBodyParts++;
-    }
-
-    if(controller->numBodyParts == MAX_NUM_BODY_PARTS)
-    {
-        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "Can't add more body parts!\n");
-        return false;
     }
 
     //get the animation group which just holds the indices to the animations of this group
