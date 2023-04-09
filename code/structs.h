@@ -65,6 +65,9 @@ typedef struct
     //index in animationIndices as in animationIndices[bodyPart][currentAnimationIndex];
     uint32_t       currentAnimationIndex; 
     uint32_t       numBodyParts;
+
+    uint32_t       animationState; //current animation pose
+    bool           animStateChange; //should the state change?
 } AnimationController;
 
 typedef struct
@@ -94,6 +97,12 @@ typedef struct
     Entity         *equipper;
     float          reach;
     uint32_t       damage;
+
+    float          attackCooldown; //the same time the animation takes??
+    float          attackTimer; //counter
+    float          hitDelay; //when does damage begin.
+    uint32_t       hitSound; //
+    bool           damageDealt;
 } Weapon;
 
 typedef struct 
@@ -108,8 +117,7 @@ typedef struct
     uint32_t  facing;
     uint32_t  health;
     float     velocity;
-    bool      attacking;//TODO: bit field
-    bool      switchAnim;
+    uint64_t  flags;
 } Actor;
 
 
@@ -177,8 +185,6 @@ typedef struct
     /* take these to game*/
     int            soundVolume;
     int            musicVolume;
-    
-    float lineX,lineY;
 
     /*uint64_t flags?*/
     bool showPointer;

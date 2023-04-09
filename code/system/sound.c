@@ -37,7 +37,7 @@ static bool loadSounds(void)
 bool initSound(void)
 {
 	memset(sounds, 0, sizeof(Mix_Chunk *) * SND_MAX);
-
+	
 	music = NULL;
 
 	return loadSounds();
@@ -101,4 +101,9 @@ void playSoundLoop(int id, int channel)
 void stopChannel(int channel)
 {
 	Mix_HaltChannel(channel);
+}
+
+void haltMusic(void)
+{
+	Mix_HaltMusic();
 }

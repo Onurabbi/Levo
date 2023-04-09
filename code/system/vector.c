@@ -3,6 +3,23 @@
 
 #include "vector.h"
 
+static Vec2f frontVectors[] = 
+{
+    {-0.5f, 0.5f},
+    {-1.0f, 0.0f},
+    {0.0f, 1.0f},
+    {0.5f, -0.5f},
+    {0.0f, -1.0f},
+    {1.0f, 0.0f},
+    {0.5f, 0.5f},
+    {-0.5f, -0.5f}
+};
+
+Vec2f getEntityFrontVector(int facing)
+{
+    return frontVectors[facing];
+}
+
 float vectorDotProduct(Vec2f v1, Vec2f v2)
 {
     return (v1.x * v2.x + v1.y * v2.y);

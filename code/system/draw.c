@@ -113,11 +113,6 @@ void drawAll(void)
         blitSprite(entities[i].sprite, (int)entities[i].x,(int)entities[i].y, true, SDL_FLIP_NONE);
     }
     
-#if 0
-    float x, y;
-    toIso(dungeon.player->p.x, dungeon.player->p.y, &x, &y);
-    SDL_RenderDrawLine(app.renderer,  x, y, (int)app.lineX, (int)app.lineY);
-#endif
 }
 
 bool initDraw(void)

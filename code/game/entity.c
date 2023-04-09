@@ -5,6 +5,7 @@
 #include "../system/utils.h"
 #include "../system/memory.h"
 #include "../system/vector.h"
+#include "../system/input.h"
 
 #include "entityFactory.h"
 #include "dungeon.h"
@@ -12,6 +13,7 @@
 #include "collision.h"
 #include "entity.h"
 #include "player.h"
+#include "weapon.h"
 
 extern App app;
 extern Dungeon dungeon;
@@ -20,28 +22,11 @@ static uint32_t * entities;
 static uint32_t * numEntities;
 static uint32_t   totalNumEntities;
 
-static Vec2f frontVectors[] = 
-{
-    {-0.5f, 0.5f},
-    {-1.0f, 0.0f},
-    {0.0f, 1.0f},
-    {0.5f, -0.5f},
-    {0.0f, -1.0f},
-    {1.0f, 0.0f},
-    {0.5f, 0.5f},
-    {-0.5f, -0.5f}
-};
-
 void die(Entity *e)
 {
     Actor * actor = (Actor *)e->data;
     removeActor(actor);
     removeEntity(e);
-}
-
-Vec2f getEntityFrontVector(int facing)
-{
-    return frontVectors[facing];
 }
 
 SimulationRegion getSimulationRegion(void)
@@ -223,8 +208,12 @@ void updateEntities(void)
             case ET_BARREL:
                 updateBarrel(entity);
                 break;
+            case ET_LONGSWORD:
+                updateWeapon(entity);
+                break;
             default:
                 break;
         }
     }
+    clearInput(&app.input);
 }

@@ -153,10 +153,17 @@ static void initLongsword(Entity * longSword)
     BIT_SET(longSword->flags, ENTITY_IS_VISIBLE_BIT);
 
     uint32_t longSwordIndex = getNewIndex(&weaponQueue, WEAPON_QUEUE);
-
     Weapon *longSwordWeapon = &dungeon.weapons[longSwordIndex];
     longSwordWeapon->weaponIndex = longSwordIndex;
     longSwordWeapon->owner = longSword;
+    longSwordWeapon->reach = 2.0f;
+    longSwordWeapon->damage = 1;
+    longSwordWeapon->attackCooldown = 0.5f;
+    longSwordWeapon->hitDelay = 0.25f;
+    longSwordWeapon->hitSound = SND_HIT;
+    longSwordWeapon->damageDealt = false;
+    
+    longSword->data = longSwordWeapon;
 }
 
 static void initPlayer(Entity * player)
@@ -190,16 +197,16 @@ static void initPlayer(Entity * player)
     Animation *initialAnim = getAnimationByIndex(initialAnimIndex);
     animController->animLengthInSeconds = initialAnim->lengthSeconds;
     animController->numFrames = initialAnim->numSprites;
+    animController->animationState = POSE_IDLE;
+    animController->animStateChange = false;
     playerActor->animationController = animController;
 
     playerActor->dP.x = 0;
     playerActor->dP.y = 0;
     playerActor->facing = FACING_LEFT;
-    playerActor->attacking = false;
-    playerActor->switchAnim = false;
     playerActor->health = 10;
     playerActor->velocity = 0.15f;
-    
+    playerActor->flags = 0;
     player->data = playerActor;
 }
 

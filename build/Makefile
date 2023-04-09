@@ -6,7 +6,7 @@ INCLUDES = ../code/common.h ../code/defs.h ../code/structs.h
 LIBS = -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2 -lm
 OBJECTS = main.o init.o texture.o draw.o atlas.o animation.o utils.o input.o \
 sound.o entity.o cJSON.o entityFactory.o text.o dungeon.o title.o widget.o asset.o \
-collision.o actor.o player.o job.o memory.o ray.o vector.o
+collision.o actor.o player.o job.o memory.o ray.o vector.o weapon.o
 
 CC = gcc -g -O0 -DDEBUG
 
@@ -63,6 +63,8 @@ actor.o: $(GAME_DIR)/actor.c $(GAME_DIR)/actor.h $(INCLUDES)
 	$(CC) -c $(GAME_DIR)/actor.c
 player.o: $(GAME_DIR)/player.c $(GAME_DIR)/player.h $(INCLUDES) 
 	$(CC) -c $(GAME_DIR)/player.c
+weapon.o: $(GAME_DIR)/weapon.c $(GAME_DIR)/weapon.h $(INCLUDES) 
+	$(CC) -c $(GAME_DIR)/weapon.c
 
 #MISC
 cJSON.o: $(JSON_DIR)/cJSON.c $(JSON_DIR)/cJSON.h

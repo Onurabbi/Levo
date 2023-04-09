@@ -24,24 +24,25 @@ extern App app;
 
 bool initSDL(void)
 {
-    if(SDL_Init(SDL_INIT_VIDEO) < 0)
+    if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0)
     {
         printf("Couldn't initialize SDL: %s\n", SDL_GetError());
         return false;
     }
 
     IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
+#if 1
 
-	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
+	if (Mix_OpenAudio(48000, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
 	{
 		printf("Couldn't initialize SDL Mixer\n");
 		return false;
 	}
-
+#if 0
 	Mix_AllocateChannels(MAX_SND_CHANNELS);
-
 	Mix_ReserveChannels(1);
-
+#endif
+#endif
     if(TTF_Init() < 0)
     {
         printf("Couldn't initialize SDL TTF: %s\n", SDL_GetError());

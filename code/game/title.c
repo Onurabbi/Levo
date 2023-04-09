@@ -59,7 +59,7 @@ void updateTitle(void)
     if ((input->keyboardEvents[SDL_SCANCODE_SPACE] == 1) || (input->keyboardEvents[SDL_SCANCODE_RETURN] == 1))
     {
         clearInput(&app.input);
-        pauseMusic(1);
+        haltMusic();
         initDungeon();
     }
 

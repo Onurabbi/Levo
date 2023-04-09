@@ -81,7 +81,7 @@ static void update(void)
 
     while (accumulator > 1.0/61.0)
     {
-        double secElapsed = 1.0 / 59.0;
+        double secElapsed = DELTA_TIME;
 
         switch(app.gameMode)
         {
@@ -105,9 +105,9 @@ static void update(void)
 
         accumulator -= secElapsed;
         
-        if(accumulator < 0)
+        if(accumulator < 0.0)
         {
-            accumulator = 0;
+            accumulator = 0.0;
         }
     }
 }
@@ -125,6 +125,8 @@ void updateAndRender(double timeElapsedSeconds)
     drawFPS();
 
     presentScene();
+    
+    //memset(&app.input, 0, sizeof(Input));
 }
 
 int main(int argc, char* args[])

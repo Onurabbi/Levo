@@ -23,9 +23,24 @@ void takeDamage(Actor *actor, Actor * attacker, uint32_t damage)
     }
 }
 
-static inline bool isActorMoving(Vec2f dP)
+bool isActorAttacking(Actor *actor)
+{
+    AnimationController *animController = actor->animationController;
+    return (animController->animationState == POSE_MELEE);    
+}
+
+bool isActorMoving(Vec2f dP)
 {
     return (sqAmplitude(dP) > epsilon);
+}
+
+bool canActorMove(Actor *actor)
+{
+    AnimationController *animController = actor->animationController;
+    return ((animController->animationState != POSE_BLOCK) && 
+            (animController->animationState != POSE_MELEE) &&
+            (animController->animationState != POSE_BOW_SHOOT) &&
+            (animController->animationState != POSE_DEATH));
 }
 
 static int getActorFacingDirection(int oldFacing)
@@ -100,15 +115,16 @@ static uint32_t updateAnimationIndex(Actor* actor, AnimationController *animCont
 {
     int animIndex = actor->animationController->currentAnimationIndex;
 
-    if ((actor->attacking == true) && (actor->switchAnim == true))
+    if ((animController->animationState == POSE_MELEE) && (animController->animStateChange == true))
     {
-        actor->switchAnim = false;
+        animController->animStateChange = false;
+        animController->animationState = POSE_MELEE;
         animIndex = getAnimIndex(actor->facing, POSE_MELEE);
     }
-    else if (actor->attacking != true)
+    else if(animController->animationState != POSE_MELEE)
     {
-        int pose = isActorMoving(actor->dP) ? POSE_RUN : POSE_IDLE;
-        animIndex = getAnimIndex(actor->facing, pose);
+        animController->animationState = isActorMoving(actor->dP) ? POSE_RUN : POSE_IDLE;
+        animIndex = getAnimIndex(actor->facing, animController->animationState);
     }
     
     return animIndex;
@@ -122,18 +138,19 @@ static double updateAnimationTimer(Actor *actor, AnimationController *animContro
     {
         result = 0.0;
 
-        if(actor->attacking)
+        if(animController->animationState == POSE_MELEE)
         {
-            actor->attacking = false;
+            animController->animationState = POSE_IDLE;
         }
     }
     return result;
 }
 
-static void updateAnimationState(Actor * actor)
+static void updateAnimation(Actor * actor)
 {
     Entity * owner = actor->owner;
     AnimationController *animController = actor->animationController;
+    
     actor->facing = getActorFacingDirection(actor->facing);
     //Animation controller is always initialised properly in entityfactory
     //update animation timer
@@ -159,5 +176,15 @@ static void updateAnimationState(Actor * actor)
 
 void updateActor(Actor *actor)
 {
-    updateAnimationState(actor);
+    Input *input = &app.input;
+    if (input->mouse.buttons[1] == 1)
+    {
+        AnimationController *animController = actor->animationController;
+        if (animController->animationState != POSE_MELEE)
+        {
+            animController->animationState = POSE_MELEE;
+            animController->animStateChange = true;
+        }
+    }
+    updateAnimation(actor);
 }

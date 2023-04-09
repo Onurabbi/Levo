@@ -39,7 +39,7 @@ void handleMouseUp(Input * input, SDL_MouseButtonEvent * event)
 #define NUM_HOLD_KEYS 4
 
 void handleInput(Input * input, double timeElapsedSeconds)
-{   
+{
     input->secElapsed = timeElapsedSeconds;
     
     SDL_Event event;
