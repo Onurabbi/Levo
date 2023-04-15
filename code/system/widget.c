@@ -48,11 +48,8 @@ static void drawSliderWidget(Widget * w, bool active)
     }
     
     width = (1.0 * s->value) / 100;
-
     drawText(w->label, w->rect.x, w->rect.y, c.r, c.g, c.b, TEXT_ALIGN_LEFT, 0);
-
     drawRect(s->rect.x + 2, s->rect.y + 2, (s->rect.w - 4) * width, s->rect.h - 4, c.r, c.g, c.b, 255);
-
     drawOutlineRect(s->rect.x, s->rect.y, s->rect.w, s->rect.h, 255, 255, 255, 255);
 }
 
@@ -79,9 +76,7 @@ static void drawButtonWidget(Widget * w, bool active)
 void drawWidgets(char *groupName)
 {
     drawRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 160);
-
     app.fontScale = 2;
-
     for(int i = 0; i < numWidgets; i++)
     {
         Widget * w = &widgets[i];
@@ -101,7 +96,6 @@ void drawWidgets(char *groupName)
                 default:
                     break;
             }
-
             if ((active == true) && (showCursor == true))
             {
                 int h = w->rect.h / 2;
@@ -109,7 +103,6 @@ void drawWidgets(char *groupName)
             }
         }
     }
-
     app.fontScale = 1;
 }
 

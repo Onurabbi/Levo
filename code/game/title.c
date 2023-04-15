@@ -25,21 +25,15 @@ bool initTitle(void)
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR, "Can't load background texture\n");
         return false;
     }
-
     logo = loadTexture("../assets/textures/logo.png");
-
     if(logo == NULL)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR, "Can't load logo texture\n");
         return false;
     }
-
     loadMusic("../assets/music/Something is near.mp3");
-
     app.gameMode = GAME_MODE_TITLE;
-    
     playMusic(true);
-
     return true;
 }
 

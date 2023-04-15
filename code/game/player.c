@@ -8,6 +8,7 @@
 #include "../system/vector.h"
 #include "../system/animation.h"
 
+#include "astar.h"
 #include "entityFactory.h"
 #include "player.h"
 #include "entity.h"
@@ -20,14 +21,10 @@ extern Dungeon dungeon;
 void updatePlayer(Entity * e)
 {
     Actor * player = (Actor *)e->data;
-
     Input * input = &app.input;
-
     float dx = 0.0f;
     float dy = 0.0f;
-
     float deltaX, deltaY;
-
     if (input->keyboardState[SDL_SCANCODE_W] == 1)
     {
         if (input->keyboardState[SDL_SCANCODE_D] == 1)
@@ -76,6 +73,11 @@ void updatePlayer(Entity * e)
         dx = -1.0f;
     }
 
+    if(input->mouse.buttons[3] == 1)
+    {
+        Vec2f target = {37.0f, 37.0f};
+        showPath(e->p, target);
+    }
     deltaX = (dx + dy) / 2.0f;
     deltaY = (dy - dx) / 2.0f;
     
@@ -83,9 +85,7 @@ void updatePlayer(Entity * e)
     {
         moveEntity(e, deltaX, deltaY);
     }
-
     updateActor(player);
-
     dungeon.camera.x = e->p.x - dungeon.camera.w / 2;
     dungeon.camera.y = e->p.y - dungeon.camera.h / 2;
 }

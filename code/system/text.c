@@ -94,7 +94,6 @@ static int drawTextWrapped(char *text, int x, int y, int r, int g, int b, int al
 
     character = text[i++];
     n = newLine = clearWord = lineWidth = wordWidth = 0;
-
     len = strlen(text);
 
     while (character)
@@ -102,7 +101,6 @@ static int drawTextWrapped(char *text, int x, int y, int r, int g, int b, int al
         if (!newLine)
         {
             wordWidth += glyphs[character].w * app.fontScale;
-
             if (character != ' ')
             {
                 word[n++] = character;
@@ -117,20 +115,15 @@ static int drawTextWrapped(char *text, int x, int y, int r, int g, int b, int al
                 {
                     drawTextLine(line, x, y, r, g, b, align);
                 }
-
                 memset(line, 0, MAX_LINE_LENGTH);
-
                 y += glyphs[' '].h * app.fontScale;
-
                 lineWidth = 0;
                 newLine = 0;
             }
 
             clearWord = 1;
         }
-
         character = text[i++];
-
         if (character == '\n')
         {
             newLine = 1;
@@ -140,20 +133,14 @@ static int drawTextWrapped(char *text, int x, int y, int r, int g, int b, int al
         if (clearWord)
         {
             clearWord = 0;
-
             if (lineWidth != 0)
             {
                 strcat(line, " ");
             }
-
             strcat(line, word);
-
             lineWidth += wordWidth;
-
             memset(word, 0, MAX_WORD_LENGTH);
-
             wordWidth = 0;
-
             n = 0;
         }
     }

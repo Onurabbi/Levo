@@ -15,6 +15,7 @@
 #include "widget.h"
 #include "memory.h"
 
+#include "../game/astar.h"
 #include "../game/entity.h"
 #include "../game/entityFactory.h"
 #include "../game/dungeon.h"
@@ -31,18 +32,16 @@ bool initSDL(void)
     }
 
     IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
-#if 1
 
 	if (Mix_OpenAudio(48000, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
 	{
 		printf("Couldn't initialize SDL Mixer\n");
 		return false;
 	}
-#if 0
+
 	Mix_AllocateChannels(MAX_SND_CHANNELS);
 	Mix_ReserveChannels(1);
-#endif
-#endif
+
     if(TTF_Init() < 0)
     {
         printf("Couldn't initialize SDL TTF: %s\n", SDL_GetError());
@@ -52,7 +51,11 @@ bool initSDL(void)
     app.window = SDL_CreateWindow("BestGameEver", SDL_WINDOWPOS_UNDEFINED, 
                                                   SDL_WINDOWPOS_UNDEFINED, 
                                                   SCREEN_WIDTH, SCREEN_HEIGHT, 
-                                                  SDL_WINDOW_SHOWN);
+                                                  SDL_WINDOW_SHOWN
+#if 0
+                                                  | SDL_WINDOW_FULLSCREEN
+#endif
+                                                  );
     
     if(!app.window)
     {
@@ -61,9 +64,7 @@ bool initSDL(void)
     }
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
-
-    app.renderer = SDL_CreateRenderer(app.window, -1, 0);
-
+    app.renderer = SDL_CreateRenderer(app.window, -1, SDL_RENDERER_PRESENTVSYNC);
     if(!app.renderer)
     {
         printf("Failed to create the renderer: %s\n", SDL_GetError());
@@ -75,9 +76,7 @@ bool initSDL(void)
         printf("Failed to create the job system: %s\n", SDL_GetError());
         return false;
     }
-    
     SDL_ShowCursor(SDL_DISABLE);
-    
     return true;
 }
 
@@ -96,6 +95,7 @@ bool initGameSystem(void)
     //GAME
     INIT_CHECK(initEntityFactory, "initEntityFactory");
     INIT_CHECK(initEntities, "initEntities");
+    INIT_CHECK(initAStar, "initAStar");
     //This will come last
     INIT_CHECK(initTitle, "initTitle");
 

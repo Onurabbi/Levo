@@ -148,11 +148,8 @@ char * readFile(char * fileName)
 
     buffer = malloc(length);
     memset(buffer, 0, length);
-
     int read = fread(buffer, 1, length, file);
-
     SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "Read %d bytes from: '%s' ...", read, fileName);
-
     fclose(file);
 
     return buffer;

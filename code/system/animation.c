@@ -154,32 +154,23 @@ static bool loadAnimationData(char * filePath)
     for(cJSON * node = root->child; node != NULL; node = node->next)
     {
         int newAnimGroup;
-
         char *groupFileName = cJSON_GetObjectItem(node, "filename")->valuestring;
-
         AnimationGroup *animGroup = createAnimationGroup(groupFileName, &newAnimGroup);
-
         int animCount = 0;
 
         if (newAnimGroup == true)
         {
             int animGroupNameLength = strlen(groupFileName);
-
             STRNCPY(animGroup->fileName.data, groupFileName, animGroupNameLength);
-
             cJSON * animations = cJSON_GetObjectItem(node, "animations");
-
             uint32_t numBodyParts = cJSON_GetObjectItem(node, "numbodyparts")->valueint;
-
             uint32_t animationSlot = getAnimationSlot(cJSON_GetObjectItem(node, "slot")->valuestring);
-
             for(cJSON * animNode = animations->child; animNode != NULL; animNode = animNode->next)
             {
                 int newAnim;
-
                 char *fileName = cJSON_GetObjectItem(animNode, "filename")->valuestring;
-
                 Animation * currentAnimation = createAnimation(fileName, &newAnim);
+
                 if(newAnim == true)
                 {
                     STRNCPY(currentAnimation->fileName.data, fileName, strlen(fileName));
@@ -196,6 +187,7 @@ static bool loadAnimationData(char * filePath)
                     cJSON * frames = cJSON_GetObjectItem(animNode, "frames");
 
                     int frameCount = 0;
+
                     for(cJSON * frameNode = frames->child; frameNode != NULL; frameNode = frameNode->next)
                     {
                         char * spritePath = frameNode->valuestring;
@@ -206,7 +198,6 @@ static bool loadAnimationData(char * filePath)
             }
         } 
     }
-
 
     free(text);
     cJSON_Delete(root);

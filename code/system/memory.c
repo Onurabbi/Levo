@@ -37,7 +37,6 @@ void * allocatePermanentMemory(size_t size)
         allocated = gameMemory.permanent.base + gameMemory.permanent.used;
         gameMemory.permanent.used += size;
     }
-
     return allocated;
 }
 
@@ -52,4 +51,10 @@ void * allocateTransientMemory(size_t size)
     }
 
     return allocated;
+}
+
+void resetTransientMemory(void)
+{
+    memset(gameMemory.transient.base, 0, gameMemory.transient.used);
+    gameMemory.transient.used = 0;
 }
