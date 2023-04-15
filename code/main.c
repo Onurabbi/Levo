@@ -29,9 +29,9 @@ static double   accumulator;
 static uint32_t ticks;
 static char     fpsBuf[MAX_NAME_LENGTH];
 
-void drawFPS(void)
+void drawFPS(double secElapsed)
 {
-    if(ticks == 0) sprintf(fpsBuf, "FPS: %.1f", 1.0f / app.input.secElapsed);
+    if(ticks == 0) sprintf(fpsBuf, "FPS: %.1f", 1000.0 / (secElapsed * 1000.0));
 
     ticks++;
     
@@ -118,7 +118,7 @@ void updateAndRender(double timeElapsedSeconds)
 
     render();
 
-    drawFPS();
+    drawFPS(timeElapsedSeconds);
 
     presentScene();
     

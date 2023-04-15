@@ -64,7 +64,8 @@ bool initSDL(void)
     }
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
-    app.renderer = SDL_CreateRenderer(app.window, -1, SDL_RENDERER_PRESENTVSYNC);
+    uint32_t flags = 0 | SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
+    app.renderer = SDL_CreateRenderer(app.window, -1, flags);
     if(!app.renderer)
     {
         printf("Failed to create the renderer: %s\n", SDL_GetError());

@@ -3,7 +3,7 @@ JSON_DIR = ../code/json
 GAME_DIR = ../code/game
 INCLUDES = ../code/common.h ../code/defs.h ../code/structs.h 
 
-LIBS = -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2 -lm
+LIBS = -lmingw32 -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2 -lm
 OBJECTS = main.o init.o texture.o draw.o atlas.o animation.o utils.o input.o \
 sound.o entity.o cJSON.o entityFactory.o text.o dungeon.o title.o widget.o asset.o \
 collision.o actor.o player.o job.o memory.o ray.o vector.o weapon.o astar.o
@@ -11,7 +11,7 @@ collision.o actor.o player.o job.o memory.o ray.o vector.o weapon.o astar.o
 CC = gcc -g -O0 -DDEBUG
 
 game: $(OBJECTS) 
-	$(CC) $(OBJECTS) -o game $(LIBS)
+	$(CC) $(OBJECTS) -o game.exe $(LIBS)
 
 main.o: ../code/main.c $(INCLUDES)
 	$(CC) $(LFLAGS) -c ../code/main.c $(LIBS)
@@ -72,4 +72,4 @@ cJSON.o: $(JSON_DIR)/cJSON.c $(JSON_DIR)/cJSON.h
 	$(CC) $(LFLAGS) -c $(JSON_DIR)/cJSON.c
 
 clean:
-	rm *.o game
+	del *.o game.exe

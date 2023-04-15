@@ -124,14 +124,12 @@ void drawAll(void)
         Vec2f end = vectorAdd(node->parent->p, cameraP);
 
         float x1, y1;
-        toIso(start.x, start.y, &x1, &y1);
+        toIso(start.x + 0.5f, start.y + 0.5f, &x1, &y1);
         float x2, y2;
-        toIso(end.x, end.y, &x2, &y2);
+        toIso(end.x + 0.5f, end.y + 0.5f, &x2, &y2);
         
         node = node->parent;
-#if 0
-        printf("x: %f y: %f\n",x1, y1);
-#endif
+
         SDL_RenderDrawLine(app.renderer, (int)x1, (int)y1, (int)x2, (int)y2);
     }
 }

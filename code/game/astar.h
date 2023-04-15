@@ -3,12 +3,14 @@
 
 typedef struct AStarNode 
 {
+    struct AStarNode * parent;
     Vec2f p;
     float g; //cost of moving from start to here
     float f; //total cost
     float h; //cost of moving to the end(heuristic)
+    uint32_t x; //to find neighbours easily
+    uint32_t y;
     bool  visited;
-    struct AStarNode * parent;
 }AStarNode;
 
 typedef struct AStarGrid

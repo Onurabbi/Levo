@@ -81,7 +81,7 @@ do {								  \
 #define MAX_TILE_COUNT_PER_THREAD		((MAX_NUM_TILES) / MAX_NUM_THREADS)
 #define MAX_ENTITY_COUNT_PER_THREAD     ((MAX_NUM_ENTITIES) / MAX_NUM_THREADS)
 
-#define MAX_NUM_ASTAR_NODES             1024
+#define MAX_NUM_ASTAR_NODES            8192
 
 
 typedef enum
