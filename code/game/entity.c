@@ -77,13 +77,13 @@ static inline void setEntityIndex(uint32_t i, uint32_t thread)
 
 bool initEntities(void)
 {
-    entities = allocateTransientMemory(MAX_NUM_ENTITIES * sizeof(uint32_t));
+    entities = allocatePermanentMemory(MAX_NUM_ENTITIES * sizeof(uint32_t));
     if(entities == NULL)
     {
         return false;
     }
 
-    numEntities = allocateTransientMemory(MAX_NUM_ENTITIES * sizeof(uint32_t));
+    numEntities = allocatePermanentMemory(MAX_NUM_ENTITIES * sizeof(uint32_t));
     if(numEntities == NULL)
     {
         return false;

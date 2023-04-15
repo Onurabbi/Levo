@@ -45,12 +45,8 @@ void swingWeapon(Weapon *weapon)
 
                     if(sqDistance(equipper->p, entity->p) <= sqWeaponLength)
                     {
-                            SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, 
-                            "entity within weapon reach\n");
                         Vec2f frontVector = getEntityFrontVector(actor->facing);
-
                         float dot = vectorDotProduct(normalDir, frontVector);
-                        
                         switch(entity->entityType)
                         {
                             case ET_BARREL:

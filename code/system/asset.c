@@ -128,16 +128,12 @@ uint8_t * getAssetByIndex(AssetType assetType, uint32_t index)
 uint8_t * getAsset(AssetType assetType, char * fileName)
 {
     uint8_t * result;
-
     uint8_t * assetStore = getAssetStore(assetType);
-
     size_t size = getAssetSize(assetType);
-
     uint32_t maxCount = getMaxAssetCount(assetType);
-
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
-
     int index = i;
+
     while(index != i - 1)
     {
         result = assetStore + size * index;
@@ -154,21 +150,13 @@ uint8_t * getAsset(AssetType assetType, char * fileName)
 uint8_t * createAsset(AssetType assetType, char * fileName, int *new)
 {
     uint8_t * result;
-
     uint8_t * assetStore = getAssetStore(assetType);
-
     size_t size = getAssetSize(assetType);
-
     uint32_t maxCount = getMaxAssetCount(assetType);
-
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
-
     *new = 0;
-
     int index = i;
-
     static int spriteCollisions;
-
     while(index != i-1)
     {
         result = assetStore + size * index;
@@ -202,13 +190,9 @@ uint8_t * createAsset(AssetType assetType, char * fileName, int *new)
 uint32_t getAssetIndex(AssetType assetType, char * fileName)
 {
     uint8_t * assetStore = getAssetStore(assetType);
-
     size_t size = getAssetSize(assetType);
-
     uint32_t maxCount = getMaxAssetCount(assetType);
-    
     uint32_t i = hashcode(fileName, strlen(fileName)) % maxCount;
-
     int index = i;
     while(index != i - 1)
     {
@@ -220,14 +204,12 @@ uint32_t getAssetIndex(AssetType assetType, char * fileName)
         }
         index = (index + 1) % maxCount;
     }
-
     return maxCount;
 }
 
 bool initAssets(void)
 {
     animations = allocatePermanentMemory(MAX_NUM_ANIMATIONS * sizeof(Animation));
-
     if(animations == NULL)
     {
         return false;
@@ -242,23 +224,18 @@ bool initAssets(void)
     numAnimationGroups = 0;
 
     sprites = allocatePermanentMemory(MAX_NUM_SPRITES * sizeof(Sprite));
-
     if(sprites == NULL)
     {
         return false;
     }
-
     numSprites = 0;
     
     textures = allocatePermanentMemory(MAX_NUM_TEXTURES * sizeof(Texture));
-
     if (textures == NULL)
     {
         return false;
     }    
-    
     numTextures = 0;
-    
     
     return true;
 }

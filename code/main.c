@@ -78,11 +78,9 @@ static void render(void)
 static void update(void)
 {
     accumulator += app.input.secElapsed;
-
     while (accumulator > 1.0/61.0)
     {
         double secElapsed = DELTA_TIME;
-
         switch(app.gameMode)
         {
             case GAME_MODE_TITLE:
@@ -102,9 +100,7 @@ static void update(void)
                 SDL_assert(0);
                 break;
         }
-
         accumulator -= secElapsed;
-        
         if(accumulator < 0.0)
         {
             accumulator = 0.0;

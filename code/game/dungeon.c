@@ -137,12 +137,9 @@ static void createDungeon(void)
 
 bool initDungeon(void)
 {
-    printf("Init dungeon!\n");
-
     memset(&dungeon, 0, sizeof(Dungeon));
 
     dungeon.entities = allocatePermanentMemory(MAX_NUM_ENTITIES * sizeof(Entity));
-    
     if(dungeon.entities == NULL)
     {
         printf("can't allocate dungeon memory\n");
@@ -280,6 +277,7 @@ static void findVisibleTiles(void)
 
 static void reset(void)
 {
+    resetTransientMemory();
     resetDraw();
     resetEntityUpdates();
 }
@@ -301,12 +299,8 @@ void updateDungeon(void)
     }
 
     app.entityOverCursorIndex = 0;
-
     reset();
-
     findVisibleTiles();
-
     doEntityFirstPass();
-    
     updateEntities();
 }

@@ -1,5 +1,8 @@
 #include "../common.h"
 
+#include "../game/astar.h"
+
+#include "vector.h"
 #include "job.h"
 #include "memory.h"
 #include "utils.h"
@@ -107,40 +110,57 @@ void drawAll(void)
     {
         blitSprite(tiles[i].sprite, (int)tiles[i].x, (int)tiles[i].y, false, SDL_FLIP_NONE);
     }
-    
     for(int i = 0; i < totalNumEntities; i++)
     {
         blitSprite(entities[i].sprite, (int)entities[i].x,(int)entities[i].y, true, SDL_FLIP_NONE);
     }
-    
+
+    AStarNode *node = getEndNode();
+
+    while (node && node->parent)
+    {
+        Vec2f cameraP = {dungeon.camera.x, dungeon.camera.y};
+        Vec2f start = vectorAdd(node->p, cameraP);  
+        Vec2f end = vectorAdd(node->parent->p, cameraP);
+
+        float x1, y1;
+        toIso(start.x, start.y, &x1, &y1);
+        float x2, y2;
+        toIso(end.x, end.y, &x2, &y2);
+        
+        node = node->parent;
+#if 0
+        printf("x: %f y: %f\n",x1, y1);
+#endif
+        SDL_RenderDrawLine(app.renderer, (int)x1, (int)y1, (int)x2, (int)y2);
+    }
 }
 
 bool initDraw(void)
 {
-    tiles = allocateTransientMemory(MAX_NUM_TILES * sizeof(Drawable));
+    tiles = allocatePermanentMemory(MAX_NUM_TILES * sizeof(Drawable));
     if(tiles == NULL)
     {
         return false;
     }
     
-    entities = allocateTransientMemory(MAX_NUM_ENTITIES * sizeof(Drawable));
+    entities = allocatePermanentMemory(MAX_NUM_ENTITIES * sizeof(Drawable));
     if(entities == NULL)
     {
         return false;
     }
 
-    numEntities = allocateTransientMemory(MAX_NUM_THREADS * sizeof(uint32_t));
+    numEntities = allocatePermanentMemory(MAX_NUM_THREADS * sizeof(uint32_t));
     if(numEntities == NULL)
     {
         return false;
     }
 
-    numTiles = allocateTransientMemory(MAX_NUM_THREADS * sizeof(uint32_t));
+    numTiles = allocatePermanentMemory(MAX_NUM_THREADS * sizeof(uint32_t));
     if(numTiles == NULL)
     {
         return false;
     }
-
     return true;
 }
 
@@ -156,24 +176,20 @@ void presentScene(void)
     {
         drawOutlineRect(app.mouseScreenPosition.x - 4, app.mouseScreenPosition.y - 4, 8, 8, 255, 255, 255, 255);
     }
-
     SDL_RenderPresent(app.renderer);
 }
 
 void blit(SDL_Texture * texture, int x, int y, bool center)
 {
     SDL_Rect dest;
-
     dest.x = x;
     dest.y = y;
     SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
-
     if (center)
     {
         dest.x -= dest.w / 2;
         dest.y -= dest.h / 2;
     }
-
     SDL_RenderCopy(app.renderer, texture, NULL, &dest);
 }
 
@@ -183,18 +199,15 @@ void blit(SDL_Texture * texture, int x, int y, bool center)
 void blitSprite(Sprite * sprite, int x, int y, bool center, SDL_RendererFlip flip)
 {
     SDL_Rect dest;
-
     dest.x = x;
     dest.y = y;
     dest.w = sprite->rect.w * ZOOM;
     dest.h = sprite->rect.h * ZOOM;
-
     if (center)
     {
         dest.x -= dest.w / 2;
         dest.y -= dest.h / 2;
     }
-
     SDL_RenderCopyEx(app.renderer, sprite->texture, &sprite->rect, &dest, 0.0, NULL, flip);
 }
 
