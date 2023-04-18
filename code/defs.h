@@ -63,6 +63,8 @@ do {								  \
 
 #define MAX_NUM_TILES		   	        (MAP_WIDTH * MAP_HEIGHT * MAX_NUM_MAP_LAYERS)
 
+#define MAX_NUM_DEBUG_POINTS			8192
+
 //because isometric, these two need to be different
 #define TILE_WIDTH		       		    64 * ZOOM
 #define TILE_HEIGHT		       		    32 * ZOOM
@@ -71,7 +73,6 @@ do {								  \
 #define MAP_RENDER_HEIGHT      			((SCREEN_HEIGHT) / (TILE_HEIGHT))
 
 #define TARGET_TICKS					16
-#define FPS_DRAW_TICKS					60
 
 #define MAX_NUM_WIDGETS					128
 #define MAX_NUM_SLIDER_WIDGETS			64
@@ -87,7 +88,7 @@ do {								  \
 typedef enum
 {
 	ET_PLAYER,
-	ET_BARREL,
+	ET_ENEMY,
 	ET_PROJECTILE,
 	ET_WEAPON,
 	ET_LONGSWORD = ET_WEAPON,
@@ -153,7 +154,7 @@ enum
 
 enum
 {
-	TILE_HOLE,
+	TILE_HOLE = 1,
 	TILE_GROUND = 11,
 	TILE_WALL = 22,
 	TILE_MAX = 100,

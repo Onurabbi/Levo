@@ -47,8 +47,10 @@ void swingWeapon(Weapon *weapon)
                     {
                         Vec2f frontVector = getEntityFrontVector(actor->facing);
                         float dot = vectorDotProduct(normalDir, frontVector);
+
                         switch(entity->entityType)
                         {
+#if 0
                             case ET_BARREL:
                                 Actor * barrel = (Actor *)entity->data;
                                 if(dot > 0.0f)
@@ -58,10 +60,12 @@ void swingWeapon(Weapon *weapon)
                                     takeDamage(barrel, actor, 1);
                                 }
                                 break;
+#endif
                             default:
                                 printf("Non barrel entity type hit\n");
                                 break;
                         }
+
                     }
                 }
             }

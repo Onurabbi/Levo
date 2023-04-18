@@ -2,7 +2,7 @@
 #define INIT_H_
 
 bool initSDL(void);
-bool initGameSystem(void);
+bool initGameSystem(Dungeon *dungeon);
 void cleanUp(void);
 
 #endif

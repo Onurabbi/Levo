@@ -19,6 +19,38 @@ extern App     app;
 
 static int walkableTiles[] = {0, 1};
 
+bool checkTileCollisions(Rect rect)
+{
+    bool move = true;
+
+    MapTile *tiles[9];
+    tiles[0]  = getTileAtRowColLayerRaw((int)(rect.y), (int)(rect.x), 1);
+    tiles[1]  = getTileAtRowColLayerRaw((int)(rect.y - 1), (int)(rect.x - 1), 1);
+    tiles[2]  = getTileAtRowColLayerRaw((int)(rect.y - 1), (int)(rect.x), 1);
+    tiles[3]  = getTileAtRowColLayerRaw((int)(rect.y - 1), (int)(rect.x + 1), 1);
+    tiles[4]  = getTileAtRowColLayerRaw((int)(rect.y), (int)(rect.x - 1), 1);
+    tiles[5]  = getTileAtRowColLayerRaw((int)(rect.y), (int)(rect.x + 1), 1);
+    tiles[6]  = getTileAtRowColLayerRaw((int)(rect.y + 1), (int)(rect.x - 1), 1);
+    tiles[7]  = getTileAtRowColLayerRaw((int)(rect.y + 1), (int)(rect.x), 1);
+    tiles[8]  = getTileAtRowColLayerRaw((int)(rect.y + 1), (int)(rect.x + 1), 1);
+
+    for(int i = 0; i < 9; i++)
+    {
+        Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 1.0f, 1.0f};
+        if((tiles[i]->tile == TILE_WALL) && rectangleRectangleCollision(tileRect, rect))
+        {
+            move = false;
+            break;
+        }
+    }
+    return move;
+}
+
+bool isWalkableTile(MapTile *tile)
+{
+    return (tile->tile != TILE_WALL);
+}
+
 static inline bool isTileWalkable(int tile)
 {
     return ((tile == walkableTiles[0]) || (tile == walkableTiles[1]));
@@ -49,6 +81,8 @@ static MapTile * initTileAtRowColLayerRaw(int row, int col, int layer)
     MapTile * result = getTileAtRowColLayerRaw(row, col, layer);
     result->p.x = (float)col;
     result->p.y = (float)row;
+    result->tile = 0;
+    result->flags = 0;
     return result;
 }
 
@@ -103,7 +137,7 @@ static void loadLevel(char *path)
             if(val > 0)
             {
                 tileType = (isTileWalkable(val)) ? TILE_GROUND : TILE_WALL;
-                sprintf(buf, "gfx/tiles/grasslands%d.png", val-1);
+                sprintf(buf, "gfx/tiles/grasslands%d.png", val - 1);
                 spritePath = buf;
             }
             else
@@ -184,15 +218,15 @@ bool initDungeon(void)
     dungeon.player = initEntity("Player");
     dungeon.player->p.x = (float)(MAP_WIDTH/2);
     dungeon.player->p.y = (float)(MAP_HEIGHT/2);
-    
-    Entity* barrel = initEntity("Barrel");
-    barrel->p.x = dungeon.player->p.x + 5;
-    barrel->p.y = dungeon.player->p.y + 5;
-    
+
     Entity *sword = initEntity("Longsword");
     sword->p.x = dungeon.player->p.x - 5;
     sword->p.y = dungeon.player->p.y - 5;
-
+#if 1
+    Entity *enemy = initEntity("Enemy");
+    enemy->p.x = dungeon.player->p.x - 10;
+    enemy->p.y = dungeon.player->p.y;
+#endif
     dungeon.camera.w = MAP_RENDER_WIDTH;
     dungeon.camera.h = MAP_RENDER_HEIGHT;
 
@@ -200,7 +234,6 @@ bool initDungeon(void)
     dungeon.camera.y = dungeon.player->p.y - dungeon.camera.h / 2;
 
     app.gameMode = GAME_MODE_DUNGEON;
-    
     return true;
 }
 
@@ -233,7 +266,6 @@ static void entityFirstPassJob(void * context)
             addEntityToUpdateList(i, thread);
         }
     }
-
     finishThreadJob();
 }
 
@@ -262,10 +294,17 @@ static void tileVisibilityJob(void * context)
         if((rectangleRectangleCollision(tileRect, screenRect) == true) && 
            (tile->tile != TILE_NULL))
         {
+            if (tile->tile == TILE_WALL)
+            {
+                Vec2f rectPos;
+                rectPos.x = tile->p.x;
+                rectPos.y = tile->p.y;
+
+                debugDrawRect(rectPos, 1.0f, 1.0f, 255, 0, 0, thread);
+            }
             addTileToDrawList(tile, screenPos, thread);
         }
     }
-
     finishThreadJob();
 }
 

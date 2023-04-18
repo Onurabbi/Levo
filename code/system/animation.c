@@ -128,6 +128,7 @@ bool addAnimationGroupToAnimationController(char *fileName, AnimationController 
     for(int i = 0; i < MAX_NUM_ANIMATIONS_PER_BODY_PART; i++)
     {
         controller->animationIndices[bodyPart][i] = animGroup->animationIndices[i];
+        
     }
 
     return true;
@@ -212,6 +213,12 @@ bool initAnimations(void)
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load clothes animation data!\n");
         return false;
     }
+    
+    if(loadAnimationData("../data/steel_armorAnimation.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load clothes animation data!\n");
+        return false;
+    }
 
     if(loadAnimationData("../data/head_longAnimation.json") == false)
     {
@@ -222,6 +229,18 @@ bool initAnimations(void)
     if(loadAnimationData("../data/longswordAnimation.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load longsword animation data!\n");
+        return false;
+    }
+
+    if(loadAnimationData("../data/bucklerAnimation.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load buckler animation data!\n");
+        return false;
+    }
+
+    if(loadAnimationData("../data/shieldAnimation.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_CATEGORY_ERROR, "Can't load shield animation data!\n");
         return false;
     }
 

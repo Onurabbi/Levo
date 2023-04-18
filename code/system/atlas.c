@@ -107,17 +107,15 @@ static bool initAtlas(char * texturePath, char * dataPath)
 
 bool initSprites(void)
 {
-#if 0
-    if(initAtlas("../assets/textures/nordiclady.png", "../data/nordicladyatlas.json") == false)
-    {
-        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/nordiclady.png");
-        return false;
-    }
-#endif
-
     if(initAtlas("../assets/textures/Heroine/clothes.png", "../data/clothesAtlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/clothes.png");
+        return false;
+    }
+
+    if(initAtlas("../assets/textures/Heroine/steel_armor.png", "../data/steel_armorAtlas.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/steel_armor.png");
         return false;
     }
 
@@ -130,6 +128,12 @@ bool initSprites(void)
     if(initAtlas("../assets/textures/Heroine/shield.png", "../data/shieldAtlas.json") == false)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/shield.png");
+        return false;
+    }
+
+    if(initAtlas("../assets/textures/Heroine/buckler.png", "../data/bucklerAtlas.json") == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Can't load atlas %s\n", "../assets/textures/Heroine/buckler.png");
         return false;
     }
 

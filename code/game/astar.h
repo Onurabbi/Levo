@@ -11,6 +11,7 @@ typedef struct AStarNode
     uint32_t x; //to find neighbours easily
     uint32_t y;
     bool  visited;
+    bool  walkable;
 }AStarNode;
 
 typedef struct AStarGrid
@@ -26,7 +27,7 @@ typedef struct
 }PriorityQueue;
 
 bool      initAStar(void);
-void      showPath(Vec2f start, Vec2f end);
+Vec2f     findPath(Vec2f start, Vec2f end);
 AStarNode *getEndNode(void);
 
 #endif

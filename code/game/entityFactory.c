@@ -28,7 +28,7 @@ typedef struct
     uint32_t maxCount;
 } IndexQueue;
 
-extern Dungeon dungeon;
+static Dungeon *dungeon;
 
 static InitFunc initFuncs[MAX_NUM_INIT_FUNCS];
 static uint32_t numInitFuncs;
@@ -67,7 +67,7 @@ static void pushIndexToQueue(IndexQueue *indexQueue, uint32_t index)
 static char * entityTypes[ET_MAX] =
 {
     "Player",
-    "Barrel",
+    "Enemy",
     "Projectile",
     "Longsword"
 };
@@ -102,21 +102,22 @@ static uint32_t getNewIndex(IndexQueue *queue, int type)
         switch(type)
         {
             case ENTITY_QUEUE:
-                result = dungeon.numEntities++;
+                result = dungeon->numEntities++;
                 break;
             case ACTOR_QUEUE:
-                result = dungeon.numActors++;
+                result = dungeon->numActors++;
                 break;
             case WEAPON_QUEUE:
-                result = dungeon.numWeapons++;
+                result = dungeon->numWeapons++;
                 break;
             case ANIMATION_CONTROLLER_QUEUE:
-                result = dungeon.numAnimationControllers++;
+                result = dungeon->numAnimationControllers++;
                 break;
             default:
                 break;
         }
     }
+    return result;
 }
 
 static void initProjectile(Entity * projectile)
@@ -153,7 +154,7 @@ static void initLongsword(Entity * longSword)
     BIT_SET(longSword->flags, ENTITY_IS_VISIBLE_BIT);
 
     uint32_t longSwordIndex = getNewIndex(&weaponQueue, WEAPON_QUEUE);
-    Weapon *longSwordWeapon = &dungeon.weapons[longSwordIndex];
+    Weapon *longSwordWeapon = &dungeon->weapons[longSwordIndex];
     longSwordWeapon->weaponIndex = longSwordIndex;
     longSwordWeapon->owner = longSword;
     longSwordWeapon->reach = 2.0f;
@@ -166,11 +167,11 @@ static void initLongsword(Entity * longSword)
     longSword->data = longSwordWeapon;
 }
 
-static void initPlayer(Entity * player)
+static void initPlayer(Entity *player)
 {
     player->angle = 0.0;
-    player->width = 0.7f;
-    player->height = 0.50f;
+    player->width = 1.0f;
+    player->height = 1.0f;
     player->flags = 0;
 
     BIT_SET(player->flags, ENTITY_CAN_UPDATE_BIT);
@@ -179,18 +180,20 @@ static void initPlayer(Entity * player)
     BIT_SET(player->flags, ENTITY_IS_VISIBLE_BIT);
 
     player->entitySprites.sprites[BODY] = getSprite("gfx/entities/head_longLeftIdle1.png");
-    player->entitySprites.sprites[HEAD] = getSprite("gfx/entities/clothesLeftIdle1.png");
+    player->entitySprites.sprites[HEAD] = getSprite("gfx/entities/steel_armorLeftIdle1.png");
     player->entitySprites.drawableCount = 2;
 
     uint32_t actorIndex = getNewIndex(&actorQueue, ACTOR_QUEUE);
-    Actor * playerActor = &dungeon.actors[actorIndex];
+    Actor * playerActor = &dungeon->actors[actorIndex];
     playerActor->actorIndex = actorIndex;
     playerActor->owner = player;
     
     uint32_t animControllerIndex = getNewIndex(&animationControllerQueue, ANIMATION_CONTROLLER_QUEUE);
-    AnimationController *animController = &dungeon.animationControllers[animControllerIndex];
-    (void)addAnimationGroupToAnimationController("gfx/animations/clothes.animGroup", animController, "Body");
+    AnimationController *animController = &dungeon->animationControllers[animControllerIndex];
+    (void)addAnimationGroupToAnimationController("gfx/animations/steel_armor.animGroup", animController, "Body");
     (void)addAnimationGroupToAnimationController("gfx/animations/head_long.animGroup", animController, "Head");
+    (void)addAnimationGroupToAnimationController("gfx/animations/shield.animGroup", animController, "Offhand");
+    
     animController->animTimer = 0.0;
     animController->currentAnimationIndex = 0;
     uint32_t initialAnimIndex = animController->animationIndices[0][0];
@@ -210,28 +213,48 @@ static void initPlayer(Entity * player)
     player->data = playerActor;
 }
 
-static void initBarrel(Entity * barrel)
+static void initEnemy(Entity *enemy)
 {
-    barrel->angle = 0.0;
-    barrel->width = 0.7f;
-    barrel->height = 0.50f;
-    barrel->entitySprites.sprites[0] = getSprite("gfx/entities/barrel.png");
-    barrel->entitySprites.drawableCount = 1;
-    
-    barrel->flags = 0;
-    BIT_SET(barrel->flags, ENTITY_CAN_UPDATE_BIT);
-    BIT_SET(barrel->flags, ENTITY_CAN_COLLIDE_BIT);
-    BIT_SET(barrel->flags, ENTITY_IS_ALIVE_BIT);
-    BIT_SET(barrel->flags, ENTITY_IS_VISIBLE_BIT);
+    enemy->angle = 0.0;
+    enemy->width = 1.0f;
+    enemy->height = 1.0f;
+    enemy->flags = 0;
+
+    BIT_SET(enemy->flags, ENTITY_CAN_UPDATE_BIT);
+    BIT_SET(enemy->flags, ENTITY_CAN_COLLIDE_BIT);
+    BIT_SET(enemy->flags, ENTITY_IS_ALIVE_BIT);
+    BIT_SET(enemy->flags, ENTITY_IS_VISIBLE_BIT);
+
+    enemy->entitySprites.sprites[BODY] = getSprite("gfx/entities/head_longLeftIdle1.png");
+    enemy->entitySprites.sprites[HEAD] = getSprite("gfx/entities/clothesLeftIdle1.png");
+    enemy->entitySprites.drawableCount = 2;
 
     uint32_t actorIndex = getNewIndex(&actorQueue, ACTOR_QUEUE);
-    Actor * barrelActor = &dungeon.actors[actorIndex];
-    barrelActor->actorIndex = actorIndex;
-    barrelActor->owner = barrel;
-    barrelActor->health = 10;
-    barrelActor->velocity = 0;
+    Actor * enemyActor = &dungeon->actors[actorIndex];
+    enemyActor->actorIndex = actorIndex;
+    enemyActor->owner = enemy;
+    
+    uint32_t animControllerIndex = getNewIndex(&animationControllerQueue, ANIMATION_CONTROLLER_QUEUE);
+    AnimationController *animController = &dungeon->animationControllers[animControllerIndex];
+    (void)addAnimationGroupToAnimationController("gfx/animations/clothes.animGroup", animController, "Body");
+    (void)addAnimationGroupToAnimationController("gfx/animations/head_long.animGroup", animController, "Head");
+    animController->animTimer = 0.0;
+    animController->currentAnimationIndex = 0;
+    uint32_t initialAnimIndex = animController->animationIndices[0][0];
+    Animation *initialAnim = getAnimationByIndex(initialAnimIndex);
+    animController->animLengthInSeconds = initialAnim->lengthSeconds;
+    animController->numFrames = initialAnim->numSprites;
+    animController->animationState = POSE_IDLE;
+    animController->animStateChange = false;
+    enemyActor->animationController = animController;
 
-    barrel->data = barrelActor;
+    enemyActor->dP.x = 0;
+    enemyActor->dP.y = 0;
+    enemyActor->facing = FACING_LEFT;
+    enemyActor->health = 10;
+    enemyActor->velocity = 0.075f;
+    enemyActor->flags = 0;
+    enemy->data = enemyActor;
 }
 
 Entity* initEntity(char * name)
@@ -242,13 +265,15 @@ Entity* initEntity(char * name)
     Entity * result;
 
     uint32_t entityIndex = getNewIndex(&entityQueue, ENTITY_QUEUE);
-    result = &dungeon.entities[entityIndex];
+    result = &dungeon->entities[entityIndex];
     memset(result, 0, sizeof(Entity));
     result->entityIndex = entityIndex;
 
-    result->id = dungeon.entityId++;
+    result->id = dungeon->entityId++;
     result->entityType = type;
-
+    result->currentTile = NULL;
+    
+    printf("Entity id: %d type %d\n", entityIndex, type);
     getInitFunction(type)->init(result);
     return result;
 }
@@ -260,6 +285,7 @@ void removeActor(Actor *a)
         printf("pushing actor %d to queue!\n", a->actorIndex);
         pushIndexToQueue(&actorQueue, a->actorIndex);
     }   
+    a->flags = 0;
 }
 
 void removeEntity(Entity * e)
@@ -297,8 +323,16 @@ static bool initQueue(IndexQueue *queue, uint32_t maxCount)
     return true;
 }
 
-bool initEntityFactory(void)
+bool initEntityFactory(Dungeon *pDungeon)
 {
+    if (pDungeon == NULL)
+    {
+        //TODO:logging
+        return false;
+    }
+
+    dungeon = pDungeon;
+
     memset(initFuncs, 0, sizeof(initFuncs));
     numInitFuncs = 0;
 
@@ -327,7 +361,7 @@ bool initEntityFactory(void)
     }
 
     addInitFunc("Player", initPlayer);
-    addInitFunc("Barrel", initBarrel);
+    addInitFunc("Enemy", initEnemy);
     addInitFunc("Projectile", initProjectile);
     addInitFunc("Longsword", initLongsword);
 

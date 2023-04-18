@@ -43,47 +43,12 @@ bool canActorMove(Actor *actor)
             (animController->animationState != POSE_DEATH));
 }
 
-static int getActorFacingDirection(int oldFacing)
+static int getActorFacingDirection(ActorController controller, uint32_t oldFacing)
 {
-    Input *input = &app.input;
     int newFacing;
-    if (input->keyboardState[SDL_SCANCODE_W] == 1)
+    if (controller.changeFacingDirection == true)
     {
-        if (input->keyboardState[SDL_SCANCODE_D] == 1)
-        {
-            newFacing = FACING_RIGHT_UP;
-        }
-        else if (input->keyboardState[SDL_SCANCODE_A] == 1)
-        {
-            newFacing = FACING_LEFT_UP;
-        }
-        else
-        {
-            newFacing = FACING_UP;
-        }
-    }
-    else if (input->keyboardState[SDL_SCANCODE_S] == 1)
-    {
-        if (input->keyboardState[SDL_SCANCODE_D] == 1)
-        {
-            newFacing = FACING_RIGHT_DOWN;
-        }
-        else if (input->keyboardState[SDL_SCANCODE_A] == 1)
-        {
-            newFacing = FACING_LEFT_DOWN;
-        }
-        else
-        {
-            newFacing = FACING_DOWN;
-        }
-    }
-    else if (input->keyboardState[SDL_SCANCODE_D] == 1)
-    {
-        newFacing = FACING_RIGHT;
-    }
-    else if (input->keyboardState[SDL_SCANCODE_A] == 1)
-    {
-        newFacing = FACING_LEFT;
+        newFacing = controller.facing;
     }
     else
     {
@@ -97,8 +62,27 @@ static int getAnimIndex(int facing, int pose)
     return (facing * POSE_COUNT + pose);
 }
 
+//weapon and offhand sorting require different y values
+static float getBodyPartYOffset(uint32_t facing, uint32_t animSlot)
+{
+    float result = 0.0f;
+    if (animSlot == BODY || animSlot == HEAD)
+    {
+        return result;
+    }
 
-static inline void getAnimationVisibleSprites(AnimationController *animController, EntityVisibleSprites *sprites, uint32_t frameIndex)
+    if (animSlot == WEAPON_HAND)
+    {
+        result = -1.0f;
+    }
+    else if (animSlot == OFFHAND)
+    {
+        result = 1.0f;  
+    }
+    return result;
+}
+
+static inline void getAnimationVisibleSprites(AnimationController *animController, EntityVisibleSprites *sprites, uint32_t frameIndex, uint32_t facing)
 {
     sprites->drawableCount = 0;
 
@@ -107,6 +91,7 @@ static inline void getAnimationVisibleSprites(AnimationController *animControlle
         uint32_t animationIndex = animController->animationIndices[i][animController->currentAnimationIndex];
         Animation *animation = getAnimationByIndex(animationIndex);
         sprites->sprites[i] = &animation->animationSprites[frameIndex];
+        sprites->yOffsets[i] = getBodyPartYOffset(facing, animation->animationSlot);
         sprites->drawableCount++;
     }
 }
@@ -146,12 +131,12 @@ static double updateAnimationTimer(Actor *actor, AnimationController *animContro
     return result;
 }
 
-static void updateAnimation(Actor * actor)
+static void updateAnimation(Actor * actor, ActorController controller)
 {
     Entity * owner = actor->owner;
     AnimationController *animController = actor->animationController;
     
-    actor->facing = getActorFacingDirection(actor->facing);
+    actor->facing = getActorFacingDirection(controller, actor->facing);
     //Animation controller is always initialised properly in entityfactory
     //update animation timer
     animController->animTimer = updateAnimationTimer(actor, animController);
@@ -171,13 +156,12 @@ static void updateAnimation(Actor * actor)
     uint32_t numFrames = animController->numFrames;
     double timePerFrame = animController->animLengthInSeconds / (double)numFrames;
     uint32_t frameIndex = (int)(animController->animTimer / timePerFrame);
-    getAnimationVisibleSprites(animController, &owner->entitySprites, frameIndex);
+    getAnimationVisibleSprites(animController, &owner->entitySprites, frameIndex, actor->facing);
 }
 
-void updateActor(Actor *actor)
+void updateActor(Actor *actor, ActorController controller)
 {
-    Input *input = &app.input;
-    if (input->mouse.buttons[1] == 1)
+    if (controller.attack)
     {
         AnimationController *animController = actor->animationController;
         if (animController->animationState != POSE_MELEE)
@@ -186,5 +170,5 @@ void updateActor(Actor *actor)
             animController->animStateChange = true;
         }
     }
-    updateAnimation(actor);
+    updateAnimation(actor, controller);
 }

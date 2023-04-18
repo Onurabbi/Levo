@@ -6,7 +6,7 @@ INCLUDES = ../code/common.h ../code/defs.h ../code/structs.h
 LIBS = -lmingw32 -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2 -lm
 OBJECTS = main.o init.o texture.o draw.o atlas.o animation.o utils.o input.o \
 sound.o entity.o cJSON.o entityFactory.o text.o dungeon.o title.o widget.o asset.o \
-collision.o actor.o player.o job.o memory.o ray.o vector.o weapon.o astar.o
+collision.o actor.o player.o job.o memory.o ray.o vector.o weapon.o astar.o enemy.o
 
 CC = gcc -g -O0 -DDEBUG
 
@@ -67,6 +67,8 @@ weapon.o: $(GAME_DIR)/weapon.c $(GAME_DIR)/weapon.h $(INCLUDES)
 	$(CC) -c $(GAME_DIR)/weapon.c
 astar.o: $(GAME_DIR)/astar.c $(GAME_DIR)/astar.h $(INCLUDES) 
 	$(CC) -c $(GAME_DIR)/astar.c
+enemy.o: $(GAME_DIR)/enemy.c $(GAME_DIR)/enemy.h $(INCLUDES) 
+	$(CC) -c $(GAME_DIR)/enemy.c
 #MISC
 cJSON.o: $(JSON_DIR)/cJSON.c $(JSON_DIR)/cJSON.h
 	$(CC) $(LFLAGS) -c $(JSON_DIR)/cJSON.c

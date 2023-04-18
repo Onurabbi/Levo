@@ -16,14 +16,72 @@ extern Dungeon dungeon;
 //not using this for now
 static Sprite *  pointerSprite;
 
-static Drawable * tiles;
-static uint32_t * numTiles;
+static Drawable *tiles;
+static uint32_t numTiles[MAX_NUM_THREADS];
 
-static Drawable * entities;
-static uint32_t * numEntities;
+static Drawable *entities;
+static uint32_t numEntities[MAX_NUM_THREADS];
+
+static SDL_FPoint *debugPoints;
+static uint32_t   numDebugPoints[MAX_NUM_THREADS];
 
 static uint32_t totalNumTiles;
 static uint32_t totalNumEntities;
+
+static inline SDL_FPoint convertToIso(SDL_FPoint point)
+{
+    SDL_FPoint result;
+    toIso(point.x, point.y, &result.x, &result.y);
+    return result;
+}
+
+void debugDrawRect(Vec2f start, float w, float h, int r, int g, int b, int thread)
+{
+    if (numDebugPoints[thread] == MAX_NUM_DEBUG_POINTS/MAX_NUM_THREADS)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR, "Debug draw queue is full!\n");
+        return;
+    }
+
+    if (r > 255) r = 255;
+    else if (r < 0) r = 0;
+    
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+
+    if (b > 255) b = 255;
+    else if (b < 0) b = 0;
+
+    float x,y;
+    uint32_t pointsPerThread = MAX_NUM_DEBUG_POINTS / MAX_NUM_THREADS;
+
+    SDL_FPoint *base = debugPoints + thread * pointsPerThread;
+    SDL_assert(thread * pointsPerThread < MAX_NUM_DEBUG_POINTS);
+
+    SDL_FPoint topLeft;
+    topLeft.x = start.x - w/2;
+    topLeft.y = start.y - h/2;
+    topLeft = convertToIso(topLeft);
+    base[numDebugPoints[thread]++] = topLeft;
+
+    SDL_FPoint topRight;
+    topRight.x = start.x + w/2;
+    topRight.y = start.y - h/2;
+    topRight = convertToIso(topRight);
+    base[numDebugPoints[thread]++] = topRight;
+
+    SDL_FPoint bottomRight;
+    bottomRight.x = start.x + w/2;
+    bottomRight.y = start.y + h/2;
+    bottomRight = convertToIso(bottomRight);
+    base[numDebugPoints[thread]++] = bottomRight;
+
+    SDL_FPoint bottomLeft;
+    bottomLeft.x = start.x - w/2;
+    bottomLeft.y = start.y + h/2;
+    bottomLeft = convertToIso(bottomLeft);
+    base[numDebugPoints[thread]++] = bottomLeft;
+}
 
 static int compareDrawables(const void * a, const void * b)
 {
@@ -75,6 +133,7 @@ void resetDraw(void)
     {
         numEntities[thread] = 0;
         numTiles[thread] = 0;
+        numDebugPoints[thread] = 0;
     }
     totalNumEntities = 0;
     totalNumTiles = 0;
@@ -104,34 +163,43 @@ static void setDrawableTile(Drawable drawable, uint32_t thread)
     base[numTiles[thread]] = drawable;
 }
 
+static void drawDebugLines(void)
+{
+    uint32_t pointsPerThread = MAX_NUM_DEBUG_POINTS / MAX_NUM_THREADS;
+    uint32_t pointsPerRect = 4;
+
+    SDL_SetRenderDrawColor(app.renderer, 255, 0, 0, 255);
+
+    for (int thread = 0; thread < MAX_NUM_THREADS; thread++)
+    {
+        int numRects = numDebugPoints[thread] / pointsPerRect;
+        for(int rect = 0; rect < numRects; rect++)
+        {
+            for (int point = 0; point < pointsPerRect; point++)
+            {
+                SDL_FPoint *currentRectangle = debugPoints + thread * pointsPerThread + rect * pointsPerRect;
+                int index = point;
+                int nextIndex = (point+1) % pointsPerRect;
+                SDL_FPoint start = currentRectangle[index];
+                SDL_FPoint end = currentRectangle[nextIndex];
+                SDL_RenderDrawLineF(app.renderer, (int)start.x, (int)start.y, (int)end.x, (int)end.y);
+            }
+        }
+    }
+}
+
 void drawAll(void)
 {
-    for(int i = 0; i < totalNumTiles; i++)
+    for (int i = 0; i < totalNumTiles; i++)
     {
-        blitSprite(tiles[i].sprite, (int)tiles[i].x, (int)tiles[i].y, false, SDL_FLIP_NONE);
+        blitSprite(tiles[i].sprite, (int)tiles[i].x, (int)tiles[i].y, true, SDL_FLIP_NONE);
     }
-    for(int i = 0; i < totalNumEntities; i++)
+    for (int i = 0; i < totalNumEntities; i++)
     {
         blitSprite(entities[i].sprite, (int)entities[i].x,(int)entities[i].y, true, SDL_FLIP_NONE);
     }
 
-    AStarNode *node = getEndNode();
-
-    while (node && node->parent)
-    {
-        Vec2f cameraP = {dungeon.camera.x, dungeon.camera.y};
-        Vec2f start = vectorAdd(node->p, cameraP);  
-        Vec2f end = vectorAdd(node->parent->p, cameraP);
-
-        float x1, y1;
-        toIso(start.x + 0.5f, start.y + 0.5f, &x1, &y1);
-        float x2, y2;
-        toIso(end.x + 0.5f, end.y + 0.5f, &x2, &y2);
-        
-        node = node->parent;
-
-        SDL_RenderDrawLine(app.renderer, (int)x1, (int)y1, (int)x2, (int)y2);
-    }
+    drawDebugLines();
 }
 
 bool initDraw(void)
@@ -148,14 +216,8 @@ bool initDraw(void)
         return false;
     }
 
-    numEntities = allocatePermanentMemory(MAX_NUM_THREADS * sizeof(uint32_t));
-    if(numEntities == NULL)
-    {
-        return false;
-    }
-
-    numTiles = allocatePermanentMemory(MAX_NUM_THREADS * sizeof(uint32_t));
-    if(numTiles == NULL)
+    debugPoints = allocatePermanentMemory(MAX_NUM_DEBUG_POINTS * sizeof(SDL_FPoint));
+    if (debugPoints == NULL)
     {
         return false;
     }
@@ -191,9 +253,6 @@ void blit(SDL_Texture * texture, int x, int y, bool center)
     SDL_RenderCopy(app.renderer, texture, NULL, &dest);
 }
 
-/*
-    x and y should be top left
-*/
 void blitSprite(Sprite * sprite, int x, int y, bool center, SDL_RendererFlip flip)
 {
     SDL_Rect dest;
@@ -264,7 +323,7 @@ void addEntityToDrawList(Entity * e, Vec2f p, int thread)
         {
             drawable->sprite = e->entitySprites.sprites[i];
             drawable->x = p.x;
-            drawable->y = p.y;
+            drawable->y = p.y + e->entitySprites.yOffsets[i];
         }
         else
         {

@@ -73,8 +73,17 @@ typedef struct
 typedef struct
 {
     Sprite   *sprites[MAX_DRAWABLES_PER_ENTITY];
+    float    yOffsets[MAX_DRAWABLES_PER_ENTITY];
     uint32_t drawableCount;
 }EntityVisibleSprites;
+
+typedef struct
+{
+    Sprite *sprite;
+    Vec2f    p;
+	int      tile;
+    uint8_t  flags;
+} MapTile;
 
 typedef struct
 {
@@ -86,6 +95,7 @@ typedef struct
     EntityVisibleSprites entitySprites;
     EntityType           entityType;
     uint64_t             flags;
+    MapTile              *currentTile;
     void                 *data;
 } Entity;
 
@@ -120,14 +130,12 @@ typedef struct
     uint64_t  flags;
 } Actor;
 
-
-typedef struct
+typedef struct 
 {
-    Sprite * sprite;
-	int      tile;
-    Vec2f    p;
-} MapTile;
-
+    uint32_t facing;
+    bool     changeFacingDirection;
+    bool     attack;
+} ActorController;
 
 
 typedef struct 
@@ -137,6 +145,14 @@ typedef struct
     uint32_t layer;
     Sprite   *sprite;
 } Drawable;
+
+typedef struct 
+{
+    SDL_FPoint points[5];
+    uint8_t r;
+    uint8_t g;
+    uint8_t b;
+} DebugRect;
 
 typedef struct
 {

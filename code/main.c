@@ -26,19 +26,18 @@ App app;
 Dungeon dungeon;
 
 static double   accumulator;
-static uint32_t ticks;
+static double   fpsTimer;
 static char     fpsBuf[MAX_NAME_LENGTH];
 
 void drawFPS(double secElapsed)
 {
-    if(ticks == 0) sprintf(fpsBuf, "FPS: %.1f", 1000.0 / (secElapsed * 1000.0));
-
-    ticks++;
-    
-    if(ticks == FPS_DRAW_TICKS) ticks = 0;
-
+    fpsTimer += secElapsed;
+    if(fpsTimer > 1.0f)
+    {
+        sprintf(fpsBuf, "FPS: %.1f", 1000.0 / (secElapsed * 1000.0));
+        fpsTimer = 0.0;
+    }
     app.fontScale = 1;
-
     drawText(fpsBuf, SCREEN_WIDTH - 200, SCREEN_HEIGHT - 100, 255, 255, 255, TEXT_ALIGN_CENTER, 0);
 }
 
@@ -121,8 +120,6 @@ void updateAndRender(double timeElapsedSeconds)
     drawFPS(timeElapsedSeconds);
 
     presentScene();
-    
-    //memset(&app.input, 0, sizeof(Input));
 }
 
 int main(int argc, char* args[])
@@ -135,7 +132,7 @@ int main(int argc, char* args[])
         return 1;
     }
 
-    if(initGameSystem() == false)
+    if (initGameSystem(&dungeon) == false)
     {
         printf("game system init fault\n");
         return 2;

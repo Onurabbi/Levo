@@ -64,7 +64,7 @@ bool initSDL(void)
     }
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
-    uint32_t flags = 0 | SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
+    uint32_t flags = 0 | SDL_RENDERER_ACCELERATED;// | SDL_RENDERER_PRESENTVSYNC;
     app.renderer = SDL_CreateRenderer(app.window, -1, flags);
     if(!app.renderer)
     {
@@ -81,7 +81,7 @@ bool initSDL(void)
     return true;
 }
 
-bool initGameSystem(void)
+bool initGameSystem(Dungeon *dungeon)
 {
     //SYSTEMS
     INIT_CHECK(initMemory, "initMemory");
@@ -94,7 +94,13 @@ bool initGameSystem(void)
     INIT_CHECK(initWidgets, "initWidgets");
 
     //GAME
-    INIT_CHECK(initEntityFactory, "initEntityFactory");
+    if (initEntityFactory(dungeon) == false)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR,
+                       "Can't initialize entity factory!\n");
+        return false;
+    }
+
     INIT_CHECK(initEntities, "initEntities");
     INIT_CHECK(initAStar, "initAStar");
     //This will come last

@@ -14,24 +14,33 @@
 #include "entity.h"
 #include "player.h"
 #include "weapon.h"
+#include "enemy.h"
 
 extern App app;
 extern Dungeon dungeon;
 
-static uint32_t * entities;
-static uint32_t * numEntities;
-static uint32_t   totalNumEntities;
+static uint32_t *entities;
+static uint32_t *numEntities;
+static uint32_t  totalNumEntities;
 
 void die(Entity *e)
 {
-    Actor * actor = (Actor *)e->data;
-    removeActor(actor);
+    switch(e->entityType)
+    {
+        case ET_ENEMY:
+        case ET_PLAYER:
+            Actor * actor = (Actor *)e->data;
+            removeActor(actor);
+            break;
+        default:
+            break;
+    }
     removeEntity(e);
 }
 
 SimulationRegion getSimulationRegion(void)
 {
-    SimulationRegion result = {};
+    SimulationRegion result;
     result.entities = entities;
     result.totalNumEntities = totalNumEntities;
     return result;
@@ -99,6 +108,12 @@ void addEntityToUpdateList(uint32_t index, uint32_t thread)
     SDL_assert(numEntities[thread] <= MAX_ENTITY_COUNT_PER_THREAD);
 }
 
+void  moveEntityRaw(Entity *e, float dx, float dy)
+{
+    e->p.x += dx;
+    e->p.y += dy;
+}
+
 void moveEntity(Entity * entity, float dx, float dy)
 {
     float newX, newY;
@@ -113,29 +128,9 @@ void moveEntity(Entity * entity, float dx, float dy)
 
     bool move = true;
 
-    Rect entityRect = {newX - entity->width/2.0f, newY - entity->width/2.0f, entity->width, entity->width};
-
-    MapTile * tiles[9];
-
-    tiles[0]  = getTileAtRowColLayerRaw((int)(newY), (int)(newX), 1);
-    tiles[1]  = getTileAtRowColLayerRaw((int)(newY - 1), (int)(newX - 1), 1);
-    tiles[2]  = getTileAtRowColLayerRaw((int)(newY - 1), (int)(newX), 1);
-    tiles[3]  = getTileAtRowColLayerRaw((int)(newY - 1), (int)(newX + 1), 1);
-    tiles[4]  = getTileAtRowColLayerRaw((int)(newY), (int)(newX - 1), 1);
-    tiles[5]  = getTileAtRowColLayerRaw((int)(newY), (int)(newX + 1), 1);
-    tiles[6]  = getTileAtRowColLayerRaw((int)(newY + 1), (int)(newX - 1), 1);
-    tiles[7]  = getTileAtRowColLayerRaw((int)(newY + 1), (int)(newX), 1);
-    tiles[8]  = getTileAtRowColLayerRaw((int)(newY + 1), (int)(newX + 1), 1);
-
-    for(int i = 0; i < 9; i++)
-    {
-        Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 0.75f, 0.375f};
-        if((tiles[i]->tile == TILE_WALL) && rectangleRectangleCollision(tileRect, entityRect))
-        {
-            move = false;
-        }
-    }
-
+    Rect entityRect = {newX, newY, entity->width, entity->width};
+    debugDrawRect(entity->p, entity->width, entity->height, 255, 0, 0, 0);
+    move = checkTileCollisions(entityRect);
     if((newX >= 0) && (newX < MAP_WIDTH) && (newY >= 0) && (newY < MAP_HEIGHT) && (move == true))
     {
         for(int i = 0; i < totalNumEntities; i++)
@@ -144,11 +139,11 @@ void moveEntity(Entity * entity, float dx, float dy)
             Entity * collider = &dungeon.entities[index];
             if (entity != collider)
             {
-                Vec2f newPos = {newX + entity->width/2.0f, newY + entity->width/2.0f};
+                Vec2f newPos = {newX, newY};
                 Actor * colliderActor = (Actor *)collider->data;
                 if (colliderActor && 
                     (circleCircleCollision(newPos, entity->width / 2.0f, collider->p, collider->width/2.0f) == true) && 
-                    colliderActor->health > 0)
+                     isEntityAlive(collider))
                 {
                     move = false;
                     break;
@@ -168,6 +163,15 @@ void moveEntity(Entity * entity, float dx, float dy)
         
         entity->p.x = newX;
         entity->p.y = newY;
+
+        //entity steps on new tile
+        MapTile *newTile = getTileAtRowColLayerRaw(entity->p.y, entity->p.x, 1);
+        if (newTile != entity->currentTile)
+        {
+            entity->currentTile->flags = 0x0;
+            entity->currentTile = newTile;
+            entity->currentTile->flags = 0x1;
+        }
     }
 }
 
@@ -199,17 +203,16 @@ void updateEntities(void)
     {
         uint32_t index = entities[i];
         Entity *entity = &dungeon.entities[index];
-
         switch(entity->entityType)
         {
             case ET_PLAYER:
                 updatePlayer(entity);
                 break;
-            case ET_BARREL:
-                updateBarrel(entity);
-                break;
             case ET_LONGSWORD:
                 updateWeapon(entity);
+                break;
+            case ET_ENEMY:
+                updateEnemy(entity);
                 break;
             default:
                 break;

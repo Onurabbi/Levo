@@ -45,6 +45,11 @@ float sqAmplitude(Vec2f v)
     return (v.x * v.x + v.y * v.y);
 }
 
+float distance(Vec2f start, Vec2f end)
+{
+    return sqrt(pow(start.x - end.x, 2) + pow(start.y - end.y, 2));
+}
+
 float sqDistance(Vec2f v1, Vec2f v2)
 {
     float xDistSq = (v1.x - v2.x) * (v1.x - v2.x);

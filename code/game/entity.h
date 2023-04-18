@@ -13,6 +13,7 @@ bool  initEntities(void);
 void  updateEntities(void);
 void  addEntityToUpdateList(uint32_t index, uint32_t thread);
 void  moveEntity(Entity *e, float dx, float dy);
+void  moveEntityRaw(Entity *e, float dx, float dy);
 void  resetEntityUpdates(void);
 void  denselyPackEntities(void);
 
