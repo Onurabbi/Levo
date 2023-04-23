@@ -2,6 +2,8 @@
 
 #include "../system/utils.h"
 #include "../system/memory.h"
+
+#include "tile.h"
 #include "dungeon.h"
 #include "astar.h"
 
@@ -236,11 +238,17 @@ static AStarNode *constructAStarPath(Entity *e, Vec2f start, Vec2f end)
                     neighbourRect.w = e->width;
                     neighbourRect.h = e->height;
 
+                    Entity entityAtNeighbour;
+                    entityAtNeighbour.p.x = neighbour->p.x;
+                    entityAtNeighbour.p.y = neighbour->p.y;
+                    entityAtNeighbour.width = e->width;
+                    entityAtNeighbour.height = e->height;
+
                     bool visited = neighbour->visited;
                     bool walkable = neighbour->walkable;
-                    bool canMove = checkTileCollisions(neighbourRect);
+                    bool collided = checkTileCollisions(&entityAtNeighbour);
 
-                    if (!visited && walkable && canMove)
+                    if (!visited && walkable && !collided)
                     {
                         pushNodeToOpenList(neighbour);
                         float possiblyLowerGoal = node->g + sqDistance(neighbour->p, node->p);
@@ -252,20 +260,22 @@ static AStarNode *constructAStarPath(Entity *e, Vec2f start, Vec2f end)
                         }
                         else
                         {
-
+                            //TODO: Logging
                         }
                     }
                     else
                     {
-
+                        //TODO: Logging
                     }
                 }
                 else
                 {
+                    //TODO: Logging
                 }
             }
             else
             {
+                //TODO: Logging
             }
         }
     }
@@ -296,8 +306,7 @@ Vec2f findPath(Entity *e, Vec2f end)
         int x = (int)(node->p.x);
         int y = (int)(node->p.y);
 
-        MapTile *tile = getTileAtRowColLayerRaw(y, x, 1);
-        tile->flags = 0;
+        MapTile *tile = getTileAtRowCol(dungeon.map, y, x);
 
         result.x = node->p.x;
         result.y = node->p.y;

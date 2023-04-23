@@ -110,7 +110,8 @@ void addEntityToUpdateList(uint32_t index, uint32_t thread)
 
 bool checkEntityCollisions(Entity *entity, Vec2f *newPos)
 {
-    bool move = true;
+    //means can't move
+    bool collided = false;
     if((newPos->x >= 0) && (newPos->x < MAP_WIDTH) && (newPos->y >= 0) && (newPos->y < MAP_HEIGHT))
     {
         for(int i = 0; i < totalNumEntities; i++)
@@ -130,10 +131,10 @@ bool checkEntityCollisions(Entity *entity, Vec2f *newPos)
     }
     else
     {
-        move = false;
+        collided = true;
     }
 
-    return move;
+    return collided;
 }
 
 bool moveEntityRaw(Entity *e, float dx, float dy)
@@ -148,8 +149,8 @@ bool moveEntityRaw(Entity *e, float dx, float dy)
     newPos.y = e->p.y + dy * vel;
     Vec2f finalPos = newPos;
 
-    bool move = checkEntityCollisions(e, &finalPos);
-    if (move)
+    bool collided = checkEntityCollisions(e, &finalPos);
+    if (collided == false)
     {
         if ((finalPos.x != newPos.x) || (finalPos.y != newPos.y))
         {
@@ -169,7 +170,7 @@ bool moveEntityRaw(Entity *e, float dx, float dy)
 
 void moveEntity(Entity * entity, float dx, float dy)
 {
-    bool move = true;
+    bool collided = true;
 
     Actor * actor = (Actor *)entity->data;
     float vel = actor->velocity;
@@ -181,11 +182,18 @@ void moveEntity(Entity * entity, float dx, float dy)
     newPos.y = entity->p.y + dy * vel;
     
     Rect entityRect = {newPos.x, newPos.y, entity->width, entity->width};
-    move = checkTileCollisions(entityRect);
-    if (move == true)
+
+    Entity entityAtNewPos;
+    entityAtNewPos.p.x = newPos.x;
+    entityAtNewPos.p.y = newPos.y;
+    entityAtNewPos.width = entity->width;
+    entityAtNewPos.height = entity->height;
+
+    collided = checkTileCollisions(&entityAtNewPos);
+    if (collided == false)
     {
-        move = checkEntityCollisions(entity, &newPos);
-        if(move == true)
+        collided = checkEntityCollisions(entity, &newPos);
+        if(collided == false)
         {
             actor->dP.x = dx * vel;
             actor->dP.y = dy * vel;

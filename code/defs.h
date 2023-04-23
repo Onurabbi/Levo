@@ -4,6 +4,8 @@
 #define SCREEN_WIDTH  1920
 #define SCREEN_HEIGHT 1080
 
+#define ArrayCount(arr) (sizeof(arr) / sizeof((arr)[0]))
+
 #define BIT_SET(number, bit)   ((number) |= (1ULL << bit))
 #define BIT_CLEAR(number, bit) ((number) &= ~(1ULL << bit))
 #define BIT_CHECK(number, bit) ((number) & (1ULL << bit))
@@ -59,15 +61,15 @@ do {								  \
 
 #define MAP_WIDTH 			   			64
 #define MAP_HEIGHT 			  	 		64
-#define MAX_NUM_MAP_LAYERS     			2
 
-#define MAX_NUM_TILES		   	        (MAP_WIDTH * MAP_HEIGHT * MAX_NUM_MAP_LAYERS)
+#define MAX_NUM_TILES		   	        (MAP_WIDTH * MAP_HEIGHT)
 
 #define MAX_NUM_DEBUG_POINTS			8192
 
 //because isometric, these two need to be different
 #define TILE_WIDTH		       		    64 * ZOOM
 #define TILE_HEIGHT		       		    32 * ZOOM
+#define MAX_NUM_TILE_SPRITES			4
 
 #define MAP_RENDER_WIDTH       			((SCREEN_WIDTH) / (TILE_WIDTH))
 #define MAP_RENDER_HEIGHT      			((SCREEN_HEIGHT) / (TILE_HEIGHT))

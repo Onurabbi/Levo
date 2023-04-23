@@ -46,7 +46,7 @@ void updateEnemy(Entity *e)
     }
     else
     {
-        //what to do here
+        //TODO: Logging
     }
 
     //no enemy in range or no path found
@@ -61,5 +61,4 @@ void updateEnemy(Entity *e)
     }
     
     updateActor(enemy, enemy->controller);
-    //move to player if found path
 }

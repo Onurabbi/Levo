@@ -83,7 +83,24 @@ void debugDrawRect(Vec2f start, float w, float h, int r, int g, int b, int threa
     base[numDebugPoints[thread]++] = bottomLeft;
 }
 
-static int compareDrawables(const void * a, const void * b)
+static int compareTileDrawables(const void *a, const void *b)
+{
+    SDL_assert(a && b);
+
+    Drawable * d1 = (Drawable *)a;
+    Drawable * d2 = (Drawable *)b;
+
+    if (d1->layer < d2->layer)
+    {
+        return -1;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+static int compareEntityDrawables(const void * a, const void * b)
 {
     SDL_assert(a && b);
 
@@ -114,10 +131,10 @@ void denselyPackAndSortDrawableEntities(void)
         dest += numEntities[i+1];
         totalNumEntities += numEntities[i+1];
     }
-    qsort(entities, totalNumEntities, sizeof(Drawable), compareDrawables);
+    qsort(entities, totalNumEntities, sizeof(Drawable), compareEntityDrawables);
 }
 
-void denselyPackDrawableTiles(void)
+void denselyPackAndSortDrawableTiles(void)
 {
     Drawable *dest = tiles + numTiles[0];
     totalNumTiles = numTiles[0];
@@ -132,6 +149,7 @@ void denselyPackDrawableTiles(void)
         dest += numTiles[i+1];
         totalNumTiles += numTiles[i+1];
     }
+    qsort(tiles, totalNumTiles, sizeof(Drawable), compareTileDrawables);
 }
 
 void resetDraw(void)
@@ -334,22 +352,26 @@ void addEntityToDrawList(Entity * e, Vec2f p, int thread)
         }
         else
         {
-            printf("Can't get drawable\n");
+            //TODO: Logging
         }
     }
 }
 
 void addTileToDrawList(MapTile * tile, Vec2f p, int thread)
 {
-    Drawable * drawable = getNewDrawable(DL_TILE, thread);
-    if(drawable)
+    for (int i = 0; i < tile->spriteCount; i++)
     {
-        drawable->sprite = tile->sprite;
-        drawable->x = p.x;
-        drawable->y = p.y;
-    }
-    else
-    {
-        printf("Can't get drawable\n");
+        Drawable * drawable = getNewDrawable(DL_TILE, thread);
+        if(drawable)
+        {
+            drawable->sprite = tile->sprites[i];
+            drawable->x = p.x;
+            drawable->y = p.y;
+            drawable->layer = i;
+        }
+        else
+        {
+            //TODO: Logging
+        }
     }
 }

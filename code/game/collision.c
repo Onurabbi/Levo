@@ -81,7 +81,7 @@ bool pointRectangleCollisionf(Rect rect, Vec2f point)
     return success;
 }
 
-bool rectangleRectangleCollision(Rect rect1, Rect rect2)
+bool checkRectangleRectangleCollision(Rect rect1, Rect rect2)
 {
     float top1 = rect1.y;
     float top2 = rect2.y;

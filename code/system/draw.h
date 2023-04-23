@@ -13,6 +13,6 @@ void       drawRect(int x, int y, int w, int h, int r, int g, int b, int a);
 void       drawOutlineRect(int x, int y, int w, int h, int r, int g, int b, int a);
 void       drawAll(void);
 void       resetDraw(void);
-void       denselyPackDrawableTiles(void);
+void       denselyPackAndSortDrawableTiles(void);
 void       denselyPackAndSortDrawableEntities(void);
 #endif

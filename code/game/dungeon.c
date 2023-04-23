@@ -9,6 +9,7 @@
 #include "../system/memory.h"
 #include "../json/cJSON.h"
 
+#include "tile.h"
 #include "astar.h"
 #include "entityFactory.h"
 #include "entity.h"
@@ -20,78 +21,50 @@ extern App     app;
 
 static int walkableTiles[] = {0, 1};
 
-bool checkTileCollisions(Rect rect)
+bool checkTileCollisions(Entity *e)
 {
-    bool move = true;
+    bool collided = false;
+
+    Rect rect = {e->p.x, e->p.y, e->width, e->height};
 
     MapTile *tiles[9];
-    tiles[0]  = getTileAtRowColLayerRaw((int)(rect.y), (int)(rect.x), 1);
-    tiles[1]  = getTileAtRowColLayerRaw((int)(rect.y - 1), (int)(rect.x - 1), 1);
-    tiles[2]  = getTileAtRowColLayerRaw((int)(rect.y - 1), (int)(rect.x), 1);
-    tiles[3]  = getTileAtRowColLayerRaw((int)(rect.y - 1), (int)(rect.x + 1), 1);
-    tiles[4]  = getTileAtRowColLayerRaw((int)(rect.y), (int)(rect.x - 1), 1);
-    tiles[5]  = getTileAtRowColLayerRaw((int)(rect.y), (int)(rect.x + 1), 1);
-    tiles[6]  = getTileAtRowColLayerRaw((int)(rect.y + 1), (int)(rect.x - 1), 1);
-    tiles[7]  = getTileAtRowColLayerRaw((int)(rect.y + 1), (int)(rect.x), 1);
-    tiles[8]  = getTileAtRowColLayerRaw((int)(rect.y + 1), (int)(rect.x + 1), 1);
+    tiles[0]  = getTileAtRowCol(dungeon.map, (int)(rect.y), (int)(rect.x));
+    tiles[1]  = getTileAtRowCol(dungeon.map, (int)(rect.y - 1), (int)(rect.x - 1));
+    tiles[2]  = getTileAtRowCol(dungeon.map, (int)(rect.y - 1), (int)(rect.x));
+    tiles[3]  = getTileAtRowCol(dungeon.map, (int)(rect.y - 1), (int)(rect.x + 1));
+    tiles[4]  = getTileAtRowCol(dungeon.map, (int)(rect.y), (int)(rect.x - 1));
+    tiles[5]  = getTileAtRowCol(dungeon.map, (int)(rect.y), (int)(rect.x + 1));
+    tiles[6]  = getTileAtRowCol(dungeon.map, (int)(rect.y + 1), (int)(rect.x - 1));
+    tiles[7]  = getTileAtRowCol(dungeon.map, (int)(rect.y + 1), (int)(rect.x));
+    tiles[8]  = getTileAtRowCol(dungeon.map, (int)(rect.y + 1), (int)(rect.x + 1));
 
     for(int i = 0; i < 9; i++)
     {
         if (tiles[i] != NULL)
         {
+            //we are copying the tile data, so it won't be changed
             Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 1.0f, 1.0f};
-            if((tiles[i]->tile == TILE_WALL) && rectangleRectangleCollision(tileRect, rect))
+            if((BIT_CHECK(tiles[i]->flags, TILE_CAN_COLLIDE_BIT)) && 
+                checkRectangleRectangleCollision(rect, tileRect))
             {
-                move = false;
+                collided = true;
                 break;
             }
         }
     }
-    return move;
-}
-
-bool isWalkableTile(MapTile *tile)
-{
-    return (tile->tile != TILE_WALL);
+    return collided;
 }
 
 static inline bool isTileWalkable(int tile)
 {
-    return ((tile == walkableTiles[0]) || (tile == walkableTiles[1]));
-}
-
-static void initTile(MapTile * tile, char * spritePath, int tileType)
-{
-    if(spritePath)
+    for (int i = 0; i < ArrayCount(walkableTiles); i++)
     {
-        tile->sprite = getSprite(spritePath);
-        tile->tile = tileType;
+        if (tile == walkableTiles[i])
+        {
+            return true;
+        }
     }
-    else
-    {
-        tile->sprite = NULL;
-        tile->tile = TILE_NULL;
-    }
-}
-
-MapTile * getTileAtRowColLayerRaw(int row, int col, int layer)
-{
-    MapTile *result = NULL;
-    if (row >= 0 && row < MAP_HEIGHT && col >= 0 && col < MAP_WIDTH)
-    {
-        result = &dungeon.map[layer * (MAP_WIDTH * MAP_HEIGHT) + row * MAP_WIDTH + col];
-    }
-    return result;
-}
-
-static MapTile * initTileAtRowColLayerRaw(int row, int col, int layer)
-{
-    MapTile * result = getTileAtRowColLayerRaw(row, col, layer);
-    result->p.x = (float)col;
-    result->p.y = (float)row;
-    result->tile = 0;
-    result->flags = 0;
-    return result;
+    return false;
 }
 
 static void loadLevel(char *path)
@@ -124,6 +97,8 @@ static void loadLevel(char *path)
 
     for(cJSON * node = layers->child; node != NULL; node = node->next)
     {
+        SDL_assert(layer < MAX_NUM_TILE_SPRITES);
+
         int width = cJSON_GetObjectItem(node, "width")->valueint;
         int height = cJSON_GetObjectItem(node, "height")->valueint;
 
@@ -136,30 +111,43 @@ static void loadLevel(char *path)
 
         for(cJSON * child = arr->child; child != NULL; child = child->next)
         {
-            MapTile * tile = initTileAtRowColLayerRaw(row, col, layer);
-            int val = child->valueint; //tiled increments values
-            memset(buf, 0, 64);
-
-            char * spritePath;
-
-            if(val > 0)
+            MapTile *tile = NULL;
+            if (layer == 0)
             {
-                tileType = (isTileWalkable(val)) ? TILE_GROUND : TILE_WALL;
-                sprintf(buf, "gfx/tiles/grasslands%d.png", val - 1);
-                spritePath = buf;
+                tile = initTileAtRowCol(dungeon.map, row, col);
             }
             else
             {
-                spritePath = NULL;
+                tile = getTileAtRowCol(dungeon.map, row, col);
             }
-            initTile(tile, spritePath, tileType);
 
-            if (++col == width)
+            if (tile != NULL)
             {
-                col = 0;
-                row++;
+                int val = child->valueint; //tiled increments value
+                if(val > 0)//a tile exists
+                {
+                    memset(buf, 0, 64);
+                    sprintf(buf, "gfx/tiles/grasslands%d.png", val - 1);
+                    bool walkable = isTileWalkable(val);
+                    if (walkable == false)
+                    {
+                        printf("tile %s is not walkable\n", buf);
+                        BIT_SET(tile->flags, TILE_CAN_COLLIDE_BIT);
+                    }
+                    addSpriteToTile(tile, buf);
+                }
+                if (++col == width)
+                {
+                    col = 0;
+                    row++;
+                }
+            }
+            else
+            {
+                //TODO: Logging
             }
         }
+
         layer++;
     }
     free(text);
@@ -174,7 +162,7 @@ static void createDungeon(void)
     dungeon.floor = dungeon.newFloor;
     dungeon.boss = NULL;
 
-    loadLevel("../data/test.tmj");
+    loadLevel("../data/test2.tmj");
 }
 
 bool initDungeon(void)
@@ -233,7 +221,7 @@ bool initDungeon(void)
 
     Entity *enemy = initEntity("Enemy");
     enemy->p.x = dungeon.player->p.x - rand() % 10;
-    enemy->p.y = dungeon.player->p.y - rand() % 10;
+    enemy->p.y = dungeon.player->p.y + rand() % 10;
 
     dungeon.camera.w = MAP_RENDER_WIDTH;
     dungeon.camera.h = MAP_RENDER_HEIGHT;
@@ -264,7 +252,7 @@ static void entityFirstPassJob(void * context)
         Rect entityRect = {screenPos.x, screenPos.y, TILE_WIDTH, TILE_HEIGHT};
         Rect screenRect = {0,0,SCREEN_WIDTH, SCREEN_HEIGHT};
 
-        if(isEntityAlive(entity) && rectangleRectangleCollision(entityRect, screenRect) == true)
+        if(isEntityAlive(entity) && checkRectangleRectangleCollision(entityRect, screenRect) == true)
         {
             //entity visibility will be resolved later.
             if(isEntityVisible(entity) == true)
@@ -294,26 +282,23 @@ static void tileVisibilityJob(void * context)
     for(int i = startIndex; i < endIndex; i++)
     {
         MapTile * tile = &dungeon.map[i];
-        tile->flags = 0;
+
         Vec2f screenPos;
         toIso(tile->p.x, tile->p.y, &screenPos.x, &screenPos.y);
         Rect tileRect = {screenPos.x, screenPos.y, TILE_WIDTH, TILE_HEIGHT};
         Rect screenRect = {0, 0, SCREEN_WIDTH + TILE_WIDTH,  SCREEN_HEIGHT + TILE_HEIGHT};
         
-        if(rectangleRectangleCollision(tileRect, screenRect) == true)
+        if(checkRectangleRectangleCollision(tileRect, screenRect) == true)
         {
-            if (tile->tile != TILE_NULL)
+            if (BIT_CHECK(tile->flags, TILE_CAN_COLLIDE_BIT) != 0)
             {
-                if (tile->tile == TILE_WALL)
-                {
-                    Vec2f rectPos;
-                    rectPos.x = tile->p.x;
-                    rectPos.y = tile->p.y;
+                Vec2f rectPos;
+                rectPos.x = tile->p.x;
+                rectPos.y = tile->p.y;
 
-                    debugDrawRect(rectPos, 1.0f, 1.0f, 255, 0, 0, thread);
-                }
-                addTileToDrawList(tile, screenPos, thread);
+                debugDrawRect(rectPos, 1.0f, 1.0f, 255, 0, 0, thread);
             }
+            addTileToDrawList(tile, screenPos, thread);
         }
     }
     finishThreadJob();
@@ -322,7 +307,7 @@ static void tileVisibilityJob(void * context)
 static void findVisibleTiles(void)
 {
     performJobs(tileVisibilityJob);
-    denselyPackDrawableTiles();
+    denselyPackAndSortDrawableTiles();
 }
 
 static void reset(void)

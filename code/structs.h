@@ -79,11 +79,11 @@ typedef struct
 
 typedef struct
 {
-    Sprite *sprite;
+    Sprite   *sprites[MAX_NUM_TILE_SPRITES];
     Vec2f    p;
-	int      tile;
+    uint32_t spriteCount;
     uint8_t  flags;
-} MapTile;
+}  MapTile;
 
 typedef struct Entity
 {
