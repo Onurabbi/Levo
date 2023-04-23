@@ -78,6 +78,9 @@ bool initSDL(void)
         return false;
     }
     SDL_ShowCursor(SDL_DISABLE);
+
+    srand(1234);
+    
     return true;
 }
 

@@ -170,8 +170,8 @@ static void initLongsword(Entity * longSword)
 static void initPlayer(Entity *player)
 {
     player->angle = 0.0;
-    player->width = 1.0f;
-    player->height = 1.0f;
+    player->width = 0.75f;
+    player->height = 0.75f;
     player->flags = 0;
 
     BIT_SET(player->flags, ENTITY_CAN_UPDATE_BIT);
@@ -210,14 +210,21 @@ static void initPlayer(Entity *player)
     playerActor->health = 10;
     playerActor->velocity = 0.15f;
     playerActor->flags = 0;
+
+    playerActor->controller.attack = false;
+    playerActor->controller.changeFacingDirection = false;
+    playerActor->controller.maxWaitTime = 0.25f;
+    playerActor->controller.wait = false;
+    playerActor->controller.facing = FACING_LEFT;
+
     player->data = playerActor;
 }
 
 static void initEnemy(Entity *enemy)
 {
     enemy->angle = 0.0;
-    enemy->width = 1.0f;
-    enemy->height = 1.0f;
+    enemy->width = 0.75f;
+    enemy->height = 0.75f;
     enemy->flags = 0;
 
     BIT_SET(enemy->flags, ENTITY_CAN_UPDATE_BIT);
@@ -254,6 +261,13 @@ static void initEnemy(Entity *enemy)
     enemyActor->health = 10;
     enemyActor->velocity = 0.075f;
     enemyActor->flags = 0;
+    
+    enemyActor->controller.attack = false;
+    enemyActor->controller.changeFacingDirection = false;
+    enemyActor->controller.maxWaitTime = 0.5f;
+    enemyActor->controller.wait = false;
+    enemyActor->controller.facing = FACING_LEFT;
+
     enemy->data = enemyActor;
 }
 
@@ -271,8 +285,7 @@ Entity* initEntity(char * name)
 
     result->id = dungeon->entityId++;
     result->entityType = type;
-    result->currentTile = NULL;
-    
+
     printf("Entity id: %d type %d\n", entityIndex, type);
     getInitFunction(type)->init(result);
     return result;

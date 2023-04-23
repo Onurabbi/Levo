@@ -4,19 +4,63 @@
 
 #include "collision.h"
 
+bool checkCircleCircleCollision(Vec2f center1, float r1, Vec2f center2, float r2)
+{
+    return (sqDistance(center1, center2) < (r1 + r2) * (r1 + r2));
+}
+
+void resolveCircleCircleCollision(Vec2f *center1, float r1, Vec2f *center2, float r2)
+{
+    float dy = center2->y - center1->y;
+    float dx = center2->x - center1->x;
+
+    float dist = sqrt(dy * dy + dx * dx);
+
+    if (dist < r1 + r2)
+    {
+        float angle = atan2(dy, dx);
+        float sinAngle = sin(angle);
+        float cosAngle = cos(angle);
+
+        float vx1 = 0;
+        float vy1 = 0;
+        float vx2 = 0;
+        float vy2 = 0;
+
+        if (center1->x < center2->x)
+        {
+            vx1 = -1;
+            vx2 = 1;
+        }
+        else
+        {
+            vx1 = 1;
+            vx2 = -1;
+        }
+
+        if (center1->y < center2->y) 
+        {
+            vy1 = -1;
+            vy2 = 1;
+        } 
+        else 
+        {
+            vy1 = 1;
+            vy2 = -1;
+        }
+
+        float overlap = (r1 + r2 - dist);
+        center1->x += overlap * cosAngle * vx1;
+        center1->y += overlap * sinAngle * vy1;
+        center2->x += overlap * cosAngle * vx2;
+        center2->y += overlap * sinAngle * vy2;
+    }
+}
+
 bool pointCircleCollision(Vec2f center, float r, Vec2f point)
 {
     float sqDist = sqDistance(center, point);
     return (r * r >= sqDist);
-}
-
-bool circleCircleCollision(Vec2f center1, float r1, Vec2f center2, float r2)
-{
-    float xDistSq = (center1.x - center2.x) * (center1.x - center2.x);
-    float yDistSq = (center1.y - center2.y) * (center1.y - center2.y);
-    float rSq = (r1 + r2) * (r1 + r2);
-
-    return (rSq >= (xDistSq + yDistSq));
 }
 
 bool pointRectangleCollisioni(Rect rect, Vec2i point)

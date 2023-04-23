@@ -9,6 +9,7 @@
 #include "../system/memory.h"
 #include "../json/cJSON.h"
 
+#include "astar.h"
 #include "entityFactory.h"
 #include "entity.h"
 #include "dungeon.h" 
@@ -36,11 +37,14 @@ bool checkTileCollisions(Rect rect)
 
     for(int i = 0; i < 9; i++)
     {
-        Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 1.0f, 1.0f};
-        if((tiles[i]->tile == TILE_WALL) && rectangleRectangleCollision(tileRect, rect))
+        if (tiles[i] != NULL)
         {
-            move = false;
-            break;
+            Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 1.0f, 1.0f};
+            if((tiles[i]->tile == TILE_WALL) && rectangleRectangleCollision(tileRect, rect))
+            {
+                move = false;
+                break;
+            }
         }
     }
     return move;
@@ -72,7 +76,11 @@ static void initTile(MapTile * tile, char * spritePath, int tileType)
 
 MapTile * getTileAtRowColLayerRaw(int row, int col, int layer)
 {
-    MapTile * result = &dungeon.map[layer * (MAP_WIDTH * MAP_HEIGHT) + row * MAP_WIDTH + col];
+    MapTile *result = NULL;
+    if (row >= 0 && row < MAP_HEIGHT && col >= 0 && col < MAP_WIDTH)
+    {
+        result = &dungeon.map[layer * (MAP_WIDTH * MAP_HEIGHT) + row * MAP_WIDTH + col];
+    }
     return result;
 }
 
@@ -222,11 +230,11 @@ bool initDungeon(void)
     Entity *sword = initEntity("Longsword");
     sword->p.x = dungeon.player->p.x - 5;
     sword->p.y = dungeon.player->p.y - 5;
-#if 1
+
     Entity *enemy = initEntity("Enemy");
-    enemy->p.x = dungeon.player->p.x - 10;
-    enemy->p.y = dungeon.player->p.y;
-#endif
+    enemy->p.x = dungeon.player->p.x - rand() % 10;
+    enemy->p.y = dungeon.player->p.y - rand() % 10;
+
     dungeon.camera.w = MAP_RENDER_WIDTH;
     dungeon.camera.h = MAP_RENDER_HEIGHT;
 
@@ -286,23 +294,26 @@ static void tileVisibilityJob(void * context)
     for(int i = startIndex; i < endIndex; i++)
     {
         MapTile * tile = &dungeon.map[i];
+        tile->flags = 0;
         Vec2f screenPos;
         toIso(tile->p.x, tile->p.y, &screenPos.x, &screenPos.y);
         Rect tileRect = {screenPos.x, screenPos.y, TILE_WIDTH, TILE_HEIGHT};
         Rect screenRect = {0, 0, SCREEN_WIDTH + TILE_WIDTH,  SCREEN_HEIGHT + TILE_HEIGHT};
         
-        if((rectangleRectangleCollision(tileRect, screenRect) == true) && 
-           (tile->tile != TILE_NULL))
+        if(rectangleRectangleCollision(tileRect, screenRect) == true)
         {
-            if (tile->tile == TILE_WALL)
+            if (tile->tile != TILE_NULL)
             {
-                Vec2f rectPos;
-                rectPos.x = tile->p.x;
-                rectPos.y = tile->p.y;
+                if (tile->tile == TILE_WALL)
+                {
+                    Vec2f rectPos;
+                    rectPos.x = tile->p.x;
+                    rectPos.y = tile->p.y;
 
-                debugDrawRect(rectPos, 1.0f, 1.0f, 255, 0, 0, thread);
+                    debugDrawRect(rectPos, 1.0f, 1.0f, 255, 0, 0, thread);
+                }
+                addTileToDrawList(tile, screenPos, thread);
             }
-            addTileToDrawList(tile, screenPos, thread);
         }
     }
     finishThreadJob();

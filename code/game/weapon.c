@@ -82,7 +82,8 @@ void equipWeapon(Weapon * weapon, Actor *equipper)
     owner->entitySprites.drawableCount = 0;
     //memset(&owner->entitySprites, 0, sizeof(EntityVisibleSprites));
     BIT_CLEAR(owner->flags, ENTITY_IS_VISIBLE_BIT);
-
+    BIT_CLEAR(owner->flags, ENTITY_CAN_COLLIDE_BIT);
+    
     weapon->equipper = equipper->owner;
     equipper->weapon = weapon;
 
@@ -109,7 +110,7 @@ void updateWeapon(Entity *e)
     {
         //only player can equip us
         Entity *player = &dungeon.entities[0];
-        if (circleCircleCollision(e->p, e->width, player->p, player->width) == true)
+        if (checkCircleCircleCollision(e->p, e->width, player->p, player->width) == true)
         {
             if (input->mouse.buttons[2] == 1)
             {

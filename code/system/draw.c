@@ -90,7 +90,14 @@ static int compareDrawables(const void * a, const void * b)
     Drawable * d1 = (Drawable *)a;
     Drawable * d2 = (Drawable *)b;
 
-    return (d1->y - d2->y);
+    if (d1->y < d2->y)
+    {
+        return -1;
+    }
+    else
+    {
+        return 1;
+    }
 }
 
 void denselyPackAndSortDrawableEntities(void)

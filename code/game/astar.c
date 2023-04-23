@@ -12,30 +12,60 @@
 
 extern Dungeon dungeon;
 
-static uint32_t  *openList;     //processing queue
-static uint32_t  nodeCount;
+static AStarNode  **openList;     //processing queue
+static uint32_t   nodeCount;
 
 static AStarGrid  closedList;   //permanent storage
 
 static AStarNode *startNode;
 static AStarNode *endNode;
+static bool errorPrint;
 
 AStarNode *getEndNode(void)
 {
     return endNode;
 }
 
-static bool isBlocked(Vec2f p)
+static void resetData(void)
 {
-    return false;
+    memset(openList, 0, sizeof(AStarNode *) * MAX_NUM_ASTAR_NODES);
+    nodeCount = 0;
+    
+    memset(closedList.nodes, 0, sizeof(AStarNode) * ASTAR_DIM * ASTAR_DIM);
+
+    for (uint32_t row = 0; row < ASTAR_HEIGHT; row++)
+    {
+        for (uint32_t col = 0; col < ASTAR_WIDTH; col++)
+        {
+            uint32_t index = row * ASTAR_WIDTH + col;
+            SDL_assert(index < ASTAR_HEIGHT * ASTAR_WIDTH);
+            AStarNode *node = closedList.nodes + index;
+
+            int x = (int)(closedList.topLeft.x + col);
+            int y = (int)(closedList.topLeft.y + row);
+
+            node->walkable = true;
+            node->p.x = (float)x + 0.5f;
+            node->p.y = (float)y + 0.5f;
+            node->row = row;
+            node->col = col;
+            node->f = 1000.0;
+            node->g = 1000.0;
+            node->h = 1000.0;
+            node->parent = NULL;
+            node->visited = false;
+        }
+    }
 }
 
-static bool initData(bool dungeonMode) 
+static void initData(void)
 {
-    memset(openList, 0, sizeof(uint32_t) * MAX_NUM_ASTAR_NODES);
+    memset(openList, 0, sizeof(AStarNode *) * MAX_NUM_ASTAR_NODES);
+    nodeCount = 0;
 
-    int row = 0;
-    int col = 0;
+    memset(closedList.nodes, 0, sizeof(AStarNode) * ASTAR_DIM * ASTAR_DIM);
+    closedList.topLeft.x = 0;
+    closedList.topLeft.y = 0;
 
     for (uint32_t row = 0; row < ASTAR_HEIGHT; row++)
     {
@@ -47,59 +77,44 @@ static bool initData(bool dungeonMode)
 
             node->p.x = closedList.topLeft.x + (float)col;
             node->p.y = closedList.topLeft.y + (float)row;
-            node->x = col;
-            node->y = row;
+            node->row = row;
+            node->col = col;
             node->f = 1000.0;
             node->g = 1000.0;
             node->h = 1000.0;
             node->parent = NULL;
             node->visited = false;
-            node->walkable = false;
-#if 1
-            if (dungeonMode)
-            {
-                int x = (int)(node->p.x + dungeon.camera.x + ASTAR_WIDTH / 2);
-                int y = (int)(node->p.y + dungeon.camera.y + ASTAR_HEIGHT / 2);
-
-                SDL_assert(x < MAP_WIDTH && x > 0);
-                SDL_assert(y < MAP_HEIGHT && y > 0);
-
-                MapTile *tile = getTileAtRowColLayerRaw(y, x, 1);
-                if (isWalkableTile(tile))
-                {
-                    node->walkable = true;
-                }
-                else
-                {
-                    node->walkable = false;
-                }
-            }
-#endif
+            node->walkable = true;
         }
     }
 
     startNode = NULL;
     endNode = NULL;
-
-    return true;
 }
 
 static int compareNodes(const void *a, const void *b)
 {
     SDL_assert(a && b);
 
-    uint32_t indexA = *((uint32_t *)a);
-    uint32_t indexB = *((uint32_t *)b);
+    AStarNode* nodeA = *((AStarNode **)a);
+    AStarNode* nodeB = *((AStarNode **)b);
 
-    return (closedList.nodes[indexA].f - closedList.nodes[indexB].f);
+    if (nodeA->f < nodeB->f)
+    {
+        return -1;
+    }
+    else
+    {
+        return 1;
+    }
 }
 
 static void sortOpenList(void)
 {
-    qsort(openList, nodeCount, sizeof(uint32_t), compareNodes);
+    qsort(openList, nodeCount, sizeof(AStarNode *), compareNodes);
 }
 
-static void pushNodeToOpenList(uint32_t index)
+static void pushNodeToOpenList(AStarNode* node)
 {
     if (nodeCount == MAX_NUM_ASTAR_NODES)
     {
@@ -109,26 +124,25 @@ static void pushNodeToOpenList(uint32_t index)
 #endif
         return;
     }
-
-    openList[nodeCount++] = index;
+    openList[nodeCount++] = node;
     sortOpenList();
 }
 
-static uint32_t pop(void)
+static AStarNode *pop(void)
 {
     if (nodeCount == 0)
     {
         SDL_LogMessage(SDL_LOG_CATEGORY_ERROR, SDL_LOG_PRIORITY_INFO, "Open list is empty.\n");
-        return UINT32_MAX;
+        return NULL;
     }
 
-    uint32_t rootIndex = openList[0];
+    AStarNode *root = openList[0];
     for (uint32_t i = 0; i < nodeCount - 1; i++)
     {
         openList[i] = openList[i + 1];
     }
     nodeCount--;
-    return rootIndex;
+    return root;
 }
 
 static inline bool openListEmpty(void)
@@ -136,23 +150,35 @@ static inline bool openListEmpty(void)
     return (nodeCount == 0);
 }
 
-static inline bool reachedGoal(Vec2f start, Vec2f end)
-{
-    return (distance(start, end) < 1.0f);
-}
-
-static AStarNode *constructAStarPath(Vec2f start, Vec2f end)
+static inline AStarNode *nodeFromWorldPos(Vec2f worldPos)
 {
     AStarNode *result = NULL;
+    int y = (int)(worldPos.y - closedList.topLeft.y);
+    int x = (int)(worldPos.x - closedList.topLeft.x);
 
-    if(sqDistance(start, end) > 100.0f)
+    if (x >= 0 && x < ASTAR_WIDTH && y >= 0 && y < ASTAR_HEIGHT)
     {
-        return result;
+        result = &closedList.nodes[y * ASTAR_DIM + x];
     }
+    return result;
+}
 
-    uint32_t startIndex = (uint32_t)(start.y - closedList.topLeft.y) * ASTAR_DIM + (uint32_t)(start.x - closedList.topLeft.x);
+static void printPath(AStarNode *node)
+{
+    printf("printing path:\n");
+    int count = 0;
+    while (node)
+    {
+        printf("Node %d = x: %f y: %f\n", count++, node->p.x, node->p.y);
+        node = node->parent;
+    }
+}
+
+static AStarNode *constructAStarPath(Entity *e, Vec2f start, Vec2f end)
+{
+    AStarNode *result = NULL;
     
-    startNode = &closedList.nodes[startIndex];
+    startNode = nodeFromWorldPos(start);
     startNode->parent = NULL;
     startNode->g = 0;
     startNode->h = sqDistance(start, end);
@@ -161,106 +187,137 @@ static AStarNode *constructAStarPath(Vec2f start, Vec2f end)
     startNode->p.y = start.y;
     startNode->visited = false;
 
-    uint32_t endIndex = (uint32_t)(end.y - closedList.topLeft.y) * ASTAR_DIM + (uint32_t)(end.x - closedList.topLeft.x);
-    endNode = &closedList.nodes[endIndex];
-    pushNodeToOpenList(startIndex); 
+    endNode = nodeFromWorldPos(end);
+    endNode->parent = NULL;
+    endNode->g = 0;
+    endNode->h = 0;
+    endNode->f = 0;
+    endNode->p.x = end.x;
+    endNode->p.y = end.y;
+    endNode->visited = false;
+
+    pushNodeToOpenList(startNode);
 
     while ((openListEmpty() == false))
     {
-        uint32_t nodeIndex = pop();
-        AStarNode *node = &closedList.nodes[nodeIndex];
+        AStarNode *node =  pop();
         if (node->visited == true)
         {
             continue;
         }
         node->visited = true;
-        if (node == endNode)
+
+        float sqDist = sqDistance(node->p, endNode->p);
+
+        if (sqDist < 2.0f)
         {
             result = node;
             break;
         }
 
         int neighbourCount = 4;
-        int deltaX[4] = {-1, 0, 0, 1};
-        int deltaY[4] = {0, -1, 1, 0};
+        int deltaX[4] = {1, 0, 0, -1};
+        int deltaY[4] = {0, 1, -1, 0};
 
         for (int i = 0; i < neighbourCount; i++)
         {
-            int x = node->x + deltaX[i];
-            int y = node->y + deltaY[i];
+            int x = node->col + deltaX[i];
+            int y = node->row + deltaY[i];
 
-            if (x >= 0 && x < ASTAR_WIDTH && y >= 0 && y < ASTAR_HEIGHT)
+            if(x >= 0 && x < ASTAR_WIDTH && y >= 0 && y < ASTAR_WIDTH)
             {
-                uint32_t neighbourIndex = y * ASTAR_WIDTH + x;
-                AStarNode *neighbour = &closedList.nodes[neighbourIndex];
-                Rect rect = {neighbour->p.x + dungeon.camera.x, neighbour->p.y + dungeon.camera.y, 1.0f, 1.0f};
-                if (neighbour->visited == false && (checkTileCollisions(rect) ==  true))
+                AStarNode *neighbour = &closedList.nodes[y * ASTAR_DIM + x];
+
+                if (neighbour != NULL)
                 {
-                    pushNodeToOpenList(neighbourIndex);
-                    float possiblyLowerGoal = node->g + sqDistance(neighbour->p, node->p);
-                    if (possiblyLowerGoal < neighbour->g)
+                    Rect neighbourRect;
+                    neighbourRect.x = neighbour->p.x;
+                    neighbourRect.y = neighbour->p.y;
+                    neighbourRect.w = e->width;
+                    neighbourRect.h = e->height;
+
+                    bool visited = neighbour->visited;
+                    bool walkable = neighbour->walkable;
+                    bool canMove = checkTileCollisions(neighbourRect);
+
+                    if (!visited && walkable && canMove)
                     {
-                        neighbour->parent = node;
-                        neighbour->g = possiblyLowerGoal;
-                        neighbour->f = neighbour->g + sqDistance(neighbour->p, end);
+                        pushNodeToOpenList(neighbour);
+                        float possiblyLowerGoal = node->g + sqDistance(neighbour->p, node->p);
+                        if (possiblyLowerGoal < neighbour->g)
+                        {
+                            neighbour->parent = node;
+                            neighbour->g = possiblyLowerGoal;
+                            neighbour->f = neighbour->g + sqDistance(neighbour->p, end);
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    else
+                    {
+
                     }
                 }
+                else
+                {
+                }
+            }
+            else
+            {
             }
         }
     }
     return result;
 }
 
-Vec2f findPath(Vec2f start, Vec2f end)
+Vec2f findPath(Entity *e, Vec2f end)
 {   
     Vec2f result;
     result.x = INFINITY;
     result.y = INFINITY;
 
-    AStarNode *node = NULL;
-    //convert positions to camera space
-    start.x = start.x - dungeon.camera.x;
-    start.y = start.y - dungeon.camera.y;
-
-    end.x = end.x - dungeon.camera.x;
-    end.y = end.y - dungeon.camera.y;
-
+    Vec2f start = e->p;
     closedList.topLeft.x = start.x - (float)(ASTAR_WIDTH / 2);
     closedList.topLeft.y = start.y - (float)(ASTAR_HEIGHT / 2);
 
-    (void)initData(true);
-    node = constructAStarPath(start, end);
+    resetData();
 
+    AStarNode *node = NULL;
+    node = constructAStarPath(e, start, end);
     if (node != NULL)
     {
-        while (node && node->parent != startNode)
+        while (node->parent && node->parent != startNode)
         {
             node = node->parent;
         }
-        if(node)
-        {
-            result.x = node->p.x + dungeon.camera.x;
-            result.y = node->p.y + dungeon.camera.y;
-        }
 
+        int x = (int)(node->p.x);
+        int y = (int)(node->p.y);
+
+        MapTile *tile = getTileAtRowColLayerRaw(y, x, 1);
+        tile->flags = 0;
+
+        result.x = node->p.x;
+        result.y = node->p.y;
     }
     else
     {
-        memset(openList, 0, sizeof(uint32_t) * MAX_NUM_ASTAR_NODES);
+        memset(openList, 0, sizeof(AStarNode *) * MAX_NUM_ASTAR_NODES);
         memset(closedList.nodes, 0, sizeof(AStarNode) * ASTAR_DIM * ASTAR_DIM);
         closedList.topLeft.x = 0;
         closedList.topLeft.y = 0;
         nodeCount = 0;
         startNode = NULL;
-        endNode = NULL;
+        endNode = NULL;        
     }
-
     return result;
 }
 
 bool initAStar(void)
 {
-    bool success;
+    bool success = true;
 
     closedList.nodes = allocatePermanentMemory(sizeof(AStarNode) * ASTAR_DIM * ASTAR_DIM);
     if(closedList.nodes == NULL)
@@ -273,10 +330,17 @@ bool initAStar(void)
     Vec2f topLeft = {0.0f, 0.0f};
     closedList.topLeft = topLeft;
 
-    openList = allocatePermanentMemory(sizeof(uint32_t) * MAX_NUM_ASTAR_NODES);
+    openList = allocatePermanentMemory(sizeof(AStarNode *) * MAX_NUM_ASTAR_NODES);
+    if (openList == NULL)
+    {
+        SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR,
+                       "Can not allocate a star open list memory!\n");
+        success = false;
+        return success;          
+    }
     nodeCount = 0;
 
-    success = initData(false);
-
+    initData();
+    errorPrint = true;
     return success;
 }

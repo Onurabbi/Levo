@@ -53,7 +53,7 @@ float distance(Vec2f start, Vec2f end)
 float sqDistance(Vec2f v1, Vec2f v2)
 {
     float xDistSq = (v1.x - v2.x) * (v1.x - v2.x);
-    float yDistSq = (v1.y - v2.y) * (v1.y - v2.y);  
+    float yDistSq = (v1.y - v2.y) * (v1.y - v2.y);
     return (xDistSq + yDistSq);
 }
 

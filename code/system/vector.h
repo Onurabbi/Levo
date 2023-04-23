@@ -9,6 +9,6 @@ Vec2f vectorMultiply(Vec2f v, float m);
 Vec2f vectorAdd(Vec2f v1, Vec2f v2);
 Vec2f vectorSubtract(Vec2f v1, Vec2f v2);
 
-Vec2f getEntityFrontVector(int facing);
-
+Vec2f    getEntityFrontVector(int facing);
+uint32_t getFacingFromDirection(Vec2f direction);
 #endif

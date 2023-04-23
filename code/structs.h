@@ -66,7 +66,7 @@ typedef struct
     uint32_t       currentAnimationIndex; 
     uint32_t       numBodyParts;
 
-    uint32_t       animationState; //current animation pose
+    uint32_t       animationState;  //current animation pose
     bool           animStateChange; //should the state change?
 } AnimationController;
 
@@ -85,7 +85,7 @@ typedef struct
     uint8_t  flags;
 } MapTile;
 
-typedef struct
+typedef struct Entity
 {
     uint32_t             id;
     uint32_t             entityIndex;
@@ -95,7 +95,6 @@ typedef struct
     EntityVisibleSprites entitySprites;
     EntityType           entityType;
     uint64_t             flags;
-    MapTile              *currentTile;
     void                 *data;
 } Entity;
 
@@ -117,26 +116,30 @@ typedef struct
 
 typedef struct 
 {
-    AnimationController *animationController;
+    uint32_t facing;
 
-    uint32_t  id;
-    uint32_t  actorIndex;
-    Entity    *owner;
-    Weapon    *weapon;
-    Vec2f     dP;
-    uint32_t  facing;
-    uint32_t  health;
-    float     velocity;
-    uint64_t  flags;
-} Actor;
+    float    waitTimer;
+    float    maxWaitTime;
+    bool     changeFacingDirection;
+    bool     attack;
+    bool     wait;
+} ActorController;
 
 typedef struct 
 {
-    uint32_t facing;
-    bool     changeFacingDirection;
-    bool     attack;
-} ActorController;
+    AnimationController *animationController;
 
+    uint32_t        id;
+    uint32_t        actorIndex;
+    Entity          *owner;
+    Weapon          *weapon;
+    ActorController controller;
+    Vec2f           dP;
+    uint32_t        facing;
+    uint32_t        health;
+    float           velocity;
+    uint64_t        flags;
+} Actor;
 
 typedef struct 
 {

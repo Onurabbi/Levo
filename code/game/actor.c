@@ -10,6 +10,7 @@
 extern Dungeon dungeon;
 extern App app;
 
+
 void takeDamage(Actor *actor, Actor * attacker, uint32_t damage)
 {
     Entity * owner = actor->owner;
@@ -73,11 +74,11 @@ static float getBodyPartYOffset(uint32_t facing, uint32_t animSlot)
 
     if (animSlot == WEAPON_HAND)
     {
-        result = -1.0f;
+        result = -0.1f;
     }
     else if (animSlot == OFFHAND)
     {
-        result = 1.0f;  
+        result = 0.1f;  
     }
     return result;
 }
@@ -91,6 +92,10 @@ static inline void getAnimationVisibleSprites(AnimationController *animControlle
         uint32_t animationIndex = animController->animationIndices[i][animController->currentAnimationIndex];
         Animation *animation = getAnimationByIndex(animationIndex);
         sprites->sprites[i] = &animation->animationSprites[frameIndex];
+        if (sprites->sprites[i]->fileName.count == 0)
+        {
+            printf("frameIndex: %d, facing: %d, animIndex: %d\n", frameIndex, facing, animationIndex);
+        }
         sprites->yOffsets[i] = getBodyPartYOffset(facing, animation->animationSlot);
         sprites->drawableCount++;
     }
@@ -161,13 +166,24 @@ static void updateAnimation(Actor * actor, ActorController controller)
 
 void updateActor(Actor *actor, ActorController controller)
 {
-    if (controller.attack)
+    AnimationController *animController = actor->animationController;
+    if (controller.attack == true)
     {
-        AnimationController *animController = actor->animationController;
         if (animController->animationState != POSE_MELEE)
         {
             animController->animationState = POSE_MELEE;
             animController->animStateChange = true;
+        }
+    }
+
+    if (controller.wait == true)
+    {
+        if (animController->animationState != POSE_IDLE)
+        {
+            animController->animationState = POSE_IDLE;
+            animController->animStateChange = true;
+            actor->dP.x = 0.0f;
+            actor->dP.y = 0.0f;
         }
     }
     updateAnimation(actor, controller);

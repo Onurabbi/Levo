@@ -15,6 +15,27 @@ static Vec2f frontVectors[] =
     {-0.5f, -0.5f}
 };
 
+uint32_t getFacingFromDirection(Vec2f direction)
+{
+    float maxDot = -INFINITY;
+    uint32_t maxIndex = FACING_DIRECTION_COUNT;
+    uint32_t i;
+    for (i = 0; i < FACING_DIRECTION_COUNT; i++)
+    {
+        float dot = vectorDotProduct(direction, vectorNormalize(frontVectors[i]));
+        if (dot > maxDot)
+        {
+            maxIndex = i;
+            maxDot = dot;
+        }
+    }
+    if (maxIndex == FACING_DIRECTION_COUNT)
+    {
+        printf("sigh");
+    }
+    return maxIndex;
+}
+
 Vec2f getEntityFrontVector(int facing)
 {
     return frontVectors[facing];

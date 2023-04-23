@@ -108,30 +108,10 @@ void addEntityToUpdateList(uint32_t index, uint32_t thread)
     SDL_assert(numEntities[thread] <= MAX_ENTITY_COUNT_PER_THREAD);
 }
 
-void  moveEntityRaw(Entity *e, float dx, float dy)
+bool checkEntityCollisions(Entity *entity, Vec2f *newPos)
 {
-    e->p.x += dx;
-    e->p.y += dy;
-}
-
-void moveEntity(Entity * entity, float dx, float dy)
-{
-    float newX, newY;
-
-    Actor * actor = (Actor *)entity->data;
-    float vel = actor->velocity;
-    actor->dP.x = 0.0f;
-    actor->dP.y = 0.0f;
-    
-    newX = entity->p.x + dx * vel;
-    newY = entity->p.y + dy * vel;
-
     bool move = true;
-
-    Rect entityRect = {newX, newY, entity->width, entity->width};
-    debugDrawRect(entity->p, entity->width, entity->height, 255, 0, 0, 0);
-    move = checkTileCollisions(entityRect);
-    if((newX >= 0) && (newX < MAP_WIDTH) && (newY >= 0) && (newY < MAP_HEIGHT) && (move == true))
+    if((newPos->x >= 0) && (newPos->x < MAP_WIDTH) && (newPos->y >= 0) && (newPos->y < MAP_HEIGHT))
     {
         for(int i = 0; i < totalNumEntities; i++)
         {
@@ -139,14 +119,11 @@ void moveEntity(Entity * entity, float dx, float dy)
             Entity * collider = &dungeon.entities[index];
             if (entity != collider)
             {
-                Vec2f newPos = {newX, newY};
                 Actor * colliderActor = (Actor *)collider->data;
                 if (colliderActor && 
-                    (circleCircleCollision(newPos, entity->width / 2.0f, collider->p, collider->width/2.0f) == true) && 
-                     isEntityAlive(collider))
+                    canEntityCollide(collider))
                 {
-                    move = false;
-                    break;
+                    resolveCircleCircleCollision(newPos, entity->width / 2.0f, &collider->p, collider->width / 2.0f);
                 }
             }
         }
@@ -156,23 +133,69 @@ void moveEntity(Entity * entity, float dx, float dy)
         move = false;
     }
 
-    if(move == true)
+    return move;
+}
+
+bool moveEntityRaw(Entity *e, float dx, float dy)
+{
+    bool result = false;
+
+    Actor * actor = (Actor *)e->data;
+    float vel = actor->velocity;
+
+    Vec2f newPos;
+    newPos.x = e->p.x + dx * vel;
+    newPos.y = e->p.y + dy * vel;
+    Vec2f finalPos = newPos;
+
+    bool move = checkEntityCollisions(e, &finalPos);
+    if (move)
     {
+        if ((finalPos.x != newPos.x) || (finalPos.y != newPos.y))
+        {
+            //collision happened
+            result = true;
+        }
+
         actor->dP.x = dx * vel;
         actor->dP.y = dy * vel;
-        
-        entity->p.x = newX;
-        entity->p.y = newY;
 
-        //entity steps on new tile
-        MapTile *newTile = getTileAtRowColLayerRaw(entity->p.y, entity->p.x, 1);
-        if (newTile != entity->currentTile)
+        e->p.x = finalPos.x;
+        e->p.y = finalPos.y;
+    }
+    debugDrawRect(e->p, e->width, e->height, 255, 0, 0, 0);
+    return result;
+}
+
+void moveEntity(Entity * entity, float dx, float dy)
+{
+    bool move = true;
+
+    Actor * actor = (Actor *)entity->data;
+    float vel = actor->velocity;
+    actor->dP.x = 0.0f;
+    actor->dP.y = 0.0f;
+
+    Vec2f newPos;
+    newPos.x = entity->p.x + dx * vel;
+    newPos.y = entity->p.y + dy * vel;
+    
+    Rect entityRect = {newPos.x, newPos.y, entity->width, entity->width};
+    move = checkTileCollisions(entityRect);
+    if (move == true)
+    {
+        move = checkEntityCollisions(entity, &newPos);
+        if(move == true)
         {
-            entity->currentTile->flags = 0x0;
-            entity->currentTile = newTile;
-            entity->currentTile->flags = 0x1;
+            actor->dP.x = dx * vel;
+            actor->dP.y = dy * vel;
+            
+            entity->p.x = newPos.x;
+            entity->p.y = newPos.y;
         }
     }
+   
+    debugDrawRect(entity->p, entity->width, entity->height, 255, 0, 0, 0);
 }
 
 static inline Entity * getEntityById(int id)
@@ -184,6 +207,13 @@ bool isEntityAlive(Entity * entity)
 {
     bool alive = BIT_CHECK(entity->flags, ENTITY_IS_ALIVE_BIT);
     return alive;
+}
+
+bool canEntityCollide(Entity *entity)
+{
+    bool canCollide = BIT_CHECK(entity->flags, ENTITY_IS_ALIVE_BIT) && 
+                      BIT_CHECK(entity->flags, ENTITY_CAN_COLLIDE_BIT);
+    return canCollide;
 }
 
 bool isEntityVisible(Entity *entity)
