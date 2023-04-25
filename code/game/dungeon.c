@@ -21,40 +21,6 @@ extern App     app;
 
 static int walkableTiles[] = {0, 1};
 
-bool checkTileCollisions(Entity *e)
-{
-    bool collided = false;
-
-    Rect rect = {e->p.x, e->p.y, e->width, e->height};
-
-    MapTile *tiles[9];
-    tiles[0]  = getTileAtRowCol(dungeon.map, (int)(rect.y), (int)(rect.x));
-    tiles[1]  = getTileAtRowCol(dungeon.map, (int)(rect.y - 1), (int)(rect.x - 1));
-    tiles[2]  = getTileAtRowCol(dungeon.map, (int)(rect.y - 1), (int)(rect.x));
-    tiles[3]  = getTileAtRowCol(dungeon.map, (int)(rect.y - 1), (int)(rect.x + 1));
-    tiles[4]  = getTileAtRowCol(dungeon.map, (int)(rect.y), (int)(rect.x - 1));
-    tiles[5]  = getTileAtRowCol(dungeon.map, (int)(rect.y), (int)(rect.x + 1));
-    tiles[6]  = getTileAtRowCol(dungeon.map, (int)(rect.y + 1), (int)(rect.x - 1));
-    tiles[7]  = getTileAtRowCol(dungeon.map, (int)(rect.y + 1), (int)(rect.x));
-    tiles[8]  = getTileAtRowCol(dungeon.map, (int)(rect.y + 1), (int)(rect.x + 1));
-
-    for(int i = 0; i < 9; i++)
-    {
-        if (tiles[i] != NULL)
-        {
-            //we are copying the tile data, so it won't be changed
-            Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 1.0f, 1.0f};
-            if((BIT_CHECK(tiles[i]->flags, TILE_CAN_COLLIDE_BIT)) && 
-                checkRectangleRectangleCollision(rect, tileRect))
-            {
-                collided = true;
-                break;
-            }
-        }
-    }
-    return collided;
-}
-
 static inline bool isTileWalkable(int tile)
 {
     for (int i = 0; i < ArrayCount(walkableTiles); i++)

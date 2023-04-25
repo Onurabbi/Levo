@@ -7,4 +7,5 @@
 MapTile * getTileAtRowCol(MapTile *tiles, int row, int col);
 MapTile * initTileAtRowCol(MapTile *tiles, int row, int col);
 void      addSpriteToTile(MapTile * tile, char * spritePath);
+bool      checkTileCollisions(Entity *e, Vec2f *newPos);
 #endif

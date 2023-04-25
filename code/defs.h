@@ -36,7 +36,7 @@ do {								  \
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
 #define DELTA_TIME						(1.0 / 59.0)
-#define epsilon							(0.001)
+#define epsilon							(0.0001)
 #define ZOOM							2
 #define MAX_DESCRIPTION_LENGTH 			256
 #define MAX_FILENAME_LENGTH    			256

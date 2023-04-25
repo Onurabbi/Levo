@@ -72,8 +72,22 @@ Vec2f vectorSubtract(Vec2f v1, Vec2f v2)
     return result;
 }
 
-Vec2f vectorMultiply(Vec2f v, float m)
+Vec2f vectorMultiplyScalar(Vec2f v, float m)
 {
     Vec2f result = {v.x * m, v.y * m};
+    return result;
+}
+
+Vec2f vectorMultiplyVector(Vec2f v1, Vec2f v2)
+{
+    Vec2f result = {v1.x * v2.x, v1.y * v2.y};
+    return result;
+}
+
+Vec2f vectorDivideVector(Vec2f v1, Vec2f v2)
+{
+    Vec2f result;
+    result.x = v1.x / v2.x;
+    result.y = v1.y / v2.y;
     return result;
 }

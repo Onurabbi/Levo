@@ -40,7 +40,7 @@ void updateEnemy(Entity *e)
             dir = vectorNormalize(vectorSubtract(target, e->p));
             if(canActorMove(enemy))
             {
-                (void)moveEntityRaw(e, dir.x, dir.y);
+                (void)moveEntity(e, dir.x, dir.y);
             }
         }
     }

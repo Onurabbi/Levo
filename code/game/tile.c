@@ -1,7 +1,43 @@
 #include "../common.h"
 
 #include "../system/atlas.h"
+
+#include "collision.h"
 #include "tile.h"
+#include "dungeon.h"
+
+extern Dungeon dungeon;
+extern App app;
+
+bool checkTileCollisions(Entity *e, Vec2f *deltaP)
+{
+    MapTile *tiles[9];
+    tiles[0]  = getTileAtRowCol(dungeon.map, (int)(e->p.y), (int)(e->p.x));
+    tiles[1]  = getTileAtRowCol(dungeon.map, (int)(e->p.y - 1), (int)(e->p.x - 1));
+    tiles[2]  = getTileAtRowCol(dungeon.map, (int)(e->p.y - 1), (int)(e->p.x));
+    tiles[3]  = getTileAtRowCol(dungeon.map, (int)(e->p.y - 1), (int)(e->p.x + 1));
+    tiles[4]  = getTileAtRowCol(dungeon.map, (int)(e->p.y), (int)(e->p.x - 1));
+    tiles[5]  = getTileAtRowCol(dungeon.map, (int)(e->p.y), (int)(e->p.x + 1));
+    tiles[6]  = getTileAtRowCol(dungeon.map, (int)(e->p.y + 1), (int)(e->p.x - 1));
+    tiles[7]  = getTileAtRowCol(dungeon.map, (int)(e->p.y + 1), (int)(e->p.x));
+    tiles[8]  = getTileAtRowCol(dungeon.map, (int)(e->p.y + 1), (int)(e->p.x + 1));
+
+    Rect rect = {e->p.x - e->width/2, e->p.y - e->width/2, e->width, e->height};
+
+    for(int i = 0; i < 9; i++)
+    {
+        if (tiles[i] != NULL)
+        {
+            Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 1.0f, 1.0f};
+            if((BIT_CHECK(tiles[i]->flags, TILE_CAN_COLLIDE_BIT)))
+            {
+                (void)resolveRectangleVsRectangle(rect, deltaP, tileRect);
+            }
+        }
+    }
+    
+    return false;
+}
 
 void addSpriteToTile(MapTile * tile, char * spritePath)
 {

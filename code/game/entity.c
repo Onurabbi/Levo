@@ -9,7 +9,7 @@
 
 #include "entityFactory.h"
 #include "dungeon.h"
-
+#include "tile.h"
 #include "collision.h"
 #include "entity.h"
 #include "player.h"
@@ -124,7 +124,8 @@ bool checkEntityCollisions(Entity *entity, Vec2f *newPos)
                 if (colliderActor && 
                     canEntityCollide(collider))
                 {
-                    resolveCircleCircleCollision(newPos, entity->width / 2.0f, &collider->p, collider->width / 2.0f);
+                    resolveCircleCircleCollision(newPos, entity->width / 2.0f, 
+                                                 &collider->p, collider->width / 2.0f);
                 }
             }
         }
@@ -152,6 +153,7 @@ bool moveEntityRaw(Entity *e, float dx, float dy)
     bool collided = checkEntityCollisions(e, &finalPos);
     if (collided == false)
     {
+        
         if ((finalPos.x != newPos.x) || (finalPos.y != newPos.y))
         {
             //collision happened
@@ -177,21 +179,14 @@ void moveEntity(Entity * entity, float dx, float dy)
     actor->dP.x = 0.0f;
     actor->dP.y = 0.0f;
 
-    Vec2f newPos;
-    newPos.x = entity->p.x + dx * vel;
-    newPos.y = entity->p.y + dy * vel;
-    
-    Rect entityRect = {newPos.x, newPos.y, entity->width, entity->width};
+    Vec2f deltaP;
+    deltaP.x = dx * vel;
+    deltaP.y = dy * vel;
 
-    Entity entityAtNewPos;
-    entityAtNewPos.p.x = newPos.x;
-    entityAtNewPos.p.y = newPos.y;
-    entityAtNewPos.width = entity->width;
-    entityAtNewPos.height = entity->height;
-
-    collided = checkTileCollisions(&entityAtNewPos);
+    collided = checkTileCollisions(entity, &deltaP);
     if (collided == false)
     {
+        Vec2f newPos = vectorAdd(entity->p, deltaP);
         collided = checkEntityCollisions(entity, &newPos);
         if(collided == false)
         {

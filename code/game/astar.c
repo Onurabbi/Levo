@@ -46,9 +46,10 @@ static void resetData(void)
             int x = (int)(closedList.topLeft.x + col);
             int y = (int)(closedList.topLeft.y + row);
 
-            node->walkable = true;
             node->p.x = (float)x + 0.5f;
             node->p.y = (float)y + 0.5f;
+            MapTile *tile = getTileAtRowCol(dungeon.map, node->p.y, node->p.x);
+            node->walkable = (BIT_CHECK(tile->flags, TILE_CAN_COLLIDE_BIT) == 0);
             node->row = row;
             node->col = col;
             node->f = 1000.0;
@@ -246,9 +247,8 @@ static AStarNode *constructAStarPath(Entity *e, Vec2f start, Vec2f end)
 
                     bool visited = neighbour->visited;
                     bool walkable = neighbour->walkable;
-                    bool collided = checkTileCollisions(&entityAtNeighbour);
 
-                    if (!visited && walkable && !collided)
+                    if (!visited && walkable)
                     {
                         pushNodeToOpenList(neighbour);
                         float possiblyLowerGoal = node->g + sqDistance(neighbour->p, node->p);
