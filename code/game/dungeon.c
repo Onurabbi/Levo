@@ -23,6 +23,11 @@ static int walkableTiles[] = {0, 1};
 
 static inline bool isTileWalkable(int tile)
 {
+    if ((tile < 32) || (tile > 176 && tile <= 192))
+    {
+        return true;
+    }
+    
     for (int i = 0; i < ArrayCount(walkableTiles); i++)
     {
         if (tile == walkableTiles[i])
@@ -185,9 +190,13 @@ bool initDungeon(void)
     sword->p.x = dungeon.player->p.x - 5;
     sword->p.y = dungeon.player->p.y - 5;
 
-    Entity *enemy = initEntity("Enemy");
-    enemy->p.x = dungeon.player->p.x - rand() % 10;
-    enemy->p.y = dungeon.player->p.y + rand() % 10;
+    for (int i = 0; i < 10; i++)
+    {
+        Entity *enemy = initEntity("Enemy");
+        enemy->p.x = dungeon.player->p.x + rand() % 16;
+        enemy->p.y = dungeon.player->p.y + rand() % 16;
+    }
+
 
     dungeon.camera.w = MAP_RENDER_WIDTH;
     dungeon.camera.h = MAP_RENDER_HEIGHT;
@@ -217,8 +226,8 @@ static void entityFirstPassJob(void * context)
         toIso(entity->p.x, entity->p.y, &screenPos.x, &screenPos.y);
         Rect entityRect = {screenPos.x, screenPos.y, TILE_WIDTH, TILE_HEIGHT};
         Rect screenRect = {0,0,SCREEN_WIDTH, SCREEN_HEIGHT};
-
-        if(isEntityAlive(entity) && checkRectangleRectangleCollision(entityRect, screenRect) == true)
+        
+        if(isEntityAlive(entity) && checkStaticRectangleVsRectangle(entityRect, screenRect) == true)
         {
             //entity visibility will be resolved later.
             if(isEntityVisible(entity) == true)
@@ -248,13 +257,14 @@ static void tileVisibilityJob(void * context)
     for(int i = startIndex; i < endIndex; i++)
     {
         MapTile * tile = &dungeon.map[i];
-
+        BIT_CLEAR(tile->flags, TILE_IS_OCCUPIED_BIT);
+        
         Vec2f screenPos;
         toIso(tile->p.x, tile->p.y, &screenPos.x, &screenPos.y);
         Rect tileRect = {screenPos.x, screenPos.y, TILE_WIDTH, TILE_HEIGHT};
         Rect screenRect = {0, 0, SCREEN_WIDTH + TILE_WIDTH,  SCREEN_HEIGHT + TILE_HEIGHT};
         
-        if(checkRectangleRectangleCollision(tileRect, screenRect) == true)
+        if(checkStaticRectangleVsRectangle(tileRect, screenRect) == true)
         {
             if (BIT_CHECK(tile->flags, TILE_CAN_COLLIDE_BIT) != 0)
             {

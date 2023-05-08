@@ -11,6 +11,7 @@ bool checkCircleCircleCollision(Vec2f center1, float r1, Vec2f center2, float r2
     return (sqDistance(center1, center2) < (r1 + r2) * (r1 + r2));
 }
 
+//circle 1 is static
 void resolveCircleCircleCollision(Vec2f *center1, float r1, Vec2f *center2, float r2)
 {
     float dy = center2->y - center1->y;
@@ -52,11 +53,12 @@ void resolveCircleCircleCollision(Vec2f *center1, float r1, Vec2f *center2, floa
         }
 
         float overlap = (r1 + r2 - dist);
-        center1->x += overlap * cosAngle * vx1 / 2.0f;
-        center1->y += overlap * sinAngle * vy1 / 2.0f;
-
-        center2->x += overlap * cosAngle * vx2 / 2.0f;
-        center2->y += overlap * sinAngle * vy2 / 2.0f;
+        center1->x += overlap * cosAngle * vx1;
+        center1->y += overlap * sinAngle * vy1;
+#if 0
+        center2->x += overlap * cosAngle * vx2;
+        center2->y += overlap * sinAngle * vy2;
+#endif
     }
 }
 
@@ -84,7 +86,7 @@ bool pointRectangleCollisionf(Rect rect, Vec2f point)
     return success;
 }
 
-bool checkRectangleRectangleCollision(Rect rect1, Rect rect2)
+bool checkStaticRectangleVsRectangle(Rect rect1, Rect rect2)
 {
     float top1 = rect1.y;
     float top2 = rect2.y;
@@ -121,50 +123,7 @@ bool checkRectangleRectangleCollision(Rect rect1, Rect rect2)
     return true;
 }
 
-void resolveRectangleRectangleCollision(Rect *rect1, const Rect *rect2)
-{
-    float top1 = rect1->y;
-    float top2 = rect2->y;
-
-    float bot1 = rect1->y + rect1->h;
-    float bot2 = rect2->y + rect2->h;
-
-    float left1 = rect1->x;
-    float left2 = rect2->x;
-
-    float right1 = rect1->x + rect1->w;
-    float right2 = rect2->x + rect2->w;
-
-    //no collision
-    if ((top1 >= bot2) || (bot1 <= top2) || (left1 >= right2) || (right1 <= left2))
-    {
-        return;
-    }
-
-    float overlapX, overlapY;
-    if (top1 < bot2)
-    {
-        overlapY = bot2 - top1;
-    }
-    else
-    {
-        overlapY = bot1 - top2;
-    }
-
-    if (left1 < right2)
-    {
-        overlapX = right2 - left1;
-    }
-    else
-    {
-        overlapX = right1 - left2;
-    }
-
-    rect1->x += overlapX;
-    rect1->y += overlapY;
-}
-
-bool checkRectangleVsRectangle(Rect rDynamic, const Vec2f *deltaP, Rect rStatic, Vec2f *contactPoint, Vec2f *contactNormal, float *contactTime)
+bool checkDynamicRectangleVsRectangle(Rect rDynamic, const Vec2f *deltaP, Rect rStatic, Vec2f *contactPoint, Vec2f *contactNormal, float *contactTime)
 {
     Rect expandedTarget;
     expandedTarget.x = rStatic.x - rDynamic.w / 2;
@@ -187,13 +146,13 @@ bool checkRectangleVsRectangle(Rect rDynamic, const Vec2f *deltaP, Rect rStatic,
     }
 }
 
-bool resolveRectangleVsRectangle(Rect rDynamic, Vec2f *deltaP, Rect rStatic)
+bool resolveDynamicRectangleVsRectangle(Rect rDynamic, Vec2f *deltaP, Rect rStatic)
 {
     Vec2f contactPoint, contactNormal;
     float contactTime = 0.0f;
     Vec2f newDeltaP = *deltaP;
 
-    if (checkRectangleVsRectangle(rDynamic, deltaP, rStatic, &contactPoint, &contactNormal, &contactTime) == true)
+    if (checkDynamicRectangleVsRectangle(rDynamic, deltaP, rStatic, &contactPoint, &contactNormal, &contactTime) == true)
     {
         Vec2f absDeltaP = {fabs(deltaP->x), fabs(deltaP->y)};
         newDeltaP =  vectorAdd(vectorMultiplyScalar(vectorMultiplyVector(contactNormal, absDeltaP), 1.0f - contactTime), *deltaP);

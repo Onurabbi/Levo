@@ -9,7 +9,7 @@ sound.o entity.o cJSON.o entityFactory.o text.o dungeon.o title.o widget.o asset
 collision.o actor.o player.o job.o memory.o ray.o vector.o weapon.o astar.o enemy.o \
 tile.o
 
-CC = gcc -g -O0 -DDEBUG
+CC = gcc -g -O0 -Werror -DDEBUG 
 
 game: $(OBJECTS) 
 	$(CC) $(OBJECTS) -o game.exe $(LIBS)

@@ -1,8 +1,7 @@
 #include "../common.h"
 #include "../json/cJSON.h"
 
-#include "../system/memory.h"
-
+#include "memory.h"
 #include "utils.h"
 #include "asset.h"
 #include "atlas.h"
@@ -50,6 +49,120 @@ static uint32_t getAnimationSlot(char *animSlot)
         }
     }
     return MAX_NUM_BODY_PARTS;    
+}
+
+//weapon and offhand sorting require different y values
+static float getBodyPartYOffset(uint32_t facing, uint32_t animSlot)
+{
+    float result = 0.0f;
+    if (animSlot == BODY || animSlot == HEAD)
+    {
+        return result;
+    }
+
+    if (animSlot == WEAPON_HAND)
+    {
+        result = -0.1f;
+    }
+    else if (animSlot == OFFHAND)
+    {
+        result = 0.1f;  
+    }
+    return result;
+}
+
+static inline void getAnimationVisibleSprites(AnimationController *animController, EntityVisibleSprites *sprites, uint32_t frameIndex, uint32_t facing)
+{
+    sprites->drawableCount = 0;
+
+    for(int i = 0; i < animController->numBodyParts; i++)
+    {
+        uint32_t animationIndex = animController->animationIndices[i][animController->currentAnimationIndex];
+        Animation *animation = getAnimationByIndex(animationIndex);
+        sprites->sprites[i] = &animation->animationSprites[frameIndex];
+        if (sprites->sprites[i]->fileName.count == 0)
+        {
+            printf("frameIndex: %d, facing: %d, animIndex: %d\n", frameIndex, facing, animationIndex);
+        }
+        sprites->yOffsets[i] = getBodyPartYOffset(facing, animation->animationSlot);
+        sprites->drawableCount++;
+    }
+}
+
+bool isAnimationInMovableState(AnimationController *animController)
+{
+    return ((animController->animationState != POSE_BLOCK) && 
+            (animController->animationState != POSE_MELEE) &&
+            (animController->animationState != POSE_BOW_SHOOT) &&
+            (animController->animationState != POSE_DEATH));
+}
+
+static int getAnimIndex(int facing, int pose)
+{
+    return (facing * POSE_COUNT + pose);
+}
+
+static inline bool isActorMoving(Vec2f dP)
+{
+    return (sqAmplitude(dP) >= epsilon);
+}
+
+static uint32_t updateAnimationIndex(AnimationController *animController, ActorMovement movement)
+{
+    uint32_t animIndex = animController->currentAnimationIndex;
+    if ((animController->animationState == POSE_MELEE) && (animController->animStateChange == true))
+    {
+        animController->animStateChange = false;
+        animController->animationState = POSE_MELEE;
+        animIndex = getAnimIndex(movement.facing, POSE_MELEE);
+    }
+    else if(animController->animationState != POSE_MELEE)
+    {
+        animController->animationState = (isActorMoving(movement.dP)) ? POSE_RUN : POSE_IDLE;
+        animIndex = getAnimIndex(movement.facing, animController->animationState);
+    }
+    
+    return animIndex;
+}
+
+static double updateAnimationTimer(AnimationController *animController)
+{
+    double result = 0.0;
+    result = animController->animTimer + 1.0/59.0;
+    if(result > animController->animLengthInSeconds)
+    {
+        result = 0.0;
+
+        if(animController->animationState == POSE_MELEE)
+        {
+            animController->animationState = POSE_IDLE;
+        }
+    }
+    return result;
+}
+
+void updateAnimation(EntityVisibleSprites *entitySprites, AnimationController *animController, ActorMovement movement)
+{    
+    //Animation controller is always initialised properly in entityfactory
+    //update animation timer
+    animController->animTimer = updateAnimationTimer(animController);
+    //update animation index
+    uint32_t newAnimIndex = updateAnimationIndex(animController, movement);
+    if (animController->currentAnimationIndex != newAnimIndex)
+    {
+        //update animation controller
+        //any body part will do
+        int newIndex = animController->animationIndices[0][newAnimIndex];
+        Animation * newAnim = getAnimationByIndex(newIndex);
+        animController->animLengthInSeconds = newAnim->lengthSeconds;
+        animController->numFrames = newAnim->numSprites;
+        animController->animTimer = 0.0;
+    }
+    animController->currentAnimationIndex = newAnimIndex;
+    uint32_t numFrames = animController->numFrames;
+    double timePerFrame = animController->animLengthInSeconds / (double)numFrames;
+    uint32_t frameIndex = (int)(animController->animTimer / timePerFrame);
+    getAnimationVisibleSprites(animController, entitySprites, frameIndex, movement.facing);
 }
 
 Animation *getAnimationByIndex(uint32_t index)

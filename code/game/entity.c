@@ -78,12 +78,6 @@ static inline uint32_t getEntityIndex(uint32_t i, uint32_t thread)
     return base[i];
 }
 
-static inline void setEntityIndex(uint32_t i, uint32_t thread)
-{
-    uint32_t *base = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
-    base[numEntities[thread]] = i;
-}
-
 bool initEntities(void)
 {
     entities = allocatePermanentMemory(MAX_NUM_ENTITIES * sizeof(uint32_t));
@@ -103,7 +97,8 @@ bool initEntities(void)
 
 void addEntityToUpdateList(uint32_t index, uint32_t thread)
 {
-    setEntityIndex(index, thread);
+    uint32_t *base = entities + thread * MAX_ENTITY_COUNT_PER_THREAD;
+    base[numEntities[thread]] = index;
     numEntities[thread]++;
     SDL_assert(numEntities[thread] <= MAX_ENTITY_COUNT_PER_THREAD);
 }
@@ -138,38 +133,6 @@ bool checkEntityCollisions(Entity *entity, Vec2f *newPos)
     return collided;
 }
 
-bool moveEntityRaw(Entity *e, float dx, float dy)
-{
-    bool result = false;
-
-    Actor * actor = (Actor *)e->data;
-    float vel = actor->velocity;
-
-    Vec2f newPos;
-    newPos.x = e->p.x + dx * vel;
-    newPos.y = e->p.y + dy * vel;
-    Vec2f finalPos = newPos;
-
-    bool collided = checkEntityCollisions(e, &finalPos);
-    if (collided == false)
-    {
-        
-        if ((finalPos.x != newPos.x) || (finalPos.y != newPos.y))
-        {
-            //collision happened
-            result = true;
-        }
-
-        actor->dP.x = dx * vel;
-        actor->dP.y = dy * vel;
-
-        e->p.x = finalPos.x;
-        e->p.y = finalPos.y;
-    }
-    debugDrawRect(e->p, e->width, e->height, 255, 0, 0, 0);
-    return result;
-}
-
 void moveEntity(Entity * entity, float dx, float dy)
 {
     bool collided = true;
@@ -195,9 +158,11 @@ void moveEntity(Entity * entity, float dx, float dy)
             
             entity->p.x = newPos.x;
             entity->p.y = newPos.y;
+
+            MapTile *tile = getTileAtRowCol(dungeon.map, entity->p.y, entity->p.x);
+            BIT_SET(tile->flags, TILE_IS_OCCUPIED_BIT);
         }
     }
-   
     debugDrawRect(entity->p, entity->width, entity->height, 255, 0, 0, 0);
 }
 
@@ -223,11 +188,6 @@ bool isEntityVisible(Entity *entity)
 {
     bool visible = BIT_CHECK(entity->flags, ENTITY_IS_VISIBLE_BIT);
     return visible;
-}
-
-static void updateBarrel(Entity * entity)
-{
-
 }
 
 void updateEntities(void)

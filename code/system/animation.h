@@ -15,4 +15,8 @@ bool       initAnimations(void);
 bool       addAnimationGroupToAnimationController(char *filePath, 
                                                   AnimationController *controller, 
                                                   char *animationSlot);
+
+bool isAnimationInMovableState(AnimationController *animController);
+void updateAnimation(EntityVisibleSprites *entitySprites, AnimationController *animController, ActorMovement movement);
+
 #endif

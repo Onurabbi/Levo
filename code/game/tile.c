@@ -22,7 +22,7 @@ bool checkTileCollisions(Entity *e, Vec2f *deltaP)
     tiles[7]  = getTileAtRowCol(dungeon.map, (int)(e->p.y + 1), (int)(e->p.x));
     tiles[8]  = getTileAtRowCol(dungeon.map, (int)(e->p.y + 1), (int)(e->p.x + 1));
 
-    Rect rect = {e->p.x - e->width/2, e->p.y - e->width/2, e->width, e->height};
+    Rect rect = {e->p.x, e->p.y, e->width, e->height};
 
     for(int i = 0; i < 9; i++)
     {
@@ -31,7 +31,7 @@ bool checkTileCollisions(Entity *e, Vec2f *deltaP)
             Rect tileRect = {tiles[i]->p.x, tiles[i]->p.y, 1.0f, 1.0f};
             if((BIT_CHECK(tiles[i]->flags, TILE_CAN_COLLIDE_BIT)))
             {
-                (void)resolveRectangleVsRectangle(rect, deltaP, tileRect);
+                (void)resolveDynamicRectangleVsRectangle(rect, deltaP, tileRect);
             }
         }
     }

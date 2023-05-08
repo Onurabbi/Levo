@@ -223,8 +223,8 @@ static void initPlayer(Entity *player)
 static void initEnemy(Entity *enemy)
 {
     enemy->angle = 0.0;
-    enemy->width = 0.75f;
-    enemy->height = 0.75f;
+    enemy->width = 0.5f;
+    enemy->height = 0.5f;
     enemy->flags = 0;
 
     BIT_SET(enemy->flags, ENTITY_CAN_UPDATE_BIT);
@@ -258,7 +258,7 @@ static void initEnemy(Entity *enemy)
     enemyActor->dP.x = 0;
     enemyActor->dP.y = 0;
     enemyActor->facing = FACING_LEFT;
-    enemyActor->health = 10;
+    enemyActor->health = 3;
     enemyActor->velocity = 0.075f;
     enemyActor->flags = 0;
     

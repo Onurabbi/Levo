@@ -48,8 +48,12 @@ static void resetData(void)
 
             node->p.x = (float)x + 0.5f;
             node->p.y = (float)y + 0.5f;
-            MapTile *tile = getTileAtRowCol(dungeon.map, node->p.y, node->p.x);
-            node->walkable = (BIT_CHECK(tile->flags, TILE_CAN_COLLIDE_BIT) == 0);
+
+            MapTile *tile = getTileAtRowCol(dungeon.map, y, x);
+            node->walkable = (tile && 
+                             (BIT_CHECK(tile->flags, TILE_CAN_COLLIDE_BIT) == 0) &&
+                             (BIT_CHECK(tile->flags, TILE_IS_OCCUPIED_BIT) == 0));
+
             node->row = row;
             node->col = col;
             node->f = 1000.0;
@@ -177,6 +181,38 @@ static void printPath(AStarNode *node)
     }
 }
 
+static AStarNode *findEndPoint(AStarNode *node)
+{
+    AStarNode *result = NULL;
+
+    if (node->walkable == false)
+    {
+        //check all neighbours clock-wise
+        int neighbourCount = 8;
+        int deltaX[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+        int deltaY[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+
+        for (int i = 0; i < neighbourCount; i++)
+        {
+            int x = node->col + deltaX[i];
+            int y = node->row + deltaY[i];
+
+            if(x >= 0 && x < ASTAR_WIDTH && y >= 0 && y < ASTAR_WIDTH)
+            {
+                AStarNode *neighbour = &closedList.nodes[y * ASTAR_DIM + x];
+                if ((neighbour != NULL) && (neighbour->walkable == true))
+                {
+                    node = neighbour;
+                    break;
+                }
+            }
+        }
+    }
+
+    result = node;
+    return result;
+}
+
 static AStarNode *constructAStarPath(Entity *e, Vec2f start, Vec2f end)
 {
     AStarNode *result = NULL;
@@ -218,9 +254,9 @@ static AStarNode *constructAStarPath(Entity *e, Vec2f start, Vec2f end)
             break;
         }
 
-        int neighbourCount = 4;
-        int deltaX[4] = {1, 0, 0, -1};
-        int deltaY[4] = {0, 1, -1, 0};
+        int neighbourCount = 8;
+        int deltaX[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+        int deltaY[] = {-1, 0, 1, -1, 1, -1, 0, 1};
 
         for (int i = 0; i < neighbourCount; i++)
         {
@@ -230,21 +266,8 @@ static AStarNode *constructAStarPath(Entity *e, Vec2f start, Vec2f end)
             if(x >= 0 && x < ASTAR_WIDTH && y >= 0 && y < ASTAR_WIDTH)
             {
                 AStarNode *neighbour = &closedList.nodes[y * ASTAR_DIM + x];
-
                 if (neighbour != NULL)
                 {
-                    Rect neighbourRect;
-                    neighbourRect.x = neighbour->p.x;
-                    neighbourRect.y = neighbour->p.y;
-                    neighbourRect.w = e->width;
-                    neighbourRect.h = e->height;
-
-                    Entity entityAtNeighbour;
-                    entityAtNeighbour.p.x = neighbour->p.x;
-                    entityAtNeighbour.p.y = neighbour->p.y;
-                    entityAtNeighbour.width = e->width;
-                    entityAtNeighbour.height = e->height;
-
                     bool visited = neighbour->visited;
                     bool walkable = neighbour->walkable;
 
@@ -307,7 +330,8 @@ Vec2f findPath(Entity *e, Vec2f end)
         int y = (int)(node->p.y);
 
         MapTile *tile = getTileAtRowCol(dungeon.map, y, x);
-
+        BIT_SET(tile->flags, TILE_IS_OCCUPIED_BIT);
+        
         result.x = node->p.x;
         result.y = node->p.y;
     }

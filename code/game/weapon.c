@@ -50,17 +50,15 @@ void swingWeapon(Weapon *weapon)
 
                         switch(entity->entityType)
                         {
-#if 0
-                            case ET_BARREL:
-                                Actor * barrel = (Actor *)entity->data;
-                                if(dot > 0.0f)
+                            case ET_ENEMY:
+                                Actor * enemy = (Actor *)entity->data;
+                                if(dot > 0.5f)
                                 {
                                     SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, 
-                                                    "Hit barrel entity with id: %d\n", entity->entityIndex);
-                                    takeDamage(barrel, actor, 1);
+                                                    "Hit enemy entity with id: %d\n", entity->entityIndex);
+                                    takeDamage(enemy, actor, 1);
                                 }
                                 break;
-#endif
                             default:
                                 printf("Non barrel entity type hit\n");
                                 break;

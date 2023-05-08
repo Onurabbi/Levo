@@ -66,7 +66,7 @@ typedef struct
     uint32_t       currentAnimationIndex; 
     uint32_t       numBodyParts;
 
-    uint32_t       animationState;  //current animation pose
+    uint32_t       animationState;  //current animation pose        
     bool           animStateChange; //should the state change?
 } AnimationController;
 
@@ -114,10 +114,15 @@ typedef struct
     bool           damageDealt;
 } Weapon;
 
+typedef struct
+{
+    Vec2f    dP;
+    uint32_t facing;
+} ActorMovement;
+
 typedef struct 
 {
     uint32_t facing;
-
     float    waitTimer;
     float    maxWaitTime;
     bool     changeFacingDirection;
